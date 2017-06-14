@@ -1,0 +1,402 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Creating tables
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-07">
+      Lab-07
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic07/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a/index.html">
+          Lab-11
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-07">
+        <h1>Objectives</h1>
+<p>This lab will put into practice the CREATE TABLE statement and the INSERT INTO statement.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Super and Subtype mapping</h1>
+<p>Transform the STAFF supertype in the following example, using the subtype or two table implementation.</p>
+<p><img src="./img/07.png" alt=""></p>
+<p>Make sure you have a foreign key in each staff type to represent the recursive relationship between manager and staff.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Creating Tables</h1>
+<p>It is a useful exercise now to add to the table mappings you completed last week. In order to create a table we also need to know the datatype and the size of the column. It is also good practice to note if any other constraints are needed for each column.</p>
+<p>For this reason we show our table mapping information as below:</p>
+<p><img src="./img/01.png" alt=""></p>
+<p>Complete the GRADUATE table mapping chart. Credits is a foreign key column referencing the REQUIREMENTS table.</p>
+<p><img src="./img/02.png" alt=""></p>
+<p>Next on paper, write the syntax to create the graduates table.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Oracle Application Express</h1>
+<p>Login in to application express:</p>
+<p>Open a web browser and go to - <a href="https://iacademy3.oracle.com">https://iacademy3.oracle.com</a></p>
+<p>Enter in the following (replace Snn with S and the two digit number assigned to you in class):</p>
+<p>workspace: IE_A932_SQL_Snn</p>
+<p>username: IE_A932_SQL_Snn</p>
+<p>The username ends with two numbers given to you in class.</p>
+<p>If you havent&#39; logged in before this is the original password, otherwise you changed it the first time you logged in:</p>
+<p>pasword: cAnJZ27#</p>
+<p><img src="./img/05.png" alt=""></p>
+<p>Once you get access you should see the following:</p>
+<p><img src="./img/06.png" alt=""></p>
+<p>Click on SQL Workshop and you should see:</p>
+<p><img src="./img/03.png" alt=""></p>
+<p>Click on SQL Commands and you should see:</p>
+<p><img src="./img/11.png" alt=""></p>
+<p>You should have an SQL CREATE TABLE statement you can enter into the Commands box.</p>
+<pre><code>CREATE TABLE graduates
+( student_id NUMBER(6),
+  last_name VARCHAR2(15),
+  first_name VARCHAR2(15),
+  credits NUMBER(3),
+  graduation_date DATE
+);</code></pre>
+<p> Click the Run button and you should receive a message in the results area to say Table created. 0.01 seconds</p>
+<p> Now confirm the table exists by right clicking on the second tab (SQL Workshop) choose open in a new tab. </p>
+<p>Go to that tab and choose Object Browser from the SQL Workshop tab. When the table list loads in the left hand pane of the window, you should see the graduates table, click it to view the column details you just created.</p>
+<p>  <img src="./img/12.png" alt=""></p>
+<p> In order to run just one statement in the commands box without the other statements running you must highlight the statement you wish to run and click run. Otherwise clicking run will execute all SQL contained in the command box.</p>
+<h2>Creating tables using a script</h2>
+<p> Download the following file:</p>
+<p>-<a href="archives/SQL_Schema.sql">SQL Schema.sql</a></p>
+<p>In the SQL Workshop tab choose SQL Scripts</p>
+<p><img src="./img/13.png" alt=""></p>
+<p>Click Upload</p>
+<p><img src="./img/14.png" alt=""></p>
+<p>Click Browse and navigate to the file you just downloaded. Add a Script Name such as &quot;SQL to add all tables&quot;, leave the Character set as the default (Unicode UTF-8) and click Upload.</p>
+<p><img src="./img/15.png" alt=""></p>
+<p>You will now see the script listed.</p>
+<p><img src="./img/16.png" alt=""></p>
+<p>Click the run icon and then click Run Now. This will take you to the manage scripts results page. If you click view results you will see there are errors as the DROP statements failed because the tables did not already exist. This is fine you can ignore those errors.</p>
+<p>Next go to the Object Browser to confirm the tables are there.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Practice</h1>
+<p>From the lab last week you should have table mappings for shift, shift assignment, order, order line, frequent diner card, and food item. Add to these mappings so that you now have the appropriate data type and size for each column.</p>
+<ul>
+<li>Write a CREATE TABLE statement for each table. </li>
+<li>Run each statement and describe the table to ensure it exists.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>INSERT statement</h1>
+<p>Make a copy of the d_cds table  that is available in your database.</p>
+<p>Insert four new rows of data into the table.</p>
+<p><img src="./img/08.png" alt=""></p>
+<p>To confirm the data is in the table run the following statement:</p>
+<pre><code>SELECT * from copy_d_cds;</code></pre>
+<p>DJs on Demand has two new events coming up. 
+Make a copy of the d_songs table and then add these songs to the copy_d_songs table using an implicit INSERT.</p>
+<p><img src="./img/09.png" alt=""></p>
+<p>Copy the d_clients table and insert the following data:</p>
+<p><img src="./img/10.png" alt=""></p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Dr. Brenda Mullally (bmullally@wit.ie).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,431 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Enhanced Entity Relationship Modelling
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-03">
+      Lab-03
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a/index.html">
+          Lab-11
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-03">
+        <h1>Objectives</h1>
+<p>This lab will put into practice the advanced entity relationship diagraming you have seen in the lectures.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>ERDish practice</h1>
+<p><img src="./img/00.png" alt=""></p>
+<ul>
+<li>Each EMPLOYEE may be assigned to one or more DEPARTMENTs.</li>
+<li>Each DEPARTMENT must be responsible for one or more EMPLOYEEs.</li>
+</ul>
+<ul>
+<li>Each EMPLOYEE must be assigned to one and only one DEPARTMENT.</li>
+<li><p>Each DEPARTMENT must be responsible for one or more EMPLOYEEs.</p>
+</li>
+<li><p>Each EMPLOYEE must be assigned to exactly one DEPARTMENT.</p>
+</li>
+<li>Each DEPARTMENT may be responsible for exactly one EMPLOYEE.</li>
+</ul>
+<p>Which text corresponds to the image?</p>
+<p>Write the appropriate relationships for the diagram below. comment on each one, do you think each is correct?</p>
+<p><img src="./img/01.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Matrix Diagrams</h1>
+<p><img src="./img/02.png" alt=""></p>
+<p>Complete the the matrix diagram as above and draw an ERD from it.</p>
+<p>Complete section 3 quiz in ilearning</p>
+<ul>
+<li><a href="http://ilearning.oracle.com/ilearn/en/learner/jsp/login.jsp?site=OracleAcad">http://ilearning.oracle.com/ilearn/en/learner/jsp/login.jsp?site=OracleAcad</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Super and Sub Types</h1>
+<p>Identify which item off of the following list is the supertype entity and which items are the
+subtypes of that entity.</p>
+<ul>
+<li>Amputation</li>
+<li>Visual Impairment</li>
+<li>Hearing Impairment</li>
+<li>Disability</li>
+<li>Paralysis</li>
+</ul>
+<p>For each rule, indicate whether the rule is applicable to supertypes or subtypes.</p>
+<ul>
+<li>They share common attributes</li>
+<li>They inherit all attributes and relationships of the entity</li>
+<li>It never exists alone</li>
+<li>It contains the attributes held in common by all instances</li>
+</ul>
+<p>Read the following scenario and construct an ERD that contains at least two subtypes of
+the entity PRODUCT. Show clearly which attributes belong to the entity supertype, and
+which belong to the subtypes. Identify a UID for the entity.</p>
+<p>&quot;Our shops sell several kinds of women’s clothing, including dresses, skirts and blouses.
+Of course each product has a name, a description, and a price. Oh, and sizes too: all
+products have a waist size. Dresses and skirts have a hem length but blouses don’t.
+Dresses and blouses have a chest size, but skirts don’t.”</p>
+<p>Complete section 4 quiz.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Business Rules</h1>
+<p>Members of your design team have been working with the local hospital to develop a data
+model for their need to store information about patients, the patient&#39;s room number, the
+patient&#39;s doctor, drug prescriptions given, and specific drug information.</p>
+<p>However, they all went on vacation and left you to figure out the model. They also failed to
+give you any of their documentation other than the entities and attributes illustrated here.
+Instead of going back to the hospital, which could reflect poorly on your company, you’re
+going to have to think about everything you know about hospitals!</p>
+<p>Your task is in pairs to generate a list of business rules you think were used to arrive at the information
+shown here. Use your imagination. List 10 structural rules, 5 procedural rules, and
+2 programmatic rules (rules to be addressed by computer applications in the future). State
+each rule as a single sentence.</p>
+<p>Based on your set of business rules, draw the ERD.</p>
+<p><img src="./img/03.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>You are a small database consulting company specializing in developing databases
+for the medical industry. You have just been awarded the contract to develop a data
+model for a database application system for a mid-size health insurance company to
+keep track of health claims including patient information, provider(doctor)
+information, information about patient visits to their doctor as well as prescription
+drugs prescribed to patients.</p>
+<p>Information such as patient name, address, phone, email etc. are needed as well as
+who each patient’s primary care doctor is, their insurance ID number and insurance
+company name. We also want information on each doctor such as their specialty
+and what hospitals they are affiliated with as well as their phone, address etc.
+Regarding the hospitals themselves we will need to know where they are located
+and how to contact them.</p>
+<p>The prescriptions given to each patient by a health-care provider also need to be
+tracked in this particular database at this time to determine claim eligibility including
+some basic information on the drug being prescribed to make sure there are no
+conflicts with a patient’s other prescriptions. We need to know each drug’s name,
+purpose/use and possible side effects.</p>
+<p>Eventually, the database will be used to track trends and for some extrapolative
+modeling based on the accumulated data. The database will be accessible in English
+only right now, although plans include making it available in multiple languages
+eventually. </p>
+<p>Based on the business scenario stated above you will identify the database needs,
+and then create a conceptual data model to support these needs.</p>
+<ol>
+<li>Review the types of information a medical database may contain. Read articles
+and check  the internet to understand the challenges of tracking this information.</li>
+<li>Research medical information to better understand your topic. Look for the type of
+information you will need to track.</li>
+<li>Build a list of business needs, rules and assumptions based on your scenario,
+research, and objectives.</li>
+<li>Develop a list of potential entities including their attributes, the attribute’s
+optionality as well as a possible UID for each entity.</li>
+<li>Create a preliminary Entity Relationship Diagram (ERD) that meets these needs
+and objectives. (Note : Create entities only, relationships will be added next)</li>
+</ol>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Dr. Brenda Mullally (bmullally@wit.ie).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

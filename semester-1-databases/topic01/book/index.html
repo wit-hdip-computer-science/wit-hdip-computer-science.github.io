@@ -1,0 +1,372 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Introducing Databases
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-01">
+      Lab-01
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="active item" href="../../topic01/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a/index.html">
+          Lab-11
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-01">
+        <h1>Objectives</h1>
+<p>This lab will firstly introduce you to the learning environment provided by Oracle Academy.  It will show you how to setup an Oracle Academy account and login to ilearning to access the module materials.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<h2>Instructions for setting up an Oracle Academy membership</h2>
+<p>First you must have an oracle account.
+Go to - <a href="http://Oracle.com/">http://Oracle.com/</a> and sign up for an oracle account.
+Next go to - <a href="http://academy.oracle.com/">http://academy.oracle.com/</a> click on Sign In/Register for Account.
+Scroll down the page and click on the image shown below:</p>
+<p><img src="./img/00.png" alt=""></p>
+<p>Next scroll down and read the 7 steps on joining Oracle Academy.</p>
+<p><img src="./img/02.png" alt=""></p>
+<p>Choose the button to join as an individual.</p>
+<p><img src="./img/01.png" alt=""></p>
+<p>While joining as an idividual you will need to choose Waterford Institute of Technology from the list of institutions so you are associated to W.I.T</p>
+<p><img src="./img/03.png" alt=""></p>
+<p>Once you complete the registration process you should be able to login to the Oracle iLearning website.</p>
+<h2>Instructions for accessing Oracle Academy ilearning site</h2>
+<ul>
+<li><a href="http://ilearning.oracle.com/ilearn/en/learner/jsp/login.jsp?site=OracleAcad">http://ilearning.oracle.com/ilearn/en/learner/jsp/login.jsp?site=OracleAcad</a></li>
+</ul>
+<p>To login use the username and password given to you (replace snn with s and the two digit number assigned to you in class)</p>
+<p>username: ie_wit_db_snn
+password: databases2017</p>
+<p>Once logged in you will be asked to update your password to at least 8 characters. </p>
+<p>Then you should see the following:</p>
+<p><img src="./img/04.png" alt=""></p>
+<p>This page gives you access to some of the the curriculum used in this module.</p>
+<p>Open a new page and go to - <a href="https://iacademy3.oracle.com">https://iacademy3.oracle.com</a></p>
+<p>Enter in the following (replace Snn with S and the two digit number assigned to you in class):</p>
+<p>workspace: IE_A932_SQL_Snn</p>
+<p>username: IE_A932_SQL_Snn</p>
+<p>pasword: cAnJZ27#</p>
+<p>You will have to change your password and return to the login screen to gain access using your new password.</p>
+<p>Once you get access you should see the following:</p>
+<p><img src="./img/06.png" alt=""></p>
+<p>These two sites are what you will be using for at least the first 6-8 weeks of this module. Save your usernames and passwords for these sites.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Accessing curriculum</h1>
+<h2>ilearning</h2>
+<p>To access the curriculum shown in lectures login to ilearning.
+Click the play button beside Database Design - Student - English</p>
+<p>In the left hand pane click on Section 2: Entities and Attributes </p>
+<p>You will see a page similar to this:</p>
+<p><img src="./img/07.png" alt=""></p>
+<p>Click on either the number 1, or on the Next Lesson button.</p>
+<p>The following icons are shown:</p>
+<p><img src="./img/08.png" alt=""></p>
+<p>The book link will open a new tab and display the html page containing the curriculum material.
+The graduation cap will open a new tab and display a pdf version of the curriculum material.
+The writing hand will open a pdf that contains practice activities for the section.</p>
+<p>These icons show for each subsection within Entities and Attributes.</p>
+<p>You should now complete the activities for subsection 2-2 Entities, Instances, Attributes and Identifiers.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Installing MySQL</h1>
+<p>It is also a good idea to try downloading and installing a database for your own loptop.</p>
+<ul>
+<li><a href="http://dev.mysql.com/downloads/windows/installer/5.7.html">http://dev.mysql.com/downloads/windows/installer/5.7.html</a></li>
+</ul>
+<p>You will need to use your Oracle signin to access the download.</p>
+<p>Download the the MySQL installer and follow the steps to install MySQL Server, workbench, sample databases and connectors.</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Dr. Brenda Mullally (bmullally@wit.ie).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

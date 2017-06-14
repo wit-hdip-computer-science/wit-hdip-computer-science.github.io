@@ -1,0 +1,408 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      SQL SELECT statement is used to retrieve data from the database
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-09">
+      Lab-09
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book/index.html">
+          Lab-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic08/book/index.html">
+          Lab-09
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book/index.html">
+          Lab-10
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a/index.html">
+          Lab-11
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-09">
+        <h1>Objectives</h1>
+<p>This lab will put into practice the SELECT statement using operators, comparisons, aliases and ORDER BY</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>SELECT Statement</h1>
+<p>The manager of Global Fast Foods would like to send out coupons for the upcoming sale. He wants to send one coupon to each household. Create the SELECT statement that returns the customer last name and a mailing address.</p>
+<p>Each statement below has errors. Correct the errors and execute the query in Oracle Application Express.</p>
+<ul>
+<li>SELECT first name FROM f_staffs;</li>
+<li>SELECT first_name |&quot; &quot;| last_name AS &quot;DJs on Demand Clients&quot; FROM d_clients;</li>
+<li>SELECT DISTINCT f_order_lines FROM quantity;</li>
+<li>SELECT order number FROM f_orders;</li>
+</ul>
+<p>Sue, Bob and Monique were the employees of the month. Using the f_staffs table, write a CREATE statement to display the results as shown below.</p>
+<p><img src="./img/01.png" alt=""></p>
+<p>Which is the following is TRUE about the following query?</p>
+<pre><code>
+SELECT first_name, DISTINCT birthdate FROM f_staffs;</code></pre>
+<ul>
+<li>Only two rows will be returned</li>
+<li>Four rows will be returned</li>
+<li>Only Fred 05-Jan-1988 and Lizzie 10-Mov-1987 will be returned</li>
+<li>No rows will be returned</li>
+</ul>
+<p>Global FAst Foods has decided to give all staff members a 5% pay rise. Write the SELECT statement that presents the output as shown below:</p>
+<p><img src="./img/02.png" alt=""></p>
+<p>The owners of DJs on Demand would like a report of all items in their D_CDs table with the following column headings: Inventory Item, CD Title, Music Producer, and Year Purchased. Write the SELECT statement to produce this report.</p>
+<p>There are four coding errors in this statement. Can you identify them?</p>
+<pre><code>
+SELECT employee_id, last_name sal x 12 ANNUAL SALARY FROM employees;</code></pre>
+<p>Click on the History tab at the lower part of the SQL Commands window. Scroll to find the SQL statment you used to generate the SuperStar output. Click on the SQL and it will load into the command window. Execute the command to ensure it is correct. Click on the SAVE button in the top right corner. Enter a name for the saved statement. If you log out of Oracle Express and log back in you can click on the saved SQL tab and load it for editing or running.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>WHERE CLAUSE</h1>
+<p>Using Global Fast Foods database, retrieve the customer&#39;s first name, last name and address for the customer who uses ID 456.</p>
+<p>Show the name, start date, and end date for Global Fast Foods&#39; promotional item &quot;ballpen and highlighter&quot; giveaway.</p>
+<p>The following query was supposed to return the CD title &quot;Carpe Diem&quot; but no rows were returned. Correct the mistake in the statement and show the output.</p>
+<pre><code>
+SELECT producer, title
+FROM d_cds
+WHERE title=&#39;carpe diem&#39;;</code></pre>
+<p>The manager of DJs on Demand would like a report of all the CD titles and years of CDs that were produced before 2000</p>
+<p>Write a SQL statement that will list the titles and years of all the DJs on Demand&#39;s CDs that were not produced in 2000.</p>
+<p>For the next three questions, create the following table :</p>
+<p>TABLE NAME: students
+COLUMNS: studentno NUMBER(6)
+          fname VARCHAR2(12)
+          lname VARCHAR2(20)
+          gender CHAR(1)
+          major VARCHAR2(24)</p>
+<p>Write a SQL statement that will display the student number of any student who has a PE major. Title the studentno output Student Number.</p>
+<p>Write a SQL statement that will display the student number, first name and last name for all female students.</p>
+<p>Write a SQL statement that will display all details for all male students.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Comparision operators</h1>
+<p>Display the first name, last name and salary of all Global Fast Foods staff whose salary is between $5.00 and $10.00 per hour</p>
+<p>Display the location type and comments for all DJs on Demand venues that are Private Homes.</p>
+<p>Using only less than, equal, or greater than operators rewrite the following query:</p>
+<pre><code>
+SELECT first_name, last_name
+FROM f_staffs
+WHERE salary BETWEEN 20.00 and 60.00;</code></pre>
+<p>Create a list of all DJs on Demand CD titles that have &quot;a&quot; as the second letter in the title.</p>
+<p>Who are the partners of DJs on Demand who do not get an authorised expense amount?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Logical Comparisons and Precedence Rules</h1>
+<p>Execute the two queries below. Why do these nearly identical statements produce two different results?</p>
+<pre><code>
+SELECT code, description
+FROM d_themes
+WHERE code &gt; 200 AND description IN (&#39;Tropical&#39;, &#39;Football&#39;, &#39;Carnival&#39;);
+
+SELECT code, description
+FROM d_themes
+WHERE code &gt; 200 OR description IN (&#39;Tropical&#39;, &#39;Football&#39;,&#39;Carnival&#39;);</code></pre>
+<p>Display the last names of all Global Fast Foods employees who have &quot;d&quot; and &quot;i&quot; in their last names.</p>
+<p>Display the Global Fast Food employees that make more than $6.50 per hour and their position is not order taker.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Ordering</h1>
+<p>In the example below, assign the employee_id column the alias of &quot;Number.&quot; Complete the SQL statement to order the result set by the column alias.</p>
+<pre><code>
+SELECT employee_id, first_name, last_name
+FROM employees;</code></pre>
+<p>Create a query that will return all the DJs on Demand CD titles ordered by year with titles in alphabetical order by year.</p>
+<p>Order the DJs on Demand songs by descending title. Use the alias &quot;Our Collection&quot; for the song title.</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Dr. Brenda Mullally (bmullally@wit.ie).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
