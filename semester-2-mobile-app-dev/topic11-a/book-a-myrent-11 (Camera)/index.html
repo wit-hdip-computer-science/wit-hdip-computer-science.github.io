@@ -1,0 +1,1664 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      11-a: Camera
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-15 (Camera)">
+      MyRent-15 (Camera)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-b-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview) /index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+          MyRent-11 (Maps - Google)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+          MyRent-11a (Maps - MapBox)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+          MyRentSQLite (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-a-myrent-12 (SQLite)/index.html">
+          MyRent-12 (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+          MyRentSQLite (ContentProvider)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service/index.html">
+          MyRent (Play Service)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service-test/index.html">
+          MyRent (JUnit Test)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+          MyRent-13 (Client)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-b-services/index.html">
+          MyRent-14 (Services)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic11-a/book-a-myrent-11 (Camera)/index.html">
+          MyRent-15 (Camera)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-b/book-a-crypto/index.html">
+          App Signing & Crypto
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-c/book-a-myrent-16(Mongo)/index.html">
+          MyRent-16 (Mongo)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-15 (Camera)">
+        <h1>Camera</h1>
+<p>Make use of the device camera to take and serialize a photo, display it as thumbnail and create a simple single-photo gallery.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Preview</h1>
+<p>In this lab you will use the device camera to take a photo.</p>
+<ul>
+<li>The photo may be saved to a file</li>
+<li>It will appear as a thumbnail in the residence details view</li>
+<li>An enlarged image will be viewable in a one-photo gallery</li>
+</ul>
+<p>The following figures provide an outline.</p>
+<p><img src="img/04.png" alt="Figure 1: Set up Genymotion camera"></p>
+<p><img src="img/05.png" alt="Figure 2: Start the picture-taking process"></p>
+<p><img src="img/06.png" alt="Figure 3: Take and save photo"></p>
+<p><img src="img/07.png" alt="Figure 4: Long-press thumbnail opens gallery"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Resources</h1>
+<h2>Manifest</h2>
+<p>Proceeding with the application as <a href="https://github.com/wit-ictskills-2016/myrent-14.git">completed to the end of the previous lab</a>, we shall add two new activities, the content for which is provided in a later step:</p>
+<ul>
+<li>ResidenceCameraActivity<ul>
+<li>Manages the taking of a photo</li>
+</ul>
+</li>
+<li>ResidenceGalleryActivity<ul>
+<li>Allows the display of the photo in a single-photo gallery.</li>
+</ul>
+</li>
+</ul>
+<p>Modify manifest file: add following snippets.</p>
+<pre><code>    &lt;activity
+        android:name=&quot;.activities.ResidenceCameraActivity&quot;
+        android:label=&quot;@string/app_name&quot;&gt;
+
+        &lt;meta-data android:name=&quot;android.support.PARENT_ACTIVITY&quot;
+                   android:value=&quot;.activities.ResidencePagerActivity&quot;/&gt;
+    &lt;/activity&gt;
+    &lt;activity
+        android:name=&quot;.activities.ResidenceGalleryActivity&quot;
+        android:label=&quot;@string/app_name&quot;&gt;
+
+        &lt;meta-data android:name=&quot;android.support.PARENT_ACTIVITY&quot;
+                   android:value=&quot;.activities.ResidencePagerActivity&quot;/&gt;
+    &lt;/activity&gt;</code></pre>
+<h2>Residence details view layout</h2>
+<p>We add a Camera button and a thumnail placeholder to the Residence details view: </p>
+<ul>
+<li>layout/fragment_residence.xml</li>
+</ul>
+<p><img src="img/01.png" alt="Figure 1: Camera button and thumbnail placeholder"></p>
+<p><img src="img/01a.png" alt="Figure 2: Camera button and thumbnail placeholder positions"></p>
+<p>First add 2 string resources:</p>
+<pre><code>  &lt;string name=&quot;take_photo&quot;&gt;Take Photo&lt;/string&gt;
+  &lt;string name=&quot;save_photo&quot;&gt;Save Photo&lt;/string&gt;</code></pre>
+<p>Here is the additional code:</p>
+<pre><code>&lt;!-- Camera button + thumbnail--&gt;
+      &lt;ImageButton
+          android:id=&quot;@+id/camera_button&quot;
+          android:layout_width=&quot;40dp&quot;
+          android:layout_height=&quot;40dp&quot;
+          android:scaleType=&quot;centerInside&quot;
+          android:layout_marginTop=&quot;16dp&quot;
+          android:src=&quot;@android:drawable/ic_menu_camera&quot;
+          android:layout_gravity=&quot;top&quot;/&gt;
+      &lt;ImageView
+          android:id=&quot;@+id/myrent_imageView&quot;
+          android:layout_width=&quot;40dp&quot;
+          android:layout_height=&quot;40dp&quot;
+          android:scaleType=&quot;centerInside&quot;
+          android:background=&quot;@android:color/darker_gray&quot;
+          android:cropToPadding=&quot;true&quot;
+          android:layout_marginTop=&quot;16dp&quot;
+          android:layout_gravity=&quot;top|end&quot;
+          android:layout_margin=&quot;16dp&quot;/&gt;</code></pre>
+<p>As you can see, the code is located immediately following the geolocation input window. </p>
+<p>For reference, here is the refactored fragment_residence.xml file:</p>
+<pre><code>&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+              android:layout_width=&quot;match_parent&quot;
+              android:layout_height=&quot;match_parent&quot;
+              android:orientation=&quot;vertical&quot; &gt;
+
+  &lt;!-- LOCATION --&gt;
+
+  &lt;TextView
+      style=&quot;?android:listSeparatorTextViewStyle&quot;
+      android:layout_width=&quot;match_parent&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:text=&quot;@string/location&quot; /&gt;
+
+  &lt;LinearLayout
+      android:layout_width=&quot;match_parent&quot;
+      android:layout_height=&quot;51dp&quot;
+      android:baselineAligned=&quot;false&quot;
+      android:orientation=&quot;horizontal&quot;
+      android:weightSum=&quot;1&quot;&gt;
+
+    &lt;!-- Geolocation (GPS Coords) --&gt;
+
+    &lt;EditText
+        android:id=&quot;@+id/geolocation&quot;
+        android:layout_width=&quot;194dp&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:hint=&quot;@string/geolocation_hint&quot;
+        android:layout_weight=&quot;0.75&quot;&gt;
+
+      &lt;requestFocus /&gt;
+    &lt;/EditText&gt;
+
+    &lt;!-- Camera button + thumbnail--&gt;
+      &lt;ImageButton
+          android:id=&quot;@+id/camera_button&quot;
+          android:layout_width=&quot;40dp&quot;
+          android:layout_height=&quot;40dp&quot;
+          android:scaleType=&quot;centerInside&quot;
+          android:layout_marginTop=&quot;16dp&quot;
+          android:src=&quot;@android:drawable/ic_menu_camera&quot;
+          android:layout_gravity=&quot;top&quot;/&gt;
+      &lt;ImageView
+          android:id=&quot;@+id/myrent_imageView&quot;
+          android:layout_width=&quot;40dp&quot;
+          android:layout_height=&quot;40dp&quot;
+          android:scaleType=&quot;centerInside&quot;
+          android:background=&quot;@android:color/darker_gray&quot;
+          android:cropToPadding=&quot;true&quot;
+          android:layout_marginTop=&quot;16dp&quot;
+          android:layout_gravity=&quot;top|end&quot;
+          android:layout_margin=&quot;16dp&quot;/&gt;
+
+  &lt;/LinearLayout&gt;
+
+  &lt;!-- STATUS --&gt;
+
+  &lt;TextView
+      style=&quot;?android:listSeparatorTextViewStyle&quot;
+      android:layout_width=&quot;match_parent&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:text=&quot;@string/status&quot; /&gt;
+
+  &lt;Button android:id=&quot;@+id/registration_date&quot;
+          android:layout_width=&quot;match_parent&quot;
+          android:layout_height=&quot;wrap_content&quot;
+          android:layout_marginLeft=&quot;16dp&quot;
+          android:layout_marginRight=&quot;16dp&quot;
+      /&gt;
+  &lt;!-- Checkbox --&gt;
+  &lt;CheckBox
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:text=&quot;@string/isrented&quot;
+      android:id=&quot;@+id/isrented&quot;
+      android:checked=&quot;false&quot;/&gt;
+
+  &lt;Button
+      android:id=&quot;@+id/tenant&quot;
+      android:layout_width=&quot;match_parent&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:layout_marginLeft=&quot;16dp&quot;
+      android:layout_marginRight=&quot;16dp&quot;
+      android:text=&quot;@string/landlord&quot; /&gt;
+
+  &lt;Button android:id=&quot;@+id/residence_reportButton&quot;
+          android:layout_width=&quot;match_parent&quot;
+          android:layout_height=&quot;wrap_content&quot;
+          android:layout_marginLeft=&quot;16dp&quot;
+          android:layout_marginRight=&quot;16dp&quot;
+          android:text=&quot;@string/residence_report&quot;
+      /&gt;
+
+
+  &lt;android.support.design.widget.FloatingActionButton
+      android:id=&quot;@+id/fab&quot;
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:layout_gravity=&quot;bottom|end&quot;
+      android:layout_margin=&quot;@dimen/fab_margin&quot;
+      android:src=&quot;@drawable/ic_blue_marker&quot;/&gt;
+&lt;/LinearLayout&gt;</code></pre>
+<h2>Camera layout</h2>
+<p>Next we add a layout for the Camera activity:</p>
+<p>File: /res/layout/residence_photo.xml</p>
+<pre><code>&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+                xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+                android:layout_width=&quot;match_parent&quot;
+                android:layout_height=&quot;match_parent&quot;
+                android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
+                android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
+                android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
+                android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
+                tools:context=&quot;org.wit.myrent.activities.ResidenceCameraActivity&quot; &gt;
+
+  &lt;ImageView
+      android:id=&quot;@+id/residenceImage&quot;
+      android:layout_width=&quot;match_parent&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:layout_above=&quot;@+id/takePhoto&quot;
+      android:layout_alignParentRight=&quot;true&quot;
+      android:layout_alignParentTop=&quot;true&quot;
+      android:src=&quot;@mipmap/ic_lens&quot;/&gt;
+
+  &lt;Button
+      android:id=&quot;@+id/takePhoto&quot;
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:layout_alignLeft=&quot;@+id/residenceImage&quot;
+      android:layout_alignParentBottom=&quot;true&quot;
+      android:text=&quot;@string/take_photo&quot; /&gt;
+
+  &lt;Button
+      android:id=&quot;@+id/savePhoto&quot;
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:layout_alignBottom=&quot;@+id/takePhoto&quot;
+      android:layout_alignRight=&quot;@+id/residenceImage&quot;
+      android:layout_alignTop=&quot;@+id/takePhoto&quot;
+      android:text=&quot;@string/save_photo&quot; /&gt;
+
+&lt;/RelativeLayout&gt;</code></pre>
+<p>Download the image ic_lens.png from <a href="archives/ic_lens.png">here</a> to a temp location.</p>
+<ul>
+<li>In Android Studio select <em>res/mipmap</em>, right click and select <code>new|Image Asset</code>.</li>
+<li>The <code>Configure Image Asset</code> window should open.</li>
+<li>Change the name to <code>ic_lens</code>.</li>
+<li>Browse to where you have saved the ic_lens image and select it.</li>
+<li>The result should be as represented in Figure 3.</li>
+<li>Overwrite ic_lens if it already exist.</li>
+<li>Complete the remaining steps in the configuration wizard.</li>
+</ul>
+<p><img src="img/09.png" alt="Figure 3: Image Asset configuration"></p>
+<p><img src="img/02.png" alt="Figure 4: Layout for Camera activity"></p>
+<h2>Emulator</h2>
+<p>If using an Android emulator ensure you enable at least one camera simulator in the settings. This is illustrated in Figure 5.</p>
+<p><img src="img/08.png" alt="Figure 5: Enable Emulator camera"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Model</h1>
+<p>The model Residence class requires a new field to represent the photo filename:</p>
+<ul>
+<li>Add and initialize with a placeholder name to avoid null pointer issues.</li>
+</ul>
+<pre><code>public String photo;</code></pre>
+<pre><code>public Residence()
+{
+  ...
+  photo = &quot;photo&quot;;
+}</code></pre>
+<p>For reference here is the updated Residence:</p>
+<pre><code>package org.wit.myrent.models;
+
+import android.content.Context;
+
+import org.wit.myrent.R;
+
+import java.util.Date;
+import java.util.Random;
+
+
+public class Residence
+{
+  public Long id;
+  public Long date;
+
+  //a latitude longitude pair
+  //example &quot;52.4566,-6.5444&quot;
+  public String geolocation;
+  public boolean rented;
+  public String tenant;
+  public double  zoom       ;//zoom level of accompanying map
+  public String photo;
+
+  public Residence() {
+    id = unsignedLong();
+    date = new Date().getTime();
+    geolocation = &quot;52.253456,-7.187162&quot;;
+    tenant = &quot;none presently&quot;;
+    zoom = 16.0f;
+    photo = &quot;photo&quot;;
+  }
+
+  public void setGeolocation(String geolocation) {
+    this.geolocation = geolocation;
+  }
+
+  public String getGeolocation() {
+    return geolocation;
+  }
+
+  public String getDateString() {
+    return &quot;Registered:&quot; + dateString();
+  }
+
+  private String dateString() {
+    String dateFormat = &quot;EEE d MMM yyyy H:mm&quot;;
+    return android.text.format.DateFormat.format(dateFormat, date).toString();
+  }
+
+  public String getResidenceReport(Context context) {
+    String rentedString = &quot;&quot;;
+    if (rented) {
+      rentedString = context.getString(R.string.residence_report_rented);
+    }
+    else {
+      rentedString = context.getString(R.string.residence_report_not_rented);
+    }
+
+    String prospectiveTenant = tenant;
+    if (tenant == null) {
+      prospectiveTenant = context.getString(R.string.residence_report_nobody_interested);
+    }
+    else {
+      prospectiveTenant = context.getString(R.string.residence_report_prospective_tenant, tenant);
+    }
+    String report = &quot;Location &quot; + geolocation + &quot; Date: &quot; + dateString() + &quot; &quot; + rentedString + &quot; &quot; + prospectiveTenant;
+    return report;
+
+  }
+
+  /**
+   * Generate a long greater than zero
+   * @return Unsigned Long value greater than zero
+   */
+  private Long unsignedLong() {
+    long rndVal = 0;
+    do {
+      rndVal = new Random().nextLong();
+    } while (rndVal &lt;= 0);
+    return rndVal;
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Helpers</h1>
+<p>We will now add two helper classes, CameraHelper &amp; FileIOHelper.</p>
+<ul>
+<li><p>CameraHelper class has 2 methods:</p>
+<ul>
+<li>showPhoto<ul>
+<li>displays the photo</li>
+</ul>
+</li>
+<li>getScaledDrawable<ul>
+<li>scales photo to fit in the application&#39;s imageview</li>
+</ul>
+</li>
+</ul>
+<p>These methods have been obtained from Android Programming by Hardy &amp; Phillips.</p>
+</li>
+</ul>
+<h2>CameraHelper</h2>
+<p>File: org.wit.android.helpers.CameraHelper.java</p>
+<pre><code>package org.wit.android.helpers;
+
+import java.util.List;
+
+import org.wit.myrent.models.Residence;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.hardware.Camera.Size;
+import android.view.Display;
+import android.widget.ImageView;
+
+public class CameraHelper
+{
+
+  /**
+   * Render the photo on the ImageView
+   */
+  public static void showPhoto(Activity activity, Residence res, ImageView photoView)
+  { 
+    String path = activity.getFileStreamPath(res.photo).getAbsolutePath();
+    BitmapDrawable b = getScaledDrawable(activity, path);
+    if (b != null)
+      photoView.setImageDrawable(b);
+  }
+
+  /**
+   * Get a BitmapDrawable from a local file that is scaled down to fit the
+   * current Window size.
+   */
+  @SuppressWarnings(&quot;deprecation&quot;)
+  public static BitmapDrawable getScaledDrawable(Activity a, String path)
+  {
+    Display display = a.getWindowManager().getDefaultDisplay();
+    float destWidth = display.getWidth();
+    float destHeight = display.getHeight();
+
+    // read in the dimensions of the image on disk
+    BitmapFactory.Options options = new BitmapFactory.Options();
+    options.inJustDecodeBounds = true;
+    BitmapFactory.decodeFile(path, options);
+
+    float srcWidth = options.outWidth;
+    float srcHeight = options.outHeight;
+
+    int inSampleSize = 1;
+    if (srcHeight &gt; destHeight || srcWidth &gt; destWidth)
+    {
+      if (srcWidth &gt; srcHeight)
+      {
+        inSampleSize = Math.round((float) srcHeight / (float) destHeight);
+      }
+      else
+      {
+        inSampleSize = Math.round((float) srcWidth / (float) destWidth);
+      }
+    }
+
+    options = new BitmapFactory.Options();
+    options.inSampleSize = inSampleSize;
+
+    Bitmap bitmap = BitmapFactory.decodeFile(path, options);
+    return new BitmapDrawable(a.getResources(), bitmap);
+  }
+
+}</code></pre>
+<h2>FileIOHelper</h2>
+<p>Here is the FileIOHelper class:</p>
+<pre><code>package org.wit.android.helpers;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+
+public class FileIOHelper
+{
+  public static boolean write(Context context, String filename, byte[] data)
+  {
+    FileOutputStream os = null;
+    boolean success = true;
+    try
+    {
+      os = context.openFileOutput(filename, Context.MODE_PRIVATE);      
+      os.write(data);
+    }
+    catch (Exception e)
+    {
+      LogHelpers.info(context,&quot;Error writing to file &quot; + filename + &quot; &quot; + e.getMessage());
+      success = false;
+    }
+    finally
+    {
+      try
+      {
+        if (os != null)
+          os.close();
+      }
+      catch (Exception e)
+      {
+        LogHelpers.info(context, &quot;Error closing file &quot; + filename + &quot; &quot; + e.getMessage());
+        success = false;
+      }
+    }
+    return success;
+  }
+
+  public static byte[] byteArray(Bitmap bmp)
+  {
+    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+    bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
+    return stream.toByteArray();
+  }
+
+  public static boolean writeBitmap(Context context, String filename, Bitmap bmp)
+  {
+    return write(context, filename, byteArray(bmp));
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Camera Activity</h1>
+<p>Note: Not all necessary import statements are supplied as accompaniment to the various code snipptes below. A complete set of statements is provided at the end of this file for reference purposes.</p>
+<p>Create a new activity ResidenceCameraActivity in the package <em>org.wit.myrent.activities</em>.</p>
+<pre><code>package org.wit.myrent.activities;
+
+import org.wit.myrent.R;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class ResidenceCameraActivity extends AppCompatActivity
+{
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.residence_photo);
+  }
+
+}</code></pre>
+<p>Introduce and wire up the <strong>Up</strong> button so that it behaves similarly to the <a href="http://developer.android.com/design/patterns/navigation.html">back button</a>. We can do this by invoking <a href="http://developer.android.com/reference/android/app/Activity.html#onBackPressed%28%29">Activity.onBackPressed</a></p>
+<ul>
+<li>Display and enable the Up button by adding this statement to the <em>onCreate</em> method following <em>setContentView</em>:</li>
+</ul>
+<pre><code>getSupportActionBar().setDisplayHomeAsUpEnabled(true);</code></pre>
+<ul>
+<li>Override <em>onOptionsItemSelected</em> to act on pressing the Up button:</li>
+</ul>
+<pre><code>  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case android.R.id.home:
+        onBackPressed();
+        return true;
+
+      default:
+        return super.onOptionsItemSelected(item);
+    }
+  }</code></pre>
+<p>Add an import statement for MenuItem:</p>
+<pre><code>import android.view.MenuItem;</code></pre>
+<p>There are two buttons in the view: Take Photo and Save Photo.</p>
+<ul>
+<li>Add fields for these</li>
+</ul>
+<pre><code>  private Button    savePhoto;
+  private Button    takePhoto;</code></pre>
+<p>Import the Button class:</p>
+<pre><code>import android.widget.Button;</code></pre>
+<p>Add an ImageView field in which the photo will be displayed.</p>
+<pre><code>  private ImageView residenceImage;</code></pre>
+<p>Import the ImageView class:</p>
+<pre><code>import android.widget.ImageView;</code></pre>
+<p>Bind the widget instances to their respective layout elements. The following code which should be added to onCreate does this:</p>
+<pre><code>    residenceImage  = (ImageView) findViewById(R.id.residenceImage);
+    savePhoto       = (Button)findViewById(R.id.savePhoto);
+    takePhoto       = (Button)findViewById(R.id.takePhoto);</code></pre>
+<p>Set the default state of the save photo button to disabled. We will only enable this once a photo has been taken.</p>
+<pre><code>    savePhoto.setEnabled(false);</code></pre>
+<p>Implement an OnClickListener interface:</p>
+<pre><code>public class ResidenceCameraActivity extends AppCompatActivity implements OnClickListener</code></pre>
+<p>Import the listener interface:</p>
+<pre><code>import android.view.View.OnClickListener;</code></pre>
+<p>Add the listener method skeleton:</p>
+<pre><code>  @Override
+  public void onClick(View v)
+  {
+    // TODO Auto-generated method stub
+
+  }</code></pre>
+<p>Register listeners in onCreate to respond to button clicks:</p>
+<pre><code>    savePhoto.setOnClickListener(this);
+    takePhoto.setOnClickListener(this);</code></pre>
+<p>In <em>onClick</em> method respond to clicking the buttons. For convenience we will locate most of the necessary code, as shown below, in two private methods: </p>
+<ul>
+<li>onTakePhotoClicked</li>
+<li>onPictureTaken</li>
+</ul>
+<pre><code>  @Override
+  public void onClick(View v)
+  {
+    switch(v.getId())
+    {
+    case R.id.takePhoto     : onTakePhotoClicked(v);                              
+                              break;
+
+    case R.id.savePhoto     : onPictureTaken(residencePhoto);    
+                              break;                   
+    }
+  }</code></pre>
+<p>The approach we adopt is to use an implicit Intent to make use of the device camera (which we check is available). Here is the implementation of <em>onTakePhotoClicked</em>:</p>
+<pre><code>  public void onTakePhotoClicked(View v)
+  {
+    // Check for presence of device camera. If not present advise user and quit method.
+    PackageManager pm = getPackageManager();
+    if (!pm.hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
+      Toast.makeText(this, &quot;Camera app not present on this device&quot;, Toast.LENGTH_SHORT).show();
+      return;
+    }
+    // The device has a camera app ... so use it.
+    Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+    startActivityForResult(cameraIntent,CAMERA_RESULT);
+    savePhoto.setEnabled(true);
+  }</code></pre>
+<p>This requires an import statement for the Intent class:</p>
+<pre><code>import android.content.Intent;</code></pre>
+<p>Also necessary is a definition of the constant CAMERA_RESULT. The value 5 has been chosen arbitrarily.</p>
+<pre><code>  private static  final int CAMERA_RESULT = 5;
+  public static final String EXTRA_PHOTO_FILENAME = &quot;org.wit.myrent.photo.filename&quot;;</code></pre>
+<p>Next we define the method <em>onPictureTaken</em>. We are chosing the <em>png</em> format as this is the only format acceptable to the helper method <em>writeBitMap</em>.</p>
+<pre><code>  private void onPictureTaken(Bitmap data) {
+    String filename = UUID.randomUUID().toString() + &quot;.png&quot;;
+    if (writeBitmap(this, filename, data) == true) {
+      Intent intent = new Intent();
+      intent.putExtra(EXTRA_PHOTO_FILENAME, filename);
+      setResult(Activity.RESULT_OK, intent);
+    }
+    else {
+      setResult(Activity.RESULT_CANCELED);
+    }
+    finish();
+  }</code></pre>
+<p>This requires these import statements:</p>
+<pre><code>import android.graphics.Bitmap;
+import static org.wit.android.helpers.FileIOHelper.writeBitmap;</code></pre>
+<p>We must also define the string EXTRA_PHOTO_FILENAME. Note that the arguments in <a href="http://developer.android.com/reference/android/content/Intent.html#putExtra%28java.lang.String,%20android.os.Bundle%29"><em>Intent.putExtra</em></a> comprise key-value pairs, the first argument always being a String. </p>
+<pre><code>  public static   final String  EXTRA_PHOTO_FILENAME = &quot;org.wit.myrent.photo.filename&quot;;</code></pre>
+<p>A further instance variable is required to hold the picture in bitmap form:</p>
+<pre><code>  private Bitmap residencePhoto;</code></pre>
+<p>We retrieve the photo taken by the device camera in the <em>onActivityResult</em> method:</p>
+<pre><code>  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data)
+  {
+    super.onActivityResult(requestCode, resultCode, data);
+    switch (requestCode)
+    {
+      case ResidenceCameraActivity.CAMERA_RESULT :
+        if(data != null) {
+          processImage(data);
+        }
+        else {
+          Toast.makeText(this, &quot;Camera failure: check simulated camera present emulator advanced settings&quot;,
+                                Toast.LENGTH_LONG).show();
+        }
+        break;
+    }
+  }</code></pre>
+<p>For convenience, we have located the code in a private method, <em>processImage</em>:</p>
+<pre><code>  private void processImage(Intent data)
+  {
+    residencePhoto = (Bitmap) data.getExtras().get(&quot;data&quot;);
+    if(residencePhoto == null)
+    {
+      Toast.makeText(this, &quot;Attempt to take photo did not succeed&quot;, Toast.LENGTH_SHORT).show();
+    }
+    residenceImage.setImageBitmap(residencePhoto);
+  }</code></pre>
+<p>Complete set import statements:</p>
+<pre><code>import org.wit.myrent.R;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Residence Fragment</h1>
+<p>Here we provide instructions on how to wire up the camera module to the ResidenceFragment class.</p>
+<p>Add imports:</p>
+<pre><code>import static org.wit.android.helpers.CameraHelper.showPhoto;
+import android.widget.ImageView;</code></pre>
+<p>Add a static constant to represent the photo:</p>
+<pre><code>private static final int REQUEST_PHOTO = 0;</code></pre>
+<p>Create instance variables:</p>
+<pre><code>private ImageView cameraButton;
+private ImageView photoView;</code></pre>
+<p>Invoke the <em>showPhoto</em> method in <em>onStart</em>. </p>
+<ul>
+<li>Its purpose is to display the photo in the thumbnail if a photo exists.</li>
+</ul>
+<pre><code>showPhoto(getActivity(), residence, photoView);</code></pre>
+<p>Here, for reference, is the refactored <em>onStart</em> method:</p>
+<pre><code>  @Override
+  public void onStart()
+  {
+    super.onStart();
+    //display thumbnail photo
+    showPhoto(getActivity(), residence, photoView);    
+  }</code></pre>
+<p>In <em>addListeners</em>: </p>
+<ul>
+<li>Bind the camera button and thumbnail placeholder to their respective layouts:</li>
+</ul>
+<pre><code>    cameraButton = (ImageView) v.findViewById(R.id.camera_button);
+    photoView = (ImageView) v.findViewById(R.id.myrent_imageView);</code></pre>
+<ul>
+<li>Register listener for camera button:</li>
+</ul>
+<pre><code>    cameraButton.setOnClickListener(this);</code></pre>
+<p>In <em>onActivityResult</em> introduce code to:</p>
+<ul>
+<li>capture the photo filename, </li>
+<li>save this to the model and</li>
+<li>invoke a method to display the photo in a thumbnail.</li>
+</ul>
+<p>Observe that we are replacing the <em>if-else</em> structure with a <em>switch</em> statement:</p>
+<pre><code>  @Override
+  public void onActivityResult(int requestCode, int resultCode, Intent data)
+  {
+    if (resultCode != Activity.RESULT_OK)
+    {
+      return;
+    }
+    switch (requestCode)
+    {
+      case REQUEST_CONTACT:
+        String name = ContactHelper.getContact(getActivity(), data);
+        residence.tenant = name;
+        tenantButton.setText(name);
+        break;
+      case REQUEST_PHOTO:
+        String filename = data.getStringExtra(ResidenceCameraActivity.EXTRA_PHOTO_FILENAME);
+        if (filename != null)
+        {
+          residence.photo = filename;
+          showPhoto(getActivity(), residence, photoView );
+        }
+        break;
+    }
+  }</code></pre>
+<p>Respond to camera button click: add this code to <em>onClick</em>:</p>
+<pre><code>      case R.id.camera_button:
+        Intent ic = new Intent(getActivity(), ResidenceCameraActivity.class);
+        startActivityForResult(ic, REQUEST_PHOTO);
+        break;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Gallery</h1>
+<p>Add a new layout file for the gallery:</p>
+<p>File: res/layout/residence_gallery.xml</p>
+<pre><code>&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:id=&quot;@+id/FrameLayout1&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
+    android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
+    tools:context=&quot;org.wit.myrent.activities.ResidenceCameraActivity&quot; &gt;
+
+    &lt;ImageView
+        android:id=&quot;@+id/residenceGalleryImage&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;426dp&quot;
+        android:src=&quot;@mipmap/ic_launcher&quot; /&gt;
+
+&lt;/FrameLayout&gt;</code></pre>
+<p>Here is the activity code:</p>
+<p>File: org.wit.myrent.activities/ResidenceGalleryActivity.java</p>
+<pre><code>package org.wit.myrent.activities;
+
+import org.wit.myrent.R;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Portfolio;
+import org.wit.myrent.models.Residence;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import static org.wit.android.helpers.CameraHelper.showPhoto;
+
+public class ResidenceGalleryActivity extends AppCompatActivity
+{
+
+  public static   final String  EXTRA_PHOTO_FILENAME = &quot;org.wit.myrent.photo.filename&quot;;
+  private ImageView photoView;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.residence_gallery);
+    photoView = (ImageView) findViewById(R.id.residenceGalleryImage);
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    showPicture();
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item)
+  {
+    switch (item.getItemId())
+    {
+    case android.R.id.home  : onBackPressed();
+                              return true;
+    default                 : return super.onOptionsItemSelected(item);
+    }
+  }
+
+  private void showPicture()
+  {
+    Long resId = (Long)getIntent().getSerializableExtra(ResidenceFragment.EXTRA_RESIDENCE_ID);
+    MyRentApp app = (MyRentApp) getApplication();
+    Portfolio portfolio = app.portfolio;
+    Residence residence = portfolio.getResidence(resId);
+    showPhoto(this, residence,  photoView);
+  }
+}</code></pre>
+<p>The gallery activity is started by a long-press of the thumbnail in the residence fragment.
+Here are the necessary changes to ResidenceFragment:</p>
+<ul>
+<li>Add an <code>OnLongClickListener</code> interface to those already implemented, the purpose being to listen for a long-press on the thumbnail image.</li>
+</ul>
+<pre><code>
+public class ResidenceFragment extends Fragment implements 
+    TextWatcher,
+    OnCheckedChangeListener,
+    OnClickListener,
+    DatePickerDialog.OnDateSetListener,
+    View.OnLongClickListener</code></pre>
+<ul>
+<li>Register the listener in the <em>addListeners</em> method:</li>
+</ul>
+<pre><code>    photoView.setOnLongClickListener(this);</code></pre>
+<ul>
+<li>Implement the long-press listener method:</li>
+</ul>
+<pre><code>  /* ====================== longpress thumbnail ===================================*/
+  /*
+   * Long press the bitmap image to view photo in single-photo gallery
+   */
+  @Override
+  public boolean onLongClick(View v)
+  {
+    Intent i = new Intent(getActivity(), ResidenceGalleryActivity.class);
+    i.putExtra(EXTRA_RESIDENCE_ID, residence.id);
+    startActivity(i);
+    return true;
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>ResidenceFragment</h1>
+<p>For reference, here is the refactored class:</p>
+<pre><code>package org.wit.myrent.activities;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import org.wit.android.helpers.ContactHelper;
+import org.wit.android.helpers.MapHelper;
+import org.wit.myrent.R;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Portfolio;
+import org.wit.myrent.models.Residence;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.app.DatePickerDialog;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.DatePicker;
+import android.widget.EditText;
+
+import static org.wit.android.helpers.ContactHelper.sendEmail;
+import static org.wit.android.helpers.IntentHelper.navigateUp;
+import static org.wit.android.helpers.IntentHelper.startActivityWithData;
+import static org.wit.android.helpers.CameraHelper.showPhoto;
+
+import android.widget.ImageView;
+
+
+public class ResidenceFragment extends Fragment implements TextWatcher,
+    OnCheckedChangeListener,
+    OnClickListener,
+    DatePickerDialog.OnDateSetListener,
+    View.OnLongClickListener
+{
+  public static final String EXTRA_RESIDENCE_ID = &quot;myrent.RESIDENCE_ID&quot;;
+  private static final int REQUEST_CONTACT = 1;
+  private static final int REQUEST_PHOTO = 0;
+
+
+  private EditText geolocation;
+  private CheckBox rented;
+  private Button dateButton;
+  private Button tenantButton;
+  private Button reportButton;
+
+  private Residence residence;
+  private Portfolio portfolio;
+
+  String emailAddress = &quot;&quot;;
+
+  private ImageView cameraButton;
+  private ImageView photoView;
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setHasOptionsMenu(true);
+
+    UUID resId = (UUID) getActivity().getIntent().getSerializableExtra(EXTRA_RESIDENCE_ID);
+
+    MyRentApp app = (MyRentApp) getActivity().getApplication();
+    portfolio = app.portfolio;
+    residence = portfolio.getResidence(resId);
+
+  }
+
+  @Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+    super.onCreateView(inflater, parent, savedInstanceState);
+    View v = inflater.inflate(R.layout.fragment_residence, parent, false);
+
+    addListeners(v);
+    updateControls(residence);
+
+    FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.fab);
+    fab.setOnClickListener(this);
+
+    return v;
+  }
+
+  private void addListeners(View v) {
+    geolocation = (EditText) v.findViewById(R.id.geolocation);
+    dateButton = (Button) v.findViewById(R.id.registration_date);
+    rented = (CheckBox) v.findViewById(R.id.isrented);
+    tenantButton = (Button) v.findViewById(R.id.tenant);
+    reportButton = (Button) v.findViewById(R.id.residence_reportButton);
+    cameraButton = (ImageView) v.findViewById(R.id.camera_button);
+    photoView = (ImageView) v.findViewById(R.id.myrent_imageView);
+
+
+    geolocation.addTextChangedListener(this);
+    dateButton.setOnClickListener(this);
+    rented.setOnCheckedChangeListener(this);
+    tenantButton.setOnClickListener(this);
+    reportButton.setOnClickListener(this);
+    cameraButton.setOnClickListener(this);
+    photoView.setOnLongClickListener(this);
+  }
+
+  public void updateControls(Residence residence) {
+    geolocation.setText(residence.geolocation);
+    rented.setChecked(residence.rented);
+    dateButton.setText(residence.getDateString());
+  }
+
+  @Override
+  public void onStart() {
+    super.onStart();
+    //display thumbnail photo
+    showPhoto(getActivity(), residence, photoView);
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case android.R.id.home:
+        navigateUp(getActivity());
+        return true;
+      default:
+        return super.onOptionsItemSelected(item);
+    }
+  }
+
+  @Override
+  public void onPause() {
+    super.onPause();
+    portfolio.saveResidences();
+  }
+
+  @Override
+  public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    if (resultCode != Activity.RESULT_OK) {
+      return;
+    }
+    switch (requestCode) {
+      case REQUEST_CONTACT:
+        String name = ContactHelper.getContact(this, data);
+        emailAddress = ContactHelper.getEmail(this, data);
+        tenantButton.setText(name + &quot; : &quot; + emailAddress);
+        residence.tenant = name;
+        break;
+      case REQUEST_PHOTO:
+        String filename = data.getStringExtra(ResidenceCameraActivity.EXTRA_PHOTO_FILENAME);
+        if (filename != null) {
+          residence.photo = filename;
+          showPhoto(getActivity(), residence, photoView);
+        }
+        break;
+    }
+  }
+
+  @Override
+  public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+  }
+
+  @Override
+  public void onTextChanged(CharSequence s, int start, int before, int count) {
+  }
+
+  @Override
+  public void afterTextChanged(Editable c) {
+    Log.i(this.getClass().getSimpleName(), &quot;geolocation &quot; + c.toString());
+    residence.geolocation = c.toString();
+  }
+
+  @Override
+  public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+    residence.rented = isChecked;
+  }
+
+  @Override
+  public void onClick(View v) {
+    switch (v.getId()) {
+      case R.id.registration_date:
+        Calendar c = Calendar.getInstance();
+        DatePickerDialog dpd = new DatePickerDialog(getActivity(), this, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH));
+        dpd.show();
+        break;
+
+      case R.id.tenant:
+        Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+        startActivityForResult(i, REQUEST_CONTACT);
+        if (residence.tenant != null) {
+          tenantButton.setText(&quot;Tenant: &quot; + residence.tenant);
+        }
+        break;
+
+      case R.id.residence_reportButton:
+        sendEmail(getActivity(), &quot;emailAddress&quot;, getString(R.string.residence_report_subject), residence.getResidenceReport(getActivity()));
+        break;
+
+      case R.id.fab:
+        startActivityWithData(getActivity(), MapActivity.class, EXTRA_RESIDENCE_ID, residence.id);
+        break;
+
+      case R.id.camera_button:
+        Intent ic = new Intent(getActivity(), ResidenceCameraActivity.class);
+        startActivityForResult(ic, REQUEST_PHOTO);
+        break;
+    }
+  }
+
+  @Override
+  public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+    Date date = new GregorianCalendar(year, monthOfYear, dayOfMonth).getTime();
+    residence.date = date;
+    dateButton.setText(residence.getDateString());
+  }
+
+  /* ====================== longpress thumbnail ===================================*/
+  /*
+   * Long press the bitmap image to view photo in single-photo gallery
+   */
+  @Override
+  public boolean onLongClick(View v)
+  {
+    Intent i = new Intent(getActivity(), ResidenceGalleryActivity.class);
+    i.putExtra(EXTRA_RESIDENCE_ID, residence.id);
+    startActivity(i);
+    return true;
+  }
+}</code></pre>
+<h2>Test</h2>
+<p>Test the app as follows:</p>
+<ul>
+<li>Build and install on device or emulator</li>
+<li>Create a new residence</li>
+<li>Click the photo button</li>
+<li>Take a photo</li>
+<li>Save the photo</li>
+<li>Verify the photo in thumbnail in details view</li>
+<li>Long-press the thumbnail: does photo display in gallery?</li>
+<li>Return from gallery to details view using up button.</li>
+<li>Switch to residence list and back to details view: is picture still displayed?</li>
+<li>Shutdown the app and relaunch: is picture still displayed in thumbnail?</li>
+</ul>
+<p>The application at the end of this lab is available for reference here: <a href="https://github.com/wit-ictskills-2016/myrent-15.git">myrent-15</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Camera Permissions</h1>
+<p>This file contains the gist of the code required to determine if <a href="https://developer.android.com/guide/topics/permissions/index.html">permission</a> to use the camera is to be allowed or denied at runtime.</p>
+<pre><code>package org.wit.mytweet.activities;
+
+import android.support.v4.app.ActivityCompat;
+...
+...
+
+public class MyTweetCameraActivity  extends AppCompatActivity implements View.OnClickListener {
+
+
+    public static final int CAMERA_PERMISSION = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ...
+
+    }
+
+
+    @Override
+    public void onClick(View v) {
+
+        switch(v.getId())
+        {
+            case R.id.takePhoto:
+                /*-- jf 24-12-2015--*/
+                checkCameraPermission();
+                //onTakePhotoClicked(v);
+                break;
+
+            ...
+            ...
+        }
+
+    }
+
+    public void onTakePhotoClicked()  /*-- jf 24-12-2015-- removed redundant parameter*/
+    {
+        ...
+        ...
+    }
+
+    /*-- jf 24-12-2015--*/
+    /**
+     * http://stackoverflow.com/questions/32714787/android-m-permissions-onrequestpermissionsresult-not-being-called
+     * This is an override of AppCompat.onRequestPermissionsResult
+     *
+     * @param requestCode
+     * @param permissions String array of permissions requested.
+     * @param grantResults int array of results for permissions request.
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case MyTweetCameraActivity.CAMERA_RESULT : {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length &gt; 0 &amp;&amp; grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    onTakePhotoClicked();
+                }
+                break;
+            }
+        }
+    }
+
+    /**
+     * Bespoke method to check if camera permission exists.
+     * If it exists then the photo taken.
+     * Otherwise, the method AppCompat.request permissions is invoked and
+     * The response is via the callback onRequestPermissionsResult.
+     * In onRequestPermissionsResult, on successfully being granted permission photo taken.
+     * See: https://developer.android.com/training/permissions/requesting.html
+     * See: http://bit.ly/2hBUAZD
+     */
+    private void checkCameraPermission() {
+        if (ContextCompat.checkSelfPermission(this,
+            Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+
+            onTakePhotoClicked();
+        }
+        else {
+            // Invoke callback to request user-granted permission
+            ActivityCompat.requestPermissions( // If this file represents fragment replace ActivityCompat with android.support.v13.app.FragmentCompat;
+                new String[]{Manifest.permission.CAMERA},
+                CAMERA_PERMISSION);
+        }
+    }
+    /*-- jf 24-12-2015--end--*/
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<ol>
+<li>When a residence is deleted, delete its locally-saved photo (png) if it exists.</li>
+</ol>
+<h2>Challenges</h2>
+<ol>
+<li><p>When a photo is taken and saved:</p>
+<ul>
+<li>save it to the local SQLite database.</li>
+<li>save it to the server. See <a href="http://bit.ly/2gHwnoM">stackoverflow: Retrofit API to retrieve a png image</a>. </li>
+</ul>
+</li>
+<li><p>When a residence is deleted, delete the photo on the server. </p>
+</li>
+</ol>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

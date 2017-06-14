@@ -1,0 +1,809 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      9-a: Client-Service
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-13 (Client)">
+      MyRent-13 (Client)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-b-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview) /index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+          MyRent-11 (Maps - Google)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+          MyRent-11a (Maps - MapBox)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+          MyRentSQLite (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-a-myrent-12 (SQLite)/index.html">
+          MyRent-12 (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+          MyRentSQLite (ContentProvider)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service/index.html">
+          MyRent (Play Service)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service-test/index.html">
+          MyRent (JUnit Test)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+          MyRent-13 (Client)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-b-services/index.html">
+          MyRent-14 (Services)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-a/book-a-myrent-11 (Camera)/index.html">
+          MyRent-15 (Camera)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-b/book-a-crypto/index.html">
+          App Signing & Crypto
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-c/book-a-myrent-16(Mongo)/index.html">
+          MyRent-16 (Mongo)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-13 (Client)">
+        <h1>Introduction</h1>
+<p>In a previous lab we introduced an SQLite database. This allows us to retain a local copy of the data. Here we integrate the Retrofit REST client to facilitate manipulation of server-based data. The local and remote data are kept in sync. Testing is performed against localhost and Heroku deployed databases.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<p>Two completed Play apps and an Android app accompany this lab. They are available for downloading as follows:</p>
+<h4>Play apps</h4>
+
+<p>Download <a href="archive/myrent-service-2016.zip">MyRent service</a> : a server app configured to run on localhost. </p>
+<p>Download <a href="archive/myrent-service-2016.zip">JUnit tester</a> : a JUnit app used to test the server app.</p>
+<p>These two Play apps correspond to the Andoid app you will have developed at the end of this lab.</p>
+<p>To run the service (at the conclusion of the lab):</p>
+<ul>
+<li>Expand the archive.</li>
+<li>Change into the expanded folder <code>myrent-service-2016</code>.</li>
+<li>Run the command <code>play run</code></li>
+</ul>
+<p><img src="img/01.png" alt="Figure 1: Server running"></p>
+<h4>Android app:</h4>
+
+<p>Download <a href="archive/myrent.zip">MyRent Android client</a>.</p>
+<p>Figure 2 represents MyRent listview with this lab&#39;s features implemented. The only visual difference to the previous version is the presence of the refresh menu item that allows a user to manually refresh the local storage with the content of the remote database. However, significant changes to the code base will become evident as you proceed through the lab.</p>
+<p><img src="img/02.png" alt="Figure 2: MyRent listview"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Refresh menu item</h1>
+<p>Add this code to <code>res/menu/residencelist.xml</code>:</p>
+<pre><code>  &lt;item
+      android:id=&quot;@+id/action_refresh&quot;
+      android:icon=&quot;@android:drawable/ic_menu_rotate&quot;
+      app:showAsAction=&quot;always&quot;
+      android:title=&quot;@string/refresh&quot;/&gt;</code></pre>
+<p>Add the referenced string to <code>res/values/strings.xml</code>:</p>
+<pre><code>  &lt;string name=&quot;refresh&quot;&gt;Refresh Residence List&lt;/string&gt;</code></pre>
+<p>Build and run the app: the rotate icon should now be visible in the list view as shown in Figure 2 in the previous step.</p>
+<p>We shall now wire up this menu item and add some skeleton code to allow basic testing. In the file ResidenceListFragment.java add a new item to the method <code>onOptionsItemSelected</code>:</p>
+<pre><code>      case R.id.action_refresh:
+        retrieveResidences(); 
+        return true;</code></pre>
+<p>Add skeleton code for the <code>retrieveResidences</code> method:</p>
+<pre><code>
+  public void retrieveResidences() {
+      Toast.makeText(getActivity(), &quot;Retrieving residence list&quot;, Toast.LENGTH_SHORT).show();
+  }</code></pre>
+<p>Toast requires importing:</p>
+<pre><code>import android.widget.Toast;</code></pre>
+<p>Test that pressing the menu item published the toast message.</p>
+<p>Later, we shall complete the implementation of <code>retrieveResidences</code>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Retrofit setup</h1>
+<p>Here is the official documentation on the Retrofit client:</p>
+<p><a href="http://square.github.io/retrofit/">Retrofit - Square Open Source</a>.</p>
+<p>We shall now integrate this feature.</p>
+<p>Add these dependencies to build.gradle (Module: app) and sync the project as prompted at the top of the gradle file:</p>
+<pre><code>    compile &#39;com.squareup.retrofit:retrofit:2.0.0-beta2&#39;
+    compile &#39;com.squareup.retrofit:converter-gson:2.0.0-beta2&#39;
+    compile &#39;com.squareup.okhttp:okhttp:2.4.0&#39;
+    compile &#39;com.google.code.gson:gson:2.4&#39;</code></pre>
+<p>In Android Studio&#39;s project window add a package <code>retrofit</code>. </p>
+<p><img src="img/03.png" alt="Figure 1: retrofit package added"></p>
+<p>In this new package create a class ResidenceServiceProxy.java containing the following content:</p>
+<pre><code>
+package org.wit.myrent.retrofit;
+
+import org.wit.myrent.models.Residence;
+
+import java.util.List;
+
+import retrofit.Call;
+import retrofit.http.Body;
+import retrofit.http.DELETE;
+import retrofit.http.GET;
+import retrofit.http.POST;
+import retrofit.http.Path;
+
+public interface ResidenceServiceProxy
+{
+  @POST(&quot;/api/residence&quot;)
+  Call&lt;Residence&gt; createResidence(@Body Residence residence);
+
+  @DELETE(&quot;/api/residences/{id}&quot;)
+  Call&lt;String&gt; deleteResidence(@Path(&quot;id&quot;) Long id);
+
+  @POST(&quot;/api/residence/update&quot;)
+  Call&lt;Residence&gt; updateResidence(@Body Residence residence);
+
+  @GET(&quot;/api/residences&quot;)
+  Call&lt;List&lt;Residence&gt;&gt; getResidences();
+
+}</code></pre>
+<p>Sync the project. It should remain error free.</p>
+<p>Study the content of this interface and compare it to the routes file in the Play server app downloaded earlier in the project and shown here in Figure 2.</p>
+<p><img src="img/04.png" alt="Figure 2: myrent-service-2016 routes file"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>MyRentApp</h1>
+<p>Add imports:</p>
+<pre><code>import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.squareup.okhttp.OkHttpClient;
+import org.wit.myrent.retrofit.ResidenceServiceProxy;
+import java.util.concurrent.TimeUnit;
+import retrofit.GsonConverterFactory;
+import retrofit.Retrofit;</code></pre>
+<p>Define a localhost url:</p>
+<pre><code>
+  public String service_url = &quot;http://10.0.2.2:9000&quot;; //Android Emulator</code></pre>
+<p>Alternatively use the service on Heroku:</p>
+<pre><code>  public String service_url = &quot;https://myrent-service-2016.herokuapp.com/&quot;;</code></pre>
+<p>This latter will be the one to use if you are testing on a physical device as accessing localhost may be problematic (discovering the full ip address to use).</p>
+<p>Define a proxy field:</p>
+<pre><code>  public ResidenceServiceProxy residenceService;</code></pre>
+<p>Initialize the proxy in <code>onCreate</code>:</p>
+<pre><code>
+    Gson gson = new GsonBuilder().create();
+    Retrofit retrofit = new Retrofit.Builder()
+        .baseUrl(service_url)
+        .addConverterFactory(GsonConverterFactory.create(gson))
+        .build();
+
+    residenceService = retrofit.create(ResidenceServiceProxy.class);</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Create</h1>
+<p>Here we shall create a Residence object and transmit it across the network to be saved in the database on the server.</p>
+<p>Presently, in the method <code>onOptionsItemSelected</code>, a new Residence object is created as a reponse to the menu item (+) selection and this object is saved to the local database. See Figure 1.</p>
+<p><img src="img/05.png" alt="Figure 1: Default Residence instantiation"></p>
+<p>Additionally, we shall now save the Residence object across the network. But first change the ResidenceListFragment header so as to implement the Retrofit interface Callback, using Residence as a parameter, and implement the interface&#39;s methods <code>onResponse</code> and <code>onFailure</code>:</p>
+<pre><code>
+public class ResidenceListFragment extends ListFragment implements
+    OnItemClickListener,
+    AbsListView.MultiChoiceModeListener,
+    Callback&lt;Residence&gt;</code></pre>
+<pre><code>
+  @Override
+  public void onResponse(Response&lt;Residence&gt; response, Retrofit retrofit) {
+
+  }
+
+  @Override
+  public void onFailure(Throwable t) {
+
+  }</code></pre>
+<p>These import statements are required:</p>
+<pre><code>import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.Retrofit;</code></pre>
+<p>We shall shortly complete the implementation of the above two methods.</p>
+<p>Add this statement immediately following <code>portfolio.addResidence(residence)</code> in <code>onOptionsItemSelected</code>:</p>
+<pre><code>createResidence(residence);</code></pre>
+<p>Implement <code>createResidence</code>. It sends an an asynchronous request to the server and elicits a response which is handled by one of of the two methods, <code>onResponse</code>, <code>onFailure</code>.</p>
+<pre><code>  public void createResidence(Residence res) {
+    Call&lt;Residence&gt; call = app.residenceService.createResidence(res);
+    call.enqueue(this);
+  }</code></pre>
+<p>Here are the the fully implemented Callback methods:</p>
+<pre><code>  @Override
+  public void onResponse(Response&lt;Residence&gt; response, Retrofit retrofit) {
+    Residence returnedResidence = response.body();
+    if (returnedResidence != null) {
+      Toast.makeText(getActivity(), &quot;Residence created successfully&quot;, Toast.LENGTH_SHORT).show();
+    }
+    else {
+      Toast.makeText(getActivity(), &quot;Residence null object returned due to incorrectly configured client&quot;, Toast.LENGTH_SHORT).show();
+
+    }
+
+  }
+
+  @Override
+  public void onFailure(Throwable t) {
+    Toast.makeText(getActivity(), &quot;Failed to create residence due to unknown network issue&quot;, Toast.LENGTH_SHORT).show();
+
+  }</code></pre>
+<p>Test as follows:</p>
+<ol>
+<li>Start the service: myrent-service-2016.</li>
+<li>Build and deploy MyRent apk to the emulator or physical device.</li>
+<li>Create a new Residence.</li>
+<li>Use the Toast message generated within one of the Callback methods to determine if the new Residence object has been successfully saved to the server database.</li>
+</ol>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Update</h1>
+<p>When a new Residence is created or an existing Residence in the list view is clicked, then the app switches to the Residence details view. In the case of a new residence, the default state is shown. On pressing the up button the app switches back to the list view and in doing so the state of the residence object is updated locally in the SQLite database. Here we shall mimic this behaviour across the network.</p>
+<h4>ResidenceFragment</h4>
+
+<p>Add these import statements:</p>
+<pre><code>import android.widget.Toast;
+
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.Retrofit;</code></pre>
+<p>Change the class header so that it implements <code>Callback</code> interface:</p>
+<pre><code>public class ResidenceFragment extends Fragment implements TextWatcher,
+    OnCheckedChangeListener,
+    OnClickListener,
+    DatePickerDialog.OnDateSetListener,
+    View.OnLongClickListener,
+    Callback&lt;Residence&gt;</code></pre>
+<p>This necessitates implementation of the interface&#39;s methods:</p>
+<pre><code>  @Override
+  public void onResponse(Response&lt;Residence&gt; response, Retrofit retrofit) {
+
+  }
+
+  @Override
+  public void onFailure(Throwable t) {
+
+  }</code></pre>
+<p>Write a new method called <code>updateResidence</code> and invoke it in <code>onPause</code>:</p>
+<pre><code>  public void updateResidence(Residence res) {
+    Call&lt;Residence&gt; call = app.residenceService.updateResidence(res);
+    call.enqueue(this);
+  }</code></pre>
+<pre><code>  @Override
+  public void onPause() {
+    super.onPause();
+    updateResidence(residence);
+    portfolio.updateResidence(residence);
+  }</code></pre>
+<p>Here is the full implementation of the interface methods:</p>
+<pre><code>  @Override
+  public void onResponse(Response&lt;Residence&gt; response, Retrofit retrofit) {
+    Residence returnedResidence = response.body();
+    if (returnedResidence != null) {
+      Toast.makeText(getActivity(), &quot;Residence updated successfully&quot;, Toast.LENGTH_SHORT).show();
+    }
+    else {
+      Toast.makeText(getActivity(), &quot;Update failed. Residence null returned due to incorrectly configured client&quot;, Toast.LENGTH_SHORT).show();
+
+    }
+  }
+
+  @Override
+  public void onFailure(Throwable t) {
+    Toast.makeText(getActivity(), &quot;Failed to update residence due to unknown network issue&quot;, Toast.LENGTH_SHORT).show();
+
+  }</code></pre>
+<p>Test by building, installing the apk, creating a new app which renders the details view and then switching back to the list view. Check the correct Toast message is displayed. </p>
+<ul>
+<li>Make some changes in the details view and switch to the listview. Have the changes persisted?</li>
+<li>Shut down the app and relaunch. Is the listview displaying correctly?</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Delete</h1>
+<h4>ResidenceListFragment</h4>
+
+<p>We have already in place a method to delete a selection of residences:</p>
+<p><img src="img/06.png" alt="Figure 1: MultiChoiceModeListener method and helper to delete residence objects"></p>
+<p>We shall now add functionality to delete residences across the network.</p>
+<p>We have already implemented the Callback interface by refactoring the class header. This implementation has been applied to updating a Residence object. Consequently it is necessary to adopt a slightly different approach to delete a residence. We shall create an inner class named DeleteRemoteResidence and implement the Callback interface on this class. Its methods will then be used to handle to response from the delete network call.</p>
+<p>Invoke a method named <code>deleteResidence</code> within the private helper method <code>deleteResidence</code> which then becomes:</p>
+<pre><code>  private void deleteResidence(ActionMode actionMode) {
+    for (int i = adapter.getCount() - 1; i &gt;= 0; i--) {
+      if (listView.isItemChecked(i)) {
+        Residence residence = adapter.getItem(i);
+        portfolio.deleteResidence(residence);
+        deleteResidence(residence.id);
+      }
+    }
+    actionMode.finish();
+    adapter.notifyDataSetChanged();
+  }</code></pre>
+<p>Implement the new <code>deleteResidence</code> method:</p>
+<pre><code>  public void deleteResidence(String id) {
+    DeleteRemoteResidence delResidence = new DeleteRemoteResidence();
+    Call&lt;String&gt; call = app.residenceService.deleteResidence(id);
+    call.enqueue(delResidence);
+  }</code></pre>
+<p>DeleteRemoteResidence is an inner class we define here and that implements the Callback interface:</p>
+<pre><code>class DeleteRemoteResidence implements Callback&lt;String&gt; {
+
+}</code></pre>
+<p>This necessitates implementing the interface&#39;s methods:</p>
+<pre><code>    @Override
+    public void onResponse(Response&lt;String&gt; response, Retrofit retrofit) {
+
+    }
+
+    @Override
+    public void onFailure(Throwable t) {
+
+    }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Refresh</h1>
+<h4>ResidenceListFragment</h4>
+
+<p>The final feature we shall implement is the ability to refresh the local data store with the content of the server-side database. This wil be achieved by engaging the menu item (represented by the rotate icon) that we partially implemented earlier in the lab. We shall complete development of this feature now. And in a later lab we shall demonstrate how the process may be automated using a timer or a service.</p>
+<p>The approach is similar to that employed for deletion:</p>
+<ul>
+<li>Complete the implementation of <code>retrieveResidences</code>.</li>
+<li>Develop an inner class, <code>RetrieveResidences</code>, that implements the Callback interface and its methods.</li>
+</ul>
+<p>Here is the code:</p>
+<pre><code>  public void retrieveResidences() {
+    RetrieveResidences retrieveResidences = new RetrieveResidences();
+    Call&lt;List&lt;Residence&gt;&gt; call = app.residenceService.getResidences();
+    call.enqueue(retrieveResidences);
+  }</code></pre>
+<pre><code>  class RetrieveResidences implements Callback&lt;List&lt;Residence&gt;&gt;
+  {
+    @Override
+    public void onResponse(Response&lt;List&lt;Residence&gt;&gt; response, Retrofit retrofit) {
+      List&lt;Residence&gt; listRes = response.body();
+      Toast.makeText(getActivity(), &quot;Retrieved &quot; + listRes.size() + &quot; residences&quot;, Toast.LENGTH_SHORT).show();
+      portfolio.refreshResidences(listRes);
+      ((ResidenceAdapter) getListAdapter()).notifyDataSetChanged();
+    }
+
+    @Override
+    public void onFailure(Throwable t) {
+      Toast.makeText(getActivity(), &quot;Failed to retrieve residence list&quot;, Toast.LENGTH_SHORT).show();
+    }
+  }</code></pre>
+<p>This code will not compile because the Portfolio method invoked in <code>onResponse</code> does not exist. Here it is:</p>
+<pre><code>  /**
+   * Clear local and sqlite residences and refresh with incoming list.
+   * @param residences List residence objects
+   */
+  public void refreshResidences(List&lt;Residence&gt; residences)
+  {
+    dbHelper.deleteResidences();
+    this.residences.clear();
+
+    dbHelper.addResidences(residences);
+
+    for (int i = 0; i &lt; residences.size(); i += 1) {
+      this.residences.add(residences.get(i));
+    }
+  }</code></pre>
+<p>Test as follows:</p>
+<ol>
+<li>Create a series of residences.</li>
+<li>Use Postman to view the residences on the server database.</li>
+<li>Use Postman to delete a subset of the residences.</li>
+<li>Refresh the residence list on the MyRent app. The resulting number of list items (residences) should correspond to that displayed in Postman.</li>
+</ol>
+<p><img src="img/07.png" alt="Figure 1: Using Postman to check the refresh feature"></p>
+<p>The application at the end of this lab is available for reference here: <a href="https://github.com/wit-ictskills-2016/myrent-13.git">myrent-13</a></p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

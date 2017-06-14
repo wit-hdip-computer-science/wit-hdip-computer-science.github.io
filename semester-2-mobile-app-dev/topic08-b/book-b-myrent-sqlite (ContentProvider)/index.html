@@ -1,0 +1,1493 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      8-b: Content provider
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRentSQLite (ContentProvider)">
+      MyRentSQLite (ContentProvider)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="10">
+      10
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-b-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview) /index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+          MyRent-11 (Maps - Google)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+          MyRent-11a (Maps - MapBox)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+          MyRentSQLite (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-a-myrent-12 (SQLite)/index.html">
+          MyRent-12 (SQLite)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+          MyRentSQLite (ContentProvider)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service/index.html">
+          MyRent (Play Service)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service-test/index.html">
+          MyRent (JUnit Test)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+          MyRent-13 (Client)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-b-services/index.html">
+          MyRent-14 (Services)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-a/book-a-myrent-11 (Camera)/index.html">
+          MyRent-15 (Camera)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-b/book-a-crypto/index.html">
+          App Signing & Crypto
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-c/book-a-myrent-16(Mongo)/index.html">
+          MyRent-16 (Mongo)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRentSQLite (ContentProvider)">
+        <h1>ContentProvider</h1>
+<p>In the MyRent series of labs we first used file storage as a means of data persistence. We then replaced this with a database. Here we shall open up this database to other applications using Android&#39;s ContentProvider.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction</h1>
+<p>In this lab we continue from the end of MyRentSQLite, a cut-back version of the MyRent app we have been developing during the past several labs. We have provided an alternative to the file system for data storage in the form of an SQLite database. This added feature, however, is accessible only from within its containing app (MyRentSQLite). Here we shall refactor the app so that its data is accessible not only to the host application but also to other applications installed on the same device. </p>
+<p>The Android class ContentProvider constitutes the basic building block for this new feature.</p>
+<p>We shall test the new feature in two ways. First we shall verify that if works correctly when exercised by MyRentSQLite. Then we shall develop a very simple Android test app to to read the MyRent database.</p>
+<p>The code developed to the end of the previous lab (MyRentSQLite) is available to download: <a href="https://github.com/wit-ictskills-2016/myrent-sqlite.git">MyRentSQLite</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Project organization</h1>
+<h2>Packages</h2>
+<p>Refactor the <em>sqlite.myrentsqlite</em> packaging as shown in Figure 1.</p>
+<p><img src="img/01.png" alt="Figure 1: Refactored packaging"></p>
+<p>Locate the files as follows:</p>
+<ul>
+<li>activities: MyRent</li>
+<li>app: MyRentApp</li>
+<li>models: Residence</li>
+<li>providers: DbHelper</li>
+</ul>
+<p>At this point both <em>services</em> and <em>cloud</em> packages are empty.</p>
+<h2>Constants</h2>
+<p>We shall follow best practice, move the constants from the DbHelper class and locate them in a separate class <em>ResidenceContract</em> located in the <em>providers</em> package.</p>
+<p>We have encountered most of the constants in the SQLite lab. The additional constants such as AUTHORITY, CONTENT_URI and so on, relate to implementing ContentProvider. </p>
+<p>Much of this module has been influenced by Chapter 11 from <a href="http://shop.oreilly.com/product/0636920023456.do">Learning Android, 2nd Edition</a> where, for example, detailed explanations are provided on the roles of the various constants. We deal with these also in the accompanying presentation. </p>
+<pre><code>package sqlite.myrentsqlite.providers;
+
+import android.net.Uri;
+import android.provider.BaseColumns;
+
+/**
+ * Created by jfitzgerald on 18/07/2016.
+ */
+public class ResidenceContract
+{
+  // Database specific constants
+
+  static final String TAG = &quot;ResidenceContract&quot;;
+  static final String DATABASE_NAME = &quot;residences.db&quot;;
+  static final int DATABASE_VERSION = 1;
+  static final String TABLE_RESIDENCES = &quot;tableResidences&quot;;
+
+  // Provider specific constants
+  public static final String AUTHORITY = &quot;sqlite.myrentsqlite.providers.ResidenceProvider&quot;;
+  public static final Uri CONTENT_URI = Uri.parse(&quot;content://&quot; + AUTHORITY + &quot;/&quot; + TABLE_RESIDENCES);
+  public static final int RESIDENCE_ITEM = 1;
+  public static final int RESIDENCE_DIR = 2;
+  public static final String STATUS_TYPE_ITEM = &quot;vnd.android.cursor.item/vnd.sqlite.myrentsqlite.providers.provider.status&quot;;
+  public static final String STATUS_TYPE_DIR = &quot;vnd.android.cursor.dir/vnd.sqlite.myrentsqlite.providers.provider.status&quot;;
+  public static final String DEFAULT_SORT = Column.DATE + &quot; DESC&quot;;
+
+  public class Column
+  {
+    public static final String ID = BaseColumns._ID;
+    public static final String UUID = &quot;uuid&quot;;
+    public static final String GEOLOCATION = &quot;geolocation&quot;;
+    public static final String DATE = &quot;date&quot;;
+    public static final String RENTED = &quot;rented&quot;;
+    public static final String TENANT = &quot;tenant&quot;;
+    public static final String ZOOM = &quot;zoom&quot;;
+    public static final String PHOTO = &quot;photo&quot;;
+  }
+
+}</code></pre>
+<h2>DbHelper</h2>
+<p>Remove all code from DbHelper other than <em>onCreate</em> and <em>onUpgrade</em>.</p>
+<p>Here is the refactored class.</p>
+<pre><code>package sqlite.myrentsqlite.providers;
+
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+public class DbHelper extends SQLiteOpenHelper
+{
+  static final String TAG = &quot;DbHelper&quot;;
+
+  public DbHelper(Context context) {
+    super(context, ResidenceContract.DATABASE_NAME, null, ResidenceContract.DATABASE_VERSION);
+  }
+
+  @Override
+  public void onCreate(SQLiteDatabase db) {
+
+    db.execSQL(&quot;CREATE TABLE &quot;
+        + ResidenceContract.TABLE_RESIDENCES + &quot; (&quot;
+        + ResidenceContract.Column.ID + &quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,&quot;
+        + ResidenceContract.Column.UUID + &quot; TEXT,&quot;
+        + ResidenceContract.Column.GEOLOCATION + &quot; TEXT,&quot;
+        + ResidenceContract.Column.DATE + &quot; TEXT,&quot;
+        + ResidenceContract.Column.RENTED + &quot; TEXT,&quot;
+        + ResidenceContract.Column.TENANT + &quot; TEXT,&quot;
+        + ResidenceContract.Column.ZOOM + &quot; TEXT,&quot;
+        + ResidenceContract.Column.PHOTO + &quot; TEXT&quot;
+        + &quot;);&quot;);
+  }
+
+  /**
+   * Invoked when schema changed.
+   * This determined by comparison existing version and old version.
+   *
+   * @param db         The SQLite database
+   * @param oldVersion The previous database version number.
+   * @param newVersion The current database version number.
+   */
+  @Override
+  public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    db.execSQL(&quot;drop table if exists &quot; + ResidenceContract.TABLE_RESIDENCES);
+    Log.d(TAG, &quot;onUpdated&quot;);
+    onCreate(db);
+  }
+}</code></pre>
+<h2>MyRentApp</h2>
+<p>Previously we maintained an instance of DbHelper in the application class. We will move this to a ContentProvider subclass, dealt with in a future step.</p>
+<p>Here is the refactored MyRentApp.</p>
+<pre><code>package sqlite.myrentsqlite.app;
+
+import android.app.Application;
+import android.util.Log;
+
+public class MyRentApp extends Application
+{
+  static final String TAG = &quot;MyRentApp&quot;;
+
+  private static MyRentApp app;
+  @Override
+  public void onCreate()
+  {
+    super.onCreate();
+    Log.d(TAG, &quot;MyRent app launched&quot;);
+    app = this;
+  }
+
+  public static MyRentApp getApp(){
+    return app;
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Model</h1>
+<p>We introduce an overloaded Residence constructor as shown below. Observe that for self-documenting purposes we have changed the name of the UUID field.</p>
+<pre><code>package sqlite.myrentsqlite.models;
+
+import java.util.Date;
+
+public class Residence
+{
+  public UUID uuid;
+  public Date date;
+  public String geolocation;
+  public boolean rented;
+  public String tenant;
+  public double zoom;//zoom level of accompanying map
+  public String photo;
+
+
+  public Residence()
+  {
+    uuid = UUID.randomUUID();
+    geolocation = &quot;52.253456,-7.187162&quot;;
+    date = new Date();
+    rented = false;
+    tenant = &quot;: none presently&quot;;
+    zoom = 16.0;
+    photo = &quot;photo&quot;;
+  }
+
+  public Residence(String geolocation, boolean rented, String tenant, double zoom, String photo)
+  {
+    uuid = UUID.randomUUID();
+    this.geolocation = geolocation;
+    date = new Date();
+    this.rented = rented;
+    this.tenant = tenant;
+    this.zoom = zoom;
+    this.photo = photo;
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>ResidenceProvider</h1>
+<p>This class is the fundamental building block of the new feature.</p>
+<p>It will contain a DbHelper field and four key methods:</p>
+<ol>
+<li>insert</li>
+<li>query</li>
+<li>delete</li>
+<li>update</li>
+</ol>
+<p>We shall develop the application incrementally in the order listed.</p>
+<p>Here is <em>providers/ResidenceProvider</em> containing essential boilerplate and the <em>insert</em> method.</p>
+<pre><code>package sqlite.myrentsqlite.providers;
+
+import android.content.ContentProvider;
+import android.content.ContentUris;
+import android.content.ContentValues;
+import android.content.UriMatcher;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteQueryBuilder;
+import android.net.Uri;
+import android.support.annotation.Nullable;
+import android.text.TextUtils;
+import android.util.Log;
+
+/**
+ * Created by jfitzgerald on 18/07/2016.
+ * Adapted from code in Learning Android Edition 2
+ * Authors: Gargenta &amp; Nakamura
+ */
+public class ResidenceProvider extends ContentProvider
+{
+  private static final String TAG = &quot;ResidenceProvider&quot;;
+  private DbHelper dbHelper;
+
+  private static final UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
+
+  static {
+    uriMatcher.addURI(ResidenceContract.AUTHORITY, ResidenceContract.TABLE_RESIDENCES, ResidenceContract.RESIDENCE_DIR);
+    uriMatcher.addURI(ResidenceContract.AUTHORITY, ResidenceContract.TABLE_RESIDENCES + &quot;/#&quot;, ResidenceContract.RESIDENCE_ITEM);
+  }
+
+  @Override
+  public boolean onCreate() {
+
+    dbHelper = new DbHelper(getContext());
+    Log.d(TAG, &quot;onCreated&quot;);
+    return true;
+  }
+
+  @Nullable
+  @Override
+  public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
+    return null;
+  }
+
+  @Nullable
+  @Override
+  public String getType(Uri uri) {
+    return null;
+  }
+
+  @Nullable
+  @Override
+  public Uri insert(Uri uri, ContentValues values) {
+    Uri retUri = null;
+    // Assert correct uri
+    if (uriMatcher.match(uri) != ResidenceContract.RESIDENCE_DIR) {
+      throw new IllegalArgumentException(&quot;Illegal uri: &quot; + uri);
+    }
+    SQLiteDatabase db = dbHelper.getWritableDatabase();
+    long rowId = db.insertWithOnConflict(ResidenceContract.TABLE_RESIDENCES, null, values, SQLiteDatabase.CONFLICT_IGNORE);
+    // Was insert successful?
+    if (rowId != -1) {
+      retUri = ContentUris.withAppendedId(uri, rowId);
+      Log.d(TAG, &quot;inserted uri: &quot; + retUri);
+      // Notify that data for this uri has changed
+      getContext().getContentResolver()
+          .notifyChange(uri, null);
+    }
+    return retUri;
+  }
+
+  @Override
+  public int delete(Uri uri, String selection, String[] selectionArgs) {
+    return 0;
+  }
+
+  @Override
+  public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
+    return 0;
+  }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>RefreshResidenceService</h1>
+<p>Here we introduce a service. This topic will be the subject of a separate future lab where it will be explained in greater detail.</p>
+<p>The class RefreshResidenceService subclasses the Android <a href="https://developer.android.com/reference/android/app/IntentService.html">IntentService</a>. Requests sent to the service are run on a worker thread and routed through <em>onHandleIntent</em> unless <em>onStartCommand</em> is overridden in which case the request is processed on the main thread. To facilitate debugging we shall work on the main thread.</p>
+<p>Add this code to the manifest file before the closing <code>&lt;/manifest&gt;</code> tag to allow the service to start:</p>
+<pre><code>    &lt;service 
+      android:name=&quot;sqlite.myrentsqlite.services.RefreshResidenceService&quot;
+      android:exported=&quot;true&quot;/&gt;</code></pre>
+<p>Here is the boilerplate service code that includes invoking the provider <em>insert</em> method. Note the presence of a ResidenceCloud object. This is a simple simulation of a cloud service. The code is presented at the end of this page.</p>
+<pre><code>package sqlite.myrentsqlite.services;
+
+import android.app.IntentService;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
+import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import sqlite.myrentsqlite.cloud.ResidenceCloud;
+import sqlite.myrentsqlite.models.Residence;
+import sqlite.myrentsqlite.providers.ResidenceContract;
+
+/**
+ * Created by jfitzgerald on 18/07/2016.
+ */
+public class RefreshResidenceService extends IntentService
+{
+  public static final String TAG = &quot;RefreshResidenceService&quot;;
+  public static final String REFRESH = &quot;refresh residence&quot;;
+  public static final String ADD_RESIDENCE = &quot;1&quot;;
+  public static final String SELECT_RESIDENCE = &quot;2&quot;;
+  public static final String DELETE_RESIDENCE = &quot;3&quot;;
+  public static final String SELECT_ALL_RESIDENCES = &quot;4&quot;;
+  public static final String DELETE_RESIDENCES = &quot;5&quot;;
+  public static final String UPDATE_RESIDENCE = &quot;6&quot;;
+
+  ResidenceCloud cloud = new ResidenceCloud();
+
+  /**
+   * Zero argument constructor required
+   */
+  public RefreshResidenceService() {
+    super(&quot;RefreshResidenceService&quot;);
+  }
+
+  /**
+   * @param name Used to name the worker thread, important only for debugging.
+   */
+  public RefreshResidenceService(String name) {
+    super(name);
+  }
+
+  @Override
+  public int onStartCommand(Intent intent, int flags, int startId) {
+    String value = intent.getStringExtra(REFRESH);
+    switch (value) {
+
+      case ADD_RESIDENCE:
+        addResidence(new Residence());
+        break;
+    }
+
+    return START_STICKY;
+  }
+
+  private void addResidence(Residence residence) {
+    ContentValues values = new ContentValues();
+
+    values.put(ResidenceContract.Column.UUID, residence.uuid.toString());
+    values.put(ResidenceContract.Column.GEOLOCATION, residence.geolocation);
+    values.put(ResidenceContract.Column.DATE, String.valueOf(residence.date.getTime()));
+    values.put(ResidenceContract.Column.RENTED, residence.rented == true ? &quot;yes&quot; : &quot;no&quot;);
+    values.put(ResidenceContract.Column.TENANT, residence.tenant);
+    values.put(ResidenceContract.Column.ZOOM, Double.toString(residence.zoom));
+    values.put(ResidenceContract.Column.PHOTO, residence.photo);
+
+    Uri uri = getContentResolver().insert(
+        ResidenceContract.CONTENT_URI, values);
+  }
+
+  @Override
+  protected void onHandleIntent(Intent intent) {
+    Log.d(TAG, &quot;onHandleIntent invoked&quot;);
+  }
+
+}</code></pre>
+<p>Create a package sqlite.myrentsqlite.cloud. This is home to a simulated cloud service. This uses the newly added model Residence overloaded constructor.
+Create a class ResidenceCloud with the following content:</p>
+<pre><code>package sqlite.myrentsqlite.cloud;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import sqlite.myrentsqlite.models.Residence;
+
+/**
+ * Created by jfitzgerald on 18/07/2016.
+ * Simulated cloud
+ */
+public class ResidenceCloud
+{
+  public static Residence residence() {
+    return new Residence(&quot;52.4444,-7.187162&quot;, true, &quot;Barney Gumble&quot;, 12.0, &quot;photo1.jpeg&quot;);
+  }
+
+  public static List&lt;Residence&gt; residences() {
+    ArrayList&lt;Residence&gt; list = new ArrayList&lt;&gt;();
+
+    list.add(new Residence(&quot;52.4444,-7.187162&quot;, true, &quot;Barney Gumble&quot;, 12.0, &quot;photo1.jpeg&quot;));
+    list.add(new Residence(&quot;52.3333,-7.187162&quot;, true, &quot;Ned Flanders&quot;, 16.0, &quot;photo2.jpeg&quot;));
+
+    return list;
+  }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Layout and Activity</h1>
+<p>We shall use adapt the MyRent activity from the previous lab. The layout remains the same other than the elimination of the Get RowId.</p>
+<p>Here is the MyRent activity code. Previous references to RowId have been deleted. The event handler methods have been retained with empty bodies as placeholders. The exception is the <em>addResidence</em> method where the RefreshResidenceService is started and configured to insert the Residence record into the SQLite database:</p>
+<p>Filename: <em>activities/MyRent.java</em></p>
+<pre><code>package sqlite.myrentsqlite.activities;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import sqlite.myrentsqlite.R;
+import sqlite.myrentsqlite.services.RefreshResidenceService;;
+
+
+public class MyRent extends AppCompatActivity implements View.OnClickListener
+{
+
+  private Button addResidence;
+  private Button selectResidence;
+  private Button deleteResidence;
+  private Button selectAllResidences;
+  private Button deleteAllResidences;
+  private Button updateResidence;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_myrent);
+
+    addResidence = (Button) findViewById(R.id.addResidence);
+    addResidence.setOnClickListener(this);
+
+    selectResidence = (Button) findViewById(R.id.selectResidence);
+    selectResidence.setOnClickListener(this);
+
+    deleteResidence = (Button) findViewById(R.id.deleteResidence);
+    deleteResidence.setOnClickListener(this);
+
+    selectAllResidences = (Button) findViewById(R.id.selectAllResidences);
+    selectAllResidences.setOnClickListener(this);
+
+    deleteAllResidences = (Button) findViewById(R.id.deleteAllResidences);
+    deleteAllResidences.setOnClickListener(this);
+
+    updateResidence = (Button) findViewById(R.id.updateResidence);
+    updateResidence.setOnClickListener(this);
+
+  }
+
+  @Override
+  public void onClick(View v) {
+    switch (v.getId()) {
+      case R.id.addResidence:
+        addResidence();
+        break;
+
+      case R.id.selectResidence:
+        selectResidence();
+        break;
+
+      case R.id.deleteResidence:
+        deleteResidence();
+        break;
+
+      case R.id.selectAllResidences:
+        selectAllResidences();
+        break;
+
+      case R.id.deleteAllResidences:
+        deleteAllResidences();
+        break;
+
+      case R.id.updateResidence:
+        updateResidence();
+        break;
+
+    }
+  }
+
+  /**
+   * Start a RefreshResidence service, passing the intent message ADD_RESIDENCE
+   * This determines what functionality is invoked in the service.
+   */
+  private void addResidence() {
+    Intent intent = new Intent(getBaseContext(), RefreshResidenceService.class);
+    intent.putExtra(RefreshResidenceService.REFRESH, RefreshResidenceService.ADD_RESIDENCE);
+    startService(intent);
+  }
+
+  /**
+   * Select a single Residence record
+   */
+  public void selectResidence() {
+
+  }
+
+  /**
+   * Select all Residence records
+   */
+  public void selectAllResidences() {
+
+  }
+
+  public void deleteResidence() {
+
+  }
+
+  /**
+   * Delete all records.
+   */
+  public void deleteAllResidences() {
+
+  }
+
+  /**
+   * Update a residence record.
+   */
+  public void updateResidence() {
+
+  }
+
+}</code></pre>
+<p>Before testing, ensure that the manifest in MySQLite has set the permission to allow its database access from another app. This is achieved by adding an attribute <em>android:exported=&quot;true&quot;</em> to the <em>provider</em> node as shown here:</p>
+<pre><code>...
+...
+    &lt;provider
+      android:name=&quot;sqlite.myrentsqlite.providers.ResidenceProvider&quot;
+      android:authorities=&quot;sqlite.myrentsqlite.providers.ResidenceProvider&quot;
+      android:exported=&quot;true&quot;/&gt;
+
+  &lt;/application&gt;</code></pre>
+<p>And most importantly, declare the service in the manifest. Without doing so the service will not start and no warning will be provided.</p>
+<pre><code>    &lt;service android:name=&quot;sqlite.myrentsqlite.services.RefreshResidenceService&quot;/&gt;</code></pre>
+<p>Build and run the application. Press the Add Residence button. Create an appropriate log filter, for example as shown in Figure 2. Observe the output on the <strong>logcat</strong> window. If should include something like that shown in Figure 1.</p>
+<p><img src="img/02.png" alt="Figure 1: LogCat output"></p>
+<p>Check the database content using the <em>adb shell</em> command.</p>
+<p><img src="img/06.png" alt="Figure 2: Log filter to observe ResidenceProvider output"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>query</h1>
+<p>We have fully implemented <em>insert</em> in the previous steps. Here we implement the <em>query</em> functionality.</p>
+<h2>Activity</h2>
+<pre><code>
+  /**
+   * Select a single Residence record
+   */
+  public void selectResidence() {
+    Intent intent = new Intent(getBaseContext(), RefreshResidenceService.class);
+    intent.putExtra(RefreshResidenceService.REFRESH, RefreshResidenceService.SELECT_RESIDENCE);
+    startService(intent);
+  }
+
+
+  /**
+   * Select all Residence records
+   */
+  public void selectAllResidences() {
+    Intent intent = new Intent(getBaseContext(), RefreshResidenceService.class);
+    intent.putExtra(RefreshResidenceService.REFRESH, RefreshResidenceService.SELECT_ALL_RESIDENCES);
+    startService(intent);
+  }</code></pre>
+<h2>Provider</h2>
+<pre><code>/**
+   * Refer to page 195 Learning Android 2nd Edition for more detailed informtion.
+   * Also Android SQLite Database (wish the url not so long).
+   * And Vogella: http://www.vogella.com/tutorials/AndroidSQLite/article.html#base-uri-of-the-content-provider
+   *
+   * @param uri Universal Resource Identifier
+   * @param projection The set of columns to be returned - null to return all
+   * @param selection Filter to specify which rows to return - null to return all
+   * @param selectionArgs Replace ?s in selection by strings
+   * @param sortOrder How to sort rows - null for default sort
+   * @return
+   */
+  @Nullable
+  @Override
+  public Cursor query(Uri uri, String[] projection, String selection,
+                      String[] selectionArgs, String sortOrder) {
+    SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+    qb.setTables( ResidenceContract.TABLE_RESIDENCES ); // Specify table
+    switch (uriMatcher.match(uri)) { // Determine uri type
+      case ResidenceContract.RESIDENCE_DIR:
+        break;
+      case ResidenceContract.RESIDENCE_ITEM: // uri contains record id
+        qb.appendWhere(ResidenceContract.Column.ID + &quot;=&quot; + uri.getLastPathSegment());
+        break;
+      default:        
+        throw new IllegalArgumentException(&quot;Illegal uri: &quot; + uri);
+    }
+
+    String orderBy = (TextUtils.isEmpty(sortOrder))
+        ? ResidenceContract.DEFAULT_SORT
+        : sortOrder; // Specify sort order of returned data
+
+    SQLiteDatabase db = dbHelper.getReadableDatabase();
+    Cursor cursor = qb.query(db, projection, selection, selectionArgs,
+        null, null, orderBy);
+
+    // register for uri changes
+    cursor.setNotificationUri(getContext().getContentResolver(), uri); // Cursor data refresh
+    Log.d(TAG, &quot;queried records: &quot; + cursor.getCount());
+    return cursor;
+  }</code></pre>
+<h2>Service</h2>
+<p>Add to the switch statement in onStartCommand:</p>
+<pre><code>      case SELECT_RESIDENCE:
+        selectResidence();
+        break;
+
+      case SELECT_ALL_RESIDENCES:
+        selectAllResidences();
+        break;</code></pre>
+<p>Now add the selection functionality:</p>
+<pre><code>  /**
+   * Select a single residence. 
+   * To ensure the database is populated
+   * we first create a default Residence object and add it to the database.
+   */
+  private void selectResidence() {
+    Residence residence = ResidenceCloud.residence();
+    addResidence(residence);
+    selectResidence(residence.uuid);
+  }</code></pre>
+<pre><code>  /**
+   * Test query method in ResidenceProvider by
+   * obtaining a single residences from simulated cloud,
+   * adding this residence as record to database,
+   * querying database for this record and
+   * checking result
+   * Refer to ResidenceProvider.query for documentation query params
+   */
+  private Residence selectResidence(UUID uuid) {
+    Residence residence = new Residence();
+    String selection = ResidenceContract.Column.UUID + &quot; = ?&quot;;
+    String[] selectionArgs = new String[]{uuid + &quot;&quot;};
+
+    // Query database
+    Cursor cursor = getContentResolver().query(ResidenceContract.CONTENT_URI, null, selection, selectionArgs, null);
+
+    if (cursor.getCount() &gt; 0) {
+      int columnIndex = 1; // Skip the 0th column - the _id
+      cursor.moveToFirst();
+
+      residence.uuid = UUID.fromString(cursor.getString(columnIndex++));
+      residence.geolocation = cursor.getString(columnIndex++);
+      residence.date = new Date(Long.parseLong(cursor.getString(columnIndex++)));
+      residence.rented = cursor.getString(columnIndex++) == &quot;yes&quot; ? true : false;
+      residence.tenant = cursor.getString(columnIndex++);
+      residence.zoom = Double.parseDouble(cursor.getString(columnIndex++));
+      residence.photo = cursor.getString(columnIndex++);
+
+    }
+    cursor.close();
+
+    return residence;
+  }
+
+  /**
+   * Test query method in ResidenceProvider by
+   * obtaining a list of residences from simulated cloud,
+   * adding each residence as record to database,
+   * querying database for this list and
+   * checking result
+   */
+  private void selectAllResidences() {
+    populateSampleData();
+
+    // Query the database
+    List&lt;Residence&gt; residences = new ArrayList&lt;Residence&gt;();
+    Cursor cursor = getContentResolver().query(ResidenceContract.CONTENT_URI, null, null, null, null);
+
+    if (cursor.moveToFirst()) {
+      int columnIndex = 1; // skip column 0, the _id
+      do {
+        Residence residence = new Residence();
+
+        residence.uuid = UUID.fromString(cursor.getString(columnIndex++));
+        residence.geolocation = cursor.getString(columnIndex++);
+        residence.date = new Date(Long.parseLong(cursor.getString(columnIndex++)));
+        residence.rented = cursor.getString(columnIndex++) == &quot;yes&quot; ? true : false;
+        residence.tenant = cursor.getString(columnIndex++);
+        residence.zoom = Double.parseDouble(cursor.getString(columnIndex++));
+        residence.photo = cursor.getString(columnIndex++);
+
+        columnIndex = 1;
+
+        residences.add(residence);
+      } while (cursor.moveToNext());
+    }
+    cursor.close();
+
+  }
+
+  /**
+   * Populate database with list sample residences
+   * Used for testing
+   */
+  private List&lt;Residence&gt; populateSampleData() {
+    List&lt;Residence&gt; residenceList = ResidenceCloud.residences();
+    for (Residence residence : residenceList) {
+      addResidence(residence);
+    }
+    return residenceList;
+  }</code></pre>
+<p>Build, run and test by clicking on first, SELECT RESIDENCE and then SELECT ALL buttons while observing output in the <em>logcat</em> pane. </p>
+<p>Then examine database content using <em>adb shell</em>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>delete</h1>
+<h2>Activity</h2>
+<pre><code>  /**
+   * Delete a single Residence record
+   */
+  public void deleteResidence() {
+    Intent intent = new Intent(getBaseContext(), RefreshResidenceService.class);
+    intent.putExtra(RefreshResidenceService.REFRESH, RefreshResidenceService.DELETE_RESIDENCE);
+    startService(intent);
+  }
+
+  /**
+   * Delete all records.
+   */
+  public void deleteAllResidences() {
+    Intent intent = new Intent(getBaseContext(), RefreshResidenceService.class);
+    intent.putExtra(RefreshResidenceService.REFRESH, RefreshResidenceService.DELETE_RESIDENCES);
+    startService(intent);
+  }</code></pre>
+<h2>Provider</h2>
+<p>The delete method:</p>
+<pre><code>  @Override
+  public int delete(Uri uri, String selection, String[] selectionArgs) {
+    String where;
+    switch (uriMatcher.match(uri)) {
+      case ResidenceContract.RESIDENCE_DIR:
+        // so we count deleted rows
+        where = (selection == null) ? &quot;1&quot; : selection;
+        break;
+      case ResidenceContract.RESIDENCE_ITEM:
+        long id = ContentUris.parseId(uri);
+        where = ResidenceContract.Column.ID
+            + &quot;=&quot;
+            + id
+            + (TextUtils.isEmpty(selection) ? &quot;&quot; : &quot; and ( &quot;
+            + selection + &quot; )&quot;);
+        break;
+      default:
+        throw new IllegalArgumentException(&quot;Illegal uri: &quot; + uri);
+    }
+    SQLiteDatabase db = dbHelper.getWritableDatabase();
+    int ret = db.delete(ResidenceContract.TABLE_RESIDENCES, where, selectionArgs);
+    if(ret &gt; 0) {
+      // Notify that data for this uri has changed
+      getContext().getContentResolver().notifyChange(uri, null);
+    }
+    Log.d(TAG, &quot;deleted records: &quot; + ret);
+    return ret;
+  }</code></pre>
+<h2>Service</h2>
+<p>Add to the switch statement in onStartCommand:</p>
+<pre><code>      case DELETE_RESIDENCE:
+        deleteResidence();
+        break;
+
+      case DELETE_RESIDENCES:
+        deleteAllResidences();
+        break;</code></pre>
+<p>Here are the delete methods:</p>
+<pre><code>  /**
+   * Add a list of residences to database
+   * Pick on at random from the list and delete it from db
+   */
+  private void deleteResidence() {
+    List&lt;Residence&gt; residenceList = populateSampleData();
+
+    String uuid = residenceList.get(0).uuid.toString(); // Pick the first row (arbitrarily)
+    String selection = ResidenceContract.Column.UUID + &quot; = ?&quot;;
+    String[] selectionArgs = new String[]{uuid + &quot;&quot;};
+    int response = getContentResolver().delete(ResidenceContract.CONTENT_URI, selection, selectionArgs);
+    Log.d(TAG, &quot;delete record response: &quot; + response);
+  }
+
+  /**
+   * Delete all Residence records.
+   */
+  private void deleteAllResidences() {
+    List&lt;Residence&gt; residenceList = populateSampleData();
+
+    int response = getContentResolver().delete(ResidenceContract.CONTENT_URI, null, null);
+    Log.d(TAG, &quot;delete all records response: &quot; + response);
+  }</code></pre>
+<p>Build, run and test by clicking on first, DELETE RESIDENCE and then DELETE ALL buttons while observing output in the <em>logcat</em> pane. </p>
+<p>Then examine database content using <em>adb shell</em>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>update</h1>
+<h2>Activity</h2>
+<pre><code>  /**
+   * Update a residence record.
+   */
+  public void updateResidence() {
+    Intent intent = new Intent(getBaseContext(), RefreshResidenceService.class);
+    intent.putExtra(RefreshResidenceService.REFRESH, RefreshResidenceService.UPDATE_RESIDENCE);
+    startService(intent);
+  }</code></pre>
+<h2>Provider</h2>
+<pre><code>  @Override
+  public int update(Uri uri, ContentValues values, String selection,
+                    String[] selectionArgs) {
+    String where;
+    switch (uriMatcher.match(uri)) {
+      case ResidenceContract.RESIDENCE_DIR:
+        // so we count updated rows
+        where = selection; 
+        break;
+      case ResidenceContract.RESIDENCE_ITEM:
+        long id = ContentUris.parseId(uri);
+        where = ResidenceContract.Column.ID
+            + &quot;=&quot;
+            + id
+            + (TextUtils.isEmpty(selection) ? &quot;&quot; : &quot; and ( &quot;
+            + selection + &quot; )&quot;);
+        break;
+      default:
+        throw new IllegalArgumentException(&quot;Illegal uri: &quot; + uri);
+    }
+    SQLiteDatabase db = dbHelper.getWritableDatabase();
+    int ret = db.update(ResidenceContract.TABLE_RESIDENCES, values,
+        where, selectionArgs);
+    if(ret &gt; 0) {
+      // Notify that data for this URI has changed
+      getContext().getContentResolver().notifyChange(uri, null);
+    }
+    Log.d(TAG, &quot;updated records: &quot; + ret);
+    return ret;
+  }</code></pre>
+<h2>Service</h2>
+<p>Add to the switch statement in onStartCommand:</p>
+<pre><code>      case UPDATE_RESIDENCE:
+        updateResidence();
+        break;</code></pre>
+<pre><code>  private void updateResidence() {
+    // Populate database with sample residence
+    Residence residence = ResidenceCloud.residence();
+    addResidence(residence);
+
+    // Modify the residence and update database copy
+    residence.zoom = 40;
+    residence.tenant = &quot;A. N. Other&quot;;
+
+    updateResidence(residence);
+
+    Residence residenceUpdated = selectResidence(residence.uuid);
+
+    boolean testResult = residence.zoom == residenceUpdated.zoom &amp;&amp;
+        residence.tenant.equals(residenceUpdated.tenant);
+
+    Log.d(TAG, &quot;update residence attempt: &quot; + testResult);
+  }</code></pre>
+<pre><code>  /**
+   * Update a residence record
+   */
+  private void updateResidence(Residence residence) {
+    String uuid = residence.uuid.toString();
+    String selection = ResidenceContract.Column.UUID + &quot; = ?&quot;;
+    String[] selectionArgs = new String[]{uuid + &quot;&quot;};
+
+      ContentValues values = new ContentValues();
+
+      values.put(ResidenceContract.Column.GEOLOCATION, residence.geolocation);
+      values.put(ResidenceContract.Column.DATE, String.valueOf(residence.date.getTime()));
+      values.put(ResidenceContract.Column.RENTED, residence.rented == true ? &quot;yes&quot; : &quot;no&quot;);
+      values.put(ResidenceContract.Column.TENANT, residence.tenant);
+      values.put(ResidenceContract.Column.ZOOM, Double.toString(residence.zoom));
+      values.put(ResidenceContract.Column.PHOTO, residence.photo);
+
+      getContentResolver().update(ResidenceContract.CONTENT_URI, values, selection, selectionArgs);
+
+    }</code></pre>
+<p>Build, run and test by clicking on the UPDATE button while observing output in the <em>logcat</em> pane. </p>
+<p>Then examine database content using <em>adb shell</em> to verify that the changed fields have been persisted.</p>
+<p>The next lab will access this database from another application using the newly developed ContentProvider interface.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="10">
+        <h1>Test</h1>
+<p>Here we describe how to access the MyRentSQlite generated database from a different app. Both apps are deployed on the same device.</p>
+<p>Create a new Android application named ContentProviderTest, accepting the wizard&#39;s defaults but, for compatibility with code samples below, define the company domain as <em>ictskills</em>.</p>
+<p>Create a project package structure similar to that here:</p>
+<p><img src="img/03.png" alt="Figure 1: Recommended package structure"></p>
+<h2>Model</h2>
+<p>Here is the model Residence class. Its fields match the MyRentSQLite model.</p>
+<pre><code>package ictskills.contentprovidertest.models;
+import java.util.Date;
+
+public class Residence
+{
+  public UUID uuid;
+  public Date date;
+  public String geolocation;
+  public boolean rented;
+  public String tenant;
+  public double zoom;
+  public String photo;
+
+  public Residence() { }
+}</code></pre>
+<h2>Layout</h2>
+<p>The text file:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;RelativeLayout
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
+    android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
+    tools:context=&quot;ictskills.contentprovidertest.activities.MainActivity&quot;&gt;
+
+  &lt;Button
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:text=&quot;Access MyRent Content Provider&quot;
+      android:id=&quot;@+id/contentProvider&quot;
+      android:layout_alignParentTop=&quot;true&quot;
+      android:layout_alignParentStart=&quot;true&quot;
+      android:layout_marginStart=&quot;33dp&quot;
+      android:layout_marginTop=&quot;89dp&quot;/&gt;
+&lt;/RelativeLayout&gt;</code></pre>
+<p><img src="img/04.png" alt="Figure 2: ContentProviderTest UI"></p>
+<h2>Activity</h2>
+<p>In the only activity, MainActivity, we add:</p>
+<ul>
+<li>A button handler. A button click invokes a method that reads the SQLite database in the MyRentSQLite app.</li>
+<li>A method, <em>selectAllResidences</em>, that populates a locally created Residence list with the content of MyRentSQLite&#39;s database. (Ensure that you run MyRentSQLite and add some Residence records before this method is invoked).</li>
+</ul>
+<pre><code>package ictskills.contentprovidertest.activities;
+
+import android.database.Cursor;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import ictskills.contentprovidertest.R;
+import ictskills.contentprovidertest.models.Residence;
+import ictskills.contentprovidertest.providers.ResidenceContract;
+
+import android.widget.Toast;
+
+/**
+ * Set a button click handler.
+ * Handler obtains list Residence records from MyRentSqlite
+ * Precondition: MyRentSqlite database must be present.
+ * Install and run MyRentSqlite and add some Residence records to populate the database.
+ *
+ */
+public class MainActivity extends AppCompatActivity implements View.OnClickListener
+{
+  private Button contentProvider;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    contentProvider = (Button)findViewById(R.id.contentProvider);
+    contentProvider.setOnClickListener(this);
+  }
+
+  @Override
+  public void onClick(View v) {
+    switch(v.getId()) {
+      case R.id.contentProvider:
+        selectAllResidences();
+    }
+  }
+
+  /**
+   * This code derived from MyRentSQLite.RefreshResidenceService.selectAllResidences.
+   */
+  private void selectAllResidences() {
+
+    // Query the database
+    List&lt;Residence&gt; residences = new ArrayList&lt;Residence&gt;();
+    Cursor cursor = getContentResolver().query(ResidenceContract.CONTENT_URI, null, null, null, null);
+
+    if (cursor.moveToFirst()) {
+      int columnIndex = 1; // skip column 0, the _id
+      do {
+        Residence residence = new Residence();
+
+        residence.uuid = UUID.fromString(cursor.getString(columnIndex++));
+        residence.geolocation = cursor.getString(columnIndex++);
+        residence.date = new Date(Long.parseLong(cursor.getString(columnIndex++)));
+        residence.rented = cursor.getString(columnIndex++) == &quot;yes&quot; ? true : false;
+        residence.tenant = cursor.getString(columnIndex++);
+        residence.zoom = Double.parseDouble(cursor.getString(columnIndex++));
+        residence.photo = cursor.getString(columnIndex++);
+
+        columnIndex = 1;
+
+        residences.add(residence);
+      } while (cursor.moveToNext());
+    }
+    cursor.close();
+    Toast.makeText(this, &quot;Retrieved MyRentSQLite Residence array, size: &quot; + residences.size(), Toast.LENGTH_SHORT).show();
+  }
+}</code></pre>
+<p>Build and deploy the app to a device or emulator on which MyRentSQLite is present and whose database is populated.</p>
+<p>Press the ACCESS MYRENT CONTENT PROVIDER button. </p>
+<p>If the app successfully retrieves the database you should see a Toast message somewhat similar to that shown in Figure 3.</p>
+<p><img src="img/05.png" alt="Figure 3: Toast message indicating that 11 records retrieved"></p>
+<p>The application at the end of this lab is available for reference here: <a href="https://github.com/wit-ictskills-2016/sqlite-content-provider.git">sqlite_content_provider</a>. The content provider is on a branch named contentprovider_complete.</p>
+<p>Also available is the application to test the content provider: <a href="https://github.com/wit-ictskills-2016/sqlite-content-provider-test.git">sqlite_content_provider_test</a>.</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

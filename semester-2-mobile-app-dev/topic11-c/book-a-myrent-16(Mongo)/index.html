@@ -1,0 +1,647 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      12: Supplementary topic
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-16 (Mongo)">
+      MyRent-16 (Mongo)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-b-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview) /index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+          MyRent-11 (Maps - Google)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+          MyRent-11a (Maps - MapBox)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+          MyRentSQLite (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-a-myrent-12 (SQLite)/index.html">
+          MyRent-12 (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+          MyRentSQLite (ContentProvider)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service/index.html">
+          MyRent (Play Service)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service-test/index.html">
+          MyRent (JUnit Test)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+          MyRent-13 (Client)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-b-services/index.html">
+          MyRent-14 (Services)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-a/book-a-myrent-11 (Camera)/index.html">
+          MyRent-15 (Camera)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-b/book-a-crypto/index.html">
+          App Signing & Crypto
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic11-c/book-a-myrent-16(Mongo)/index.html">
+          MyRent-16 (Mongo)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-16 (Mongo)">
+        <h1>Model refactoring</h1>
+<p>Allow the database to auto-generate the primary key (id). On creating a residence in the remote database, echo back the new record to inform the client of the id value. We demonstrate using a Play service, a JUnit test app and the MyRent Android client.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<p>Hint: when myrent service and test downloaded ensure you run play eclipsify in a terminal in the project root folders before importing to Eclipse.</p>
+<p>Download these three applications.</p>
+<ul>
+<li><a href="https://github.com/wit-ictskills-2016/myrent-16.git">myrent-16</a>.</li>
+<li><a href="https://github.com/wit-ictskills-2016/myrent-16-service.git">myrent-16-service</a></li>
+<li><a href="https://github.com/wit-ictskills-2016/myrent-16-service-test.git">myrent-16-service-test</a></li>
+</ul>
+<h2>myrent-16</h2>
+<p>MyRent-16 is an Android client. It has been refactored to consume an API from a database in which the primary key (id) is a Long type and is auto-generated at the server side.</p>
+<p>This differs from previous MyRent version(s) where the id has been generated client-side.</p>
+<p>The purpose of the lab is to assist in adapting your Twitter clone for use with MongoDB.</p>
+<ul>
+<li>MongoDB auto-generates its ids.</li>
+<li>These are String types.</li>
+<li>We are using Long types because the server (myrent-16-service) is a Play app.</li>
+<li>It will be necessary to modify your SQLite component to use String type ids. This is not dealt with in this lab.</li>
+</ul>
+<h2>myrent-16-service</h2>
+<p>This is a Play app. It ships with a data.yml file. If you wish to make use of this it will be necessary to remove the comments in Bootstrap.java. </p>
+<p>Once downloaded change into its folder and run </p>
+<pre><code>play run</code></pre>
+<p>If you wish to view the code in Eclipse then first run:</p>
+<pre><code>
+play eclipsify</code></pre>
+<h2>myrent-16-service-test</h2>
+<p>Download the app and import into Eclipse, first running play eclipsify.</p>
+<p>Import the project into Eclipse.</p>
+<p>Clean the project.</p>
+<p>If there are any errors it may be necessary to import JUnit library.</p>
+<ul>
+<li>Select the project and in context menu: Build Path | Add Libraries.</li>
+<li>Select JUnit and proceed as prompted by wizard</li>
+</ul>
+<p>Test as follows:</p>
+<ul>
+<li>Run the service.</li>
+<li>Select src/ResidenceTest.java, right click and run as JUnit Test.</li>
+</ul>
+<p>The test should pass, indicated by a green progress bar.</p>
+<p>In the following steps we shall identify the key changes made to the tester and the Android client to accommodate communicating with a database (where the id is auto-generated on the server).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Tester (myrent-16-service-test)</h1>
+<p>This is the new model class:</p>
+<pre><code>package app.models;
+
+import java.util.Date;
+import java.util.Random;
+
+import com.google.common.base.Objects;
+
+public class Residence
+{
+
+  public Long id;
+  public String geolocation;
+  public Long date;
+  public boolean rented;
+  public String tenant;
+  public double zoom;
+  public String photo;
+
+
+  public Residence()
+  {
+    date = new Date().getTime();
+    geolocation = &quot;&quot;;
+    date = 0L;
+    rented = false;
+    zoom = 0;
+    photo = &quot;&quot;;
+  }
+
+  @Override
+  public boolean equals(final Object obj)  {
+    if (obj instanceof Residence)  {
+      final Residence other = (Residence) obj;
+      return Objects.equal(id, other.id) 
+          &amp;&amp; Objects.equal(geolocation, other.geolocation)
+          &amp;&amp; Objects.equal(date, other.date)
+          &amp;&amp; Objects.equal(rented, other.rented)
+          &amp;&amp; Objects.equal(tenant, other.tenant)
+          &amp;&amp; Objects.equal(zoom, other.zoom)
+          &amp;&amp; Objects.equal(photo, other.photo);
+    }
+    return false;
+  }
+}</code></pre>
+<p>Note the following:</p>
+<ul>
+<li><p>The id is declared but no longer explicitly initialized. Previously we generated a random long value and assigned it to the id.</p>
+</li>
+<li><p>We still use the id field in the equals method when comparing two Residence objects. </p>
+</li>
+<li>This implies that it is necessary to obtain the id value from the server before the method is invoked</li>
+</ul>
+<p>In ResidenceTest.setup we initialize the residence id values with values obtained from the server.</p>
+<pre><code>
+    /**
+     * Set up for test.
+     * Write (create) an array of residences on server.
+     * Server echoes back each individual residence as it is created.
+     * The server model generates the residence id.
+     * Obtain this from the reflected back residence and apply 
+     * to ResidenceTest.residences fields.
+     * 
+     * @throws Exception
+     */
+  @Before
+  public void setup() throws Exception {
+
+    for (int i = 0; i &lt; NUMBER_RESIDENCES; i += 1) {
+      Residence res = service.createResidence(residences[i]);
+      residences[i].id = res.id;
+    }
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Android Client (myrent-16-service)</h1>
+<p>In ResidenceListFragment, before refactoring we have:</p>
+<pre><code>  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.menu_item_new_residence:
+        Residence residence = new Residence();
+        portfolio.addResidence(residence);
+        Intent i = new Intent(getActivity(), ResidencePagerActivity.class);
+        i.putExtra(ResidenceFragment.EXTRA_RESIDENCE_ID, residence.id);
+        startActivityForResult(i, 0);
+        return true;</code></pre>
+<p>This method remains unchanged. We provide it here to supply context:</p>
+<pre><code>  public void createResidence(Residence res) {
+    Call&lt;Residence&gt; call = app.residenceService.createResidence(res);
+    call.enqueue(this);
+  }</code></pre>
+<p>The default Residence constructor generates a residence id.</p>
+<ul>
+<li>This is then passed to the ResidenceFragment as an extra in an intent.</li>
+</ul>
+<p>We now require to obtain this id from the server. To achieve this we do the following:</p>
+<ul>
+<li>Create a residence on the server. </li>
+<li>The residence object will have a valid id. We explain below how this is achieved.</li>
+<li>Echo back that residence.</li>
+<li>Furthermore, this cannot be done on the UI thread. Hence, we move the code into the Retrofit response as follows:</li>
+</ul>
+<pre><code>
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.menu_item_new_residence:
+        Residence residence = new Residence();
+        createResidence(residence);
+        return true;</code></pre>
+<pre><code>  @Override
+  public void onResponse(Response&lt;Residence&gt; response, Retrofit retrofit) {
+    Residence res = response.body();
+    if (res != null) {
+      Toast.makeText(getActivity(), &quot;Residence created successfully&quot;, Toast.LENGTH_SHORT).show();
+
+      portfolio.addResidence(res);
+      Intent i = new Intent(getActivity(), ResidencePagerActivity.class);
+      i.putExtra(ResidenceFragment.EXTRA_RESIDENCE_ID, res.id);
+      startActivityForResult(i, 0);
+
+    }
+    else {
+      Toast.makeText(getActivity(), &quot;Residence null returned due to incorrectly configured client&quot;, Toast.LENGTH_SHORT).show();
+
+    }
+  }</code></pre>
+<p>This is what existed prior to refactoring:</p>
+<pre><code>  @Override
+  public void onResponse(Response&lt;Residence&gt; response, Retrofit retrofit) {
+    Residence res = response.body();
+    if (res != null) {
+      Toast.makeText(getActivity(), &quot;Residence created successfully&quot;, Toast.LENGTH_SHORT).show();
+    }
+    else {
+      Toast.makeText(getActivity(), &quot;Residence null returned due to incorrectly configured client&quot;, Toast.LENGTH_SHORT).show();
+
+    }
+  }</code></pre>
+<p>Observe what we have done. How the block of code shown in Figure 1 has been moved from the UI to a worker thread:</p>
+<p><img src="img/01.png" alt="Figure 1: Code block move from UI to worker thread"></p>
+<p>Test as follows:</p>
+<ul>
+<li>Run the service.</li>
+<li>Build and install MyRent-16 on an emulator (not a physical device).</li>
+<li>Create a new residence.</li>
+<li>Note the Toast message(s) to determine of successful.</li>
+<li>Open a brower and navigate to : localhost:9000/api/residences and view the json-formatted residences list.</li>
+<li>Use PostMan to look into the database.</li>
+</ul>
+<h2>Server-side id generation</h2>
+<p>This is a snippet from the myrent-service-2016 ResidenceAPI. It demonstrates how an id is generated and used to initialize the Residence object being written to the database. The residence object containing this newly generated id is then echoed back to the caller.</p>
+<pre><code>  /**
+   * 
+   * @param id
+   * @param body
+   */
+  public static void createResidence(JsonElement body) {
+    Residence residence = gson.fromJson(body.toString(), Residence.class);
+    Residence res = new Residence();
+    residence.id = res.id;
+    residence.save();
+    renderJSON(gson.toJson(residence));
+  }</code></pre>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

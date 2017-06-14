@@ -1,0 +1,1256 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      7-a: Maps
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-11 (Maps - Google)">
+      MyRent-11 (Maps - Google)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="Appendix">
+      Appendix
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-b-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview) /index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+          MyRent-11 (Maps - Google)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+          MyRent-11a (Maps - MapBox)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+          MyRentSQLite (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-a-myrent-12 (SQLite)/index.html">
+          MyRent-12 (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+          MyRentSQLite (ContentProvider)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service/index.html">
+          MyRent (Play Service)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service-test/index.html">
+          MyRent (JUnit Test)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+          MyRent-13 (Client)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-b-services/index.html">
+          MyRent-14 (Services)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-a/book-a-myrent-11 (Camera)/index.html">
+          MyRent-15 (Camera)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-b/book-a-crypto/index.html">
+          App Signing & Crypto
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-c/book-a-myrent-16(Mongo)/index.html">
+          MyRent-16 (Mongo)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-11 (Maps - Google)">
+        <h1>Embedded Map &amp; Orientation</h1>
+<p>Introduce a Google Map including necessary supporting resources such as Google Play Services Library and a personal API key. Additionally, support a landscape layout, validation of geolocation input, immediate mirroring any changes in this input in the view title and support for smaller small factor devices.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Preview</h1>
+<p>Continue building the MyRent app that you developed in the previous lab.</p>
+<p>We commence by launching Google Android Map application from within MyRent. Realizing the limitations of this approach, we then proceed to integrated a Google Map into our application and in so doing gain access to its rich application programming interface (API).</p>
+<p>This entails using:</p>
+<ul>
+<li>Google Play Services Library,</li>
+<li>A Google API key,</li>
+<li>Create a layout in XML,</li>
+<li>Adding the necessary Java code contained within a customised activity,</li>
+<li>Wiring up the activity so that its functionality can be exploited to capture residences&#39; geolocations.</li>
+</ul>
+<p>The map may be launched from within the detailed Residence view where it is bound to the floating action button. The Up button allows a user to return to the residence details view once the geolocation has been determined (by dragging a marker into position). This is illustrated in Figure 1.</p>
+<p><img src="img/17.png" alt="Figure 1: Use floating action button to launch map from within Residence view."> </p>
+<p>The instructions in this lab refer to development in <em>debug mode</em>. This means that the application you develop will not be suitable to publish on Play. Further information is available about this topic is available <a href="http://developer.android.com/tools/publishing/app-signing.html">here</a> and <a href="http://developer.android.com/distribute/tools/launch-checklist.html">here</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>External Map</h1>
+<p>This lab comprise two parts. In the first short section we show how to launch an external map application from within MyRent. The second longer lab demonstates how to embed a map within MyRent, expose the map&#39;s API and make use of some of its powerful features.</p>
+<p><img src="img/external_map/02.png" alt="Figure 1: Install Google Maps App from Play Store"></p>
+<p>Add the following method to IntentHelper:</p>
+<pre><code>  public static void openPreferredLocationInMap(Activity parent, String location)
+  {
+    Uri geoLocation = Uri.parse(&quot;geo:0,0?&quot;).buildUpon().appendQueryParameter(&quot;q&quot;, location).build();
+
+    Intent intent = new Intent(Intent.ACTION_VIEW);
+    intent.setData(geoLocation);
+
+    if (intent.resolveActivity(parent.getPackageManager()) != null)
+    {
+      parent.startActivity(intent);
+    }
+    else
+    {
+      LogHelpers.info(parent, &quot;Couldn&#39;t call &quot; + location + &quot;, no receiving apps installed!&quot;);
+    }
+  }</code></pre>
+<p>An import is required for the Uri class:</p>
+<pre><code>import android.net.Uri;</code></pre>
+<p>In the above code you will notice that we are using an implicit Intent. </p>
+<ul>
+<li>This searches for components that are registered for the action we have specified, namely ACTION_VIEW.</li>
+<li>Because of the particular argument we have used in the <em>Uri.parse</em> method, the component sought will be one which can display a geolocation. In our case this will be the external maps app that we should already have downloaded onto the emulator or physical device if not already present. See <a href="https://developer.android.com/guide/components/intents-common.html">here</a> for official documentation.</li>
+</ul>
+<p>Invoke this helper method from within ResidenceFragment by pressing the <em>floating action button</em>.</p>
+<p>Here is the code snippet to facilitate this. It should be added to ResidenceFragment:</p>
+<p>Import the floating action button:</p>
+<pre><code>  import android.support.design.widget.FloatingActionButton;</code></pre>
+<p>Initialize a local floating action button variable in the <em>onCreateView</em> method and register a listener callback.</p>
+<pre><code>FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.fab);
+fab.setOnClickListener(this);</code></pre>
+<p>Intercept and handle a click on the button in the existing <em>onClick(...)</em> method:</p>
+<pre><code>      case R.id.fab : 
+      IntentHelper.openPreferredLocationInMap(getActivity(), residence.geolocation);
+        break;</code></pre>
+<p>Add the fab button xml at the end of layout/fragment_residence.xml:</p>
+<pre><code>  &lt;android.support.design.widget.FloatingActionButton
+      android:id=&quot;@+id/fab&quot;
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:layout_gravity=&quot;bottom|end&quot;
+      android:layout_margin=&quot;@dimen/fab_margin&quot;
+      android:src=&quot;@drawable/ic_blue_marker&quot;/&gt;</code></pre>
+<p>Provide an additional attribute </p>
+<pre><code>
+xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;</code></pre>
+<p>to the root fragment_residence.xml LinearLayout node which now becomes:</p>
+<pre><code>&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+              android:layout_width=&quot;match_parent&quot;
+              android:layout_height=&quot;match_parent&quot;
+              xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+              android:orientation=&quot;vertical&quot;&gt;</code></pre>
+<p>The above is discussed in this StackOverflow article: <a href="http://stackoverflow.com/questions/26692233/what-is-the-app-android-xml-namespace">What is the &#39;app&#39; Android XML namespace</a>.</p>
+<p>Add the marker icon <a href="archive/ic_blue_marker.png">ic_blue_marker.png</a> to the <em>drawable</em> folder. This becomes part of the floating action button and is referenced in the above xml button code.</p>
+<p>Create (or replace) res/values/colors.xml with the following content:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;resources&gt;
+  &lt;color name=&quot;colorPrimary&quot;&gt;#3F51B5&lt;/color&gt;
+  &lt;color name=&quot;colorPrimaryDark&quot;&gt;#303F9F&lt;/color&gt;
+  &lt;color name=&quot;colorAccent&quot;&gt;#4CAF50&lt;/color&gt;
+&lt;/resources&gt;</code></pre>
+<p>Use was made of the <a href="https://www.materialpalette.com/">material palette</a> in arriving at this color selection.</p>
+<p>This element should be present in the file res/values/dimens.xml:</p>
+<pre><code>  &lt;dimen name=&quot;fab_margin&quot;&gt;16dp&lt;/dimen&gt;</code></pre>
+<p>Ensure that build.gradle contains this dependency:</p>
+<pre><code>  compile &#39;com.android.support:design:23.4.0&#39;</code></pre>
+<p>Test this feature by building and running the app. Create a new residence. Click on the floating action button. The Google Map should launch (Figure 2). </p>
+<p>In the next step we shall expose the Google map API and use it to capture a residence&#39;s geolocation (latitude - longitude).</p>
+<p><img src="img/04.png" alt="Figure 2: Google Maps app in foreground launched by MyRent (background)"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Map API</h1>
+<p>In this, the second part of the lab, we shall integrate a GoogleMap and thus gain access to its API.</p>
+<p>We shall use the map to capture the geolocation (latitude and longitude) of a residence object. The zoom level of the map is also saved so that on returning to a particular residence&#39;s map, the zoom level at which it was last viewed will have been retained.</p>
+<p>Start by adding a new activity named MapActivity to the activities package. We will initially use the sample code provide in the Android <a href="https://developers.google.com/maps/documentation/android-api/start">Getting Started</a> documentation and continue to build on this to create the functionality we require.</p>
+<pre><code>package org.wit.myrent.activities;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import com.google.android.gms.maps.*;
+import com.google.android.gms.maps.model.*;
+
+import org.wit.myrent.R;
+
+public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_map);
+
+    MapFragment mapFragment = (MapFragment) getFragmentManager()
+        .findFragmentById(R.id.map);
+    mapFragment.getMapAsync(this);
+  }
+
+  @Override
+  public void onMapReady(GoogleMap map) {
+    LatLng sydney = new LatLng(-33.867, 151.206);
+
+    map.addMarker(new MarkerOptions()
+        .title(&quot;Sydney&quot;)
+        .snippet(&quot;The most populous city in Australia.&quot;)
+        .position(sydney));
+
+    map.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 13));
+  }
+}</code></pre>
+<p>Here is the xml for the referenced <code>activity_map</code>:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;FrameLayout
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
+    android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
+    tools:context=&quot;.activities.MapActivity&quot;&gt;
+
+    &lt;fragment
+        android:id=&quot;@+id/map&quot;
+        android:name=&quot;com.google.android.gms.maps.MapFragment&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;/&gt;
+&lt;/FrameLayout&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Integrate MapActivity</h1>
+<p>In the first part of the lab we used the floating action button to launch the external GoogleMap app. Here is the code in ResidenceFragment.onClickView responsible for this:</p>
+<pre><code>      case R.id.fab : 
+      IntentHelper.openPreferredLocationInMap(getActivity(), residence.geolocation);</code></pre>
+<p>Delete this code and replace with the following:</p>
+<pre><code>      case R.id.fab:
+        Intent mapIntent = new Intent(getActivity(), MapActivity.class);
+        startActivity(mapIntent);
+        break;</code></pre>
+<p>Add an activity element for MapActivity to the manifest file:</p>
+<pre><code>    &lt;activity
+        android:name=&quot;.activities.MapActivity&quot;
+        android:label=&quot;@string/app_name&quot;&gt;
+      &lt;meta-data android:name=&quot;android.support.PARENT_ACTIVITY&quot;
+                 android:value=&quot;.activities.ResidencePagerActivity&quot;/&gt;
+    &lt;/activity&gt;</code></pre>
+<p>The meta-data sets the parent activity, the one to which the Up button returns the user from the MapActivity.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>API Key</h1>
+<p>Obtain an API key. How to do so is explained in detail in the Appendix at the end of this lab.</p>
+<p>One could insert one&#39;s key directly into the manifest file. However, this would necessitate changing the manifest were different keys required for production and debug builds. Instead we shall use gradle to inject the key at build time.</p>
+<p>Add the following snippet to your build.gradle (Module.app). Remember there are two build.gradle files. Ensure you configure the correct one.</p>
+<pre><code>buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+      manifestPlaceholders = [ google_map_key:&quot;Your Key Here&quot;]
+    }
+    debug {
+      manifestPlaceholders = [ google_map_key:&quot;Your Key Here&quot;]
+    }</code></pre>
+<p>This dependency is required:</p>
+<pre><code>  compile &#39;com.google.android.gms:play-services:9.4.0&#39;</code></pre>
+<p>Add this xml to the manifest file before the closing application tag:</p>
+<pre><code>
+&lt;application ...&gt;
+   ...
+   ...
+
+    &lt;!--Google MAP API key placeholder (keys in build.gradle)--&gt;
+    &lt;meta-data
+        android:name=&quot;com.google.android.maps.v2.API_KEY&quot;
+        android:value=&quot;${google_map_key}&quot;/&gt;
+&lt;/application&gt;</code></pre>
+<p>The android:value placeholder (google_map_key) will be replaced at build time with the correct key chosen from the build.gradle file.</p>
+<p>Build and run MyRent. Create a new residence and using the floating action button switch to map view. You should be presented with something similar to that shown in Figure 1.</p>
+<p><img src="img/05.png" alt="Figure 1: Sample map"></p>
+<p>For reference, here is a sample build.gradle:</p>
+<pre><code>apply plugin: &#39;com.android.application&#39;
+
+android {
+  compileSdkVersion 23
+  buildToolsVersion &quot;23.0.3&quot;
+
+  defaultConfig {
+    applicationId &quot;org.wit.myrent&quot;
+    minSdkVersion 19
+    targetSdkVersion 23
+    versionCode 1
+    versionName &quot;1.0&quot;
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+      manifestPlaceholders = [google_map_key: &quot;AIxxxxxxxxxxxxxxxxxxxxxxxx&quot;]
+    }
+    debug {
+      manifestPlaceholders = [google_map_key: &quot;AAIxxxxxxxxxxxxxxxxxxxxxxxx&quot;]
+      debuggable true
+    }
+  }
+
+  dependencies {
+    compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
+    testCompile &#39;junit:junit:4.12&#39;
+    compile &#39;com.android.support:appcompat-v7:23.4.0&#39;
+    compile &#39;com.android.support:design:23.4.0&#39;
+    compile &#39;com.google.android.gms:play-services:9.4.0&#39;
+
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Model</h1>
+<p>Before we introduce the map code we shall modify the Residence model class allowing it to store the current zoom level of the map.</p>
+<ul>
+<li>The purpose is to ensure that the zoom level is retained as one switches between the list and detail views.</li>
+</ul>
+<p>Here are the code snippets to be added to Residence.java:</p>
+<pre><code>    //New fields
+    public double  zoom       ;//zoom level of accompanying map
+    private static final String JSON_ZOOM           = &quot;zoom&quot;          ; //map zoom level</code></pre>
+<p>Constructors:</p>
+<pre><code>  public Residence()
+  {
+    ...
+    zoom        = 16.0f;
+
+  }
+
+  public Residence(JSONObject json) throws JSONException
+  {
+    ...
+    zoom          = json.getDouble(JSON_ZOOM);
+  }</code></pre>
+<p>toJSON method</p>
+<pre><code>  public JSONObject toJSON() throws JSONException
+  {
+    ...
+    json.put(JSON_ZOOM          , zoom);
+
+    return json;
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Helpers</h1>
+<p>In preparation for customisation of the map activity we will introduce helper methods to </p>
+<ul>
+<li>parse a Residence geolocation string and return a GoogleMap LatLng object,</li>
+<li>parse a GoogleMap LatLng object and return a Residence geolocation string.</li>
+</ul>
+<p>Add this helper class to the <em>org.wit.android.helpers</em> package:</p>
+<pre><code>package org.wit.android.helpers;
+
+import android.content.Context;
+import com.google.android.gms.maps.model.LatLng;
+
+/**
+ * Class contains utility methos to:
+ * parse a Residence geolocation string and return a GoogleMap LatLng object,
+ * parse a GoogleMap LatLng object and return a Residence geolocation string.
+ * @author jfitzgerald
+ * @version October 7th 2016
+ */
+public class MapHelper
+{
+  /**
+   * 
+   * @param context Presently redundant, referenct to the application context
+   * @param geolocation The geolocation in Residence format, example: &quot;42.122,-7.456&quot;
+   * @return The geolocation expressed as a Google LatLng object
+   */
+  public static LatLng latLng(Context context, String geolocation)
+  {
+    String[] g = geolocation.split(&quot;,&quot;);
+    if (g.length == 2)
+    {
+      return new LatLng(Double.parseDouble(g[0]), Double.parseDouble(g[1]));
+    }
+    return new LatLng(0, 0);
+
+  }
+
+  /**
+   * parse a GoogleMap LatLng object and return a Residence geolocation string.
+   * example: &quot;42.122,-7.456&quot;
+   * @param geo Google LatLng object representing a latitude, longitude pair
+   * @return A latitude longitude pair in a format suitable for use in Residence class
+   */
+  public static String latLng(LatLng geo)
+  {
+    return String.format(&quot;%.6f&quot;, geo.latitude) + &quot;, &quot; + String.format(&quot;%.6f&quot;, geo.longitude);
+  }
+
+}</code></pre>
+<p>The method <em>LatLng latLng(String geolocation)</em> returns a LatLng object containing the latitude and longitude coordinates contained in the <em>String geolocation</em>.</p>
+<p>The method <em>String latLng(LatLng geo)</em> returns a single string version of the coordinates contained in a LatLng object formed by concatenating the coordinates but separating them with a comma. For example:</p>
+<p><img src="img/29.png" alt="Figure 1: Latitude longitude comma-separated pair"></p>
+<p><a href="https://developer.android.com/reference/com/google/android/gms/maps/model/LatLng.html">LatLng</a> is a Google class representing a pair of latitude and longitude coordinates stored as degrees.</p>
+<p>Please note that the use of a Context type as an argument above is not necessary at this time. We are including it here because it would be required later should we decide to introduce validation and generate Toast messages.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>MapActivity</h1>
+<p>The completed map activity shall be possess the following features:</p>
+<ul>
+<li>Provide an Up button and associated functionality to facilitate returning to details residence view.</li>
+<li>Have a marker representing the residence geolocation (latitude, longitude).</li>
+<li>The marker may be dragged to any location on the map.</li>
+<li>By default, it shall be possible to pan the map.</li>
+<li>It shall be possible to zoom in and out and the zoom level is automatically saved to persistent storage.</li>
+<li>The zoom level persists when switching away from and to the map pane.</li>
+<li>The marker shall contain an info window displaying its geolocation.</li>
+</ul>
+<h2>Navigate Up button</h2>
+<p>Add a second navigateUp method to IntentHelper to facilitate inclusion of an extra in the intent:</p>
+<pre><code>  public static void navigateUp(Activity parent, String extraID, Serializable extraData)
+  {
+    Intent upIntent = NavUtils.getParentActivityIntent(parent);
+    upIntent.putExtra(extraID, extraData);
+    NavUtils.navigateUpTo(parent, upIntent);
+  }</code></pre>
+<p>In ResidenceFragment.onClick(View v) inject the residence id as an intent extra so that the MapActivity may know with which Residence object it is dealing:</p>
+<pre><code>      case R.id.fab:
+        startActivityWithData(getActivity(), MapActivity.class, EXTRA_RESIDENCE_ID, residence.id);
+
+        break;</code></pre>
+<p>This import statment is required: </p>
+<pre><code>import static org.wit.android.helpers.IntentHelper.startActivityWithData;</code></pre>
+<p>In MapActivity add this import statement:</p>
+<pre><code>import static org.wit.android.helpers.IntentHelper.navigateUp;</code></pre>
+<p>Add a Residence id field to MapActivity:</p>
+<pre><code>  /*
+   * We use the current residence when navigating back to parent class - ResidenceFragment as
+   * this is required in ResidenceFragment onCreate. 
+   */
+  Long resId;</code></pre>
+<p>In MapActivity.onCreate, initialize the residence id:</p>
+<pre><code>
+    resId = (Long)getIntent().getSerializableExtra(ResidenceFragment.EXTRA_RESIDENCE_ID);</code></pre>
+<p>Intercept and handle an Up button click by overriding onOptionsItemSelected:</p>
+<pre><code>  @Override
+  public boolean onOptionsItemSelected(MenuItem item)
+  {
+    switch (item.getItemId())
+    {
+      case android.R.id.home:
+        navigateUp(this, ResidenceFragment.EXTRA_RESIDENCE_ID, resId);
+        return true;
+
+      default: return super.onOptionsItemSelected(item);
+    }
+  }</code></pre>
+<p>Build and run MyRent, create a new residence and navigate to the map. Then check that the up button returns you to the residence details screen.</p>
+<h2>Draggable marker</h2>
+<p>Add the following code to MapActivity:</p>
+<p>Imports:</p>
+<pre><code>import org.wit.android.helpers.MapHelper;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Residence;</code></pre>
+<p>Implement additional interface GoogleMap.OnMarkerDragListener:</p>
+<pre><code>public class MapActivity extends AppCompatActivity
+    implements OnMapReadyCallback,
+    GoogleMap.OnMarkerDragListener {
+
+    ...
+  }</code></pre>
+<p>Add residence, app and map fields:</p>
+<pre><code>  Residence residence; // The residence associated with this map pane
+  MyRentApp app;
+  GoogleMap map;</code></pre>
+<p>Initialize app and residence fields in onCreate:</p>
+<pre><code>    app = (MyRentApp)getApplication();
+    residence = app.portfolio.getResidence(resId);</code></pre>
+<p>In onMapReady make the following changes:</p>
+<ul>
+<li>Initialize the GoogleMap map field:</li>
+</ul>
+<pre><code>this.map = map;</code></pre>
+<p>Stil in onMapReady, make the marker draggable by setting its draggable property to true:</p>
+<pre><code>    MarkerOptions options = new MarkerOptions()
+        .title(&quot;Sydney&quot;)
+        .snippet(&quot;The most populous city in Australia.&quot;)
+        .draggable(true)
+        .position(sydney);
+
+    map.addMarker(options);</code></pre>
+<p>Implement the OnMarkerDragListener methods:</p>
+<pre><code>  @Override
+  public void onMarkerDragStart(Marker marker) {
+
+  }
+
+  @Override
+  public void onMarkerDrag(Marker marker) {
+
+  }
+
+  /**
+   * When marker drag ends, save Residence model geolocation and zoom.
+   * @param marker The map marker representing current residence geolocation.
+   */
+  @Override
+  public void onMarkerDragEnd(Marker marker) {
+    residence.geolocation = MapHelper.latLng(marker.getPosition());
+    residence.zoom = map.getCameraPosition().zoom;
+    map.animateCamera(CameraUpdateFactory.newLatLng(marker.getPosition()));
+  }</code></pre>
+<p>Build, run and test that the marker may now be dragged.</p>
+<h2>Implement GoogleMap.OnInfoWindowClickListener</h2>
+<p>Implementing GoogleMap.OnInfoWindowClickListener enables a toggle effect to be imparted to a marker so that when it is first clicked the string defined in the MarkerOptions.snippet string is displayed in what is referred to  as an infowindow and a further click on the infowindow closes it.</p>
+<pre><code>  public class MapActivity extends AppCompatActivity
+      implements OnMapReadyCallback,
+      GoogleMap.OnInfoWindowClickListener,
+  {
+    ...
+  }
+
+  /**
+   * Click an open infowindow to close it.
+   * Click on a marker to open an infowindow
+   * @param marker The marker associated with this infowindow.
+   */
+  @Override
+  public void onInfoWindowClick(Marker marker) {
+    marker.hideInfoWindow();
+  }</code></pre>
+<p>Do not forget to register the listener:</p>
+<pre><code>  @Override
+  public void onMapReady(GoogleMap map) {
+    ...
+    map.setOnInfoWindowClickListener(this);
+    ...
+  }</code></pre>
+<p>Build, run and verify that this feature works correctly.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>MapActivity (Continued)</h1>
+<p>We are now in a position to finalize implementation of onMapReady. It remains to:</p>
+<ul>
+<li>Position the marker to represent the current residence&#39;s location by replacing 
+<code>LatLng latLng = MapHelper.latLng(...</code> as follows:</li>
+</ul>
+<pre><code>  LatLng latLng = MapHelper.latLng(this, residence.geolocation);
+  MarkerOptions options = new MarkerOptions()
+    .title(&quot;Residence&quot;)
+    .snippet(&quot;GPS : &quot; + latLng.toString())
+    .draggable(true)
+    .position(latLng);</code></pre>
+<ul>
+<li>Ensure that the zoom level is saved.  In onMapReady we retrieve the zoom level from the persistent storage and apply this level to the map:</li>
+</ul>
+<pre><code>  map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, (float)residence.zoom));</code></pre>
+<ul>
+<li>To ensure that if the zoom level is changed without dragging the marker it is necessary to implement the     GoogleMap.OnCameraIdleListener listener, register it in onMapReady and implement the single interface method <code>onCameraIdle()</code> as follows:</li>
+</ul>
+<pre><code>public class MapActivity extends AppCompatActivity
+    implements OnMapReadyCallback,
+    GoogleMap.OnMarkerDragListener,
+    GoogleMap.OnInfoWindowClickListener,
+    GoogleMap.OnCameraIdleListener
+{
+    ...
+    ...
+  }</code></pre>
+<pre><code>  @Override
+  public void onMapReady(GoogleMap map) {
+    ...
+    ...
+        map.setOnCameraIdleListener(this);
+    ...
+    ...
+  }</code></pre>
+<pre><code>  /**
+   * GoogleMap.OnCameraIdleListener
+   * We implement this interface to capture zoom when marker not dragged but zoom changed
+   * example by pinching screen.
+   * When google map camera stops moving we capture the zoom and save to model.
+   */
+  @Override
+  public void onCameraIdle() {
+    residence.zoom = map.getCameraPosition().zoom;
+  }</code></pre>
+<h2>Implement GoogleMap.OnMarkerClickListener</h2>
+<p>Finally, to ensure the <code>infowindow</code> displays the correct residence geolocation when a marker is clicked, implement OnMarkerClickListener, register it in onMapReady and implement onMarkerClick, all as shown below:</p>
+<pre><code>public class MapActivity extends AppCompatActivity
+    implements OnMapReadyCallback,
+    GoogleMap.OnMarkerDragListener,
+    GoogleMap.OnInfoWindowClickListener,
+    GoogleMap.OnMarkerClickListener {
+    ...
+    ...
+  }</code></pre>
+<pre><code>  @Override
+  public void onMapReady(GoogleMap map) {
+    ...
+    map.setOnMarkerClickListener(this);
+    ...
+  }</code></pre>
+<pre><code>  /**
+   * The purpose of including this method is to update the info window information
+   * with the geolocation of the current position of the marker.
+   * @param marker The marker whose info window being refreshed
+   * @return Returns false indicating default behaviour, i.e. open info window.
+   */
+  @Override
+  public boolean onMarkerClick(Marker marker) {
+    LatLng latLng = MapHelper.latLng(this, residence.geolocation);
+    marker.setSnippet(&quot;GPS : &quot; + latLng.toString());
+    return false;
+  }</code></pre>
+<p>Build run and test the application.</p>
+<ul>
+<li>Create a new residence.</li>
+<li>Switch to the map view.</li>
+<li>Verify the info window displays a geolation matching that in the residence details view.</li>
+<li>Drag the marker to a new location.</li>
+<li>Verify the info window geolocation changes to correspond to the new marker position.</li>
+<li>Change the map zoom level.</li>
+<li>Note the marker geolocation and then use the up button to switch to the residence details view.</li>
+<li>Verify the geolocation in the textview here matches that noted down from the map.</li>
+<li>Shut down the app (do not delete).</li>
+<li>Reopen map and verify the residence characteristics have been correctly saved and retrieved.</li>
+</ul>
+<p><img src="img/07.png" alt="Figure 1: Map showing marker and its info window"></p>
+<p>Note that it is possible to prevent the soft keyboard opening automatically on launching an activity y using this attribute:</p>
+<pre><code>android:windowSoftInputMode=&quot;stateHidden|adjustResize&quot;</code></pre>
+<p>In the case of ResidencePagerActivity its inclusion might typically result in the following:</p>
+<pre><code>    &lt;activity
+        android:name=&quot;.activities.ResidencePagerActivity&quot;
+        android:windowSoftInputMode=&quot;stateHidden|adjustResize&quot;
+        android:label=&quot;@string/app_name&quot; &gt;
+      &lt;meta-data android:name=&quot;android.support.PARENT_ACTIVITY&quot;
+                 android:value=&quot;.activities.ResidenceListActivity&quot;/&gt;
+    &lt;/activity&gt;</code></pre>
+<p>For reference, here is the completed MapActivity class:</p>
+<pre><code>
+package org.wit.myrent.activities;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.MenuItem;
+
+import com.google.android.gms.maps.*;
+import com.google.android.gms.maps.model.*;
+
+import org.wit.myrent.R;
+
+import static org.wit.android.helpers.IntentHelper.navigateUp;
+
+import org.wit.android.helpers.MapHelper;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Residence;
+
+public class MapActivity extends AppCompatActivity
+    implements OnMapReadyCallback,
+    GoogleMap.OnMarkerDragListener,
+    GoogleMap.OnInfoWindowClickListener,
+    GoogleMap.OnCameraIdleListener,
+    GoogleMap.OnMarkerClickListener
+{
+
+  /*
+ * We use the current residence when navigating back to parent class - ResidenceFragment as
+ * this is required in ResidenceFragment onCreate. The navigateUp
+ */
+  Long resId;
+
+  Residence residence; // The residence associated with this map pane
+  MyRentApp app;
+  GoogleMap map;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_map);
+
+    MapFragment mapFragment = (MapFragment) getFragmentManager()
+        .findFragmentById(R.id.map);
+    mapFragment.getMapAsync(this);
+
+    resId = (Long)getIntent().getSerializableExtra(ResidenceFragment.EXTRA_RESIDENCE_ID);
+
+    app = (MyRentApp)getApplication();
+    residence = app.portfolio.getResidence(resId);
+
+  }
+
+  @Override
+  public void onMapReady(GoogleMap map) {
+    this.map = map;
+
+    map.setOnMarkerDragListener(this);
+    map.setOnInfoWindowClickListener(this);
+    map.setOnMarkerClickListener(this);
+    map.setOnCameraIdleListener(this);
+
+    LatLng latLng = MapHelper.latLng(this, residence.geolocation);
+    MarkerOptions options = new MarkerOptions()
+        .title(&quot;Residence&quot;)
+        .snippet(&quot;GPS : &quot; + latLng.toString())
+        .draggable(true)
+        .position(latLng);
+
+    map.addMarker(options);
+
+    map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, (float)residence.zoom));
+
+    map.setOnInfoWindowClickListener(this);
+
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item)
+  {
+    switch (item.getItemId())
+    {
+      case android.R.id.home:
+        navigateUp(this, ResidenceFragment.EXTRA_RESIDENCE_ID, resId);
+        return true;
+
+      default: return super.onOptionsItemSelected(item);
+    }
+  }
+
+  /**
+   * GoogleMap.OnMarkerDragListener
+   * @param marker
+   */
+  @Override
+  public void onMarkerDragStart(Marker marker) {
+
+  }
+
+  /**
+   * GoogleMap.OnMarkerDragListener
+   * @param marker
+   */
+  @Override
+  public void onMarkerDrag(Marker marker) {
+
+  }
+
+  /**
+   * GoogleMap.OnMarkerDragListener
+   * When marker drag ends, save Residence model geolocation and zoom.
+   * @param marker The map marker representing current residence geolocation.
+   */
+  @Override
+  public void onMarkerDragEnd(Marker marker) {
+    residence.geolocation = MapHelper.latLng(marker.getPosition());
+    residence.zoom = map.getCameraPosition().zoom;
+    map.animateCamera(CameraUpdateFactory.newLatLng(marker.getPosition()));
+  }
+
+  /**
+   * GoogleMap.OnInfoWindowClickListener
+   * Click an open infowindow to close it.
+   * Click on a marker to open an infowindow
+   * @param marker The marker associated with this infowindow.
+   */
+  @Override
+  public void onInfoWindowClick(Marker marker) {
+    marker.hideInfoWindow();
+  }
+
+  /**
+   * GoogleMap.OnMarkerClickListener
+   * The purpose of including this method is to update the info window information
+   * with the geolocation of the current position of the marker.
+   * @param marker The marker whose info window being refreshed
+   * @return Returns false indicating default behaviour, i.e. open info window.
+   */
+  @Override
+  public boolean onMarkerClick(Marker marker) {
+    LatLng latLng = MapHelper.latLng(this, residence.geolocation);
+    marker.setSnippet(&quot;GPS : &quot; + latLng.toString());
+    return false;
+  }
+
+  /**
+   * GoogleMap.OnCameraIdleListener
+   * We implement this interface to capture zoom when marker not dragged but zoom changed
+   * example by pinching screen.
+   * When google map camera stops moving we capture the zoom and save to model.
+   */
+  @Override
+  public void onCameraIdle() {
+    residence.zoom = map.getCameraPosition().zoom;
+  }
+}</code></pre>
+<p>The application at the end of this lab is available for reference here: <a href="https://github.com/wit-ictskills-2016/myrent-11.git">myrent-11</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Appendix">
+        <h1>API Key</h1>
+<p>We recommend that you become familiar with the official documentation for <a href="https://developers.google.com/maps/documentation/android/start#overview">Google Maps Android API v2</a>.</p>
+<p>It is necessary to obtain an API key before using the Google Maps API. This can be achieved as follows:</p>
+<ul>
+<li>Retrieve your SHA-1 Fingerprint<ul>
+<li>A SHA-1 fingerprint is a unique text string required by Google Maps to identify your application.</li>
+<li>One easy way of obtaining the SHA-1 fingerprint associated with your machine is to create a new default project in Android Studio in which you create a Google Maps Activity. See Figure 1.<ul>
+<li>The fingerprint is then available in the file <em>google_maps_api.xml</em> as shown in Figure 2.</li>
+</ul>
+</li>
+<li>A second method of obtaining the fingerprint is to access the app&#39;s signing report as shown in Figure 3. This is described in detail in the stackoverflow article <a href="http://stackoverflow.com/questions/27609442/how-to-get-the-sha-1-fingerprint-certificate-in-android-studio-for-debug-mode">How to get the SHA-1 fingerprint certificate in Android Studio for debug mode?</a>.</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/09.png" alt="Figure 1: Android Studio project with Google Maps Activity"></p>
+<p><img src="img/09a.png" alt="Figure 2: SHA1 fingerprint"></p>
+<ul>
+<li>Register a Google account (or use an existing one) and sign in.</li>
+<li>Open the <a href="https://cloud.google.com/console">Google API Console</a><ul>
+<li>Create a project named, for example, <em>myrent</em> (Figures 4 &amp; 5).</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/08.png" alt="Figure 3: Alternative method to obtain fingerprint"></p>
+<p><img src="img/10.png" alt="Figure 4: Create new project">
+<img src="img/11.png" alt="Figure 5: New Project"></p>
+<ul>
+<li>Select Credentials in the Projects column and press the <em>Create new key</em> button (Figure 6).</li>
+</ul>
+<p><img src="img/12.png" alt="Figure 5: Create new key"></p>
+<ul>
+<li>The <em>Create a new key</em> window opens: press the <em>Android key</em> button (Figure 7).</li>
+</ul>
+<p><img src="img/13.png" alt="Figure 7: Create an Android key"></p>
+<ul>
+<li>A window similar to that illustrated in Figure 6 now opens:<ul>
+<li>Paste the SHA-1 Fingerprint into the the area indicated, followed by a semi-colon, followed by the project package name.</li>
+<li>Example: 45:B8:A9:...DE;org.wit.myrent</li>
+<li>Press the Create button.</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/14.png" alt="Figure 8: Create an Android key and configure allowed Android applications"></p>
+<ul>
+<li>A window showing the key and other relevant information should then appear as shown in Figure 9.</li>
+</ul>
+<p><img src="img/15.png" alt="Figure 9: Public API access"></p>
+<ul>
+<li>Switch on Google Maps Android API v2<ul>
+<li>Select APIS &amp; AUTH and then APIs in the left-hand Projects column  scroll to Google Maps Android API v2</li>
+<li>The button on the right should be off: if so, press it to turn it ON (Figure 10).</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/16.png" alt="Figure 10: Turn on Google Maps Android API v2"></p>
+<p>Here is a summary of the data that should be retained securely:</p>
+<ul>
+<li>The login | password pair for the Google account</li>
+<li>The SHA-1 fingerprint</li>
+<li>The API keys</li>
+</ul>
+<p>You may use the same key if you build MyRent on a different computer. However, it will be necessary to obtain the SHA-1 fingerprint for that device and add the package name and SHA-1 certificate fingerprint to your credentials console. An example is shown in Figure 11.</p>
+<p><img src="img/06.png" alt="Figure 11: Same API key used where MyRent built on different devices"></p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

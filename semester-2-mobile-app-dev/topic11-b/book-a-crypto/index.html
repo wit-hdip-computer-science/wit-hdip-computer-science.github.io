@@ -1,0 +1,1054 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      11-b: App Signing
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="App Signing & Crypto">
+      App Signing & Crypto
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-b-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview) /index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+          MyRent-11 (Maps - Google)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+          MyRent-11a (Maps - MapBox)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+          MyRentSQLite (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-a-myrent-12 (SQLite)/index.html">
+          MyRent-12 (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+          MyRentSQLite (ContentProvider)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service/index.html">
+          MyRent (Play Service)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service-test/index.html">
+          MyRent (JUnit Test)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+          MyRent-13 (Client)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-b-services/index.html">
+          MyRent-14 (Services)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-a/book-a-myrent-11 (Camera)/index.html">
+          MyRent-15 (Camera)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic11-b/book-a-crypto/index.html">
+          App Signing & Crypto
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-c/book-a-myrent-16(Mongo)/index.html">
+          MyRent-16 (Mongo)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="App Signing & Crypto">
+        <h1>Siging your app and basic cryptography</h1>
+<p>Cryptography supports the millions of daily secure internet transactions, for example, in the use of HTTPS, SSH, secure email, secure messaging and eCommerce. <br></p>
+<p>Widespread use of cryptography is made in the Android ecosystem, for example a hash function produces a fingerprint of the app and public-key cryptography is used to generate and use a set of public-private keys in signing and verifying the app. <br></p>
+<p>Specifically, in this lab, we shall sign our MyRent app and explore some simple uses of supporting cyptographic techniques.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Sign MyRent</h1>
+<h2>APK signing</h2>
+<p>Here we shall build and sign a release version of MyRent.</p>
+<p>Use your final version of the app or alternatively download and use a copy from wit-computing GitHub repo: <a href="https://github.com/wit-ictskills-2016/myrent-15.git">MyRent-15</a>.</p>
+<ul>
+<li><p>Import the project into Android Studio.</p>
+</li>
+<li><p>In the menu bar, click Build &gt; Generate Signed APK.</p>
+</li>
+</ul>
+<p><img src="img/01.png" alt="Figure 1: Generate Signed APK"></p>
+<ul>
+<li>Select the app module from the drop down and click Next.</li>
+</ul>
+<p><img src="img/02.png" alt="Figure 2: Select MyRent app module"></p>
+<ul>
+<li>On the New Key Store window, provide the following information for your keystore and key (Figures 3 &amp; 4).</li>
+</ul>
+<h2>Keystore</h2>
+<ul>
+<li>Key store path: Select the location where your keystore should be created.</li>
+<li>Password: Create and confirm a secure password for your keystore.</li>
+</ul>
+<h2>Key</h2>
+<ul>
+<li>Alias: Enter an identifying name for your key.</li>
+<li>Password: Create and confirm a secure password for your key. This should be different from the password you chose for your keystore</li>
+<li>Validity (years): Set the length of time in years that your key will be valid. Your key should be valid for at least 25 years, so you can sign app updates with the same key through the lifespan of your app.</li>
+<li>Certificate: Enter some information about yourself for your certificate. This information is not displayed in your app, but is included in your certificate as part of the APK.
+Once you complete the form, click OK.</li>
+</ul>
+<p><img src="img/03.png" alt="Figure 3: Create a new keystore"></p>
+<p><img src="img/04.png" alt="Figure 4: New Key Store Sample form"></p>
+<ul>
+<li>On the Generate Signed APK Wizard window, select a keystore, a private key, and enter the passwords for both. (If you created your keystore in the last step, these fields are already populated for you as shown in Figure 5.) Then click Next.</li>
+</ul>
+<p><img src="img/05.png" alt="Figure 5: Generate Signed APK"></p>
+<ul>
+<li>On the next window, select a destination for the signed APK(s) &amp; click Finish. See Figures 6 &amp; 7.</li>
+</ul>
+<p><img src="img/06.png" alt="Figure 6: Ready to generate signed APK"></p>
+<p><img src="img/07.png" alt="Figure 7: Signed APK successfully generated"></p>
+<p>Further details are available in the official documentation, for example how to automatically sign the apk, how to include flavours and so on: <a href="https://developer.android.com/studio/publish/app-signing.html">Sign Your App</a>.</p>
+<p>Browse to where the apk is stored on your computer and test by dragging and dropping onto an emulator or installing onto a physical device (tethered to your computer).</p>
+<p>You will find instructions on how to publish your app on the Google Play Store in the <a href="https://support.google.com/googleplay/android-developer/answer/113469?hl=en">Google Play Developer Console Help Center</a></p>
+<h2>APK verification</h2>
+<p>In a terminal (OSX) or command prompt (Windows) change into the directory where the recently signed apk resides. Then run this command:</p>
+<pre><code>jarsigner -verify -certs app-release.apk</code></pre>
+<p>A typical output is shown in Figure 8.</p>
+<p>If you require more detail run the command with the -verbose switch.</p>
+<p><img src="img/18.png" alt="Figure 8: Verifying Android APK file"></p>
+<p>To run jarsigner on Windows it is necessary that you:</p>
+<ul>
+<li>have installed Java JDK. This is available to download from the <a href="http://bit.ly/1lO1FSV">Java SE Development Kit 8 Downloads</a> page.</li>
+<li>added JDK to path.  Instructions are available here: <a href="http://bit.ly/2ft1y20">Updating the PATH Environment Variable (Optional)</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Hashing</h1>
+<p>We shall demonstrate the generation of a SHA-1 hash.</p>
+<p>Create a Java project in Eclipse IDE named <code>hashing</code>. </p>
+<p>In <code>hashing</code> source file create a class named <code>Main</code>:</p>
+<pre><code>
+package hashing;
+
+public class Main {
+
+  public static void main(String[] args) {
+
+  }
+
+}</code></pre>
+<p>Download Apache Commons Codec 1.10 file <a href="http://bit.ly/2f6pHet">commons-codec-1.10-bin.zip</a>:</p>
+<ul>
+<li><p>Unzip <code>commons-codec-1.10-bin.zip</code>.</p>
+</li>
+<li><p>Locate <code>commons-codec-1.10.jar</code> and move to a <code>lib</code> folder in the root of the project as shown in Figure 1.</p>
+</li>
+<li><p>Select the jar in the navigation panel, right click to open the context menu and add the jar to the build path.</p>
+</li>
+</ul>
+<p><img src="img/08.png" alt="Figure 1: Project structure"></p>
+<p>Add a method to convert an array of bytes to a hex string:</p>
+<pre><code>
+  public static void byteToHex(byte[] bytes) {
+    StringBuilder sb = new StringBuilder();
+    for (byte b : bytes) {
+        sb.append(String.format(&quot;%02X &quot;, b));
+    }
+    System.out.println(sb.toString());
+  }</code></pre>
+<p>Import <code>DigestUtils</code> from the Apache Commons Codec jar:</p>
+<pre><code>
+import org.apache.commons.codec.digest.DigestUtils;</code></pre>
+<p>Study the <a href="http://bit.ly/1KBZzTS">DigestUtils JavaDoc</a>. We shall use its <code>sha1</code> method to obtain the SHA-1 hash of a string in the form of a byte array which we shall then convert and print as the familiar hex string.</p>
+<p>Refactor Main:</p>
+<pre><code>  public static void main(String[] args) {
+
+    byteToHex(DigestUtils.sha1(&quot;ICTSkills_2015&quot;));
+    byteToHex(DigestUtils.sha1(&quot;ICTSkills_2016&quot;));
+  }</code></pre>
+<p>Run the program and study the output. It should match that in Figure 2. Observe how very different the two hash values are despite the inputs differing only 1 the last character.</p>
+<p><img src="img/09.png" alt="Figure 2: SHA-1 hash values of 2 very similar strings"></p>
+<p>Now obtain the hash value of a longer string and note that its length is the same as that of each of the earlier strings:</p>
+<pre><code>
+    String lorem = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, &quot;
+            + &quot;sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &quot;
+            + &quot;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris &quot;
+            + &quot;nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in &quot;
+            + &quot;reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla &quot;
+            + &quot;pariatur. Excepteur sint occaecat cupidatat non proident, sunt in &quot;
+            + &quot;culpa qui officia deserunt mollit anim id est laborum.&quot;;</code></pre>
+<p><img src="img/10.png" alt="Figure 3: SHA-1 values of all three strings same length"></p>
+<p>For reference, here is the complete Main class in which we have moved the contents of <code>main</code> to a method <code>public void sha1()</code>:</p>
+<pre><code>
+package hashing;
+import org.apache.commons.codec.digest.DigestUtils;
+
+public class Main {
+
+  public static void byteToHex(byte[] bytes) {
+    StringBuilder sb = new StringBuilder();
+    for (byte b : bytes) {
+        sb.append(String.format(&quot;%02X &quot;, b));
+    }
+    System.out.println(sb.toString());
+  }
+
+   public static void sha1() {
+    byteToHex(DigestUtils.sha1(&quot;ICTSkills_2015&quot;));
+    byteToHex(DigestUtils.sha1(&quot;ICTSkills_2016&quot;));
+    String lorem = &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, &quot;
+            + &quot;sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &quot;
+            + &quot;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris &quot;
+            + &quot;nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in &quot;
+            + &quot;reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla &quot;
+            + &quot;pariatur. Excepteur sint occaecat cupidatat non proident, sunt in &quot;
+            + &quot;culpa qui officia deserunt mollit anim id est laborum.&quot;;
+    byteToHex(DigestUtils.sha1(lorem));    
+  }
+
+  public static void main(String[] args) {
+
+    sha1();
+  }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Integrity check</h1>
+<p>In the previous step we downloaded the Apache file <code>commons-codec-1.10-bin.zip</code> available at <a href="http://commons.apache.org/proper/commons-codec/download_codec.cgi">Download Apache Commons Codec</a> and made use of a contained <code>jar</code> file. However we did not check the integrity of the file. Somehow, during the downloading operation, it could have been possible that the zip file was tampered with. For example <code>commons-codec-1.10.jar</code> might have been replaced with a malicious version containing a keylogger. This would be referred to as a <code>man in the middle</code> attack. (MiTM). To guard against this, the Apache Commons site has provided us with the downloadable zip file&#39;s <code>pgp</code> signature and <code>md5</code> hash. This is shown in Figure 1.</p>
+<p><img src="img/11.png" alt="Figure 1: Apache Commons provides md5 hashes and pgp signatures to facilitate verification"></p>
+<p>We shall verify using both md5 and pgp.</p>
+<h2>md5 verification</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/MD5">md5 algorithm</a> produces a 128-bit (16-byte) hash value.</p>
+<p>Click on <a href="http://bit.ly/2g929db">md5</a> to reveal the hash value for <code>commons-codec-1.10-bin.zip</code>:</p>
+<pre><code>59b6046b8cb5bf48c3b2e63bb4424779</code></pre>
+<p>We shall now implement a method in our hasing project to calculate the md5 hash value of the downloaded file.</p>
+<p>First, download the file <a href="http://www.java2s.com/Code/JarDownload/guava/guava.jar.zip">guava.jar</a> into the <code>lib</code> folder and add it to the build path.</p>
+<p>Next, place the downloaded file <code>commons-codec-1.10-bin.zip</code> in a new folder named <code>zip</code> located in the root of the <code>hashing</code> project. See Figure 2.</p>
+<p><img src="img/12.png" alt="Figure 2: Project file structure"></p>
+<p>Add a method to calculate the hash value:</p>
+<pre><code>  public static void md5() {
+    File file = new File(&quot;./zip/commons-codec-1.10-bin.zip&quot;);
+    try {
+      byte[] data = Files.toByteArray(file);
+      byteToHex(DigestUtils.md5(data));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }</code></pre>
+<p>These import statements are required:</p>
+<pre><code>import java.io.File;
+import java.io.IOException;
+import com.google.common.io.Files;</code></pre>
+<p>Invoke <code>md5()</code>. The output should be similar to that shown in Figure 3. This should match the published hash value (also shown above).</p>
+<p><img src="img/13.png" alt="Figure 3: Generated md5 hash value"></p>
+<p>Several online md5 algorithms are also available some of which you might consider experimenting with.</p>
+<h2>pgp verification</h2>
+<p>A requirement is that the <a href="https://gpgtools.org/">GPG Suite</a> or similar application is installed on your computer. In the case of Windows you can use <a href="http://www.gpg4win.org/">Gpg4win</a>.</p>
+<p>Download the suite but before installing verify using the SHA1 signature supplied on the GPG site. You may find the <a href="http://bit.ly/1DbcGKi">Quick Start Tutorial</a> helpful.</p>
+<p>On OSX verification may be performed by changing into the directory where the GPG suite has been saved and running a command similar to the following.</p>
+<pre><code>openssl sha1 GPG_Suite-2016.10_v2.dmg</code></pre>
+<p><img src="img/14.png" alt="Figure 4: GPG Suite - use SHA1 signature to verify download before installation"></p>
+<p>This should generate an output similar to that shown in Figure 5. Check this against the published signature.</p>
+<p><img src="img/15.png" alt="Figure 5: Verifying GPG installation file"></p>
+<p>Now download the pgg signature. This will appear as shown in Figure 6. Copy it into a text editor and save it with a <code>.asc</code> extension, for example <code>gpg.asc</code>. Save the file to the same location as the download file that we wish to verify. </p>
+<p><img src="img/16.png" alt="Figure 6: PGP Signature"></p>
+<p>Then run the following verifying command. The output should be something similar to that shown in Figure 7.</p>
+<pre><code>gpg --verify gpg.asc commons-codec-1.10-bin.zip</code></pre>
+<p><img src="img/17.png" alt="Figure 7: Verification of downloaded file using pgp signature"></p>
+<p>Further useful information is available at <a href="https://www.openoffice.org/download/checksums.html">Apache OpenOffice</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Key exchange</h1>
+<p>Discovered independently by Malcolm Williamson (1973) at GCHQ, England and later by Whitfield Diffie and Martin Hellman (1976). Generally referred to as Diffie-Hellman.</p>
+<p>Here is a slide from the presentation decks that describes what we shall now implement in a simple Java program:</p>
+<p><img src="img/20.png" alt="Figure 1: Key exchange illustrated with colours and small prime numbers"></p>
+<p>In the program we use a type <a href="https://goo.gl/Z4Xprq">BigInteger</a> because it is suited to modular arithmetic and to cryptography given the very large prime numbers used. Remember that using Math.pow() function to raise a number to an exponent requires parameter types to be doubles. This does not suit modular arithmetic where all types are natural numbers (0, 1, 2, . . .).</p>
+<p>Create a project named <code>key_exchange</code> and in a package, also named key_exchange, create two classes, one <code>Alice</code>, the other <code>Bob</code>. The presence of the eavesdropper <code>Eve</code> is implicit and represented by the use of public fields and methods.</p>
+<p>Add fields to both classes.</p>
+<pre><code>
+package key_exchange;
+
+import java.math.BigInteger;
+
+public class Alice {
+
+  public static BigInteger Z = BigInteger.valueOf(17); // Modulus
+  public static BigInteger g = BigInteger.valueOf(3); // Generator
+  private static BigInteger d = BigInteger.valueOf(15); // Alice&#39;s private number
+
+}</code></pre>
+<pre><code>package key_exchange;
+
+import java.math.BigInteger;
+
+public class Bob {
+
+  public static BigInteger Z = BigInteger.valueOf(17); // Modulus
+  public static BigInteger g = BigInteger.valueOf(3); // Generator
+  private static BigInteger d = BigInteger.valueOf(13); // Bob&#39;s private number
+
+}</code></pre>
+<p>We shall now program the equivalent of mixing colours. </p>
+<ul>
+<li>Alice and Bob adds their private colours to the public colour.</li>
+<li>This is represented mathematically by raising the generator to the power of each person&#39;s private number.</li>
+</ul>
+<p>In the class Alice:</p>
+<pre><code>  public static BigInteger mixedColors() {
+    return g.modPow(d, Z); // g raised to power d modulo Z
+  }</code></pre>
+<p>In the class Bob the code is exactly the same:</p>
+<pre><code>  public static BigInteger mixedColors() {
+    return g.modPow(d, Z); // g raised to power d modulo Z
+  }</code></pre>
+<p>The methods are public as the data is transmitted in the clear and so accessible to Eve.</p>
+<p>With this information both Alice and Bob are in a position to generate the shared secret key. Here are the methods to do so. Notice the difference between them.</p>
+<p>Alice:</p>
+<pre><code>  /**
+   * Bob&#39;s mixed colors + Alice&#39;s secret color
+   * @return Shared secret key
+   */
+  private static BigInteger sharedSecretKey() {
+    return Bob.mixedColors().modPow(d, Z);
+  }</code></pre>
+<p>Bob:</p>
+<pre><code>  /**
+   * Alice&#39;s mixed colors + Bob&#39;s secret color
+   * @return Shared secret key
+   */
+  private static BigInteger sharedSecretKey() {
+    return Alice.mixedColors().modPow(d, Z);
+  }</code></pre>
+<p>We conclude by adding <code>main</code> methods and printing the secret keys (and additionally the mixed colours).</p>
+<p>Alice:</p>
+<pre><code>  public static void main(String[] args) {
+    System.out.println(&quot;Bob&#39;s mixed colors &quot; + Bob.mixedColors());
+    System.out.println(&quot;Alices&#39;s shared secret key &quot; + sharedSecretKey());
+  }</code></pre>
+<p>Bob:</p>
+<pre><code>  public static void main(String[] args) {
+    System.out.println(&quot;Alice&#39;s mixed colors &quot; + Alice.mixedColors());
+    System.out.println(&quot;Bob&#39;s shared secret key &quot; + sharedSecretKey());
+
+  }</code></pre>
+<p>Run each main function in turn. The expected out is shown in Figure 2.</p>
+<p><img src="img/19.png" alt="Figure 2: Alice and Bob now share a secret key. Eve left out in the cold"></p>
+<p>For reference here are the classes: Alice and Bob.</p>
+<pre><code>package key_exchange;
+
+import java.math.BigInteger;
+
+public class Alice {
+
+  public static BigInteger Z = BigInteger.valueOf(17); // Modulus
+  public static BigInteger g = BigInteger.valueOf(3); // Generator
+  private static BigInteger d = BigInteger.valueOf(15); // Alice&#39;s private number
+
+  public static BigInteger mixedColors() {
+    return g.modPow(d, Z); // g raised to power d modulo Z
+  }
+
+  /**
+   * Bob&#39;s mixed colors + Alice&#39;s secret color
+   * @return Shared secret key
+   */
+  private static BigInteger sharedSecretKey() {
+    return Bob.mixedColors().modPow(d, Z);
+  }
+
+
+  public static void main(String[] args) {
+    System.out.println(&quot;Bob&#39;s mixed colors &quot; + Bob.mixedColors());
+    System.out.println(&quot;Alices&#39;s shared secret key &quot; + sharedSecretKey());
+  }
+
+}</code></pre>
+<pre><code>package key_exchange;
+
+import java.math.BigInteger;
+
+public class Bob {
+
+  public static BigInteger Z = BigInteger.valueOf(17); // Modulus
+  public static BigInteger g = BigInteger.valueOf(3); // Generator
+  private static BigInteger d = BigInteger.valueOf(13); // Bob&#39;s private number
+
+  public static BigInteger mixedColors() {
+    return g.modPow(d, Z); // g raised to power d modulo Z
+  }
+
+  /**
+   * Alice&#39;s mixed colors + Bob&#39;s secret color
+   * @return Shared secret key
+   */
+  private static BigInteger sharedSecretKey() {
+    return Alice.mixedColors().modPow(d, Z);
+  }
+
+  public static void main(String[] args) {
+    System.out.println(&quot;Alice&#39;s mixed colors &quot; + Alice.mixedColors());
+    System.out.println(&quot;Bob&#39;s shared secret key &quot; + sharedSecretKey());
+
+  }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Public key cryptography</h1>
+<p>We now implement in Java the very simple public key cryptographic problem presented in the <code>crypto-math</code> slide deck. See slides 29 to 37 inclusive.</p>
+<p>Before proceeding it is worth understanding a number of important points regarding public-key cryptography:</p>
+<ul>
+<li>A public-private key pair could be considered to be generated by splitting an existing key into complementary keys, one private the other public.</li>
+<li>What we mean by private is that the owner of the keys retains this key for his or her personal use, never discloses it to a third party, keeps it safe and protects it with a password to prevent prying eyes from using it should it somehow fall into the wrong hands. We shall not deal with how this is achieved. </li>
+<li>The public key is what it implies, public. These often reside on public key servers and are accessible to all.</li>
+<li>A message encrypted with the public key can only be decrypted with the associated private key.</li>
+<li>A message encrypted with the private key (this is called signing) can be decrypted with the public key (called verification).</li>
+</ul>
+<h2>Encryption</h2>
+<ul>
+<li>Create a Java project in Eclipse named <code>key_exchange</code> and a package within the project similarly named.</li>
+<li>Create two classes, Alice and Bob.<ul>
+<li>Alice shall generate a key pair and:</li>
+<li>Pass the public key from this pair to Bob who shall:</li>
+<li>Encrypt a message using the public key and pass back to Alice.</li>
+<li>Alice shall use her private key to decrypt the message.</li>
+</ul>
+</li>
+</ul>
+<p>We shall use very small prime numbers to facilitate understanding. But in reality, as already pointed out, huge prime numbers are used, numbers that may in some circumstances contain as many as 600 digits (approximately 2000 bits).</p>
+<p>Alice:</p>
+<pre><code>
+package public_key_crypto;
+
+import java.math.BigInteger;
+/**
+ * A class to demonstrate the use of public key cryptography.
+ * Two different prime numbers are multiplied to obtain the modulus.
+ * The public and private key components, e and d, are supplied only, not calculated.
+ * For those interested in the calculation details consult Brit Close course on KhanAcademy.
+ * Additionally Eddie Woo has uploaded two very simple YouTube videos dealing with this.
+ * Both these are referenced at the foot of one or both accompanying slide decks.
+ */
+public class Alice {
+
+  // Select 2 prime numbers. In reality 300+ digits long each.
+  private static BigInteger p = BigInteger.valueOf(2);
+  private static BigInteger q = BigInteger.valueOf(7);
+
+  public static BigInteger Z = p.multiply(q); // Modulus = p x q
+
+  /**
+   * Derivation of e &amp; d and relationship between them explained here:
+   * @see http://bit.ly/2g9Tyaf
+   */
+  public static BigInteger e = BigInteger.valueOf(5); // Public exponent used to encrypt
+  private static BigInteger d = BigInteger.valueOf(11); // Alice&#39;s private key used to decrypt 
+
+
+}</code></pre>
+<p>Bob:</p>
+<pre><code>public class Bob {
+
+  /**
+   * Public key (e, Z) obtained from Alice
+   */
+  public BigInteger e; // Encrypting exponent 
+  public BigInteger Z; // The  modulus
+  private BigInteger message = BigInteger.valueOf(2); // Private plain text message
+
+  /**
+   * Create Bob, providing the public key set as parameters.
+   * @param e
+   * @param Z
+   */
+  public Bob(BigInteger e, BigInteger Z) {
+    this.e = e;
+    this.Z = Z;
+    System.out.println(&quot;Shhhh. Bob here. I know you can keep a secret. The message is &quot; + message);
+  }
+
+
+}</code></pre>
+<p>Now add a method to Bob to encrypt a message. </p>
+<pre><code>  /**
+   * c = m^e mod Z, i.e. m raised to the power of e modulo Z.
+   * @return The ciphertext
+   */
+  public BigInteger encryptMessage() {
+    return message.modPow(e, Z);
+  }</code></pre>
+<p>It only remains for Alice to </p>
+<ul>
+<li>Create a Bob instance, </li>
+<li>Invoke Bob&#39;s method to encrypt Bob&#39;s secret message,</li>
+<li>Decrypt the encrypted version of Bob&#39;s secret message and</li>
+<li>Output the results.</li>
+</ul>
+<p>All this can be achieved within <code>main</code> as follows:</p>
+<pre><code>  public static void main(String[] args) {
+    // Instantiate Bob and encrypt his private message
+    Bob bob = new Bob(e, Z);
+    BigInteger cipherText = bob.encryptMessage();
+
+    //Alice uses her private key to decrypt and output result.
+    BigInteger message = cipherText.modPow(d, Z);
+
+    System.out.println(&quot;Alice here. See what I&#39;ve got: &quot;);
+    System.out.println(&quot;CipherText from Bob: &quot; + cipherText);
+    System.out.println(&quot;MessageText obtained by decryption of ciphertext: &quot; + message);
+  }</code></pre>
+<p>Build and run. The output should be similar to that shown in Figure 1.</p>
+<p><img src="img/21.png" alt="Figure 1: Public key encryption-decryption"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Public Key Cryptography</h1>
+<h2>Signing</h2>
+<p>In the previous step Bob used Alice&#39;s public key to encrypt a message.</p>
+<p>Alice then used her private key to decrypt the ciphertext.</p>
+<p>Here Alice will send a public message to Bob to which Eve will have access. </p>
+<p>What&#39;s of concern to both Alice and Bob is not that Eve can read the message but that the author of the message is Alice and no one else.</p>
+<p>To ensure this Alice will encrypt the message with her private key. Then Bob, or indeed Eve, can decrypt the message with the public key and in being able to do so can be confident that Alice is the author.</p>
+<p>For simplicity the message will comprise a single digit. But it could easily be an indefinite length string. However the additional work would not contribute to the current learning topic.</p>
+<p>Add a method to Bob:</p>
+<pre><code>  /**
+   * Check if signedMessage, when decrypted with public key, matches the message.
+   * @param signedMessage The message signed with Alice&#39;s private key.
+   * @param message The plain text message.
+   * @return Returns true if the message author is Alice.
+   */
+  public boolean verifyMessage(BigInteger signedMessage, BigInteger message) {
+    BigInteger unsignedMessage = signedMessage.modPow(e, Z);
+    return message.equals(unsignedMessage);
+  }</code></pre>
+<p>This method uses the public key to decrypt the incoming signed message.</p>
+<p>It then compares this unsigned message to the clear text message. </p>
+<ul>
+<li>If they are equal then the author is Alice and the boolean true is returned.</li>
+<li>Otherwise the return value is false.</li>
+</ul>
+<p>Now to Alice. Declare and initialize a field to contain the message. The message is 11:</p>
+<pre><code>  public static BigInteger message = BigInteger.valueOf(11);</code></pre>
+<p>Sign the message:</p>
+<pre><code>/**
+   * Sign a message using Alice&#39;s private key.
+   * This, in effect, is encrypting the message.
+   * @return The signed message.
+   */
+  private static BigInteger signedMessage() {
+    return message.modPow(d,  Z);
+  }</code></pre>
+<p>Alice invokes Bob.verifyMessage to determine if the message Bob has received is the one which she authored.</p>
+<pre><code>  /**
+   * Invoke Bob.verifyMessage to determine if the author is Alice.
+   * Output the result - true if Alice is the author.
+   * @param bob An instance of Bob
+   */
+  private static void verifyMessage(Bob bob) {
+    boolean isVerified = bob.verifyMessage(signedMessage(), message);
+    System.out.println(&quot;Alice message verified? &quot; + isVerified);
+
+  }</code></pre>
+<p>Finally, invoke this method in Alice.main. Remember that an instance of Bob already exists in main and we pass this as a parameter:</p>
+<pre><code>    verifyMessage(bob);</code></pre>
+<p><img src="img/22.png" alt="Figure  1: Message verified"></p>
+<p>For reference, both completed classes are provided here:</p>
+<pre><code>package public_key_crypto;
+
+import java.math.BigInteger;
+/**
+ * A class to demonstrate the use of public key cryptography.
+ * Two different prime numbers are multiplied to obtain the modulus.
+ * The public and private key components, e and d, are supplied only, not calculated.
+ * For those interested in the calculation details consult Brit Close course on KhanAcademy.
+ * Additionally Eddie Woo has uploaded two very simple YouTube videos dealing with this.
+ * Both these are referenced at the foot of one or both accompanying slide decks.
+ */
+public class Alice {
+
+  // Select 2 prime numbers. In reality 300+ digits long each.
+  private static BigInteger p = BigInteger.valueOf(2);
+  private static BigInteger q = BigInteger.valueOf(7);
+
+  public static BigInteger Z = p.multiply(q); // Modulus = p x q
+
+  /**
+   * Derivation of e &amp; d and relationship between them explained here:
+   * @see http://bit.ly/2g9Tyaf
+   */
+  public static BigInteger e = BigInteger.valueOf(5); // Public exponent used to encrypt
+  private static BigInteger d = BigInteger.valueOf(11); // Alice&#39;s private key used to decrypt 
+
+  public static BigInteger message = BigInteger.valueOf(11);
+
+  /**
+   * Sign a message using Alice&#39;s private key.
+   * This, in effect, is encrypting the message.
+   * @return The signed message.
+   */
+  private static BigInteger signedMessage() {
+    return message.modPow(d,  Z);
+  }
+
+  /**
+   * Invoke Bob.verifyMessage to determine if the author is Alice.
+   * Output the result - true if Alice is the author.
+   * @param bob An instance of Bob
+   */
+  private static void verifyMessage(Bob bob) {
+    boolean isVerified = bob.verifyMessage(signedMessage(), message);
+    System.out.println(&quot;Alice message verified? &quot; + isVerified);
+
+  }
+
+  public static void main(String[] args) {
+    // Instantiate Bob and encrypt his private message
+    Bob bob = new Bob(e, Z);
+    BigInteger cipherText = bob.encryptMessage();
+
+    //Alice uses her private key to decrypt and output result.
+    BigInteger message = cipherText.modPow(d, Z);
+
+    System.out.println(&quot;Alice here. See what I&#39;ve got: &quot;);
+    System.out.println(&quot;CipherText from Bob: &quot; + cipherText);
+    System.out.println(&quot;MessageText obtained by decryption of ciphertext: &quot; + message);
+
+    verifyMessage(bob);
+  }
+
+}</code></pre>
+<pre><code>package public_key_crypto;
+
+import java.math.BigInteger;
+
+public class Bob {
+
+  /**
+   * Public key (e, Z) obtained from Alice
+   */
+  public BigInteger e; // Encrypting exponent 
+  public BigInteger Z; // The  modulus
+  private BigInteger message = BigInteger.valueOf(2); // Private plain text message
+
+  /**
+   * Create Bob, providing the public key set as parameters.
+   * @param e
+   * @param Z
+   */
+  public Bob(BigInteger e, BigInteger Z) {
+    this.e = e;
+    this.Z = Z;
+    System.out.println(&quot;Shhhh. Bob here. I know you can keep a secret. The message is &quot; + message);
+  }
+
+  /**
+   * c = m^e mod Z, i.e. m raised to the power of e modulo Z.
+   * @return The ciphertext
+   */
+  public BigInteger encryptMessage() {
+    return message.modPow(e, Z);
+  }
+
+  /**
+   * Check if signedMessage, when decrypted with public key, matches the message.
+   * @param signedMessage The message signed with Alice&#39;s private key.
+   * @param message The plain text message.
+   * @return Returns true if the message author is Alice.
+   */
+  public boolean verifyMessage(BigInteger signedMessage, BigInteger message) {
+    BigInteger unsignedMessage = signedMessage.modPow(e, Z);
+    return message.equals(unsignedMessage);
+  }
+
+}</code></pre>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

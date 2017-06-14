@@ -1,0 +1,1442 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      7-b: SQLite
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRentSQLite (SQLite)">
+      MyRentSQLite (SQLite)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="10">
+      10
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" data-tab="Appendix-A">
+      Appendix-A
+    </a>
+    
+    <a class="item" data-tab="Appendix-B">
+      Appendix-B
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-b-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview) /index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+          MyRent-11 (Maps - Google)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+          MyRent-11a (Maps - MapBox)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+          MyRentSQLite (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-a-myrent-12 (SQLite)/index.html">
+          MyRent-12 (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+          MyRentSQLite (ContentProvider)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service/index.html">
+          MyRent (Play Service)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service-test/index.html">
+          MyRent (JUnit Test)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+          MyRent-13 (Client)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-b-services/index.html">
+          MyRent-14 (Services)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-a/book-a-myrent-11 (Camera)/index.html">
+          MyRent-15 (Camera)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-b/book-a-crypto/index.html">
+          App Signing & Crypto
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-c/book-a-myrent-16(Mongo)/index.html">
+          MyRent-16 (Mongo)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRentSQLite (SQLite)">
+        <h1>Using SQLite in Android Development</h1>
+<p>Working with a subset of the MyRent app, we develop a module to persist data using SQLite, use the Android Debug Bridge (adb) commandline tool to view the database content and as an exercise replace the file system in MyRent with an SQLite implementation.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Baseline app</h1>
+<p>Create a baseline app named MyRentSQLite and complete the wizard screesn, following the steps shown in the following figures 1 to 4.</p>
+<p>On completing the wizard, the app opens within Android Studio. This is shown in Figures 6 and 6.</p>
+<p><img src="img/01.png" alt="Figure 1:">
+<img src="img/02.png" alt="Figure 2:">
+<img src="img/03.png" alt="Figure 3:">
+<img src="img/04.png" alt="Figure 4:"></p>
+<p><img src="img/05.png" alt="Figure 5: MyRent activity">
+<img src="img/06.png" alt="Figure 6: activity-myrent.xml design view"></p>
+<p>Replace build.gradle (Module:app) with the following version to align with the Android configuration we have been using in this course:</p>
+<pre><code>apply plugin: &#39;com.android.application&#39;
+
+android {
+  compileSdkVersion 23
+  buildToolsVersion &quot;23.0.3&quot;
+
+  defaultConfig {
+    applicationId &quot;sqlite.myrentsqlite&quot;
+    minSdkVersion 19
+    targetSdkVersion 23
+    versionCode 1
+    versionName &quot;1.0&quot;
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+    }
+  }
+}
+
+dependencies {
+  compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
+  testCompile &#39;junit:junit:4.12&#39;
+  compile &#39;com.android.support:appcompat-v7:23.4.0&#39;
+}</code></pre>
+<p>Build and install apk on a device or emulator to display the standard hello world screen as shown in Figure 6.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Project structure</h1>
+<p>To closely mimic the MyRent app structure, create three packages, <em>activities</em>, <em>app</em> and <em>models</em> as shown in the following pictures:</p>
+<p><img src="img/07.png" alt="Figure 1">
+<img src="img/08.png" alt="Figure 2">
+<img src="img/09.png" alt="Figure 3"></p>
+<p>Move MyRent.java into the activities package. Unfortunately there is a bug in Android Studio 2.1.1 that cause the IDE to freeze if one attempts to drag and drop. 
+This appears to have been resolved in version 2.1.3 but if not then simply copy and paste the file into activities and delete it from its original location.</p>
+<p>We shall progressively implement the following features:</p>
+<p>We begin with a restricted version of the Residence model class. It contains only 2 fields.</p>
+<ol>
+<li>Add a Residence object to the database.</li>
+<li>Delete a single Residence object from the database.</li>
+<li>Delete all Residence objects in the database.</li>
+<li>Obtain a list of all Residence objects in the database.</li>
+<li>Obtain a single nominated Residence object from the database.</li>
+<li>Add all remaining fields to the Residence model and test previously added features.</li>
+<li>Implement an update feature whereby an existing Residence object in the database may have some or all of its fields modified, excluding the primary key.</li>
+</ol>
+<p>We will then have implemented Create, Read, Update and Delete (CRUD) capabilities.</p>
+<p>Note: not all import statements are included in the code provided. Code completion hints are generally provided that simplifies this task.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Add Residence</h1>
+<p>We will build the app incrementally, beginning with the adding of a single Residence object to the database. </p>
+<p>The refactoring comprises:</p>
+<ul>
+<li>Adding a button to the layout which when clicked causes a Residence object to be added to the database.</li>
+<li>Adding an event handler and other code to the activity MyRent to respond to a button click.</li>
+<li>Subclassing the Android Application class with a new class MyRentApp, located in the app package.</li>
+<li>Making changes to the AndroidManifest file to reflect the subclassing of the Application class.</li>
+<li>Subclassing the SQLiteOpenHelper class with a new class DbHelper, located in the app package.</li>
+<li>Adding a Residence model class that contains, for now, just two fields - the primary key and another.</li>
+</ul>
+<p>The project structure, following refactoring, is depicted in Figure 1.</p>
+<p><img src="img/11.png" alt="Figure 1: Refactored project structure"></p>
+<h2>Manifest file</h2>
+<p>Here is the AndroidManifest.xml text. We have added the application name as an attribute (<code>.app.MyRentApp</code>).</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;manifest package=&quot;sqlite.myrentsqlite&quot;
+          xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+
+  &lt;application
+      android:name=&quot;.app.MyRentApp&quot;
+      android:allowBackup=&quot;true&quot;
+      android:icon=&quot;@mipmap/ic_launcher&quot;
+      android:label=&quot;@string/app_name&quot;
+      android:supportsRtl=&quot;true&quot;
+      android:theme=&quot;@style/AppTheme&quot;&gt;
+    &lt;activity android:name=&quot;.activities.MyRent&quot;&gt;
+      &lt;intent-filter&gt;
+        &lt;action android:name=&quot;android.intent.action.MAIN&quot;/&gt;
+
+        &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot;/&gt;
+      &lt;/intent-filter&gt;
+    &lt;/activity&gt;
+  &lt;/application&gt;
+
+&lt;/manifest&gt;</code></pre>
+<h2>Layout</h2>
+<p>The refactored layout file <code>activity_myrent.xml</code> , both text and design views follow:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;RelativeLayout
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
+    android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
+    tools:context=&quot;sqlite.myrentsqlite.activities.MyRent&quot;&gt;
+
+  &lt;Button
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:text=&quot;Add Residence&quot;
+      android:id=&quot;@+id/addResidence&quot;
+      android:layout_alignParentLeft=&quot;true&quot;
+      android:layout_alignParentStart=&quot;true&quot;/&gt;
+
+&lt;/RelativeLayout&gt;</code></pre>
+<p><img src="img/10.png" alt="Figure 2: Design view - MyRentSQLite"></p>
+<h2>Model</h2>
+<pre><code>package sqlite.myrentsqlite.models;
+
+import java.util.UUID;
+
+public class Residence
+{
+  public UUID id;
+  public String geolocation;
+
+
+  public Residence()
+  {
+    id = UUID.randomUUID();
+    geolocation = &quot;52.253456,-7.187162&quot;;
+  }
+
+}</code></pre>
+<h2>Application subclass</h2>
+<pre><code>package sqlite.myrentsqlite.app;
+
+import android.app.Application;
+import android.util.Log;
+
+public class MyRentApp extends Application
+{
+  static final String TAG = &quot;MyRentApp&quot;;
+  public DbHelper dbHelper = null;
+
+  private static MyRentApp app;
+  @Override
+  public void onCreate()
+  {
+    super.onCreate();
+    dbHelper = new DbHelper(getApplicationContext());
+    Log.d(TAG, &quot;MyRent app launched&quot;);
+    app = this;
+  }
+
+  public static MyRentApp getApp(){
+    return app;
+  }
+}</code></pre>
+<h2>SQLiteOpenHelper subclass</h2>
+<pre><code>package sqlite.myrentsqlite.app;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+import sqlite.myrentsqlite.models.Residence;
+
+public class DbHelper extends SQLiteOpenHelper
+{
+  static final String TAG = &quot;DbHelper&quot;;
+  static final String DATABASE_NAME = &quot;residences.db&quot;;
+  static final int DATABASE_VERSION = 1;
+  static final String TABLE_RESIDENCES = &quot;tableResidences&quot;;
+
+  static final String PRIMARY_KEY = &quot;id&quot;;
+  static final String GEOLOCATION = &quot;geolocation&quot;;
+
+  Context context;
+
+  public DbHelper(Context context)
+  {
+    super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    this.context = context;
+  }
+
+  @Override
+  public void onCreate(SQLiteDatabase db)
+  {
+    String createTable =
+        &quot;CREATE TABLE tableResidences &quot; +
+        &quot;(id text primary key, &quot; +
+        &quot;geolocation text)&quot;;
+
+    db.execSQL(createTable);
+    Log.d(TAG, &quot;DbHelper.onCreated: &quot; + createTable);
+  }
+
+  /**
+   * @param residence Reference to Residence object to be added to database
+   */
+  public void addResidence(Residence residence)
+  {
+    SQLiteDatabase db = this.getWritableDatabase();
+    ContentValues values = new ContentValues();
+    values.put(PRIMARY_KEY, residence.id.toString());
+    values.put(GEOLOCATION, residence.geolocation);
+    // Insert record
+    db.insert(TABLE_RESIDENCES, null, values);
+    db.close();
+  }
+
+
+  @Override
+  public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
+  {
+    db.execSQL(&quot;drop table if exists &quot; + TABLE_RESIDENCES);
+    Log.d(TAG, &quot;onUpdated&quot;);
+    onCreate(db);
+  }
+}</code></pre>
+<h2>Activity</h2>
+<pre><code>package sqlite.myrentsqlite.activities;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+
+import sqlite.myrentsqlite.R;
+import sqlite.myrentsqlite.app.MyRentApp;
+import sqlite.myrentsqlite.models.Residence;
+
+public class MyRent extends AppCompatActivity implements View.OnClickListener
+{
+
+  private Button addResidence;
+
+  MyRentApp app;
+  Residence residence;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_myrent);
+
+    app = MyRentApp.getApp();
+
+    addResidence = (Button) findViewById(R.id.addResidence);
+    addResidence.setOnClickListener(this);
+  }
+
+  @Override
+  public void onClick(View v)
+  {
+    switch (v.getId())
+    {
+      case R.id.addResidence:
+        addResidence();
+        break;
+
+    }
+  }
+
+  private void addResidence()
+  {
+    residence = new Residence();
+
+    app.dbHelper.addResidence(residence);
+
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Test using adb</h1>
+<p>To check that the record is correctly inserted into the database we shall use the Android Debug Bridge (adb) commandline tool. You should refer to the Appendix for instructions in the configuration and use of <em>adb</em>.</p>
+<p>Run MyRentSQLite app and add a residence by clicking on the Add Residence button.</p>
+<p>Switch to a terminal and execute the command:</p>
+<pre><code>adb shell</code></pre>
+<p>The response should be:</p>
+<pre><code>root@generic_x86_64:/ #</code></pre>
+<p>Change directory as follows:</p>
+<pre><code>cd data/data</code></pre>
+<p>Check for the presence of our app:</p>
+<pre><code>ls -l</code></pre>
+<pre><code>drwxr-x--x u0_a80   u0_a80  2016-07-15 10:57 sqlite.myrentsqlite</code></pre>
+<p>If, in Windows, you are unable to proceed further due to a permissions issue, then try the following as a solution:</p>
+<ul>
+<li>Open a windows command prompt as an administrator. You can do this by selecting the command prompt icon in the start menu and accessing the context menu.</li>
+<li>Then in the administrative command prompt run:</li>
+</ul>
+<pre><code>adb root</code></pre>
+<p>Change directory into <em>sqlite.myrentsqlite</em>.</p>
+<pre><code>cd sqlite.myrentsqlite</code></pre>
+<p>Check its contents:</p>
+<pre><code>ls -l
+
+drwxrwx--x u0_a80   u0_a80            2016-07-15 10:57 cache
+drwxrwx--x u0_a80   u0_a80            2016-07-15 10:57 code_cache
+drwxrwx--x u0_a80   u0_a80            2016-07-15 10:57 databases
+drwx------ u0_a80   u0_a80            2016-07-15 10:57 files</code></pre>
+<p>Change into databases folder and check the contents:</p>
+<pre><code>cd databases
+ls -l</code></pre>
+<p>Here is typical output:</p>
+<pre><code>...
+-rw-rw---- u0_a80   u0_a80      20480 2016-07-15 10:58 residences.db
+-rw------- u0_a80   u0_a80      12824 2016-07-15 10:58 residences.db-journal</code></pre>
+<p>The database file <em>residences.db</em> is present. This name was assigned in the DbHelper class. We shall now inspect its contents. Run the following commands:</p>
+<pre><code>sqlite3 residences.db</code></pre>
+<p>The response should be something like the following:</p>
+<pre><code>SQLite version 3.8.10.2 2015-05-20 18:17:19
+Enter &quot;.help&quot; for usage hints.
+sqlite&gt;</code></pre>
+<p>Check what tables are present in the database:</p>
+<pre><code>.tables</code></pre>
+<p>In our case the response should be as follows:</p>
+<pre><code>android_metadata  tableResidences 
+sqlite&gt;</code></pre>
+<p>We have added one Residence object record to the database. This can now be verified:</p>
+<pre><code>sqlite&gt; select * from tableResidences;</code></pre>
+<pre><code>efb14e04-0820-4cfc-9520-1f4c391d0974|52.253456,-7.187162</code></pre>
+<p>To exit sqlite run this command:</p>
+<pre><code>.exit</code></pre>
+<p>To exit adb run a similar command but without the period:</p>
+<pre><code>exit</code></pre>
+<p>Use the above technique to regularly check the database table(s) as you progressively develop the app.</p>
+<p>Running <strong>.exit</strong> and <strong>exit</strong> in succession will return you to the terminal command prompt.</p>
+<p>Official documentation:</p>
+<ul>
+<li><a href="https://www.sqlite.org/cli.html">SQLite command shell</a></li>
+<li><a href="https://developer.android.com/studio/command-line/adb.html">Android Debug Bridge</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Select a Residence</h1>
+<p>In this step, we provide the additional code to select a single residence from the database.</p>
+<h2>Layout (xml)</h2>
+<p>Add a <em>Delete Residence</em> button to the layout:</p>
+<pre><code>  &lt;Button
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:text=&quot;Select Residence&quot;
+      android:id=&quot;@+id/selectResidence&quot;
+      android:layout_alignBottom=&quot;@+id/addResidence&quot;
+      android:layout_alignParentEnd=&quot;true&quot;
+      android:layout_marginEnd=&quot;27dp&quot;/&gt;</code></pre>
+<p><img src="img/17.png" alt=""></p>
+<h2>DbHelper</h2>
+<p>Add this method to DbHelper.java:</p>
+<pre><code>  public Residence selectResidence(UUID resId) {
+    Residence residence;
+    SQLiteDatabase db = this.getReadableDatabase();
+    Cursor cursor = null;
+
+    try {
+      residence = new Residence();
+
+      cursor = db.rawQuery(&quot;SELECT * FROM tableResidences WHERE id = ?&quot;, new String[]{resId.toString() + &quot;&quot;});
+
+      if (cursor.getCount() &gt; 0) {
+        int columnIndex = 0;
+        cursor.moveToFirst();
+        residence.id = UUID.fromString(cursor.getString(columnIndex++));
+        residence.geolocation = cursor.getString(columnIndex++);
+      }
+    } finally {
+      cursor.close();
+    }
+    return residence;
+  }</code></pre>
+<p>These import statements are required:</p>
+<pre><code>import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;</code></pre>
+<h2>MyRent (activity)</h2>
+<p>The following additional code snippets are required:</p>
+<ul>
+<li>A Button field.</li>
+<li>Binding of the button resource in the R file to the new button field.</li>
+<li>Setting a listener on the button.</li>
+<li>Intercepting a button click.</li>
+<li>Implementing a method <em>selectResidence</em> that in turn invokes DbHelper.deleteResidence.</li>
+</ul>
+<p>Here are the code snippets:</p>
+<pre><code>  private Button selectResidence;</code></pre>
+<pre><code>    selectResidence = (Button) findViewById(R.id.selectResidence);
+    selectResidence.setOnClickListener(this);</code></pre>
+<pre><code>
+      case R.id.selectResidence:
+        selectResidence();
+        break;</code></pre>
+<pre><code>  /**
+   * This method demonstrates how to select a Residence record, identified by
+   * its primary key, the UUID field.
+   * Invoking addResidence() writes a Residence record to the database.
+   * Additionally, it initializes this.residence field.
+   * The id of this.residence is then used as a parameter in DbHelper.selectResidence.
+   */
+  public void selectResidence()
+  {
+    addResidence();
+    UUID uuid = residence.id;
+    Residence selectedResidence = app.dbHelper.selectResidence(uuid);
+    if (residence != null &amp;&amp; residence.id.toString().equals(selectedResidence.id.toString()))
+    {
+      Toast.makeText(this, &quot;Residence record selected(id: &quot; + residence.id, Toast.LENGTH_LONG).show();
+    }
+    else
+    {
+      Toast.makeText(this, &quot;Failed to select Residence record&quot;, Toast.LENGTH_LONG).show();
+    }
+  }</code></pre>
+<p>Toast and UUID imports are required:</p>
+<pre><code>import android.widget.Toast;
+import java.util.UUID;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Delete a Residence</h1>
+<p>In this step, we provide the additional code to delete a single residence from the database.</p>
+<h2>Layout (xml)</h2>
+<p>Add a <em>Delete Residence</em> button to the layout:</p>
+<pre><code>  &lt;Button
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:text=&quot;Delete Residence&quot;
+      android:id=&quot;@+id/deleteResidence&quot;
+      android:layout_below=&quot;@+id/addResidence&quot;
+      android:layout_alignParentStart=&quot;true&quot;
+      android:layout_marginTop=&quot;42dp&quot;/&gt;</code></pre>
+<p><img src="img/18.png" alt=""></p>
+<h2>DbHelper</h2>
+<p>Add this method to DbHelper.java:</p>
+<pre><code>    public void deleteResidence(Residence residence) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            db.delete(&quot;tableResidences&quot;, &quot;id&quot; + &quot;=?&quot;, new String[]{residence.id.toString() + &quot;&quot;});
+        } catch (Exception e) {
+            Log.d(TAG, &quot;delete residence failure: &quot; + e.getMessage());
+        }
+    }</code></pre>
+<h2>MyRent (activity)</h2>
+<p>The following additional items are required:</p>
+<ul>
+<li>A Button field.</li>
+<li>Binding of the button resource in the R file to the new button field.</li>
+<li>Setting a listener on the button.</li>
+<li>Intercepting a button click.</li>
+<li>Implementing a method <em>deleteResidence</em> that in turn invokes DbHelper.deleteResidence.</li>
+</ul>
+<p>Here are the code snippets:</p>
+<pre><code>  private Button deleteResidence;</code></pre>
+<pre><code>    deleteResidence = (Button) findViewById(R.id.deleteResidence);
+    deleteResidence.setOnClickListener(this);</code></pre>
+<pre><code>@Override
+  public void onClick(View v)
+  {
+    switch (v.getId())
+    {
+
+      ...
+      ...
+
+      case R.id.deleteResidence:
+        deleteResidence();
+        break;
+
+    }
+
+  }</code></pre>
+<pre><code>  public void deleteResidence()
+  {
+    if (residence == null)
+    {
+      addResidence();
+    }
+    else {
+      Residence res = app.dbHelper.selectResidence(residence.id);
+      app.dbHelper.deleteResidence(res);
+    }
+  }</code></pre>
+<p>Debug into the app and using adb or otherwise verify that this feature works correctly.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>List all residences</h1>
+<p>In this step we shall select the entire tableResidences record set and store in a List array.</p>
+<h2>Layout (xml)</h2>
+<pre><code>  &lt;Button
+      android:id=&quot;@+id/selectAllResidences&quot;
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:layout_alignBottom=&quot;@+id/deleteResidence&quot;
+      android:layout_alignEnd=&quot;@+id/selectResidence&quot;
+      android:text=&quot;Select All&quot;/&gt;</code></pre>
+<p><img src="img/19.png" alt=""></p>
+<h2>DbHelper</h2>
+<pre><code>  /**
+   * Query database and select entire tableResidences.
+   * 
+   * @return A list of Residence object records
+   */
+  public List&lt;Residence&gt; selectAllResidences() {
+    List&lt;Residence&gt; residences = new ArrayList&lt;Residence&gt;();
+    String query = &quot;SELECT * FROM &quot; + &quot;tableResidences&quot;;
+    SQLiteDatabase db = this.getWritableDatabase();
+    Cursor cursor = db.rawQuery(query, null);
+    if (cursor.moveToFirst()) {
+      int columnIndex = 0;
+      do {
+        Residence residence = new Residence();
+        residence.id = UUID.fromString(cursor.getString(columnIndex++));
+        residence.geolocation = cursor.getString(columnIndex++);
+
+        columnIndex = 0;
+
+        residences.add(residence);
+      } while (cursor.moveToNext());
+    }
+    cursor.close();
+    return residences;
+  }</code></pre>
+<h2>MyRent (activity)</h2>
+<pre><code>  private Button selectAllResidences;</code></pre>
+<pre><code>    selectAllResidences = (Button) findViewById(R.id.selectAllResidences);
+    selectAllResidences.setOnClickListener(this);</code></pre>
+<pre><code>      case R.id.selectAllResidences:
+        selectAllResidences();
+        break;</code></pre>
+<pre><code>  public void selectAllResidences() {
+    List&lt;Residence&gt; residences = app.dbHelper.selectAllResidences();
+    Toast.makeText(this, &quot;Retrieved residence list containing  &quot; + residences.size() + &quot; records&quot;, Toast.LENGTH_LONG).show();
+  }</code></pre>
+<p>Import the List class:</p>
+<pre><code>import java.util.List;</code></pre>
+<p>Debug into the app to verify that this feature works correctly.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Delete all</h1>
+<p>In this step we shall delete the entire tableResidences record set.</p>
+<h2>Layout (xml)</h2>
+<pre><code>
+  &lt;Button
+      android:id=&quot;@+id/deleteAllResidences&quot;
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:layout_marginTop=&quot;49dp&quot;
+      android:text=&quot;Delete All&quot;
+      android:layout_below=&quot;@+id/deleteResidence&quot;
+      android:layout_alignParentStart=&quot;true&quot;/&gt;</code></pre>
+<p><img src="img/20.png" alt=""></p>
+<h2>DbHelper</h2>
+<pre><code>  /**
+   * Delete all records
+   */
+  public void deleteAllResidences() {
+    SQLiteDatabase db = this.getWritableDatabase();
+    try {
+      db.execSQL(&quot;delete from tableResidences&quot;);
+    } catch (Exception e) {
+      Log.d(TAG, &quot;delete residences failure: &quot; + e.getMessage());
+    }
+  }</code></pre>
+<p>Add a method to obtain the number of rows in the database:</p>
+<pre><code>  /**
+   * Queries the database for the number of records.
+   *
+   * @return The number of records in the dataabase.
+   */
+  public long getCount() {
+    SQLiteDatabase db = this.getReadableDatabase();
+    long numberRecords  = DatabaseUtils.queryNumEntries(db, TABLE_RESIDENCES);
+    db.close();
+    return numberRecords;
+  }</code></pre>
+<p>Required import:</p>
+<pre><code>import android.database.DatabaseUtils;</code></pre>
+<h2>MyRent (activity)</h2>
+<pre><code>  private Button deleteAllResidences;</code></pre>
+<pre><code>    deleteAllResidences = (Button) findViewById(R.id.deleteAllResidences);
+    deleteAllResidences.setOnClickListener(this);</code></pre>
+<pre><code>      case R.id.deleteAllResidences:
+        deleteAllResidences();
+        break;</code></pre>
+<pre><code>  /**
+   * Delete all records.
+   * Count the number of rows in database following deletion -should be zero.
+   * Provide user feed back in a toast.
+   */
+  public void deleteAllResidences() {
+    app.dbHelper.deleteAllResidences();
+    Toast.makeText(this, &quot;Number of records in database &quot; + app.dbHelper.getCount(), Toast.LENGTH_LONG).show();
+
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Residence model complete</h1>
+<p>Here will shall add the remaining fields to the Residence model and refactor the database helper appropriately.</p>
+<h2>Model Residence</h2>
+<pre><code>package sqlite.myrentsqlite.models;
+
+import java.util.Date;
+import java.util.UUID;
+
+public class Residence
+{
+  public UUID id;
+  public String geolocation;
+  public Date date;
+  public boolean rented;
+  public String tenant;
+  public double zoom;//zoom level of accompanying map
+  public String photo;
+
+
+  public Residence()
+  {
+    id = UUID.randomUUID();
+    geolocation = &quot;52.253456,-7.187162&quot;;
+    date = new Date();
+    rented = false;
+    tenant = &quot;: none presently&quot;;
+    zoom = 16.0;
+    photo = &quot;photo&quot;;
+  }
+
+}</code></pre>
+<h2>DbHelper (Complete)</h2>
+<p>Note in particular how the <em>Date date</em>, <em>boolean rented</em> and <em>double zoom</em> fields are transformed as they are inserted to and read from the database.</p>
+<pre><code>package sqlite.myrentsqlite.app;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+
+import sqlite.myrentsqlite.models.Residence;
+
+public class DbHelper extends SQLiteOpenHelper
+{
+  static final String TAG = &quot;DbHelper&quot;;
+  static final String DATABASE_NAME = &quot;residences.db&quot;;
+  static final int DATABASE_VERSION = 1;
+  static final String TABLE_RESIDENCES = &quot;tableResidences&quot;;
+
+  static final String PRIMARY_KEY = &quot;id&quot;;
+  static final String GEOLOCATION = &quot;geolocation&quot;;
+  static final String DATE = &quot;date&quot;;
+  static final String RENTED = &quot;rented&quot;;
+  static final String TENANT = &quot;tenant&quot;;
+  static final String ZOOM = &quot;zoom&quot;;
+  static final String PHOTO = &quot;photo&quot;;
+
+  Context context;
+
+  public DbHelper(Context context) {
+    super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    this.context = context;
+  }
+
+  @Override
+  public void onCreate(SQLiteDatabase db) {
+    String createTable =
+        &quot;CREATE TABLE tableResidences &quot; +
+            &quot;(id text primary key, &quot; +
+            &quot;geolocation text,&quot; +
+            &quot;date text,&quot; +
+            &quot;rented text,&quot; +
+            &quot;tenant text,&quot; +
+            &quot;zoom text,&quot; +
+            &quot;photo text)&quot;;
+
+    db.execSQL(createTable);
+    Log.d(TAG, &quot;DbHelper.onCreated: &quot; + createTable);
+  }
+
+  /**
+   * @param residence Reference to Residence object to be added to database
+   */
+  public void addResidence(Residence residence) {
+    SQLiteDatabase db = this.getWritableDatabase();
+    ContentValues values = new ContentValues();
+    values.put(PRIMARY_KEY, residence.id.toString());
+    values.put(GEOLOCATION, residence.geolocation);
+
+    values.put(DATE, String.valueOf(residence.date.getTime()));
+    values.put(RENTED, residence.rented == true ? &quot;yes&quot; : &quot;no&quot;);
+    values.put(TENANT, residence.tenant);
+    values.put(ZOOM, Double.toString(residence.zoom));
+    values.put(PHOTO, residence.photo);
+
+    // Insert record
+    db.insert(TABLE_RESIDENCES, null, values);
+    db.close();
+  }
+
+  public Residence selectResidence(UUID resId) {
+    Residence residence;
+    SQLiteDatabase db = this.getReadableDatabase();
+    Cursor cursor = null;
+
+    try {
+      residence = new Residence();
+
+      cursor = db.rawQuery(&quot;SELECT * FROM tableResidences WHERE id = ?&quot;, new String[]{resId.toString() + &quot;&quot;});
+
+      if (cursor.getCount() &gt; 0) {
+        int columnIndex = 0;
+        cursor.moveToFirst();
+        residence.id = UUID.fromString(cursor.getString(columnIndex++));
+        residence.geolocation = cursor.getString(columnIndex++);
+        residence.date = new Date(Long.parseLong(cursor.getString(columnIndex++)));
+        residence.rented = cursor.getString(columnIndex++) == &quot;yes&quot; ? true : false;
+        residence.tenant = cursor.getString(columnIndex++);
+        residence.zoom = Double.parseDouble(cursor.getString(columnIndex++));
+        residence.photo = cursor.getString(columnIndex++);
+      }
+    }
+    finally {
+      cursor.close();
+    }
+    return residence;
+  }
+
+  public void deleteResidence(Residence residence) {
+    SQLiteDatabase db = this.getWritableDatabase();
+    try {
+      db.delete(&quot;tableResidences&quot;, &quot;id&quot; + &quot;=?&quot;, new String[]{residence.id.toString() + &quot;&quot;});
+    }
+    catch (Exception e) {
+      Log.d(TAG, &quot;delete residence failure: &quot; + e.getMessage());
+    }
+  }
+
+  /**
+   * Query database and select entire tableResidences.
+   *
+   * @return A list of Residence object records
+   */
+  public List&lt;Residence&gt; selectAllResidences() {
+    List&lt;Residence&gt; residences = new ArrayList&lt;Residence&gt;();
+    String query = &quot;SELECT * FROM &quot; + &quot;tableResidences&quot;;
+    SQLiteDatabase db = this.getWritableDatabase();
+    Cursor cursor = db.rawQuery(query, null);
+    if (cursor.moveToFirst()) {
+      int columnIndex = 0;
+      do {
+        Residence residence = new Residence();
+        residence.id = UUID.fromString(cursor.getString(columnIndex++));
+        residence.geolocation = cursor.getString(columnIndex++);
+        residence.date = new Date(Long.parseLong(cursor.getString(columnIndex++)));
+        residence.rented = cursor.getString(columnIndex++) == &quot;yes&quot; ? true : false;
+        residence.tenant = cursor.getString(columnIndex++);
+        residence.zoom = Double.parseDouble(cursor.getString(columnIndex++));
+        residence.photo = cursor.getString(columnIndex++);
+        columnIndex = 0;
+
+        residences.add(residence);
+      } while (cursor.moveToNext());
+    }
+    cursor.close();
+    return residences;
+  }
+
+  /**
+   * Delete all records
+   */
+  public void deleteAllResidences() {
+    SQLiteDatabase db = this.getWritableDatabase();
+    try {
+      db.execSQL(&quot;delete from tableResidences&quot;);
+    } catch (Exception e) {
+      Log.d(TAG, &quot;delete residences failure: &quot; + e.getMessage());
+    }
+  }
+
+  /**
+   * Queries the database for the number of records.
+   *
+   * @return The number of records in the dataabase.
+   */
+  public long getCount() {
+    SQLiteDatabase db = this.getReadableDatabase();
+    long numberRecords  = DatabaseUtils.queryNumEntries(db, TABLE_RESIDENCES);
+    db.close();
+    return numberRecords;
+  }
+
+  @Override
+  public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    db.execSQL(&quot;drop table if exists &quot; + TABLE_RESIDENCES);
+    Log.d(TAG, &quot;onUpdated&quot;);
+    onCreate(db);
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="10">
+        <h1>Update</h1>
+<p>In this the final step we shall update a tableResidences record - a Residence object.</p>
+<h2>Layout (xml)</h2>
+<pre><code>  &lt;Button
+      android:id=&quot;@+id/updateResidence&quot;
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:text=&quot;Update&quot;
+      android:layout_alignTop=&quot;@+id/deleteAllResidences&quot;
+      android:layout_alignEnd=&quot;@+id/selectAllResidences&quot;/&gt;</code></pre>
+<p><img src="img/21.png" alt=""></p>
+<h2>DbHelper</h2>
+<pre><code>  /**
+   * Update an existing Residence record.
+   * All fields except record id updated.
+   * 
+   * @param residence The Residence record being updated.     
+   */
+  public void updateResidence(Residence residence) {
+    SQLiteDatabase db = this.getWritableDatabase();
+    try {
+      ContentValues values = new ContentValues();
+      values.put(GEOLOCATION, residence.geolocation);
+      values.put(DATE, String.valueOf(residence.date.getTime()));
+      values.put(RENTED, residence.rented == true ? &quot;yes&quot; : &quot;no&quot;);
+      values.put(TENANT, residence.tenant);
+      values.put(ZOOM, Double.toString(residence.zoom));
+      values.put(PHOTO, residence.photo);
+      db.update(&quot;tableResidences&quot;, values, &quot;id&quot; + &quot;=?&quot;,  new String[]{residence.id.toString() + &quot;&quot;});
+    } catch (Exception e) {
+      Log.d(TAG, &quot;update residences failure: &quot; + e.getMessage());
+    }
+  }</code></pre>
+<h2>MyRent (activity)</h2>
+<pre><code>
+  private Button updateResidence;</code></pre>
+<pre><code>    updateResidence = (Button) findViewById(R.id.updateResidence);
+    updateResidence.setOnClickListener(this);</code></pre>
+<pre><code>      case R.id.updateResidence:
+        updateResidence();
+        break;</code></pre>
+<pre><code>  /**
+   * Update a residence record.
+   * Create and insert a test record.
+   * Make some changes to its fields and update its copy in the database.
+   * Verify and provide toast feedback.
+   */
+  public void updateResidence() {
+    addResidence(); // This initializes the instance variable Residence residence
+    Residence res = app.dbHelper.selectResidence(residence.id);
+    // Makes some distinguishing changes to res fields
+    res.tenant = &quot;Barney Gumble&quot;;
+    res.rented = true;
+    res.zoom = 20;
+
+    app.dbHelper.updateResidence(res);
+
+    // Read the updated rrow and verify it&#39;s correct.
+    Residence res2 = app.dbHelper.selectResidence(res.id);
+    boolean b = res.zoom == res2.zoom;
+    if (b == true) {
+      Toast.makeText(this, &quot;Update succeeded&quot;, Toast.LENGTH_LONG).show();
+    }
+    else {
+      Toast.makeText(this, &quot;Update failed&quot;, Toast.LENGTH_LONG).show();
+    }
+  }</code></pre>
+<p>A completed version of the application is available to download from GitHub: <a href="https://github.com/wit-ictskills-2016/myrent-sqlite.git">MyRentSQLite</a></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>(1) Use this lab to integrate an SQLite database in MyRent app.</p>
+<p>(2 )Add a feature to DbHelper to insert a list of Residence records. </p>
+<p>Presently a method exists to insert a single record. Extend the:</p>
+<ul>
+<li>UI (add a button) </li>
+<li>MyRent activity (add an event handler)</li>
+<li>DbHelper (add residences method).</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Appendix-A">
+        <h1>Android Debug Bridge (adb)</h1>
+<p><strong>adb</strong> is a commandline tool to view and manipulate SQlite databases generated within an Android app.</p>
+<p>Here is the link for official Android documentation: <a href="https://developer.android.com/studio/command-line/adb.html">Android Debug Bridge</a></p>
+<p>In this step we will:</p>
+<ul>
+<li><p>very briefly describe how modify the path environment variable on your computer (Mac &amp; Windows) by adding the path to the <em>Android Debug Bridge</em> utility (<em>adb</em>).</p>
+</li>
+<li><p>outline how to manually delete the database data using <em>adb</em></p>
+</li>
+</ul>
+<p><strong>Add Android Debug Bridge to the PATH variable</strong></p>
+<ul>
+<li>On the Mac (OSX)</li>
+</ul>
+<p>The <em>Android Debug Bridge (adb)</em> is located in the platform-tools folder in the ADT bundle.</p>
+<p>It is necessary to insert the path to <em>adb</em> on the PATH environment variable.</p>
+<p>The path to this utility might be something like the following (amend appropriately for your particular environment):</p>
+<pre><code>$HOME/android-dev/adt-bundle-mac-x86_64-20130729/sdk/platform-tools</code></pre>
+<p>In OSX this can be added to the PATH variable by editing the .bash_profile file which is located in the home folder. Quoting from, for example, <a href="http://support.apple.com/kb/PH10939">OSX Mountain Lion support page</a> :</p>
+<p>In Windows 10, a typical path to adb.exe is as follows:</p>
+<pre><code>C:\Users\User\AppData\Local\Android\sdk\platform-tools</code></pre>
+<p><em>The home folder stores your documents, preference settings, and other information. A home folder is created for each user of your computer when his or her account is set up. If you are the only user of your computer, there is only one home folder. The home folder isn’t actually named “Home”; its name is the same as the account name specified in your user account. Your home folder appears in the sidebar of Finder windows.</em></p>
+<p>See also <a href="https://support.apple.com/kb/PH22031?locale=en_US">OSX El Capitan: home folder</a>.</p>
+<p>Open a terminal window. Check that you are in the home folder. Use <em>Sublime Text</em> editor to open .bash_profile*</p>
+<p>The first line of the modified path could be this:</p>
+<p>PATH=\$PATH:/\$HOME/android-dev/adt-bundle-mac-x86_64-20130729/sdk/platform-tools:\</p>
+<ul>
+<li>On Windows</li>
+</ul>
+<p>On Windows you may edit the path by accessing</p>
+<p><em>System Properties &gt; Advanced &gt; Environment Variables</em></p>
+<p><strong>Using adb</strong></p>
+<p>In a terminal window execute</p>
+<p><em>adb shell</em></p>
+<p>This will change the command prompt to <em>root@generic:/ ... </em>.</p>
+<p>Change directory:</p>
+<p><em>cd data/data</em></p>
+<p>Type *ls sqlite.myrentsqlite.</p>
+<p>You should see something like that shown in Figure 1 :</p>
+<p><img src="img/16.png" alt="Figure 1: Using *adb*"></p>
+<p>To remove the database execute</p>
+<p><em>rm -rf sqlite.myrentsqlite/databases</em></p>
+<p>It&#39;s important to note that the name of the folder containg the database, <em>sqlite.myrentsqlite</em> , derives from the package name in the AndroidManifest.xml file and that the name of the database, <em>residences.db</em>, is that which we have assigned in DbHelper.java. The table, <em>tableResidences</em>, will also have been assigned in DbHelper.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Appendix-B">
+        <h1>SQLite Browser</h1>
+<p>A third-party <a href="http://sqlitebrowser.org/">SQLite browser</a> provides an alternative approach to <em>adb</em> to view the database content.</p>
+<p><img src="img/12.png" alt="Figure 1: SQLite browser"></p>
+<p>Detailed information on the installation and use of the browser is contained in the <em>stackoverflow</em> article <a href="http://stackoverflow.com/questions/17529766/view-contents-of-database-file-in-android-studio">View contents of database file in Android Studio</a>, summarized in the the following screenshots:</p>
+<p><img src="img/13.png" alt="Figure 2: Viewing Android Studio generated database">
+<img src="img/14.png" alt="Figure 3: Viewing Android Studio generated database">
+<img src="img/15.png" alt="Figure 4: Sample tableResidences records"></p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

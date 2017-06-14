@@ -1,0 +1,606 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      5-a: Persistence & Communication
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-06a (Permissions)">
+      MyRent-06a (Permissions)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-b-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview) /index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+          MyRent-11 (Maps - Google)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+          MyRent-11a (Maps - MapBox)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+          MyRentSQLite (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-a-myrent-12 (SQLite)/index.html">
+          MyRent-12 (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+          MyRentSQLite (ContentProvider)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service/index.html">
+          MyRent (Play Service)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service-test/index.html">
+          MyRent (JUnit Test)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+          MyRent-13 (Client)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-b-services/index.html">
+          MyRent-14 (Services)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-a/book-a-myrent-11 (Camera)/index.html">
+          MyRent-15 (Camera)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-b/book-a-crypto/index.html">
+          App Signing & Crypto
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-c/book-a-myrent-16(Mongo)/index.html">
+          MyRent-16 (Mongo)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-06a (Permissions)">
+        <h1>Contact list &amp; Email support</h1>
+<p>Supplementary MyRent lab to demonstrate how to request permissions at run time. We restrict ourselves to the single permission READ_CONTACTS. We consider two scenarios: activity-fragment and viewpager-fragment.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Gradle</h1>
+<p>Add the following dependency to <code>build.gradle (Modlule: app)</code>:</p>
+<pre><code>      compile &quot;com.android.support:support-v13:23.4.0&quot;</code></pre>
+<p>The FragmentCompat class, which we shall be using shortly, requires this library.</p>
+<p>Your complete gradle file might look something like this (with the appropriate applicationId):</p>
+<pre><code>
+apply plugin: &#39;com.android.application&#39;
+
+android {
+  compileSdkVersion 23
+  buildToolsVersion &quot;23.0.3&quot;
+
+  defaultConfig {
+    applicationId &quot;org.wit.myrent&quot;
+    minSdkVersion 19
+    targetSdkVersion 23
+    versionCode 1
+    versionName &quot;1.0&quot;
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+    }
+  }
+}
+
+dependencies {
+  compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
+  testCompile &#39;junit:junit:4.12&#39;
+  compile &#39;com.android.support:appcompat-v7:23.4.0&#39;
+  compile &quot;com.android.support:support-v13:23.4.0&quot;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>ResidenceFragment code</h1>
+<p>This code will work for both the ViewPager-Fragment and Activity-Fragment situations.</p>
+<p>Introduce a new field for the intent data. </p>
+<pre><code>// This field is initialized in `onActivityResult`.
+Intent data:</code></pre>
+<p>This field is required to provide us with access to the data intent outside the method <code>onActivityResult</code>.</p>
+<pre><code>
+  @Override
+  public void onClick(View v)
+  {
+    switch (v.getId())
+    {
+     ...
+     ...
+
+      case R.id.tenant :
+        Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+        startActivityForResult(i, REQUEST_CONTACT);
+        break;
+
+      case R.id.residence_reportButton :
+        if(emailAddress == null) emailAddress = &quot;&quot;; // guard against null pointer
+        sendEmail(getActivity(), emailAddress, getString(R.string.residence_report_subject), residence.getResidenceReport(getActivity()));
+        break;
+
+    }</code></pre>
+<pre><code>  @Override
+  public void onActivityResult(int requestCode, int resultCode, Intent data)
+  {
+    switch (requestCode) {
+      case REQUEST_CONTACT:
+        this.data = data;
+        checkContactsReadPermission();
+        break;
+    }
+  }
+
+  private void readContact() {
+    String name = ContactHelper.getContact(getActivity(), data);
+    emailAddress = ContactHelper.getEmail(getActivity(), data);
+    tenantButton.setText(name + &quot; : &quot; + emailAddress);
+    residence.tenant = name;
+  }
+`</code></pre>
+<pre><code>  /**
+   * http://stackoverflow.com/questions/32714787/android-m-permissions-onrequestpermissionsresult-not-being-called
+   * This is an override of FragmentCompat.onRequestPermissionsResult
+   *
+   * @param requestCode Example REQUEST_CONTACT
+   * @param permissions String array of permissions requested.
+   * @param grantResults int array of results for permissions request.
+   */
+  @Override
+  public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    switch (requestCode) {
+      case REQUEST_CONTACT: {
+        // If request is cancelled, the result arrays are empty.
+        if (grantResults.length &gt; 0 &amp;&amp; grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+          readContact();
+        }
+        break;
+      }
+    }
+  }
+
+  /**
+   * Bespoke method to check if read contacts permission exists.
+   * If it exists then the contact sought is read.
+   * Otherwise, the method FragmentCompat.request permissions is invoked and
+   * The response is via the callback onRequestPermissionsResult.
+   * In onRequestPermissionsResult, on successfully being granted permission then the sought contact is read.
+   */
+  private void checkContactsReadPermission() {
+    if (ContextCompat.checkSelfPermission(getActivity(),
+        Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED) {
+
+      readContact();
+    }
+    else {
+      // Invoke callback to request user-granted permission
+      FragmentCompat.requestPermissions(
+          this,
+          new String[]{Manifest.permission.READ_CONTACTS},
+          REQUEST_CONTACT);
+    }
+  }</code></pre>
+<p>These import statements are required:</p>
+<pre><code>import android.support.v13.app.FragmentCompat;
+import android.support.v4.content.ContextCompat;
+import android.Manifest;
+import android.content.pm.PackageManager;</code></pre>
+<p>Replace the existing Fragment import with the following:</p>
+<pre><code>import android.app.Fragment;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Activity-Fragment</h1>
+<p>Activity class: example ResidenceActivity.</p>
+<p>Replace:</p>
+<pre><code>
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;</code></pre>
+<p>with:</p>
+<pre><code>import android.app.Fragment;
+import android.app.FragmentManager;</code></pre>
+<p>Replace:</p>
+<pre><code>        FragmentManager manager = getSupportFragmentManager();</code></pre>
+<p>with:</p>
+<pre><code>        FragmentManager manager = getFragmentManager();</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>ViewPager-Fragment</h1>
+<p>ViewPager class: example ResidencePagerActivity</p>
+<p>Replace:</p>
+<pre><code>
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;</code></pre>
+<p>with:</p>
+<pre><code>import android.app.Fragment;
+import android.app.FragmentManager;
+import android.support.v13.app.FragmentStatePagerAdapter;</code></pre>
+<p>Replace:</p>
+<pre><code>            pagerAdapter = new PagerAdapter(getSupportFragmentManager(), residences);</code></pre>
+<p>with:</p>
+<pre><code>            pagerAdapter = new PagerAdapter(getFragmentManager(), residences);</code></pre>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

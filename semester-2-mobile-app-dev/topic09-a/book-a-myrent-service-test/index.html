@@ -1,0 +1,747 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      9-a: Client-Service
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent (JUnit Test)">
+      MyRent (JUnit Test)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-b-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview) /index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+          MyRent-11 (Maps - Google)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+          MyRent-11a (Maps - MapBox)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+          MyRentSQLite (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-a-myrent-12 (SQLite)/index.html">
+          MyRent-12 (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+          MyRentSQLite (ContentProvider)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service/index.html">
+          MyRent (Play Service)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic09-a/book-a-myrent-service-test/index.html">
+          MyRent (JUnit Test)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+          MyRent-13 (Client)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-b-services/index.html">
+          MyRent-14 (Services)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-a/book-a-myrent-11 (Camera)/index.html">
+          MyRent-15 (Camera)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-b/book-a-crypto/index.html">
+          App Signing & Crypto
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-c/book-a-myrent-16(Mongo)/index.html">
+          MyRent-16 (Mongo)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent (JUnit Test)">
+        <h1>Objectives</h1>
+<p>Explore the Unit test features of Play by writing some tests to verify the current behavior of the Residence model class for the MyRent app. Develop a test app to consume MyRent service API, progressively implementing a range of functionality in writing to and reading from the service database.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Simple Test Harness</h1>
+<p>You should already have Eclipse + Play framework installed on your laptops. For the main part of this lab. Alternatively, you may develop on the NUCs.</p>
+<p>You may have seen unit testing in Eclipse for simple Java applications. There is an equivalent for the Play Framework. Unit testing is particularly important if you make any changes to the model, as it allows you to verify if the model is defined correctly.</p>
+<p>In a terminal (command line) in a suitable location run the following command and accept the default as the application name (<code>myrent-service-test-2016</code>):</p>
+<pre><code>play new myrent-service-test-2016</code></pre>
+<p>Change into the project folder and run these commands:</p>
+<pre><code>play deps
+play eclipsify</code></pre>
+<p>Import the project into Eclipse. Explore the file structure in the navigation panel on the left. It should be similar to that shown in Figure 1.</p>
+<p><img src="img/01.png" alt="Figure 1: Initial file structure"></p>
+<p>Download this <a href="archives/lib.zip">lib.zip</a> into a temporary folder, expand, and move to the root of myrent-service-test. Then add its contents to the build path as shown in Figure 2. It contains the various library files required, such as those for Retrofit and Gson.</p>
+<p><img src="img/02.png" alt="Figure 2: Add contents of lib to build path"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Residence model</h1>
+<p>It is necessary to override the Object equals method in Residence model. This is required to facilitate comparison of Residence instances. Here is the refactored class:</p>
+<pre><code>
+package models;
+
+import java.util.Date;
+import java.util.Random;
+
+import com.google.common.base.Objects;
+
+public class Residence
+{
+
+  public Long id;
+  public String geolocation;
+  public Long date;
+  public boolean rented;
+  public String tenant;
+  public double zoom;
+  public String photo;
+
+
+  public Residence()
+  {
+    id = unsignedLong();
+    date = new Date().getTime();
+    geolocation = &quot;&quot;;
+    date = 0L;
+    rented = false;
+    zoom = 0;
+    photo = &quot;&quot;;
+  }
+
+  /**
+   * Generates a long greater than zero
+   * @return Unsigned Long value greater than zero
+   */
+  private Long unsignedLong() {
+    long rndVal = 0;
+    do {
+      rndVal = new Random().nextLong();
+    } while (rndVal &lt;= 0);
+    return rndVal;
+  }
+  @Override
+  public boolean equals(final Object obj)  {
+    if (obj instanceof Residence)  {
+      final Residence other = (Residence) obj;
+      return Objects.equal(id, other.id) 
+          &amp;&amp; Objects.equal(geolocation, other.geolocation)
+          &amp;&amp; Objects.equal(date, other.date)
+          &amp;&amp; Objects.equal(rented, other.rented)
+          &amp;&amp; Objects.equal(tenant, other.tenant)
+          &amp;&amp; Objects.equal(zoom, other.zoom)
+          &amp;&amp; Objects.equal(photo, other.photo);
+    }
+    return false;
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Controllers</h1>
+<p>We shall add the service api and proxy classes to the default controller package. The file structure is now as shown in Figure 1:</p>
+<p><img src="img/03.png" alt="Figure 1: controllers package populated with api &amp; proxy classes"></p>
+<pre><code>package controllers;
+
+import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import models.Residence;
+import retrofit.Call;
+import retrofit.GsonConverterFactory;
+import retrofit.Response;
+import retrofit.Retrofit;
+
+public class ResidenceServiceAPI
+{
+  private String service_url = &quot;http://localhost:9000&quot;;
+  private ResidenceServiceProxy service;
+
+  public ResidenceServiceAPI()
+  {
+    Gson gson = new GsonBuilder().create();
+
+    Retrofit retrofit = new Retrofit.Builder().baseUrl(service_url)
+                             .addConverterFactory(GsonConverterFactory
+                             .create(gson))
+                             .build();
+    service = retrofit.create(ResidenceServiceProxy.class);
+  }
+
+  public List&lt;Residence&gt; getResidences() throws Exception
+  {
+    Call&lt;List&lt;Residence&gt;&gt; call = (Call&lt;List&lt;Residence&gt;&gt;) service.getResidences();
+    Response&lt;List&lt;Residence&gt;&gt; residences = call.execute();
+    return residences.body();
+  }
+
+  public Residence getResidence(Long id) throws Exception
+  {
+    Call&lt;Residence&gt; call = service.getResidence(id);
+    Response&lt;Residence&gt; residence = call.execute();
+    return residence.body();
+  }
+
+  public Residence createResidence(Residence newResidence) throws Exception
+  {
+      Call&lt;Residence&gt; call = (Call&lt;Residence&gt;) service.createResidence(newResidence);
+      Response&lt;Residence&gt; returnedResidence = call.execute();
+      return returnedResidence.body();
+  }
+
+  public int deleteResidence(Long id) throws Exception
+  {
+    Call&lt;String&gt; call = service.deleteResidence(id);
+    Response&lt;String&gt; val = call.execute();
+    return val.code();
+  }
+
+  public Residence updateResidence(Residence residence) throws Exception {
+    Call&lt;Residence&gt; call = (Call&lt;Residence&gt;)service.updateResidence(residence);
+    Response&lt;Residence&gt; returnedResidence = call.execute();
+    return returnedResidence.body();
+  }
+}</code></pre>
+<pre><code>package controllers;
+
+import java.util.List;
+
+import models.Residence;
+import retrofit.Call;
+import retrofit.http.Body;
+import retrofit.http.DELETE;
+import retrofit.http.GET;
+import retrofit.http.POST;
+import retrofit.http.Path;
+
+public interface ResidenceServiceProxy
+{
+
+
+  // Residence
+  @POST(&quot;/api/residence&quot;)
+  Call&lt;Residence&gt; createResidence(@Body Residence residence);
+
+  @DELETE(&quot;/api/residences/{id}&quot;)
+  Call&lt;String&gt; deleteResidence(@Path(&quot;id&quot;) Long id);
+
+  @POST(&quot;/api/residence/update&quot;)
+  Call&lt;Residence&gt; updateResidence(@Body Residence residence);
+
+  @GET(&quot;/api/residences&quot;)
+  Call&lt;List&lt;Residence&gt;&gt; getResidences();
+
+  @GET(&quot;/api/residences/{id}&quot;)
+  Call&lt;Residence&gt; getResidence(@Path(&quot;id&quot;) Long id);
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Test class</h1>
+<p>Create a class ResidenceTest in the default test package and populate with setup data as shown here. Observe that we are writing 8 residence instances to the service database.</p>
+<pre><code>
+
+import org.junit.Before;
+
+import controllers.ResidenceServiceAPI;
+import models.Residence;
+
+public class ResidenceTest {
+  private static ResidenceServiceAPI service = new ResidenceServiceAPI();
+
+  private int NUMBER_residences = 8;
+
+  static Residence residences[] = 
+    { 
+        new Residence(), 
+        new Residence(), 
+        new Residence(), 
+        new Residence(),
+        new Residence(), 
+        new Residence(), 
+        new Residence(), 
+        new Residence(),
+    };
+
+}
+
+  /**
+   * Create an array of residences.
+   * @throws Exception
+   */
+  @Before
+  public void setup() throws Exception {
+    service.createResidence(residences[0]);
+    service.createResidence(residences[1]);
+    service.createResidence(residences[2]);
+    service.createResidence(residences[3]);
+    service.createResidence(residences[4]);
+    service.createResidence(residences[5]);
+    service.createResidence(residences[6]);
+    service.createResidence(residences[7]);
+  }</code></pre>
+<p>Now add a teardown method to clean up at the end of the test run:</p>
+<pre><code>  /**
+   * Clean up following tests.
+   * @throws Exception
+   */
+  @After
+  public void teardown() throws Exception {
+    for (int i = 0; i &lt; residences.length; i += 1) {
+      service.deleteResidence(residences[i].id);
+    }
+  }</code></pre>
+<p>Let&#39;s now add a single test. This will fetch the entire list of residences across the network and check that the number corresponds to the setup number.</p>
+<pre><code>  /**
+   * Obtain entire collection of residences
+   * @throws Exception
+   */
+  @Test
+  public void getResidences() throws Exception {
+    List&lt;Residence&gt; list = service.getResidences();
+    assertEquals(list.size(), NUMBER_RESIDENCES);
+  }</code></pre>
+<p>These import statments are required.</p>
+<pre><code>import static org.junit.Assert.assertEquals;
+import java.util.List;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import controllers.ResidenceServiceAPI;
+import models.Residence;</code></pre>
+<p>Before running this test it is necessary to create a run configuration as shown here in Figure 1. But first ensure that the JUnit 4 jar is present and has been added to the build path.</p>
+<p><img src="img/04.png" alt="Figure 1: JUnit test run configuration"></p>
+<p>Figure 2 shows how to run the test.</p>
+<p><img src="img/05.png" alt="Figure 2: How to run unit test"></p>
+<p>A successful test should result in a window display similar to that shown in Figure 3.</p>
+<p><img src="img/06.png" alt="Figure 3: Successful test"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>More tests</h1>
+<p>To conclude this short set of tests, add the following:</p>
+<ul>
+<li><code>getResidence</code>: gets a single residence.</li>
+<li><code>deleteResidence</code>: deletes a single residence.</li>
+<li><code>updateResidence</code>: updates a single residence.</li>
+</ul>
+<p>Here is the code to add to ResidenceTest:</p>
+<pre><code>/**
+ * Check the getResidence api
+ * @throws Exception
+ */
+ @Test
+ public void getResidence() throws Exception {
+   Residence residence = service.getResidence(residences[0].id);
+   assertEquals(residence.id, residences[0].id);
+ }
+
+ /**
+  * Delete a single residence
+  * @throws Exception
+  */
+ @Test
+ public void deleteResidence() throws Exception {
+   Long residenceId = residences[0].id;
+   int rval = service.deleteResidence(residenceId);
+   assertEquals(rval, 200);
+ }
+
+ @Test
+ public void updateResidence() throws Exception {
+   Residence res = residences[3];
+   // Make some changes
+   res.photo = &quot;Homer&#39;s portrait&quot;;
+   res.rented = true;
+   res.tenant = &quot;Homer Simpson&quot;;
+   Residence returnedRes = service.updateResidence(res);
+   assertEquals(returnedRes, res);
+ }</code></pre>
+<p>Run the test suite. A successful run should result in a JUnit pane output as shown in Figure 1:</p>
+<p><img src="img/07.png" alt="Figure 1: Success at last, TG almighty, success at last"></p>
+<p>The End (Also TG).</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,1007 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      7-a: Maps
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-11a (Maps - MapBox)">
+      MyRent-11a (Maps - MapBox)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-b-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview) /index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email) /index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-a-myrent-10 (Maps - Google)/index.html">
+          MyRent-11 (Maps - Google)
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic07-a/book-b-myrent-10 (Maps - MapBox)/index.html">
+          MyRent-11a (Maps - MapBox)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-a-myrent-sqlite (SQLite)/index.html">
+          MyRentSQLite (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-a-myrent-12 (SQLite)/index.html">
+          MyRent-12 (SQLite)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-b/book-b-myrent-sqlite (ContentProvider)/index.html">
+          MyRentSQLite (ContentProvider)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service/index.html">
+          MyRent (Play Service)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-a-myrent-service-test/index.html">
+          MyRent (JUnit Test)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-b-myrent-14 (Retrofit Client)/index.html">
+          MyRent-13 (Client)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-b-services/index.html">
+          MyRent-14 (Services)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-a/book-a-myrent-11 (Camera)/index.html">
+          MyRent-15 (Camera)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-b/book-a-crypto/index.html">
+          App Signing & Crypto
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-c/book-a-myrent-16(Mongo)/index.html">
+          MyRent-16 (Mongo)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-11a (Maps - MapBox)">
+        <h1>Embedded Map &amp; Orientation</h1>
+<p>In a previous lab our MyRent app consumed a GoogleMap API. Here we provide an alternative mapping system provided by MapBox. This is based on the open source OpenStreetMap project. This approach has the advantage of providing greater flexibility, not requiring keys and, importantly, resulting in a significantly smaller release build.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction</h1>
+<p>In a previous lab our MyRent app consumed a GoogleMap API. Here we provide an alternative mapping system provided by MapBox. This is based on the open source OpenStreetMap project. This approach is interesting for a number of reasons. We are not obliged to undergo the somewhat laborious process of obtaining keys. For our purposes a simple token suffices. The API provided by MapBox is quite easy to use. And the method reference count in the signed release build for this iteration of MyRent is significantly less than that generated when using GoogleMaps. For example, presently, the MyRent release apk breaches the 64k method reference limit whereas using MapBox results in a method reference count in the order of 42k.</p>
+<p><a href="https://en.wikipedia.org/wiki/OpenStreetMap">OpenStreetMap (OSM)</a> is an open source project to create a free editable world map. The project was founded by Stev Coast in 2004 and has experienced growing usage. According to the referenced Wikipedia article, presently there are over two million registered users. </p>
+<p>The OSM licence was originally published under the Creative Commons Attribution-ShareAlike licence but has since changed to the Open Database Licence (ODbL).</p>
+<p>The approach taken in this lab is to continue from the end of the previous lab and replace GoogleMap with the MapBox version. It is suggested that you provide suitable tags or branches to facilite recovery of the Google Maps state should you require.</p>
+<p>Before proceeding, create an account (free - no credit card required) with <a href="https://www.mapbox.com/">MapBox</a>. </p>
+<ul>
+<li>Once registered, switch to the <a href="https://www.mapbox.com/studio/">studio page</a> and copy your default access token. This will be required in a later step.</li>
+</ul>
+<p><img src="img/01.png" alt="Figure 1: Obtain MapBox access token"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Setup</h1>
+<h2>Gradle</h2>
+<p>Delete reference to Google Play Services (something similar to the following):</p>
+<pre><code>compile &#39;com.google.android.gms:play-services:9.2.1&#39;</code></pre>
+<p>and introduce in its place the MapBox dependency:</p>
+<pre><code>compile (&#39;com.mapbox.mapboxsdk:mapbox-android-sdk:4.1.1@aar&#39;){
+  transitive=true
+}</code></pre>
+<h2>Remove GoogleMaps Code</h2>
+<p>Delete these files:</p>
+<ul>
+<li>MapActivity in activities package.</li>
+<li>activity_map.xml in res/layout package.</li>
+<li>replace MapHelper content in android.helpers package with the following. Study the code and observe the differences between it and the original material.</li>
+</ul>
+<pre><code>package org.wit.android.helpers;
+import android.util.Log;
+
+
+import com.mapbox.mapboxsdk.geometry.LatLng;
+
+import java.lang.NumberFormatException;
+
+
+public class MapHelper
+{
+
+  /**
+   * Parses a string containing latitude and longitude.
+   * @param geolocation The string obtained by concatenating comma separated latitude and longitude
+   * @return The latitude component
+   */
+  public static double latitude(String geolocation) {
+    String[] g = geolocation.split(&quot;,&quot;);
+    try {
+      if (g.length == 2) {
+        return Double.parseDouble(g[0]);
+      }
+    }
+    catch (NumberFormatException e) {
+      Log.d(&quot;MapHelper&quot;, &quot;Number format exception: invalid latitude: &quot; + e.getMessage());
+    }
+    return 0.0;
+
+  }
+
+  /**
+   * Parses a string containing latitude and longitude.
+   * @param geolocation The string obtained by concatenating comma separated latitude and longitude
+   * @return The longitude component
+   */
+  public static double longitude(String geolocation) {
+    String[] g = geolocation.split(&quot;,&quot;);
+    try {
+      if (g.length == 2) {
+        return Double.parseDouble(g[1]);
+      }
+    }
+    catch (NumberFormatException e) {
+      Log.d(&quot;MapHelper&quot;, &quot;Number format exception: invalid longitude: &quot; + e.getMessage());
+    }
+    return 0.0;
+
+  }
+
+  /**
+   *
+   * @param geo A Mapbox LatLng object representing geolocation
+   * @return String Returns concatenated latitude and longitude.
+   */
+  public static String latLng(LatLng geo) {
+
+    return String.format(&quot;%.6f&quot;, geo.getLatitude()) + &quot;, &quot; + String.format(&quot;%.6f&quot;, geo.getLongitude());
+  }
+
+}</code></pre>
+<h2>Layout</h2>
+<p>Add a default MapBox layout file named <code>activity_mapbox.xml</code> in res/layout folder:</p>
+<pre><code>&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+                xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+                xmlns:mapbox=&quot;http://schemas.android.com/apk/res-auto&quot;
+                android:layout_width=&quot;match_parent&quot;
+                android:layout_height=&quot;match_parent&quot;
+                tools:context=&quot;.activities.MapBoxActivity&quot;&gt;
+
+  &lt;!-- Set the starting camera position and map style using xml--&gt;
+  &lt;com.mapbox.mapboxsdk.maps.MapView
+      android:id=&quot;@+id/mapView&quot;
+      android:layout_width=&quot;match_parent&quot;
+      android:layout_height=&quot;match_parent&quot;
+      mapbox:style_url=&quot;mapbox://styles/mapbox/streets-v9&quot;
+      mapbox:center_latitude=&quot;40.73581&quot;
+      mapbox:center_longitude=&quot;-73.99155&quot;
+      mapbox:zoom=&quot;11&quot;/&gt;
+
+&lt;/RelativeLayout&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>MapBox activity</h1>
+<p>Add an activity MapBoxActivity to the activities package, locating your token in the placeholder <code>your token</code>.</p>
+<pre><code>package org.wit.myrent.activities;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+import com.mapbox.mapboxsdk.maps.MapView;
+import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
+import com.mapbox.mapboxsdk.MapboxAccountManager;
+
+import org.wit.myrent.R;
+
+public class MapBoxActivity extends Activity {
+
+  private MapView mapView;
+
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    // Mapbox access token only needs to be configured once in your app
+    MapboxAccountManager.start(this, &quot;your token&quot;);
+
+    // This contains the MapView in XML and needs to be called after the account manager
+    setContentView(R.layout.activity_mapbox);
+
+
+    mapView = (MapView) findViewById(R.id.mapView);
+    mapView.onCreate(savedInstanceState);
+    mapView.getMapAsync(new OnMapReadyCallback() {
+      @Override
+      public void onMapReady(MapboxMap mapboxMap) {
+
+        // Customize map with markers, polylines, etc.
+
+      }
+    });
+  }
+
+  // Add the mapView lifecycle to the activity&#39;s lifecycle methods
+  @Override
+  public void onResume() {
+    super.onResume();
+    mapView.onResume();
+  }
+
+  @Override
+  public void onPause() {
+    super.onPause();
+    mapView.onPause();
+  }
+
+  @Override
+  public void onLowMemory() {
+    super.onLowMemory();
+    mapView.onLowMemory();
+  }
+
+  @Override
+  protected void onDestroy() {
+    super.onDestroy();
+    mapView.onDestroy();
+  }
+
+  @Override
+  protected void onSaveInstanceState(Bundle outState) {
+    super.onSaveInstanceState(outState);
+    mapView.onSaveInstanceState(outState);
+  }
+}</code></pre>
+<h2>Manifest</h2>
+<p>Delete the MapActivity node.</p>
+<p>These permissions are required.</p>
+<pre><code>  &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;
+  &lt;uses-permission android:name=&quot;android.permission.ACCESS_COARSE_LOCATION&quot; /&gt;
+  &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;
+  &lt;uses-permission android:name=&quot;android.permission.READ_CONTACTS&quot; /&gt;
+  &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</code></pre>
+<p>Add a MapBoxActivity node:</p>
+<pre><code>    &lt;activity
+        android:name=&quot;.activities.MapBoxActivity&quot;
+        android:label=&quot;@string/app_name&quot;&gt;
+    &lt;meta-data android:name=&quot;android.support.PARENT_ACTIVITY&quot;
+               android:value=&quot;.activities.ResidencePagerActivity&quot;/&gt;
+    &lt;/activity&gt;</code></pre>
+<p>Add telemetry service:</p>
+<pre><code>        &lt;service android:name=&quot;com.mapbox.mapboxsdk.telemetry.TelemetryService&quot; /&gt;</code></pre>
+<h2>ResidenceFragment</h2>
+<p>In ResidenceFragment.onClick replace the code relating to the now deleted Google map activity with the following:</p>
+<pre><code>
+      case R.id.fab:
+        //startActivityWithData(getActivity(), MapActivity.class, EXTRA_RESIDENCE_ID, residence.id); // &lt;--- delete this line
+        startActivityWithData(getActivity(), MapBoxActivity.class, EXTRA_RESIDENCE_ID, residence.id);
+        break;</code></pre>
+<p>Build, install apk on a device or emulator. Open a residence detail view and click on the floating action button. You should be presented with the default MapBox map as shown in Figure 1.</p>
+<p><img src="img/02.png" alt="Figure 1: Default MapBox map"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Customize map</h1>
+<p>First remove the default location (latitude:longitude) from the layout. This now becomes:</p>
+<pre><code>&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+                xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+                xmlns:mapbox=&quot;http://schemas.android.com/apk/res-auto&quot;
+                android:layout_width=&quot;match_parent&quot;
+                android:layout_height=&quot;match_parent&quot;
+                tools:context=&quot;.activities.MapBoxActivity&quot;&gt;
+
+  &lt;!-- The starting camera position will be set programmatically in java --&gt;
+  &lt;com.mapbox.mapboxsdk.maps.MapView
+      android:id=&quot;@+id/mapView&quot;
+      android:layout_width=&quot;match_parent&quot;
+      android:layout_height=&quot;match_parent&quot;
+      mapbox:style_url=&quot;mapbox://styles/mapbox/streets-v9&quot;/&gt;
+
+&lt;/RelativeLayout&gt;</code></pre>
+<p>An anonymous class is used to set the map listener. We shall replace this with the delegate or interface pattern with which we are by now no doubt well familiar.</p>
+<p>Replace:</p>
+<pre><code>
+    mapView.getMapAsync(new OnMapReadyCallback() {
+      @Override
+      public void onMapReady(MapboxMap mapboxMap) {
+
+        // Customize map with markers, polylines, etc.
+
+      }
+    });</code></pre>
+<p>with:</p>
+<pre><code>mapView.getMapAsync(this);</code></pre>
+<p>Implement OnMapReadyCallback interface. The class header then becomes:</p>
+<pre><code>public class MapBoxActivity extends Activity implements OnMapReadyCallback</code></pre>
+<p>Implement OnMapReadyCallback abstract method:</p>
+<pre><code>  // OnMapReadyCallback interface method impl
+  @Override
+  public void onMapReady(MapboxMap mapboxMap) {
+    // TODO: map customization
+  }</code></pre>
+<p>The code should now be error free.</p>
+<p>In the next step we shall centre the map on the current residence geolocation.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Residence geolocation</h1>
+<p>To centre the map on the residence geolocation requires the following steps:</p>
+<ul>
+<li>Obtain the current residence id from the fragment bundle.</li>
+<li>Use the id to obtain a reference to the residence and thence its geolocation.</li>
+<li>Centre the map on this geolocation.</li>
+</ul>
+<p>We are about to make several additions in this step. To avoid a proliferation of errors it is best to add all the necessary imports now:</p>
+<pre><code>import android.support.annotation.NonNull;
+
+import com.mapbox.mapboxsdk.annotations.MarkerViewOptions;
+import com.mapbox.mapboxsdk.camera.CameraPosition;
+import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
+import com.mapbox.mapboxsdk.geometry.LatLng;
+
+import org.wit.android.helpers.MapHelper;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Residence;</code></pre>
+<p>Introduce these fields:</p>
+<pre><code>  private MapboxMap mapboxMap;
+  Long resId; // The id of the residence associate with this map pane
+  Residence residence; // The residence associated with this map pane
+  LatLng residenceLatLng;
+  MyRentApp app;</code></pre>
+<p>In <code>onCreate initialize</code>resId<code>,</code>residence<code>and</code>residenceLatLng`:</p>
+<pre><code>
+    resId = (Long) getIntent().getSerializableExtra(ResidenceFragment.EXTRA_RESIDENCE_ID);
+    app = (MyRentApp) getApplication();
+    residence = app.portfolio.getResidence(resId);
+    if (residence != null) {
+      residenceLatLng = new LatLng(MapHelper.latitude(residence.geolocation),
+          MapHelper.longitude(residence.geolocation));
+    }</code></pre>
+<p>Create a private method <code>setMarker</code>. This instantiates a marker and adds it to the map.</p>
+<pre><code>
+  private void setMarker() {
+
+    MarkerViewOptions marker = new MarkerViewOptions().position(residenceLatLng);
+    mapboxMap.addMarker(marker);
+  }</code></pre>
+<p>Create a private method to position the map camera. This method uses the <code>residenceLatLng</code> reference together with the incoming residence zoom value in positioning the camera.</p>
+<pre><code>
+  private void positionCamera() {
+    CameraPosition position = new CameraPosition.Builder()
+        .target(residenceLatLng) // Sets the new camera position
+        .zoom(residence.zoom) // Sets the zoom
+        .build(); // Creates a CameraPosition from the builder
+
+    mapboxMap.animateCamera(CameraUpdateFactory
+        .newCameraPosition(position));
+  }</code></pre>
+<p>We are now in a position to implement the customization to <code>onMapReady</code>:</p>
+<pre><code>  // OnMapReadyCallback interface method impl
+  @Override
+  public void onMapReady(MapboxMap mapboxMap) {
+    this.mapboxMap = mapboxMap;
+    positionCamera();
+    setMarker();
+  }</code></pre>
+<p>Test the app as before. The output should now resemble that in Figure 1.</p>
+<p><img src="img/03.png" alt="Figure 1: Map centred on current residence location"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Marker</h1>
+<p>Here we shall:</p>
+<ul>
+<li>implement an interface to facilite adding an infowindow to the marker to that when clicked it displays its geolocation.</li>
+<li>implement an interface so that a long press on any position on the map causes the marker to move to that position.</li>
+<li>update the model state.</li>
+</ul>
+<h2>OnMarkerClickListener</h2>
+<p>The MapBoxActivity class header becomes:</p>
+<pre><code>
+public class MapBoxActivity extends AppCompatActivity implements
+    OnMapReadyCallback,
+    MapboxMap.OnMarkerClickListener</code></pre>
+<p>Register the listener in <code>onMapReady</code>:</p>
+<pre><code>    mapboxMap.setOnMarkerClickListener(this);</code></pre>
+<p>Here is the interface method, fully implemented:</p>
+<pre><code>  // OnMarkerClickListener
+  @Override
+  public boolean onMarkerClick(@NonNull Marker marker) {
+    String snippet = &quot;GPS : &quot; + residence.geolocation;
+    marker.setSnippet(snippet);
+    return false;
+  }</code></pre>
+<h2>OnMapLongClickListener</h2>
+<p>The class header now becomes:</p>
+<pre><code>public class MapBoxActivity extends AppCompatActivity implements
+    OnMapReadyCallback,
+    MapboxMap.OnMarkerClickListener,
+    MapboxMap.OnMapLongClickListener</code></pre>
+<p>Register the listener:</p>
+<pre><code>
+    mapboxMap.setOnMapLongClickListener(this);</code></pre>
+<p>Here is the interface method implementation:</p>
+<pre><code>  /**
+   * Long click moves marker to clicked position and updates
+   * Residence object&#39;s geolocation to new marker position.
+   * @param point
+   */
+  // OnMapLonClickListener
+  @Override
+  public void onMapLongClick(@NonNull LatLng point) {
+    residenceMarker.setPosition(point);
+  }</code></pre>
+<h2>Persistence</h2>
+<p>Save the residence state changes in the <code>onPause</code> method:</p>
+<ul>
+<li>its zoom level</li>
+<li>its geolocation</li>
+</ul>
+<pre><code>
+  @Override
+  public void onPause() {
+    super.onPause();
+    mapView.onPause();
+    residence.zoom = mapboxMap.getCameraPosition().zoom;
+    residence.geolocation = MapHelper.latLng(residenceMarker.getPosition());
+    app.portfolio.updateResidence(residence);
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>MapBoxActivity</h1>
+<p>For reference, here is the complete class. </p>
+<p>Observe that we have:</p>
+<ul>
+<li>enabled the support action bar and programmed the up button.</li>
+<li>enabled the zoom controls. </li>
+</ul>
+<pre><code>
+package org.wit.myrent.activities;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
+
+import com.mapbox.mapboxsdk.annotations.Marker;
+import com.mapbox.mapboxsdk.annotations.MarkerViewOptions;
+import com.mapbox.mapboxsdk.camera.CameraPosition;
+import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
+import com.mapbox.mapboxsdk.geometry.LatLng;
+import com.mapbox.mapboxsdk.maps.MapView;
+import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
+import com.mapbox.mapboxsdk.MapboxAccountManager;
+
+import org.wit.android.helpers.MapHelper;
+import org.wit.myrent.R;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Residence;
+
+import static org.wit.android.helpers.IntentHelper.navigateUp;
+
+public class MapBoxActivity extends AppCompatActivity implements
+    OnMapReadyCallback,
+    MapboxMap.OnMarkerClickListener,
+    MapboxMap.OnMapLongClickListener
+{
+
+  private MapView mapView;
+  private MapboxMap mapboxMap;
+  private Marker residenceMarker;
+  Long resId; // The id of the residence associate with this map pane
+  Residence residence; // The residence associated with this map pane
+  LatLng residenceLatLng;
+  MyRentApp app;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    resId = (Long) getIntent().getSerializableExtra(ResidenceFragment.EXTRA_RESIDENCE_ID);
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    app = (MyRentApp) getApplication();
+    residence = app.portfolio.getResidence(resId);
+    if (residence != null) {
+      residenceLatLng = new LatLng(MapHelper.latitude(residence.geolocation),
+          MapHelper.longitude(residence.geolocation));
+    }
+    // Mapbox access token only needs to be configured once in your app
+    MapboxAccountManager.start(this, &quot;your token&quot;);
+
+    // This contains the MapView in XML and needs to be called after the account manager
+    setContentView(R.layout.activity_mapbox);
+
+    mapView = (MapView) findViewById(R.id.mapView);
+    mapView.onCreate(savedInstanceState);
+    mapView.getMapAsync(this);
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item)
+  {
+    switch (item.getItemId())
+    {
+      case android.R.id.home:
+        navigateUp(this, ResidenceFragment.EXTRA_RESIDENCE_ID, resId);
+        return true;
+
+      default: return super.onOptionsItemSelected(item);
+    }
+  }
+
+  // OnMapReadyCallback interface method impl
+  @Override
+  public void onMapReady(MapboxMap mapboxMap) {
+    this.mapboxMap = mapboxMap;
+    positionCamera();
+    setMarker();
+    mapboxMap.getUiSettings().setZoomControlsEnabled(true);
+    mapboxMap.getUiSettings().setZoomGesturesEnabled(true);
+    mapboxMap.setOnMarkerClickListener(this);
+    mapboxMap.setOnMapLongClickListener(this);
+
+  }
+
+  private void setMarker() {
+
+    MarkerViewOptions marker = new MarkerViewOptions().position(residenceLatLng);
+    residenceMarker = mapboxMap.addMarker(marker);
+  }
+
+  private void positionCamera() {
+    CameraPosition position = new CameraPosition.Builder()
+        .target(residenceLatLng) // Sets the new camera position
+        .zoom(residence.zoom)
+        .build(); // Creates a CameraPosition from the builder
+
+    mapboxMap.animateCamera(CameraUpdateFactory
+        .newCameraPosition(position));
+
+  }
+
+  // Add the mapView lifecycle to the activity&#39;s lifecycle methods
+  @Override
+  public void onResume() {
+    super.onResume();
+    mapView.onResume();
+  }
+
+  @Override
+  public void onPause() {
+    super.onPause();
+    mapView.onPause();
+    residence.zoom = mapboxMap.getCameraPosition().zoom;
+    residence.geolocation = MapHelper.latLng(residenceMarker.getPosition());
+    app.portfolio.updateResidence(residence);
+  }
+
+  @Override
+  public void onLowMemory() {
+    super.onLowMemory();
+    mapView.onLowMemory();
+  }
+
+  @Override
+  protected void onDestroy() {
+    super.onDestroy();
+    mapView.onDestroy();
+  }
+
+  @Override
+  protected void onSaveInstanceState(Bundle outState) {
+    super.onSaveInstanceState(outState);
+    mapView.onSaveInstanceState(outState);
+  }
+
+  // OnMarkerClickListener
+  @Override
+  public boolean onMarkerClick(@NonNull Marker marker) {
+    String snippet = &quot;GPS : &quot; + residence.geolocation;
+    marker.setSnippet(snippet);
+    return false;
+  }
+
+
+  /**
+   * Long click moves marker to clicked position and updates
+   * Residence object&#39;s geolocation to new marker position.
+   * @param point
+   */
+  // OnMapLonClickListener
+  @Override
+  public void onMapLongClick(@NonNull LatLng point) {
+    residenceMarker.setPosition(point);
+  }
+
+}</code></pre>
+<p>The application at the end of this lab is available for reference here: <a href="https://github.com/wit-ictskills-2016/myrent-11a.git">myrent-11a</a></p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar & John Fitzgerald.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
