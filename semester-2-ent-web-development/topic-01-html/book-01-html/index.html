@@ -1,0 +1,934 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      1: HTML Templates
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-1.1 Html">
+      Lab-1.1 Html
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="active item" href="../../topic-01-html/book-01-html/index.html">
+          Lab-1.1 Html
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-01-html/book-02-templates/index.html">
+          Lab-1.2 Templates
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-css/book-01-css-frameworks-1/index.html">
+          Lab-2.1 Css 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-css/book-02-css-frameworks-2/index.html">
+          Lab-2.2 Css 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-js+dom/book-1-javascript-intro/index.html">
+          Lab-3.1 JS Intro
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-js+dom/book-2-javascript-fundamentals/index.html">
+          Lab-3.2 JS Basics
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-js+dom/book-3-jquery/index.html">
+          Lab-3.3 JQuery
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-ajax+apis/book-1-ajax-1/index.html">
+          Lab-4.1 Github API
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-04-ajax+apis/book-2-ajax-2/index.html">
+          Lab-4.2-FoureSquare API
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-05-applications/book-applications/index.html">
+          Lab-5 Applications
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-06-views/book-views/index.html">
+          Lab-6 Views
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-07-sessions/book-sessions/index.html">
+          Lab-7 Sessions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-08-models/book-models/index.html">
+          Lab-8 Models
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-09-validation/book-validation/index.html">
+          Lab-9 Validation
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-10-deployment/book-deployment/index.html">
+          Lab-10 Deployment
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-11-seeding/book-seeding/index.html">
+          Lab-11 Seeding
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-12-api/book-api/index.html">
+          Lab-12 Apis
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-13-tdd/book-tdd/index.html">
+          Lab-13 Tdd
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-14-rest/book-rest/index.html">
+          Lab-14 Rest
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-15-aurelia-1/book-aurelia-1/index.html">
+          Lab-Aurelia 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-16-aurelia-2/book-aurelia-2/index.html">
+          Lab-Aurelia 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-17-aurelia-3/book-aurelia-3/index.html">
+          Lab-Aurelia 3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-18-aurelia-4/book-aurelia-4/index.html">
+          Lab-Aurelia 4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-19-auth/book-auth/index.html">
+          Lab-15 Auth
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-20-aurelia-5/book-aurelia-5/index.html">
+          Lab-Aurelia 5
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-21-android-1/book-rest-client/index.html">
+          Lab-Android 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-22-android-2/book-android-client/index.html">
+          Lab-Android 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-23-android-3/book-secure-android/index.html">
+          Lab-Android 3
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-1.1 Html">
+        <h1>Objectives</h1>
+<p>Explore a web site that embodies many of the foundation techniques for structuring and styling a web site. Deploy the lab using the surge tool set and service.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<p>Download this archive here:</p>
+<ul>
+<li><a href="https://github.com/wit-ictskills-2016/iot-web/tree/V01">https://github.com/wit-ictskills-2016/iot-web/tree/V01</a></li>
+</ul>
+<p>Unzip it somewhere suitable - and open the project in Sublime:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Explore the pages in detail - and note the range of images in the assets folder. Also notice that all of the files are inside the <code>public</code> folder of the project.</p>
+<p>Browse the pages in you web browser:</p>
+<ul>
+<li><a href="archives/iot-web-site-v01/public/index.html">iot-web-site-v01</a></li>
+</ul>
+<p>If you can, download and install:</p>
+<ul>
+<li><a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a></li>
+</ul>
+<p>and open the site using it instead of chrome:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>Explore the &#39;inspector&#39; options:</p>
+<p><img src="img/03.png" alt=""></p>
+<p>and become familiar with some of the tools. The <code>Style Editor</code> is particularly interesting:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>Note that it is currently showing an error for our site - we are linking to <code>style.css</code> in the head, but we haven&#39;t provided a css file yet.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>style.css</h1>
+<p>Create a new stylesheet in the public folder:</p>
+<h2>style.css</h2>
+<pre><code>body {
+  max-width: 80%;
+  margin: 0 auto;
+}</code></pre>
+<p>Because the links are already in all the files, the margins should immediately be reset for the full site.</p>
+<p>In Firefox Developer Edition, you can use the <code>style editor</code> to dynamically change the css in order to see different effects:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>Try adjusting the margin width and you will see the canvas changes immediately.</p>
+<p>Now append these rules to the stylesheet:</p>
+<pre><code>.header-crest-img {
+  float: right;
+  margin: 1em;
+}
+
+.footer-social-links {
+  text-align: center
+}</code></pre>
+<p>These are to better position the header crest and also the social media links at the foot of the page. They will only work if we give these elements the appropriate classes:</p>
+<pre><code>  &lt;img class=&quot;header-crest-img&quot; src=&quot;assets/images/wit-crest.png&quot; alt=&quot;WIT Crest&quot;&gt;</code></pre>
+<pre><code>&lt;hr&gt;
+&lt;p class=&quot;footer-social-links&quot;&gt;
+  &lt;a href=&quot;http://www.facebook.com/witcomp&quot;&gt; facebook &lt;/a&gt;
+  &lt;a href=&quot;http://twitter.com/ComputingAtWIT&quot;&gt; twitter &lt;/a&gt;
+  &lt;a href=&quot;https://ie.linkedin.com/pub/computing-at-wit/a9/221/1b6&quot;&gt; linkedin &lt;/a&gt;
+&lt;/p&gt;</code></pre>
+<p>Continue to experiment with the style editor to try out different options</p>
+<p><img src="img/06.png" alt=""></p>
+<h3>Project so far...</h3>
+<ul>
+<li>Download Archive: <a href="https://github.com/wit-ictskills-2016/iot-web/tree/V02">https://github.com/wit-ictskills-2016/iot-web/tree/V02</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Header + Footer</h1>
+<p>The changes you just introduced will need to be carried out on all the <code>strand</code> pages:</p>
+<pre><code>  &lt;img class=&quot;header-crest-img&quot; src=&quot;assets/images/wit-crest.png&quot; alt=&quot;WIT Crest&quot;&gt;</code></pre>
+<pre><code>&lt;hr&gt;
+&lt;p class=&quot;footer-social-links&quot;&gt;
+  &lt;a href=&quot;http://www.facebook.com/witcomp&quot;&gt; facebook &lt;/a&gt;
+  &lt;a href=&quot;http://twitter.com/ComputingAtWIT&quot;&gt; twitter &lt;/a&gt;
+  &lt;a href=&quot;https://ie.linkedin.com/pub/computing-at-wit/a9/221/1b6&quot;&gt; linkedin &lt;/a&gt;
+&lt;/p&gt;</code></pre>
+<p>Do this now.</p>
+<hr>
+
+<h3>Project so far...</h3>
+<ul>
+<li><a href="https://github.com/wit-ictskills-2016/iot-web/tree/V03">https://github.com/wit-ictskills-2016/iot-web/tree/V03</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Image Sizing</h1>
+<p>The images throughout the site are rendered without any size adjustments. Many are outsize and do not give an optimal user experience.</p>
+<p>One simple strategy to address this diversity of image sizes could be to introduce a series of rules to establish a preferred height for each image. We have a number of image types - which we target in these rules:</p>
+<pre><code>.footer-img {
+  height: 90px;
+}
+
+.strand-right-img {
+  float: right;
+  margin: 1em;
+  height: 350px;
+}
+
+.strand-left-img {
+  float: left;
+  margin: 1em;
+  height: 350px;
+}
+
+.strand-timeline-img {
+  height: 80px;
+}
+
+.strand-modules-img {
+  height: 75px;
+}
+
+.strand-modules-double-img {
+  height: 150px;
+}
+
+.strand-modules-treble-img {
+  height: 310px;
+}</code></pre>
+<p>The first rule is targeting the images at the end of the index page:</p>
+<pre><code>&lt;h4&gt; Supported by leading edge research at... &lt;/h4&gt;
+&lt;p&gt;
+  &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/tssg.png&quot; alt=&quot;TSSG&quot;&gt;
+  &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/ctrg.png&quot; alt=&quot;CTRG&quot;&gt;
+  &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/automotive.png&quot; alt=&quot;ATG&quot;&gt;
+&lt;/p&gt;</code></pre>
+<p>Test this now - and these &#39;sponsor&#39; images show appear more uniform.</p>
+<p>The remaining rules are associated with each of the strand pages -<code>project.html</code> for instance:</p>
+<pre><code>
+&lt;h1&gt; Project &lt;/h1&gt;
+&lt;p&gt;
+  &lt;img class=&quot;strand-right-img&quot; src=&quot;../assets/images/iot/project/project-1.png&quot;&gt;
+  The programme will promote an ethos of collaboration, practical application, and innovation. A project module will be included at each stage of the programme (apart from semester 1) that, through individual and collaborative projects, will challenge students to combine the knowledge and skills acquired in the various strands. Each project module will also elaborate on a theme, orthogonal to the programme disciplines, but central to the student’s individual development.
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;img class=&quot;strand-timeline-img&quot; src=&quot;../assets/images/iot/timeline.png&quot;&gt;
+  &lt;img class=&quot;strand-modules-double-img&quot; src=&quot;../assets/images/iot/project/project-modules.png&quot;&gt;
+&lt;/p&gt;
+
+&lt;h2&gt; Project Learning Path &lt;/h2&gt;
+&lt;p&gt;
+  &lt;img class=&quot;strand-left-img&quot; src=&quot;../assets/images/iot/project/project-2.jpeg&quot;&gt;  The project will be assessed via a single report and presentation each semester. The report will demonstrate an artefact of the student’s choosing that integrates knowledge from two or more strands. This may be in the form of a software application, software/hardware combination, paper or combination of all of these. The ‘Orthogonal’ dimension must be addressed in the context of this report/presentation. The tuition team across each of the strands will stimulate project ideas and concepts for consideration by the students, who may take on board specific suggestions. Students as expected to proceed with ideas and concepts that particularly interest them individually, or collectively, in small teams.
+&lt;/p&gt;</code></pre>
+<p>Note carefully the classes associated with each of the images here - and make these changes to all of the strand pages.</p>
+<p>The <code>strand-modules..</code> rules are for varying the height modules images, depending on whether there are 1, 2 or 3 rows of modules in the images.</p>
+<p>Make all these adjustments now so that the images appear more or less uniformly.</p>
+<h3>Project so far...</h3>
+<ul>
+<li><a href="https://github.com/wit-ictskills-2016/iot-web/tree/V04">https://github.com/wit-ictskills-2016/iot-web/tree/V04</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Revised Index Layout</h1>
+<p>The home pages can be enhanced somewhat - perhaps improving the use of images on the page and also incorporating a simple multi-column structure.</p>
+<p>Here are the rules:</p>
+<pre><code>.banner {
+  background: url(&quot;assets/images/banner.jpg&quot;) top center;
+  background-position: top center;
+  height:350px;
+}
+
+#summary
+{
+  width: 40%;
+  float: left;
+  color: white;
+  background : rgba(58,84,90, 0.5);
+  margin : 1em;
+  padding : 1em;
+  clear:both;
+}
+
+#curriculum
+{
+  width: 100%;
+  margin: .5em;
+  padding: .5em;
+  clear: both;
+}
+
+#col1 {
+  float: left;
+  width: 48%
+}
+
+#col2 {
+  float: right;
+  width: 48%
+}
+
+#sponsors
+{
+  width: 100%;
+  clear: both;
+}
+
+#footer
+{
+  width: 100%;
+  clear: both;
+}</code></pre>
+<p>Some of these rules are familiar from earlier layout labs.</p>
+<p>To align <code>index.html</code> with these rules we need to make some adjustments to the structure of the page. In particular we need to wrap various sections in <code>&lt;div&gt;</code> elements, so that their properties can be targeted in interesting ways.</p>
+<p>Here is the complete <code>&lt;body&gt;</code> element - which you can replace in <code>index.html</code>:</p>
+<pre><code>&lt;div id=&quot;header&quot;&gt;
+  &lt;h2&gt;
+    &lt;img class=&quot;header-crest-img&quot; src=&quot;assets/images/wit-crest.png&quot; alt=&quot;WIT Crest&quot;&gt;
+    Department of Computing &amp;amp; Mathematics
+  &lt;/h2&gt;
+
+  &lt;h3&gt; BSc (Hons) the Internet of Things &lt;/h3&gt;
+  &lt;hr&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;banner&quot;&gt;
+  &lt;div id=&quot;summary&quot;&gt;
+    &lt;p&gt;
+      BACHELOR OF SCIENCE (HONOURS)
+    &lt;/p&gt;
+
+    &lt;h3&gt;
+      APPLIED COMPUTING IN THE INTERNET OF THINGS
+    &lt;/h3&gt;
+
+    &lt;h3&gt;
+      Program your World!
+    &lt;/h3&gt;
+    &lt;p&gt;
+      An exciting new level 8 Honours Degree for 2015. Combine Programming and Electronics and learn how to code cool devices, places and things. Be part of the next wave of innovation in Computing
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;curriculum&quot;&gt;
+  &lt;hr&gt;
+  &lt;div id=&quot;col1&quot;&gt;
+    &lt;h2&gt;&lt;a href=&quot;strands/programming.html&quot;&gt; Programming &lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;
+      Learn a broad range of programming and problem solving skills, including exciting new platforms, software tools and languages. Use these skills to build apps for mobile, cloud and device based IoT applications. Evolve a porfolio of facinating aplications.
+    &lt;/p&gt;
+
+    &lt;h2&gt;&lt;a href=&quot;strands/data.html&quot;&gt; Data Science &lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;
+      At the heart of many IoT applications is data: measurements, events alarms and other information that must be relayed, stored and ultimately turned into knowledge. Learn the fundamentals of modern approaches to data in this strand.
+    &lt;/p&gt;
+    &lt;h2&gt;&lt;a href=&quot;strands/devices.html&quot;&gt; Devices &lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;
+      The &#39;Things&#39; we connect to are often physical devices. These can range from simple temperature sensors to sophisticated control systems like traffic lights or cameras. Connecting to and interacting with the physical world is the subject of this strand.
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;col2&quot;&gt;
+    &lt;h2&gt;&lt;a href=&quot;strands/networks.html&quot;&gt; Networks &lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;
+      This strand will explore modern networks and cloud technology. Be able to configure, network and manage all categories of computer systems from simple controlers to single board board computers, mobiles and full workstations.
+    &lt;/p&gt;
+    &lt;h2&gt;&lt;a href=&quot;strands/project.html&quot;&gt; Project &lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;
+      Building exciting IoT projects in every semester of the programme. Your projects will combine skills acquired from the other strands and enable you to build a comprehensive an compelling portfolio of IoT applications and services.
+    &lt;/p&gt;
+
+    &lt;h2&gt;&lt;a href=&quot;strands/maths.html&quot;&gt; Mathematics &lt;/a&gt;&lt;/h2&gt;
+    &lt;p&gt;
+      Introduce foundation concepts for many of the more applied concepts in the other Strands. Learn mathematical techniques in a modern context and apply core principles in new an interesting ways.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;sponsors&quot;&gt;
+  &lt;hr&gt;
+  &lt;h4&gt; Supported by leading edge research at... &lt;/h4&gt;
+  &lt;p&gt;
+    &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/tssg.png&quot; alt=&quot;TSSG&quot;&gt;
+    &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/ctrg.png&quot; alt=&quot;CTRG&quot;&gt;
+    &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/automotive.png&quot; alt=&quot;ATG&quot;&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;footer&quot;&gt;
+  &lt;hr&gt;
+  &lt;p class=&quot;footer-social-links&quot;&gt;
+    &lt;a href=&quot;http://www.facebook.com/witcomp&quot;&gt; facebook &lt;/a&gt;
+    &lt;a href=&quot;http://twitter.com/ComputingAtWIT&quot;&gt; twitter &lt;/a&gt;
+    &lt;a href=&quot;https://ie.linkedin.com/pub/computing-at-wit/a9/221/1b6&quot;&gt; linkedin &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p>Notice we are using a background image for the <code>banner</code> section </p>
+<pre><code>.banner {
+  background: url(&quot;assets/images/banner.jpg&quot;) top center;
+  background-position: top center;
+  height:350px;
+}</code></pre>
+<p>... and the summary section has an opacity of 0.5 set for its background:</p>
+<pre><code>#summary
+{
+  width: 40%;
+  float: left;
+  color: white;
+  background : rgba(58,84,90, 0.5);
+  margin : 1em;
+  padding : 1em;
+  clear:both;
+}</code></pre>
+<p>This serves to enhance the readability of the panel. In Firefox Style Editor you can dynamically change this value and immediately observe the effect:</p>
+<p><img src="img/07.png" alt=""></p>
+<p>Otherwise the page is styled using simple percentage widths and floats.</p>
+<h3>Project so far...</h3>
+<ul>
+<li><a href="https://github.com/wit-ictskills-2016/iot-web/tree/V05">https://github.com/wit-ictskills-2016/iot-web/tree/V05</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Open Sans</h1>
+<p>The default font is adequate - but perhaps not particularly elegant or readable. We can expect the browser to support a range of fonts - summarised here:</p>
+<ul>
+<li><a href="http://www.cssfontstack.com/">http://www.cssfontstack.com/</a></li>
+</ul>
+<p>Selecting any one of these fonts will take you to a page showing you the exact CSS you would need to include.</p>
+<p>It is also possible to download fonts dynamically over the web - some of these are cataloged here:</p>
+<ul>
+<li><a href="http://www.cssfontstack.com/Web-Fonts">http://www.cssfontstack.com/Web-Fonts</a></li>
+</ul>
+<p>This is a popular and pleasing one:</p>
+<ul>
+<li><a href="http://www.cssfontstack.com/Open-Sans">http://www.cssfontstack.com/Open-Sans</a></li>
+</ul>
+<p>This one is used in WIT Moodle.</p>
+<p>To use it, we much first make sure our <code>&lt;head&gt;</code> section includes this element:</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//fonts.googleapis.com/css?family=Open+Sans&quot; /&gt;</code></pre>
+<p>The above will need to be includes in all the pages of our site (including all the strand pages).</p>
+<p>Then we can select the font for all our pages by adjusting our <code>body</code> rule in the style sheet:</p>
+<pre><code>body {
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: &#39;Open Sans&#39;;
+}</code></pre>
+<p>Make these changes now to switch over completely to Open Sans.  Read about the background to the font here:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Open_Sans">https://en.wikipedia.org/wiki/Open_Sans</a></li>
+</ul>
+<h3>Project so far...</h3>
+<ul>
+<li><a href="https://github.com/wit-ictskills-2016/iot-web/tree/V06">https://github.com/wit-ictskills-2016/iot-web/tree/V06</a> </li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Semantic HTML</h1>
+<p>The completed site has a reasonable user experience, but the <code>Developer Experience</code> leaves something to be desired. In particular, we are overusing <code>&lt;div&gt;</code> elements, when suitable Semantic Elements are available:</p>
+<ul>
+<li><a href="http://diveinto.html5doctor.com/semantics.html#new-elements">http://diveinto.html5doctor.com/semantics.html#new-elements</a></li>
+</ul>
+<p>The specific elements we will use here are:</p>
+<ul>
+<li><code>&lt;section&gt;</code></li>
+<li><code>&lt;article&gt;</code></li>
+<li><code>&lt;figure&gt;</code></li>
+<li><code>&lt;aside&gt;</code></li>
+<li><code>&lt;header&gt;</code></li>
+<li><code>&lt;footer&gt;</code></li>
+</ul>
+<p>This is the <code>current</code> layout of the index page:</p>
+<p><img src="img/09.png" alt=""></p>
+<p>(nested elements shown in collapsed form)</p>
+<p>Rework the index page to use the semantic elements instead of <code>&lt;div&gt;</code>s like this:</p>
+<p><img src="img/10.png" alt=""></p>
+<p>Make these changes now - there should be no change in the user experience.</p>
+<p>For each of the strand pages, here is what we would like to end up with:</p>
+<p><img src="img/11.png" alt=""></p>
+<p>(folded content again).</p>
+<p>Adjust all the strand pages to adopt the above structure.</p>
+<h3>Project so far...</h3>
+<ul>
+<li><a href="https://github.com/wit-ictskills-2016/iot-web/tree/V07">https://github.com/wit-ictskills-2016/iot-web/tree/V07</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Deployment</h1>
+<p>On your workstation, install the latest verion of node.js:</p>
+<ul>
+<li><a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+</ul>
+<p>Verify that is installs correctly by entering the node command on a shell:</p>
+<pre><code>node --version
+v6.5.0</code></pre>
+<p>This will also install the npm package manager:</p>
+<pre><code>npm --version
+3.10.3</code></pre>
+<p>Then install harp web server:</p>
+<ul>
+<li><a href="https://harpjs.com">https://harpjs.com</a></li>
+</ul>
+<p>Please note, that currently due to an incompatibility between node 6 and the latest harp, install harp with the following command:</p>
+<pre><code>npm i -g sintaxi/harp#v0.21.0-pre</code></pre>
+<ul>
+<li><a href="https://github.com/sintaxi/harp/issues/564">https://github.com/sintaxi/harp/issues/564</a></li>
+</ul>
+<p>If installed, correctly, then you should see something like this when you run the command <code>harp</code>:</p>
+<pre><code> $ harp
+
+  Usage: harp [options] [command]
+
+  Commands:
+
+    init [options] [path]  Initialize a new Harp project in current directory
+    server [options] [path] Start a Harp server in current directory
+    multihost [options] [path] Start a Harp server to host a directory of Harp projects
+    compile [options] [projectPath] [outputPath] Compile project to static assets (HTML, JS and CSS)
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+
+  Use &#39;harp &lt;command&gt; --help&#39; to get more information or visit http://harpjs.com/ to learn more.</code></pre>
+<p>Now create the following file in your project:</p>
+<h2>harp.json</h2>
+<pre><code>{
+  &quot;globals&quot;: 
+  {
+
+  }
+}</code></pre>
+<p>Open a shell on your project folder, and enter the following:</p>
+<pre><code>$ harp server
+------------
+Harp v0.21.0 – Chloi Inc. 2012–2015
+Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+------------</code></pre>
+<p>Check that your web site is now visible on:</p>
+<ul>
+<li><a href="http://localhost:9000/">http://localhost:9000/</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Deployment</h1>
+<p>Now visit this site here:</p>
+<ul>
+<li><a href="https://surge.sh/">https://surge.sh/</a></li>
+</ul>
+<p>and install this toolkit. One command should do it:</p>
+<pre><code>npm install --global surge</code></pre>
+<p>From still within the project folder, enter the following command:</p>
+<pre><code>harp compile; surge ./www</code></pre>
+<pre><code>$ surge
+Welcome to Surge!
+Please login or create an account by entering your email and password:</code></pre>
+<p>Enter credential to create a new account now - be sure to remember the password. Surge will then deploy the site to a public server:</p>
+<pre><code>      project path: ./www
+               size: 34 files, 2.3 MB
+             domain: dull-pet.surge.sh
+             upload: [====================] 100%, eta: 0.0s
+   propagate on CDN: [====================] 100%
+               plan: Free
+              users: youremail@domain.com
+         IP address: 192.241.214.148
+
+    Success! Project is published and running at dull-pet.surge.sh</code></pre>
+<p>The <code>domain</code> can be customised -in the above example &#39;dull-pet&#39; was generated, you can replace this with something more suitable (but unique, so perhaps include your initials, the current date or something that may not be used by someone else).</p>
+<p>Open a browser to inspect the running site. This is now deployed and accessible globally!</p>
+<h2>Removing Web Sites from Surge</h2>
+<p>If you have published a number of sites you may want to recall what domains were generated, or perhaps remove some or all of the published pages.</p>
+<p>The various commands are listed here:</p>
+<ul>
+<li><a href="https://surge.sh/help&gt;">https://surge.sh/help&gt;</a></li>
+</ul>
+<p>To list all web sites:</p>
+<pre><code>$ surge list
+              email: youremail@domain.com
+              token: *****************
+
+      iot-1.surge.sh
+      dull-pet.surge.sh
+      highfalutin-exchange.surge.sh</code></pre>
+<p>To remove (delete) a site from the server use the <code>teardown</code> command:</p>
+<pre><code>$ surge teardown highfalutin-exchange.surge.sh
+              email: youremail@domain.com
+              token: *****************
+             domain: highfalutin-exchange.surge.sh
+
+    Success - highfalutin-exchange.surge.sh has been removed.</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Solution</h1>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+         Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
