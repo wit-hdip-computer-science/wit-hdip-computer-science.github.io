@@ -1,0 +1,830 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Introducing CSS
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-2 CSS Intro">
+      Lab-2 CSS Intro
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Lab-1 Editing HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Lab-1 HTML Structure
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic02/book/index.html">
+          Lab-2 CSS Intro
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          Lab-3a Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          Lab-3b Multicolumn
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Lab-4a Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Lab-4b Case Study
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-01-harp/index.html">
+          Lab-5a Harp & Surge
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-02-templates/index.html">
+          Lab-5b Templating
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-03-nav/index.html">
+          Lab-5c Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-6a Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-b/index.html">
+          Lab-6b Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a-setup/index.html">
+          Lab-07a Play Setup
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-b-playlist-1/index.html">
+          Lab-07b Playlist 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-a-playlist-2/index.html">
+          Lab-08a Playlist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-b-playlist-3/index.html">
+          Lab-08b Playlist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a-todolist/index.html">
+          Lab-09b Todolist-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-b-playlist-4/index.html">
+          Lab-09a Playlist-4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-sessions/index.html">
+          Lab-10 Todolist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-a-sourcetree/index.html">
+          Lab-11a Sourcdtree
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-b-git/index.html">
+          Lab-11b Todolist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-c/index.html">
+          Lab-12
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-2 CSS Intro">
+        <h1>Objectives</h1>
+<p>In this lab we will begin a new project which will have CSS stylesheet from the beginning. We will explore some of the basic features of CSS, including colours, font and interesting techniques for setting styles across entire sections of a page.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<h2>Files for Lab02</h2>
+<p>For some of the labs, we would like to build on a foundation established from the previous weeks work. However, we might find it useful to keep the project separate, so the earlier labs are preserved as we left them (in case we wish to revert to them). Normally this would be the task of a revision control system such as git or subversion. For the moment we will just duplicate the projects</p>
+<p>You should have the files created from last week. If you do then make a copy of the Lab1 folder and name the new copy Lab2.</p>
+<p>However, if you did not save the files or missed the class, here is the archive here of the completed lab (with exercises):</p>
+<ul>
+<li><a href="https://github.com/wit-web-dev-2016/app-store/releases/tag/lab.1.exercises">https://github.com/wit-web-dev-2016/app-store/releases/tag/lab.1.exercises</a></li>
+</ul>
+<p>When you expand the zip file rename the top folder (lab01-incl-exercises) as Lab02. Save this Lab02 folder into your WebDevelopment folder that you created last week.</p>
+<p>Open Sublime and navigate to Lab02:</p>
+<p>Create a new folder called Deals, in that folder create a new page name it deals.html.
+Put the following code into the page and save.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot; /&gt;
+    &lt;title&gt;App Bundle Deals&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;Business Bundle&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/business.png&quot; alt=&quot;Business Bundle&quot; /&gt;
+        Here comes the next bundle for march. This time it&#39;s macware who publish a bundle. The so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of $199.94. So you can save around 84%.
+    &lt;/p&gt;
+    &lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>This images needed for this page:</p>
+<p><img src="./img/business.png" alt="">
+<img src="./img/insanity.jpg" alt=""></p>
+<p>View the page in the web browser. What is wrong with it?
+We wrote all of the href path&#39;s the same as we had before so why do they not work for the link and the images?
+If we are viewing the deals web page stored in the deals folder, does that folder contain the index.html file? No is the simple answer so our path is incorrect. We must tell the browser to move up a level in the directories in order to find those pages. Your paths&#39;s should be as below for each link and for each image. It is very important at this stage to understand this example as you need to be able to write correct paths to your files and images.</p>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot; /&gt;
+    &lt;title&gt;App Bundle Deals&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;../style.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;Business Bundle&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/business.png&quot; alt=&quot;Business Bundle&quot; /&gt;
+        Here comes the next bundle for march. This time it&#39;s macware who publish a bundle. The so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of $199.94. So you can save around 84%.
+    &lt;/p&gt;
+     &lt;h2&gt;Insanity Deal&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/insanity.jpg&quot; alt=&quot;Insanity Deal&quot; /&gt;
+        With the new $5 Insanity Deals from Bundlehunt you receive every day a highly reduced app for $5 only with savings up to 75%. Not a real bundle but, as there are multiple apps for only $5 each, one new per day, for the days to come.
+    &lt;/p&gt;
+    &lt;a href=&quot;../index.html&quot;&gt;Home&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>On the index.html page add a link to the deals.html page. Test the link to make sure you have written the path correctly.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>CSS Inheritance</h1>
+<p>Currently our CSS file looks like this:</p>
+<pre><code class="lang-css">h1, h2
+{
+  color: red;
+}
+body
+{
+  font-family:sans-serif;
+}
+h1
+{
+  border-bottom: 1px solid black;
+}</code></pre>
+<p>Which produces the following style in the browser:</p>
+<p><img src="./img/07.png" alt=""></p>
+<p>Add the following element around the text &quot;great prices&quot; in the main paragraph of the index.html page:</p>
+<pre><code class="lang-html">      &lt;em&gt;great prices&lt;/em&gt;</code></pre>
+<p>This uses the <code>&lt;em&gt;</code> element, which introduces an emphasis style:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em</a></li>
+</ul>
+<p>You may be able to see that this text is in italics.</p>
+<p>We can introduce the following rule into our stylesheet (style.css) to target this specific element:</p>
+<pre><code class="lang-css">em
+{
+  color:red;
+}</code></pre>
+<p>Save the stylesheet and refresh the page in the browser. The text &#39;great prices&#39; should be in italics and the colour red.</p>
+<p>When experimenting with CSS, we often want to experiment with the effects we are introducing. Specifically, introducing some rules, and then perhaps removing them again to see the difference (if any).</p>
+<p>Take the body rule in your stylesheet and &#39;comment out&#39; the font rule:</p>
+<pre><code class="lang-css">body
+{
+  /*font-family:sans-serif;*/
+}</code></pre>
+<p>Save and reload. You should be able to notice the difference. This is called &#39;commenting&#39; and is a common technique in both programming and web development. &#39;Uncomment&#39; the rule again (remove the <code>/*</code> and <code>*/</code> symbols).</p>
+<p>Now introduce the following rule:</p>
+<pre><code class="lang-css">p
+{
+  font-family:serif;
+}</code></pre>
+<p>Have a close look at the resulting page. What type of font is used by the headings? What type for the paragraphs? Can you explain the difference? Comment out the body font rule again (as we did above). What is the effect?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>CSS Classes</h1>
+<p>Open the deals.html file.</p>
+<p>How would we style each heading 2 separately so that each bundle has a different colour text? Styling the <code>&lt;h2&gt;</code> element means that all <code>&lt;h2&gt;</code> elements are styled in the same way. We can define a class of elements, and then apply styles to any element that belongs to that class.</p>
+<p>Go to the first h2 which holds the business bundle. This text we want to display as red. Add an attribute called class, with an id &quot;special&quot; to the <code>&lt;h2&gt;</code> element as below:</p>
+<pre><code class="lang-html">  &lt;h2 class=&quot;special&quot;&gt;Business Bundle&lt;/h2&gt;</code></pre>
+<p>The heading 2 above now belongs to the &quot;special&quot; class. We can now apply rules to that class of elements. To select a class in CSS, you write the selector like this:</p>
+<pre><code class="lang-css">
+h2.special
+{
+  color: red;
+}</code></pre>
+<p>This allows you to select all elements that belong to a particular class. Save your html file and your css file and reload the deals.html web page in your browser.</p>
+<p>If you are having trouble with seeing the results in the browser it may be because the path to the style.css file is incorrect.
+The link in the deals.html page must show as below:</p>
+<pre><code class="lang-html">    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;../style.css&quot; media=&quot;screen&quot; /&gt;</code></pre>
+<p>If you also wanted the paragraph to be associated with the same heading 2 class to be red in colour then you add an extra selector to your css rule</p>
+<pre><code class="lang-css">h2.special, p.special
+{
+  color: red;
+}</code></pre>
+<p>You must also add the class name to the <code>&lt;p&gt;</code> element in your html file.</p>
+<pre><code class="lang-css">&lt;p class=&quot;special&quot;&gt;</code></pre>
+<p>If we were to continue adding elements to a class this will get to be a lengthy process so we can write a rule for all the elements in a class:</p>
+<pre><code class="lang-css">.special
+{
+  color: red;
+}</code></pre>
+<p>This will ensure that all elements of the &quot;special&quot; class are coloured red.</p>
+<p>Your CSS might now be:</p>
+<pre><code class="lang-CSS">body
+{
+  font-family:sans-serif;
+}
+
+h1, h2
+{
+  color: gray
+}
+
+h1
+{
+  border-bottom: 1px solid black;
+}
+
+em
+{
+  color:red;
+}
+
+p
+{
+  font-family:serif;
+}
+
+.special
+{
+  color: red;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Fonts</h1>
+<h3>Font families</h3>
+<p>Each font family contains a set of fonts that share common characteristics. There are five font familys: sans-serif, serif, monospace, cursive, and fantasy. Each family includes a large set of fonts. Fonts are not consistently available from one computer to another. The available fonts depends on the operating system as well as the fonts and applications that a user has installed. Here&#39;s a an example of how to use font-family:</p>
+<pre><code class="lang-css">body
+{
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+}</code></pre>
+<p>The font-family property provides you with a list of preferred fonts. The idea is that most browsers will have your first choice, in this case Verdana, but if none of the specific fonts can be found then the browser uses its default &quot;sans-serif&quot; font. Always put a generic font family name at the end, like &quot;serif&quot; or &quot;sans-serif&quot;. Experiment with these in the style.css</p>
+<h2>Font sizes</h2>
+<p>Often the default sizes for headings are a bit large to change these defaults, we have four general techniques:</p>
+<h2>1. Specifying using pixels.</h2>
+<p>You can specify a font size in pixels. When you specify font size in pixels, you are telling the browser how many pixels tall the letters should be.</p>
+<pre><code class="lang-css">body
+{
+font-size: 14px;
+}</code></pre>
+<p>The px must come directly after the number, there cannot be a space between them.</p>
+<p><img src="./img/01.png" alt=""></p>
+<h2>2. Specifying using percentage.</h2>
+<p>Unlike pixels, which tell the font exactly how big it should be in pixels, a font size specified as a percentage tells the font how big it should be relative to another font size.</p>
+<pre><code class="lang-css">h1
+{
+  font-size: 150%;
+}</code></pre>
+<p>This says that the font size should be 150% of another font size. Font-size is a property that is inherited from the parent element, when you specify a % font size it is relative to the parent element. <code>&lt;h1&gt;</code> inherits from body so <code>&lt;h1&gt;</code> headings will be 150% of 14px.</p>
+<p><img src="./img/02.png" alt=""></p>
+<h2>3. Specifying using &quot;em&quot;.</h2>
+<p>This like percentage is another unit of measure. With em you don&#39;t specify a percentage, instead you specify a scaling factor.</p>
+<pre><code class="lang-css">h2
+{
+  font-size: 1.2em;
+}</code></pre>
+<p>If you use this to specify a <code>&lt;h2&gt;</code> heading your <code>&lt;h2&gt;</code> headings will be 1.2 times the font size of the parent element, which in this case is 1.2 times 14px, which is about 17px.</p>
+<p><img src="./img/03.png" alt=""></p>
+<h2>4. Specifying using keywords.</h2>
+<p>You can specify a font size as xx-small, x-small,small,medium, large, x-large, or xx-large and the browser will translate these keywords into pixel values using defaults that are set in the browser.</p>
+<pre><code class="lang-css">body
+{
+  font-size: small;
+}</code></pre>
+<p><img src="./img/04.png" alt=""></p>
+<p><img src="./img/05.png" alt=""></p>
+<p>It is important to note that earlier version of Internet Explorer does not support text scaling when the font size is specified using pixels.  Change the font sizes on web pages. Add in the relevant properties to your existing rules:</p>
+<pre><code class="lang-css">body
+{
+  font-size: small;
+}
+h1
+{
+  font-size: 150%;
+}
+h2
+{
+  font-size: 130%;
+}</code></pre>
+<p>Save your css file and reload the home page. Take a look at the change in sizes.</p>
+<h2>Font Weight</h2>
+<p>The font weight property allows you to control how bold the text looks. Bold text looks darker than normal text and tends to be a bit fatter too. You can make any element use bold text by setting the font-weight property to bold.</p>
+<pre><code class="lang-css">p
+{
+  font-weight: bold;
+}</code></pre>
+<p>You can also do it the other way, if you have an element that is set to bold by default, or is inheriting bold from a parent, then you can remove the bold.</p>
+<pre><code class="lang-css">h1
+{
+  font-weight: normal;
+}</code></pre>
+<p>Experiment with changing the headings for the web site so that the bold is changed to normal weight. Add the rule to your CSS file and reload the web site. Once you have seen the difference in the headings, change it back to bold.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Colours</h1>
+<p>Web colours are specified in terms of how much red, green, and blue make up the colour. You specify the amount of each colour from 0 to 100% and then add them all together to arrive at a final colour.</p>
+<p>You can use the names of colours, but CSS defines the names of only 17 colours. That number limits the expressiveness of your pages. By specifying colours in red, green and blue, you can have access to sixteen million colours.</p>
+<h2>Specifying Colour using colour names</h2>
+<p>The most straightforward way to describe a colour in CSS is just to use its name. For example to specify &quot;silver&quot; as the background colour of a body element:</p>
+<pre><code class="lang-css">body
+{
+  background-color: silver;
+}</code></pre>
+<p>CSS colour names are case-insensitive, so you can type silver, Silver, or SILVER and all of them will work. But you must spell the word colour in the american way &quot;color&quot;</p>
+<h2>Specify in red, green and blue values.</h2>
+<p>If you want to specify an orange colour which consists of 80% red, 40% green and 0% blue:</p>
+<pre><code class="lang-css">body
+{
+  background-color: rgb(80%, 40%, 0%);
+}</code></pre>
+<p>or you can specify it as numeric values between 0 and 255. So 80% of 255 is 204, 40% of 255 is 102, and 0% of 255 is 0.</p>
+<pre><code class="lang-css">body
+{
+  background-color: rgb(204, 102, 0);
+}</code></pre>
+<h2>Specify colour using hex codes.</h2>
+<p>Each set of two digits of a hex code represents the red, green and blue of the colour. The first two represent red, the second two green and the last two blue.</p>
+<pre><code class="lang-css">body
+{
+  background-color:  #cc6600;
+}</code></pre>
+<p>Try out these colours on the web site. </p>
+<p>We would like to keep the silver colour for the background of this website.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Font &amp; Colour CSS</h1>
+<p>In your current style.css, change your CSS file so it now contains the following:</p>
+<pre><code class="lang-css">body
+{
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size:small;
+}
+
+h1, h2
+{
+  color: #007e7e;
+}
+
+h1
+{
+  font-size: 150%;
+}
+
+h2
+{
+  font-size: 130%;
+}
+
+p
+{
+ color: maroon;
+}
+
+.special
+{
+    color: red;
+}</code></pre>
+<p>The default font family is sans-serif, this is last in the list, the others are alternatives. Save the file and load the home web page in your browser. The headings should now be in sans-serif and an aquamarine colour. The paragraph text is also sans-serif as all elements inherit the <code>&lt;body&gt;</code>s font-family property.</p>
+<p>We now want to adjust the line height of the text on the entire page so that there&#39;s more vertical space between each line. To do that we add a line-height property in the existing body rule.</p>
+<pre><code class="lang-css">body
+{
+  /* as before */
+  line-height: 1.6em;
+}</code></pre>
+<p>This property allows us to specify the line height between each line. Like other font-related properties, you can specify the height in pixels, or using an em or percentage value that&#39;s relative to the font size. Save your CSS file and reload your web pages to see the change.</p>
+<p>Try a few different line heights like 200%, .5em, and 20px to see the effect. Change the height back to 1.6em when you are finished.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>More Content</h1>
+<p>We will rework the apps.html  page with some more content to illustrate some interesting CSS rules. Replace the first paragraph with the following content:</p>
+<pre><code class="lang-html">  &lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bundle APP Store&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src=&quot;images/banner.png&quot;/&gt;
+      &lt;h3&gt;Freebie&lt;/h3&gt;
+     &lt;p&gt;
+       Stacksocial just published its so called Free Ondesoft Mac Tool Bundle, which contains 5 apps from Ondesoft. The bundle worth $146 will be probably available only a couple of days so you’d better hurry up to get it.
+     &lt;/p&gt;
+     &lt;img src=&quot;images/star40.gif&quot;/&gt;
+     &lt;p&gt;
+       &lt;img src=&quot;images/ondesoft.jpg&quot; alt=&quot;Black Brain Brew Elixir&quot; /&gt;
+     &lt;/p&gt;
+     &lt;/p&gt;
+     &lt;hr&gt;
+     &lt;h3&gt;Macware Business Bundle&lt;/h3&gt;
+     &lt;p&gt;
+       Here comes the next bundle for march. This time its macware who publish a bundle. The so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of $199.94. So you can save around 84%. There is n...
+     &lt;/p&gt;
+     &lt;img src=&quot;images/star45.gif&quot;/&gt;
+     &lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>The above content relies on a couple of new image files:</p>
+<hr>
+<p><img src="./img/star40.gif" alt=""></p>
+<hr>
+<p><img src="./img/star45.gif" alt=""></p>
+<hr>
+<p>Save these files to your computer. To do this, right click on each one in turn and select save as. Then you can drag and drop them directly into the images folder in your lab02 folder.</p>
+<p>If all this goes according to plan,  the app page should now look something like this:</p>
+<p><img src="./img/06.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Coding Best Practices</h1>
+<p>We should carefully inspect our html and verify that we are laying it out correctly, and in particular that we are obeying consistent indentation rules in the structure of the html itself.</p>
+<p>Indentation is simply a consistent placement of spaces before each element, such that it flows in an ordered manner reflecting the opening/closing of tags. We prefer to use 2 spaces for each &#39;level&#39;.</p>
+<h3>Example Inconsistent indentation:</h3>
+<pre><code class="lang-html">   &lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;APP Store&lt;/title&gt; &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src=&quot;images/score.png&quot;/&gt;&lt;h1&gt;Score: Apps, Movies, Music, Books
+    &lt;/h1&gt;&lt;ol&gt; &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;music.html&quot;&gt;Music&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;movies.html&quot;&gt;Movies&lt;/a&gt;&lt;/li&gt;    &lt;/ol&gt;
+    &lt;h2&gt;New Games&lt;/h2&gt;
+    &lt;ul&gt;      &lt;li&gt;&lt;img src=&quot;images/delete.png&quot;/&gt;Clear All&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;images/google.jpg&quot;/&gt;Google Box&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;images/squink.jpg&quot;/&gt;Squinks&lt;/li&gt;    &lt;/ul&gt;
+     &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h3>Example Correct indentation</h3>
+<pre><code class="lang-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;APP Store&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src=&quot;images/score.png&quot;/&gt;&lt;h1&gt;Score: Apps, Movies, Music, Books&lt;/h1&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;music.html&quot;&gt;Music&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;movies.html&quot;&gt;Movies&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h2&gt;New Games&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;img src=&quot;images/delete.png&quot;/&gt;Clear All&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;images/google.jpg&quot;/&gt;Google Box&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;images/squink.jpg&quot;/&gt;Squinks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Review your index.html file and ensure that it is correctly indented. One quick way to determine this is to &#39;fold&#39; all the elements in the editor. To do this, hover the mouse beside the numbers listed in the left hand margin, downward arrows will appear. By clicking on the arrows the code will expand and collapse.</p>
+<p>This will reduce your editing view to this:</p>
+<p><img src="./img/11.png" alt=""></p>
+<p>It is likely that your indentation will not look like the below, so take the opportunity now to line up all elements consistently. This can be tedious, and there are tools to do this automatically, but do it manually for the moment.</p>
+<p><img src="./img/12.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<h2>Solution</h2>
+<p>This is a solution to the lab:</p>
+<ul>
+<li><a href="https://github.com/wit-web-dev-2016/app-store/releases/tag/lab.2.styled">https://github.com/wit-web-dev-2016/app-store/releases/tag/lab.2.styled</a></li>
+</ul>
+<h2>Exercise 1</h2>
+<p>In this lab you have experimented with colours, font-family, sizes and line heights.
+Apply what you have learnt to the directions page in your web site.</p>
+<h2>Exercise 2</h2>
+<p>Investigate on the mozilla site about the following properties:</p>
+<ul>
+<li>background-color</li>
+<li>background-image</li>
+<li>text-align</li>
+<li>text-shadow</li>
+<li>text-decoration</li>
+</ul>
+<p>How might you apply them to your website?</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</a></li>
+</ul>
+<h2>Exercise 3</h2>
+<p>Attempt freeCodeCamp sections 8 through 13 to practice what you have learned in the lab.    </p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

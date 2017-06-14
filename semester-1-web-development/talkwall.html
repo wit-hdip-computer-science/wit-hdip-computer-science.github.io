@@ -1,0 +1,1369 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder"> Web Development</h2>
+    <p> All Slides in the Course </p>
+  </div>
+
+  
+
+<div class="two wide column sitemap">
+  <div class="popup" data-content="To the top level Topics for this Module...">
+    <a href="index.html"> <i class="huge home icon"></i> <br> Module Home </a>
+  </div>
+</div>
+
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic00/talk-assignment-1/c-project-1.pdf">
+      Project 1 Specification
+    </a>
+    
+    <a class="item" href="topic00/talk-assignment-2/assignment-2.pdf">
+      Project 2 Specification
+    </a>
+    
+    <a class="item" href="topic01/talk-1/a-introduction.pdf">
+      The Nature of the Web
+    </a>
+    
+    <a class="item" href="topic01/talk-2/b-html-page-structure.pdf">
+      HTML Basics
+    </a>
+    
+    <a class="item" href="topic02/talk-1/a-html-elements.pdf">
+      HTML Elements
+    </a>
+    
+    <a class="item" href="topic02/talk-2/css-1.pdf">
+      CSS Basics
+    </a>
+    
+    <a class="item" href="topic02/talk-3/css2.pdf">
+      CSS Rules
+    </a>
+    
+    <a class="item" href="topic02/talk-4/css3.pdf">
+      CSS Cascade
+    </a>
+    
+    <a class="item" href="topic03/talk-1/classes-ids-divs.pdf">
+      Classes, IDs & Divs
+    </a>
+    
+    <a class="item" href="topic03/talk-2/a-box-model-1.pdf">
+      Box Fundamentals
+    </a>
+    
+    <a class="item" href="topic03/talk-3/a-box-model-example.pdf">
+      Box Model Example
+    </a>
+    
+    <a class="item" href="topic03/talk-4/b-multicolumn-layout.pdf">
+      Multicolumn Layout
+    </a>
+    
+    <a class="item" href="topic03/talk-5/c-project-1.pdf">
+      Project 1 Specification
+    </a>
+    
+    <a class="item" href="topic04/talk-1/d-html_evolution.pdf">
+      The Evolution of the Web
+    </a>
+    
+    <a class="item" href="topic04/talk-2/b-css-navigation.pdf">
+      Navigation
+    </a>
+    
+    <a class="item" href="topic04/talk-3/a-semantic-html.pdf">
+      Semantic HTML
+    </a>
+    
+    <a class="item" href="topic04/talk-4/style-guide.pdf">
+      HTML/CSS Style Guide
+    </a>
+    
+    <a class="item" href="topic05/talk-1-deployment/deployment.pdf">
+      Deployment
+    </a>
+    
+    <a class="item" href="topic05/talk-2-harp-and-surge/harp.pdf">
+      Harp & Surge
+    </a>
+    
+    <a class="item" href="topic05/talk-3-html/case-study.pdf">
+      Case Study
+    </a>
+    
+    <a class="item" href="topic05/talk-4-templates/templates.pdf">
+      Templates
+    </a>
+    
+    <a class="item" href="topic06/talk-1/lab-review.pdf">
+       Lab Review
+    </a>
+    
+    <a class="item" href="topic06/talk-2/sematic-ui-part-1.pdf">
+      Semantic-UI I
+    </a>
+    
+    <a class="item" href="topic06/talk-3/sematic-ui-part-2.pdf">
+      Semantic-UI II
+    </a>
+    
+    <a class="item" href="topic06/talk-4/sematic-ui-part-3.pdf">
+      Semantic-UI III
+    </a>
+    
+    <a class="item" href="topic06/talk-5/semantic-4.pdf">
+      Semantic Part IV
+    </a>
+    
+    <a class="item" href="topic07/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.pdf">
+      Dynamic Web Applications
+    </a>
+    
+    <a class="item" href="topic07/talk-2-starting-to-play/b-starting-to-play.pdf">
+      Starting to Play
+    </a>
+    
+    <a class="item" href="topic07/talk-3-project-structure/web-app-intro.pdf">
+      Web App Introduction
+    </a>
+    
+    <a class="item" href="topic07/talk-4-front-end/front-end.pdf">
+      Front-end
+    </a>
+    
+    <a class="item" href="topic07/talk-5-back-end/back-end.pdf">
+      Back-end
+    </a>
+    
+    <a class="item" href="topic08/talk-a-views/views.pdf">
+      Views
+    </a>
+    
+    <a class="item" href="topic08/talk-b-models/models.pdf">
+      Models
+    </a>
+    
+    <a class="item" href="topic09/talk-b-todo/forms.pdf">
+      Todo
+    </a>
+    
+    <a class="item" href="topic09/talk-c-playlist/controllers.pdf">
+      Playlist Features
+    </a>
+    
+    <a class="item" href="topic10/talk-2-sessions-intro/c-sessions.pdf">
+      Sessions
+    </a>
+    
+    <a class="item" href="topic10/talk-b-todo-sessions/todo-sessions.pdf">
+      Sessions in Todo
+    </a>
+    
+    <a class="item" href="//error: missing pdf">
+      
+    </a>
+    
+    <a class="item" href="topic12/talk-a-review/review.pdf">
+      Review + Roadmap
+    </a>
+    
+    <a class="item" href="topic12/talk-b-summer-school/summer-school.pdf">
+      Summer School
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui container">
+      <div class="ui basic segment">
+        <div class="ui four doubling stackable cards">
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Project 1 Specification</div>
+  </div>
+    
+    <a href="topic00/talk-assignment-1/c-project-1.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic00/talk-assignment-1/c-project-1.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Specification for Assignment 1</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Project 2 Specification</div>
+  </div>
+    
+    <a href="topic00/talk-assignment-2/assignment-2.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic00/talk-assignment-2/assignment-2.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Draft specification for Assignment 2</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> The Nature of the Web</div>
+  </div>
+    
+    <a href="topic01/talk-1/a-introduction.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic01/talk-1/a-introduction.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>The World Wide Web permeates or lives to an extraordinary degree. However, most of us are unaware of the its technical underpinnings. In this session we explore the nature of the Web and in particular the role of HTTP protocol and the HTML standard. We also identify the &#39;client/server&#39; nature of the web and its implications. In this context we will gain an understanding of the role of the &#39;browser&#39; in presenting a web page, and begin to understand pages are retrieved and rendered.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> HTML Basics</div>
+  </div>
+    
+    <a href="topic01/talk-2/b-html-page-structure.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic01/talk-2/b-html-page-structure.jpeg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>We can now explore the basics of HTML and we will try to get to grips with the fundamentals of the HTML language. As you will see, its structure and format is relatively straightforward, and you will be able to understand the basics very quickly. We will be focusing on a small number of &#39;tags&#39; to get started, and also on the ways in which different html files can be linked together to form a site.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> HTML Elements</div>
+  </div>
+    
+    <a href="topic02/talk-1/a-html-elements.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic02/talk-1/a-html-elements.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>HTML Elements are at the heart of the HTML specification. There are perhaps a dozen categories or elements to explore -in Lab-01 we explored elements from 5 of these categories. Here we review these and examine the role and format of each one in detail.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> CSS Basics</div>
+  </div>
+    
+    <a href="topic02/talk-2/css-1.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic02/talk-2/css-1.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>This language looks simple at first, but as we will see in the next few weeks, it is considerably more complex than HTML and will require a very careful approach to get right</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> CSS Rules</div>
+  </div>
+    
+    <a href="topic02/talk-3/css2.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic02/talk-3/css2.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>In order to style the same html elements in different ways we need to use classes. This allows us to target specific occurences of an html element for styling purposes.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> CSS Cascade</div>
+  </div>
+    
+    <a href="topic02/talk-4/css3.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic02/talk-4/css3.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Inheritance is a key feature in how CSS applies rules, and it has some interesting side effects</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Classes, IDs & Divs</div>
+  </div>
+    
+    <a href="topic03/talk-1/classes-ids-divs.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic03/talk-1/classes-ids-divs.gif">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>These three concepts are essential in order to build useful style sheets. The allow is to define different regions, elements a subsets of elements on a page.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Box Fundamentals</div>
+  </div>
+    
+    <a href="topic03/talk-2/a-box-model-1.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic03/talk-2/a-box-model-1.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>At the heart of the layout engine in web browsers is a concept called the &#39;box model&#39;. This defines a general layout structure for all HTML elements, providing a language for specifying important dimensions and relationships to other elements.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Box Model Example</div>
+  </div>
+    
+    <a href="topic03/talk-3/a-box-model-example.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic03/talk-3/a-box-model-example.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A worked example of the box model in action. This example featured in this weeks lab, and demonstrates the major features of the model.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Multicolumn Layout</div>
+  </div>
+    
+    <a href="topic03/talk-4/b-multicolumn-layout.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic03/talk-4/b-multicolumn-layout.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Using an understanding of the fundamental features of the box model we can start to produce more interesting page layouts. This will allow is to grow multi-column pages that can vary according to the size of the browser windows used to view them.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Project 1 Specification</div>
+  </div>
+    
+    <a href="topic03/talk-5/c-project-1.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic03/talk-5/c-project-1.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>When you finish these labs you will have the knowledge to prepare your first project for this module. The briefing is here - pay close attention to the guidelines</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> The Evolution of the Web</div>
+  </div>
+    
+    <a href="topic04/talk-1/d-html_evolution.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic04/talk-1/d-html_evolution.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Both HTML &amp; CSS continue to evolve. Understanding where it is going is part and parcel of becoming a programmer. Here we look a some aspects of the history of HTML, including some major milestones in its evolution.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Navigation</div>
+  </div>
+    
+    <a href="topic04/talk-2/b-css-navigation.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic04/talk-2/b-css-navigation.jpeg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Central to a well design site is a clear and understandably navigation structure. This must easily allow the user to explore the site, provide sufficient context such that the user knows where they are at any stage, and do this in a visually pleasing and efficient manner.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Semantic HTML</div>
+  </div>
+    
+    <a href="topic04/talk-3/a-semantic-html.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic04/talk-3/a-semantic-html.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>HTML5, the latest version of the standard, introduced a range of new elements. Among the most interesting are the so-called &#39;semantic&#39; elements. These attempt to re-examine the proliferation of DIVs in html, and proposed an alternative vocabulary that would better reflect the purpose of many of these DIVs</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> HTML/CSS Style Guide</div>
+  </div>
+    
+    <a href="topic04/talk-4/style-guide.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic04/talk-4/style-guide.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A review of some of the guidelines from the Google HTML/CSS style recommendations.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Deployment</div>
+  </div>
+    
+    <a href="topic05/talk-1-deployment/deployment.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic05/talk-1-deployment/deployment.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Deploying a site involves understanding a little more about Clients &amp; Servers, Hosting Providers, Domain Names, Transferring the Sites Files, HTTP and Absolute &amp; Relative Paths</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Harp & Surge</div>
+  </div>
+    
+    <a href="topic05/talk-2-harp-and-surge/harp.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic05/talk-2-harp-and-surge/harp.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Harp.js and Surge.sh are the two services we will use to server the page locally, and also to deploy it to a public web server.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Case Study</div>
+  </div>
+    
+    <a href="topic05/talk-3-html/case-study.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic05/talk-3-html/case-study.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A review of the the evolution of a web site from simple unstyled pages to a reasonable simple but appealing layout.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Templates</div>
+  </div>
+    
+    <a href="topic05/talk-4-templates/templates.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic05/talk-4-templates/templates.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>The EJS template system implements mechanisms for assembling sites from templates - which are called &#39;partials&#39; in EJS. Additionally, there is a complimentary &#39;layout&#39; mechanism for reusing entire page structures.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header">  Lab Review</div>
+  </div>
+    
+    <a href="topic06/talk-1/lab-review.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic06/talk-1/lab-review.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Review of the Labs to date</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Semantic-UI I</div>
+  </div>
+    
+    <a href="topic06/talk-2/sematic-ui-part-1.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic06/talk-2/sematic-ui-part-1.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>An overview of the container and segments styles in the framework</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Semantic-UI II</div>
+  </div>
+    
+    <a href="topic06/talk-3/sematic-ui-part-2.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic06/talk-3/sematic-ui-part-2.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>An exploration of the Grid and Image styles.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Semantic-UI III</div>
+  </div>
+    
+    <a href="topic06/talk-4/sematic-ui-part-3.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic06/talk-4/sematic-ui-part-3.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>An exploration of the Tables</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Semantic Part IV</div>
+  </div>
+    
+    <a href="topic06/talk-5/semantic-4.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic06/talk-5/semantic-4.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Our final tour of the Semantic-UI library - with a focus on icons, variations in segments and responsive grids</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Dynamic Web Applications</div>
+  </div>
+    
+    <a href="topic07/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic07/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.gif">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>The applications to date have been static - essentially a collecting of individual web pages. For more sophisticated web site we need to move to creating web applications. This will require a shift to considering the web site as an aggregating of fragments of web pages, composed and assembled by a program we also write.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Starting to Play</div>
+  </div>
+    
+    <a href="topic07/talk-2-starting-to-play/b-starting-to-play.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic07/talk-2-starting-to-play/b-starting-to-play.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>To build a web application we need a web framework. This will define the superstructure of our application and provide essential features to enable us to compose a complicated and efficient web application</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Web App Introduction</div>
+  </div>
+    
+    <a href="topic07/talk-3-project-structure/web-app-intro.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic07/talk-3-project-structure/web-app-intro.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Structure of a web app: Front-end Vs Backend. Routers, Models, Views, Controllers</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Front-end</div>
+  </div>
+    
+    <a href="topic07/talk-4-front-end/front-end.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic07/talk-4-front-end/front-end.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Review the front end of a Play Project, consisting of view, layouts and partials.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Back-end</div>
+  </div>
+    
+    <a href="topic07/talk-5-back-end/back-end.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic07/talk-5-back-end/back-end.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>The back end of a Play project consists of routes, controllers, models + configuration.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Views</div>
+  </div>
+    
+    <a href="topic08/talk-a-views/views.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic08/talk-a-views/views.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Explore the play templating language in more depth</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Models</div>
+  </div>
+    
+    <a href="topic08/talk-b-models/models.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic08/talk-b-models/models.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Playu includes a simple relational database - we can preload and read/write from this db in our app.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Todo</div>
+  </div>
+    
+    <a href="topic09/talk-b-todo/forms.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic09/talk-b-todo/forms.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A Separate case study - a simple todo list application</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Playlist Features</div>
+  </div>
+    
+    <a href="topic09/talk-c-playlist/controllers.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic09/talk-c-playlist/controllers.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Complete a review of the playlist features</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Sessions</div>
+  </div>
+    
+    <a href="topic10/talk-2-sessions-intro/c-sessions.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic10/talk-2-sessions-intro/c-sessions.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Keeping track of the currently logged in user is a challenge - as HTTP is, by definition &#39;stateless&#39;. Hidden form fields, url rewriting and cookies are three common techniques for implementing sessions.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Sessions in Todo</div>
+  </div>
+    
+    <a href="topic10/talk-b-todo-sessions/todo-sessions.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic10/talk-b-todo-sessions/todo-sessions.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Include the session on the Todo app</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> </div>
+  </div>
+    
+    <a href="undefined/undefined/error: missing pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="undefined/undefined/undefined">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Review + Roadmap</div>
+  </div>
+    
+    <a href="topic12/talk-a-review/review.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic12/talk-a-review/review.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A review of the course so far + a peek into the future</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Summer School</div>
+  </div>
+    
+    <a href="topic12/talk-b-summer-school/summer-school.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic12/talk-b-summer-school/summer-school.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Schedule and structure of the Summer School</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

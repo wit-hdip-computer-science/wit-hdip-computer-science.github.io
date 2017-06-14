@@ -1,0 +1,529 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Git, Github & Bitbucket
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-11a Sourcdtree">
+      Lab-11a Sourcdtree
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Lab-1 Editing HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Lab-1 HTML Structure
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-2 CSS Intro
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          Lab-3a Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          Lab-3b Multicolumn
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Lab-4a Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Lab-4b Case Study
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-01-harp/index.html">
+          Lab-5a Harp & Surge
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-02-templates/index.html">
+          Lab-5b Templating
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-03-nav/index.html">
+          Lab-5c Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-6a Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-b/index.html">
+          Lab-6b Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a-setup/index.html">
+          Lab-07a Play Setup
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-b-playlist-1/index.html">
+          Lab-07b Playlist 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-a-playlist-2/index.html">
+          Lab-08a Playlist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-b-playlist-3/index.html">
+          Lab-08b Playlist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a-todolist/index.html">
+          Lab-09b Todolist-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-b-playlist-4/index.html">
+          Lab-09a Playlist-4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-sessions/index.html">
+          Lab-10 Todolist-2
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic11/book-a-sourcetree/index.html">
+          Lab-11a Sourcdtree
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-b-git/index.html">
+          Lab-11b Todolist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-c/index.html">
+          Lab-12
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-11a Sourcdtree">
+        <h1>Objectives</h1>
+<p>Install and Configure Sourcetree</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Git,  Github &amp; Bitbucket</h1>
+<p>Make sure git is installed for your workstation::</p>
+<ul>
+<li><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+</ul>
+<p>Verify that is is by opening a shell (command prompt on Windows) and enter the following:</p>
+<pre><code>git --version</code></pre>
+<p>The system might respond with something like this:</p>
+<pre><code>git version 2.10.1 (Apple Git-78)</code></pre>
+<h1>Github</h1>
+<p>Sign up for a github account:</p>
+<ul>
+<li><a href="https://github.com/">https://github.com/</a></li>
+</ul>
+<p>Be sure to verify your email.</p>
+<h1>Bitbucket</h1>
+<p>Sign up for a github account:</p>
+<ul>
+<li><a href="https://bitbucket.org/">https://bitbucket.org/</a></li>
+</ul>
+<p>Be sure to verify your email.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Install Sourcetree</h1>
+<p>Visit:</p>
+<ul>
+<li><a href="https://www.sourcetreeapp.com/">https://www.sourcetreeapp.com/</a></li>
+</ul>
+<p>And download and install the application for your platform.</p>
+<p>On the very first screen - you will be asked to log in to <code>Atlassian</code>. Your bitbucket credentials should work here...</p>
+<p>During installation you will be asked to link your sourcetree installation to github and to bitbucket</p>
+<p>This are the first install screen you will see:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>Here you will be asked to log in to an <code>Atlassian</code> account:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>The credentials here should be the same as your bitbucket account details from the last step.</p>
+<p><img src="img/03.png" alt=""></p>
+<p>We would like to link our Sourcetree installation to both Bitbucket &amp; Github:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>Selecting each of the above will take you through an authorisation sequence with both services.</p>
+<p>If all goes well, the Sourcetree home screen will launch:</p>
+<p><img src="img/11.png" alt=""></p>
+<p>To see if the both the bitbucket a github accounts are properly linked, select <code>Tools-&gt;Options-&gt;Authentication</code> :</p>
+<p><img src="img/10.png" alt=""></p>
+<p>This should show the both accounts linked as above. If not, you can press <code>add</code> and link them now (no need to reinstall).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Create new Repo on Github</h1>
+<p>Back on :</p>
+<ul>
+<li><a href="https://github.com">https://github.com</a></li>
+</ul>
+<p>Create a new repository:</p>
+<p><img src="img/17.png" alt=""></p>
+<p>This will create a new empty repo on github.</p>
+<p><img src="img/18.png" alt=""></p>
+<p>Note carefully the url of the repo - in the box above. Copy this to the clipboard now.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Create New Application</h1>
+<p>We now would like to start a new play application, which we will tie to a github repo.</p>
+<p>First, create a new app by cloning a starter app:</p>
+<h2>Create New Project</h2>
+<p>Create a new play project using this command:</p>
+<pre><code>git clone https://github.com/edeleastar/play-template-1.git</code></pre>
+<p>The shell should show something like this:</p>
+<pre><code>Cloning into &#39;play-template-1&#39;...
+remote: Counting objects: 66, done.
+remote: Compressing objects: 100% (47/47), done.
+remote: Total 66 (delta 9), reused 66 (delta 9), pack-reused 0
+Unpacking objects: 100% (66/66), done.</code></pre>
+<h2>Rename Project</h2>
+<p>The default name of the project should be changed now. This will require the following procedure:</p>
+<ul>
+<li>Rename the folder <code>play-template-1</code>. Call the folder <code>todolist-versioned</code> instead.</li>
+<li><p>Use Sublime Text to edit this file: <code>playlist/conf/application.conf</code>. The first three lines contains the following:</p>
+<pre><code>  # This is the main configuration file for the application.
+  # ~~
+  application.name=play-template-1</code></pre>
+</li>
+<li><p>Change <code>play-template-1</code> above to <code>todolist-versioned</code>, and save the file:</p>
+<pre><code>  # This is the main configuration file for the application.
+  # ~~
+  application.name=todolist-versioned</code></pre>
+</li>
+</ul>
+<h2>Run the project -</h2>
+<pre><code>play run</code></pre>
+<p>and verify that the skeleton app is available:</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Set Remote Repo</h1>
+<p>Your Sourcetree app currently looks like this:</p>
+<p><img src="img/11.png" alt=""></p>
+<p>Locate the <code>todolist-versioned</code> folder we just created, and drag and drop it onto SourceTree:</p>
+<p><img src="img/12.png" alt=""></p>
+<p>Select it in the navigation panel, and we have a more detailed view:</p>
+<p><img src="img/13.png" alt=""></p>
+<p>Select <code>Repository-&gt;Settings</code> - and you will get details of the current <code>remote</code> repo this repository is connected to:</p>
+<p><img src="img/14.png" alt=""></p>
+<p>Select <code>Edit</code> - and change URL / Path to the url you should have in the clipboard from step 3:</p>
+<p><img src="img/20.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Push</h1>
+<p>Press the <code>Push</code> button:</p>
+<p>This will bring up this screen:</p>
+<p><img src="img/20.png" alt=""></p>
+<p>When you press Push on this panel, the application will be replicated to the repo in your account on github. This might take a minute or so...</p>
+<p>You should be able to view it on github now:</p>
+<p><img src="img/21.png" alt=""></p>
+<p>Explore the various view - including the <code>commits</code> screen:</p>
+<p><img src="img/22.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>To get fluent with this procedure, try the following:</p>
+<h2>Exercise 1: Github Practice</h2>
+<p>Create another new app - called <code>demo-1</code> - using the procedure  specified on Step 04.</p>
+<p>Then, Following steps 05 and 06, attach the new project to a new repo on github.</p>
+<h2>Exercise 2: Bitbucket Practice</h2>
+<p>The procedure we carried out to bind a local repo to github can also be carried out to bind a repo to a bitbucket hosted repository.
+Create (another!) new project <code>demo-2</code> - this time see if you can figure out how put it on bitbucket.</p>
+<p>The main difference between github and bitbucket is that github repos are always public, whereas bitbucket can be either (default private).</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,483 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      7: More on Collections
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="TechSupport">
+      TechSupport
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-classes-objects/book-a/index.html">
+          Classes-objects
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-classes-objects/book-b/index.html">
+          Class-components
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-classes-objects(solns)/book-solutions/index.html">
+          Class-components-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-ticket-machine/book/index.html">
+          Ticket-Machine
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-ticket-machine(solns)/book-a/index.html">
+          Ticket-Machine-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-a/index.html">
+          Abstraction-modularization[1]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-b/index.html">
+          Abstraction-modularization[2]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-c/index.html">
+          Abstraction-modularization[3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization(solns)/book-solutions-ab/index.html">
+          Abstraction-modularization-Solutions-[1-2]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization(solns)/book-solutions-c/index.html">
+          Abstraction-modularization-Solutions-[3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow/book-a/index.html">
+          Generics-Control-flow
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow(solns)/book-solutions-a/index.html">
+          Notebook_solutions-[1-3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(assignment-1)/book-a/index.html">
+          Assignment1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-a/index.html">
+          Eclipse
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-b/index.html">
+          CRUD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-c/index.html">
+          XML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-d/index.html">
+          Exception
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-more-on-collections/book-a/index.html">
+          Primitive-Arrays
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic07-more-on-collections/book-b/index.html">
+          TechSupport
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-inheritance-polymorphism/book-1/index.html">
+          NetworkSystem
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-inheritance-polymorphism/book-2/index.html">
+          ShopV6.0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-inheritance-polymorphism/book-3/index.html">
+          ShopV7.0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-abstraction-TDD/book-a/index.html">
+          Lab-Abstraction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-abstraction-TDD/book-b/index.html">
+          Lab-DVDTesting
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-interfaces/book/index.html">
+          Lab-10
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="TechSupport">
+        <h1>Objectives</h1>
+<p>On completion of this lab you should be able to:</p>
+<ul>
+<li>build a small, console-based application using ArrayList, HashMap and HashSet.</li>
+<li>integrate code to tokenize Strings into the above app.</li>
+<li>use the Random class to return random objects from a collection.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Developing Tech Support 2 application</h1>
+<p>In this section, you will:</p>
+<ul>
+<li>download the solution to Tech Support 1 that we covered in lectures. </li>
+<li>familiarise yourself with the functionality and classes in the solution.</li>
+<li>refactor the code so that the system replies with a random response from a list of pre-defined responses.</li>
+</ul>
+<h2>Tech Support 1</h2>
+<ul>
+<li><p>Download and extract the solution to <a href="archives/tech_support_1.zip">Tech Support 1</a>.</p>
+</li>
+<li><p>Import it into Eclipse and familiarise yourself with the code.  The app:</p>
+<ul>
+<li>is a console based system.</li>
+<li>is a textual dialog system i.e. you enter text on the console and the system will provide a response.</li>
+<li>responds with the same String always:  “That sounds interesting.  Tell me more…”</li>
+</ul>
+</li>
+</ul>
+<h2>Tech Support 2</h2>
+<ul>
+<li><p>Create a new project in Eclipse and call it <strong>Tech Support 2</strong>.</p>
+</li>
+<li><p>Copy the java files from <strong>Tech Support 1</strong> into <strong>Tech Support 2</strong>.</p>
+</li>
+<li><p>Make the necessary changes to this project so that the system provides a random response from a list of pre-defined responses e.g.:</p>
+<ul>
+<li>&quot;That sounds interesting. Tell me more...&quot;</li>
+<li>&quot;I need a bit more information on that.&quot;</li>
+<li>&quot;Have you checked that you do not have a dll conflict?&quot;</li>
+<li>&quot;That is explained in the manual. Have you read the manual?“</li>
+<li>&quot; That&#39;s not a bug, it&#39;s a feature!&quot;</li>
+<li>&quot;Could you elaborate on that?“</li>
+<li>etc.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Use your lecture notes to support you in this task.</p>
+</li>
+<li><p>Test your completed app to make sure it behaves as expected.</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Developing Tech Support 3 application</h1>
+<p>In this section, you will:</p>
+<ul>
+<li><p>refactor the code from the previous step to have this functionality:</p>
+<ul>
+<li>Based on the user input, the system provides a context-sensitive, generated response from a list of pre-defined responses.  If the system cannot find a suitable generated response, it returns a random one.</li>
+</ul>
+</li>
+</ul>
+<h2>Tech Support 2</h2>
+<ul>
+<li>If you are not happy with your solution from the previous step, download and extract this version of <a href="archives/tech_support_2.zip">Tech Support 2</a>.  Then import it into Eclipse and familiarise yourself with the code.  </li>
+</ul>
+<h2>Tech Support 3</h2>
+<ul>
+<li><p>Create a new project in Eclipse and call it <strong>Tech Support 3</strong>.</p>
+</li>
+<li><p>Copy the java files from <strong>Tech Support 2</strong> into <strong>Tech Support 3</strong>.</p>
+</li>
+<li><p>Make the necessary changes to have this functionality:</p>
+<ul>
+<li>Based on the user input, the system provides a context-sensitive, generated response from a list of pre-defined responses.  If the system cannot find a suitable generated response, it returns a random one.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Use your lecture notes to support you in this task.</p>
+</li>
+<li><p>Test your completed app to make sure it behaves as expected.</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Solutions</h1>
+<p>The solution to the Tech Support 1 project <a href="archives/tech_support_1.zip">is here</a>.</p>
+<p>The solution to the Tech Support 2 project <a href="archives/tech_support_2.zip">is here</a>.</p>
+<p>The solution to the Tech Support 3 project <a href="archives/tech_support_3.zip">is here</a>.</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald (labs), Dr. Siobhan Drohan (lectures).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,509 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      11: Interfaces
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-10">
+      Lab-10
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-classes-objects/book-a/index.html">
+          Classes-objects
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-classes-objects/book-b/index.html">
+          Class-components
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-classes-objects(solns)/book-solutions/index.html">
+          Class-components-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-ticket-machine/book/index.html">
+          Ticket-Machine
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-ticket-machine(solns)/book-a/index.html">
+          Ticket-Machine-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-a/index.html">
+          Abstraction-modularization[1]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-b/index.html">
+          Abstraction-modularization[2]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-c/index.html">
+          Abstraction-modularization[3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization(solns)/book-solutions-ab/index.html">
+          Abstraction-modularization-Solutions-[1-2]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization(solns)/book-solutions-c/index.html">
+          Abstraction-modularization-Solutions-[3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow/book-a/index.html">
+          Generics-Control-flow
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow(solns)/book-solutions-a/index.html">
+          Notebook_solutions-[1-3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(assignment-1)/book-a/index.html">
+          Assignment1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-a/index.html">
+          Eclipse
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-b/index.html">
+          CRUD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-c/index.html">
+          XML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-d/index.html">
+          Exception
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-more-on-collections/book-a/index.html">
+          Primitive-Arrays
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-more-on-collections/book-b/index.html">
+          TechSupport
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-inheritance-polymorphism/book-1/index.html">
+          NetworkSystem
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-inheritance-polymorphism/book-2/index.html">
+          ShopV6.0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-inheritance-polymorphism/book-3/index.html">
+          ShopV7.0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-abstraction-TDD/book-a/index.html">
+          Lab-Abstraction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-abstraction-TDD/book-b/index.html">
+          Lab-DVDTesting
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic11-interfaces/book/index.html">
+          Lab-10
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-10">
+        <h1>Objectives</h1>
+<p>On completion of this lab you should be able to:</p>
+<ul>
+<li><p>use Interfaces when defining collections.</p>
+</li>
+<li><p>write your own bespoke Interface and implement it.</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Using Pre-defined Interfaces</h1>
+<p>In this practical, you will use the Collections Framework Interfaces in the Network app.</p>
+<h2>Creating Network-V6</h2>
+<ul>
+<li><p>Create a new project called Network-V6 in Eclipse.</p>
+</li>
+<li><p>Copy the following classes into the project:</p>
+<ul>
+<li><p><a href="archives/Driver.java">Driver.java</a></p>
+</li>
+<li><p><a href="archives/MessagePost.java">MessagePost.java</a></p>
+</li>
+<li><p><a href="archives/NewsFeed.java">NewsFeed.java</a></p>
+</li>
+<li><p><a href="archives/PhotoPost.java">PhotoPost.java</a></p>
+</li>
+<li><p><a href="archives/Post.java">Post.java</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Using the List Interface</h2>
+<ul>
+<li><p>In this section, you may need to refer to your lecture slides for support (i.e. the fourth slide deck).</p>
+</li>
+<li><p>In Post.java:</p>
+<ul>
+<li><p>define the <strong>comments</strong> ArrayList to be a List.</p>
+</li>
+<li><p>create a getter and setter for the <strong>comments</strong> field.</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>In NewsFeed.java:</p>
+<ul>
+<li>define the <strong>posts</strong> ArrayList to be a List.</li>
+</ul>
+</li>
+<li><p>Test your code to make sure your refactoring did not break anything.</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Implementing INewsFeed</h1>
+<p>In this practical, you will create the INewsFeed interface and implement it in NewsFeed. In this section, you may need to refer to your lecture slides for support (i.e. the fourth slide deck).</p>
+<h2>Creating the New Project</h2>
+<ul>
+<li>In Eclipse, right click on your Network-V6 project and paste it as Network-V7.  Note: the solution to V6 is in the next step if you need it.</li>
+</ul>
+<h2>Creating INewsFeed.java</h2>
+<ul>
+<li><p>Within the <strong>src</strong> folder, create a new Interface called <strong>INewsFeed.java</strong>.</p>
+</li>
+<li><p>Add the following methods into the Interface:</p>
+</li>
+</ul>
+<pre><code>    void addPost(Post post);
+    void deletePost(int index);
+    String show();</code></pre>
+<h2>Updating NewsFeed.java</h2>
+<ul>
+<li><p>Implement the INewsFeed interface in the NewsFeed class.</p>
+</li>
+<li><p>You will notice that implementations have already been provided for two of the abstract methods:</p>
+<ul>
+<li>void addPost(Post post);</li>
+<li>String show();</li>
+</ul>
+</li>
+<li><p>You need to provide an implementation for this method:</p>
+<ul>
+<li>void deletePost(int index);</li>
+</ul>
+</li>
+<li><p>The implementation should remove the object stored in the <strong>posts</strong> collection at the specified index.</p>
+</li>
+<li><p>In the implementation of the <strong>show</strong> method, add the index number of the post to the output string.</p>
+</li>
+</ul>
+<h2>Updating Driver.java</h2>
+<ul>
+<li><p>Add an option 4 to the menu.</p>
+</li>
+<li><p>When this option is selected, a new method called <strong>deletePost()</strong> should be called.  This method should:</p>
+<ul>
+<li><p>display all the stored posts</p>
+</li>
+<li><p>ask the user to enter the index number of the post they wish to delete</p>
+</li>
+<li><p>delete the post at the specified index</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Note: don&#39;t worry about robustness in this lab e.g. exception handling on the input, verifying that the index is valid, etc.  The purpose of this lab is just to introduce you to Interfaces in the simplest form possible.</p>
+</li>
+<li><p>Test the delete aspect of your code; is all working as expected?</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Solutions</h1>
+<p>The solution for Network-V6 can be found <a href="archives/Network-V6.zip">here </a>.</p>
+<p>The solution for Network-V7 can be found <a href="archives/Network-V7.zip">here </a>.</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald (labs), Dr. Siobhan Drohan (lectures).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

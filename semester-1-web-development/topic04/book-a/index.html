@@ -1,0 +1,644 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Navigation
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-4a Navigation ">
+      Lab-4a Navigation 
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Lab-1 Editing HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Lab-1 HTML Structure
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-2 CSS Intro
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          Lab-3a Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          Lab-3b Multicolumn
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic04/book-a/index.html">
+          Lab-4a Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Lab-4b Case Study
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-01-harp/index.html">
+          Lab-5a Harp & Surge
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-02-templates/index.html">
+          Lab-5b Templating
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-03-nav/index.html">
+          Lab-5c Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-6a Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-b/index.html">
+          Lab-6b Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a-setup/index.html">
+          Lab-07a Play Setup
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-b-playlist-1/index.html">
+          Lab-07b Playlist 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-a-playlist-2/index.html">
+          Lab-08a Playlist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-b-playlist-3/index.html">
+          Lab-08b Playlist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a-todolist/index.html">
+          Lab-09b Todolist-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-b-playlist-4/index.html">
+          Lab-09a Playlist-4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-sessions/index.html">
+          Lab-10 Todolist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-a-sourcetree/index.html">
+          Lab-11a Sourcdtree
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-b-git/index.html">
+          Lab-11b Todolist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-c/index.html">
+          Lab-12
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-4a Navigation ">
+        <h1>Objectives</h1>
+<p>Restructure the output of the last lab to participate in a tabbed navigation structure, and then produce a simple application mockup using these techniques. Do this by introducing a simple tabbed design into the site to provide the user with the visual metaphor for navigation. We then &#39;wire-up&#39; these tabs to lead the user through the site. We will do this twice: once for the example content we laid out in last weeks lab. Then we will apply this to the app store site, using the same CSS rules.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<p>For this lab, start with the this project here:</p>
+<ul>
+<li><a href="./archives/lab05-starter.zip">lab05</a></li>
+</ul>
+<p><img src="./img/01.png" alt=""></p>
+<p>This archive contains the following pages:</p>
+<ul>
+<li><a href="./archives/1.basicnav/home.html">home.html</a></li>
+<li><a href="./archives/1.basicnav/home.css">home.css</a></li>
+<li><a href="./archives/1.basicnav/page1.html">page1.html</a></li>
+<li><a href="./archives/1.basicnav/page2.html">page2.html</a></li>
+</ul>
+<p>Download and expand the zip file above, or alternatively in your browser, you can select &#39;save link as&#39; or equivalent and save these into your own workstation. To do this you will first have to locate the actual folder in which the lab05 project is stored, save the four files into that folder.</p>
+<p>Either way, we wish to use the above as the basis for this lab.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Navigation</h1>
+<p>On a web page the navigation can be thought of as the table of contents. You expect the table of contents to direct you to the content you want to access.</p>
+<p>In this lab we will create a tabbed navigation section that will look like this:</p>
+<p><img src="./img/08.png" alt=""></p>
+<p>In HTML the element that best suits a table of contents is the <code>&lt;ul</code>&gt; element - which are already using. We will use the ordered list to construct the navigation section of the web page.</p>
+<p>Here&#39;s the code we have already in our web page:</p>
+<pre><code>    &lt;div id=&quot;navigation&quot;&gt;  
+      &lt;ul&gt;  
+        &lt;li&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page1.html&quot;&gt; Cras &lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page2.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page3.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;Curabitur&lt;/li&gt;  
+        &lt;li&gt;Integer&lt;/li&gt;  
+        &lt;li&gt;Suspendisse&lt;/li&gt;  
+        &lt;li&gt;Quisque&lt;/li&gt;  
+      &lt;/ul&gt;  
+    &lt;/div&gt;</code></pre>
+<p>What we have is an item for each link to a page.</p>
+<p>Next we want to ensure our navigation tells the user which page they are currently viewing. We do this by added a class attribute to the appropriate list item. So if we edit the home.html page first we want to add the class attribute &quot;current&quot; to the first list item (Mauris) as below:</p>
+<pre><code>    &lt;div id=&quot;navigation&quot;&gt;  
+      &lt;ul&gt;  
+        &lt;li class=&quot;current&quot;&gt; &lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page1.html&quot;&gt; Cras &lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page2.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page3.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;Curabitur&lt;/li&gt;  
+        &lt;li&gt;Integer&lt;/li&gt;  
+        &lt;li&gt;Suspendisse&lt;/li&gt;  
+        &lt;li&gt;Quisque&lt;/li&gt;  
+      &lt;/ul&gt;  
+    &lt;/div&gt;</code></pre>
+<p>We must also do this for page1, 2 and 3. So for page1.html add the class attribute &quot;current&quot; to the second list item (Cras). For page2.html add it to the third list item (Proin) and for page3.html add it to the fourth list item (Integer)</p>
+<p>When viewing out web pages this makes no visible difference as all we are doing is identifying those elements we will no go on to style in a particular way.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Forming the Tab</h1>
+<p>Make sure the &#39;navigation&#39; division is located towards the top of the page structure between the header and the maincontent. (If you copied the output of last weeks lab, it will be near the end) If we were to take a view of any of the pages using the folding feature if eclipse, we would like to see this:</p>
+<p><img src="./img/02.png" alt=""></p>
+<p>There are several methods for creating nice navigation on your site, the method we teach in this lab is a pure CSS method using different background colour for &#39;tabs&#39; on the navigation menu.</p>
+<p>Before you go any further make sure your site is &#39;navigable&#39; without any broken links.</p>
+<p>Next we are going to mark each of <code>&lt;ul&gt;</code> elements with a new id <code>menu</code>:</p>
+<pre><code>    &lt;div id=&quot;navigation&quot;&gt;  
+      &lt;ul id=&quot;menu&quot;&gt;  
+        &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page1.html&quot;&gt; Cras &lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page2.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page3.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;Curabitur&lt;/li&gt;  
+        &lt;li&gt;Integer&lt;/li&gt;  
+        &lt;li&gt;Suspendisse&lt;/li&gt;  
+        &lt;li&gt;Quisque&lt;/li&gt;  
+      &lt;/ul&gt;  
+    &lt;/div&gt;</code></pre>
+<p>Do this now for all pages - as the <code>navigation</code> section appears everywhere.</p>
+<p>Again, before you go any further make sure your site is &#39;navigable&#39; without any broken links. There should be no change in the appearence as yet.</p>
+<p>In your css flle, change the <code>navigation</code> rule to make that section the full width:</p>
+<pre><code>#navigation
+{  
+  width: 100%;
+  float: left;  
+}</code></pre>
+<p>This will have the effect of making the navigation section pop up to the top of the page:</p>
+<p><img src="img/x02.png" alt=""></p>
+<p>In yoiur css file, introduce this rule at the very end:</p>
+<pre><code>ul#menu li 
+{
+  display:inline; 
+}</code></pre>
+<p><img src="img/x03.png" alt=""></p>
+<p>This is make the navigation section now appear all on one line:</p>
+<p>Refresh the page - can you see a difference? If you cant, delete the rule and refresh again until you can see the small change.</p>
+<p>One last change for this step - change <code>maincontent</code> to be the full width of the page:</p>
+<pre><code>#maincontent
+{  
+  width: 100%;  
+  float: right;
+}</code></pre>
+<p><img src="img/x04.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Establishing the Tab Bar</h1>
+<p>Next add the following rule to the home.css file:</p>
+<pre><code>ul#menu 
+{
+  margin: 0;
+  padding: 0;
+}</code></pre>
+<p>This has the effect of tightening the navigation section - and more closely aligning it with the left of the page. It will be useful as a basis for the next few adjustments (make sure you can see the difference).</p>
+<p><img src="img/x05.png" alt=""></p>
+<p>Lets revist the `ul#menu li&quot; rule - extending it with three properties as shown here:</p>
+<pre><code>ul#menu li 
+{
+  display:inline; 
+  line-height: 2em;
+  padding-right: .5em;
+  padding-left: .5em;
+}</code></pre>
+<p>The page should now look like this:</p>
+<p><img src="img/x06.png" alt=""></p>
+<p>So, what&#39;s happening here? We are setting the height of the menu (which will be our bar of tabs) to 2 em units (which is twice the height of the letter &#39;m&#39; in the current font) In most browsers, this is automatically calculated because all the list items (tabs) will be 2 em units in height.</p>
+<p>The padding left and right are both set to .5 to avoid any spacing inside and outside the list. </p>
+<p>Next we&#39;ll style the default state for each link item (tab) inside the menu:</p>
+<pre><code>ul#menu a
+{
+  text-decoration: none;
+}</code></pre>
+<p><img src="img/x07.png" alt=""></p>
+<p>This &#39;turns off&#39; the underlining of links, which will make our tabs look more distinctive.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Styling the Tab</h1>
+<p>Our page is navigable now, but the user has no real idea of what page they are visting. Then cannot even tell if the list long the top is in fact a navigation panel.</p>
+<p>We can do two things to fix this:</p>
+<h2>1: Border</h2>
+<p>Lets go back to <code>maincontent</code> rule - and adjust it as follows:</p>
+<pre><code>#maincontent
+{  
+  width: 100%;  
+  float: right;
+  padding: 2%;
+  border: blue solid 1px;
+}</code></pre>
+<p><img src="img/x08.png" alt=""></p>
+<p>As you can see, the content area is framed to give additional visual ques to the user</p>
+<h2>2: Acitve Tab</h2>
+<p>Now we are ready to <code>activate</code> the tabs. Introduce this rule:</p>
+<pre><code>#menu li.current a 
+{
+  background: blue;
+  padding: .5em 2em .5em 2em;
+  color:white;
+}</code></pre>
+<p>Our page will now have a pleasing tabbed effect:</p>
+<p><img src="img/x09.png" alt=""></p>
+<p>Your page should behave as follows:</p>
+<ul>
+<li><a href="archives/final/home.html">Final Version</a></li>
+</ul>
+<p>This is the final version of the CSS:</p>
+<pre><code>body
+{
+  width: 80%;  
+  margin: 0 auto;
+}
+
+#maincontent
+{  
+  width: 100%;  
+  float: right;
+  padding: 2%;
+  border: blue solid 1px;
+}
+
+#navigation
+{  
+  width: 100%;
+  float: left;  
+}
+
+#header
+{  
+  width: 100%;
+}
+
+#footer
+{  
+  width: 100%;
+  clear: both;
+}
+
+#primary
+{  
+  width: 68%;  
+  float: left;  
+}
+
+#secondary
+{  
+  width: 30%;  
+  float: right;
+}
+
+ul#menu 
+{
+  margin: 0;
+  padding: 0;
+}
+
+ul#menu li 
+{
+  display:inline; 
+  line-height: 2em;
+  padding-right: .5em;
+  padding-left: .5em;
+}
+
+ul#menu a
+{
+  text-decoration: none;
+}
+
+#menu li.current a 
+{
+  background: blue;
+  padding: .5em 2em .5em 2em;
+  color:white;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h2>Exercises</h2>
+<h2>Completed Lab</h2>
+<p>This is a complete archive of this lab if you are having difficulty:</p>
+<ul>
+<li><a href="./archives/final.zip">final.zip</a></li>
+</ul>
+<p>This is the completed app store lab:</p>
+<ul>
+<li><a href="./archives/lab03.zip">lab03.zip</a></li>
+</ul>
+<h2>Exercise 1</h2>
+<p>We now want to apply the navigation tabs to the app store.</p>
+<p>We would like to add a set of tabs for home, deals and about that is positioned just above the main heading.</p>
+<p><img src="./img/09.png" alt=""></p>
+<p>Work through the steps needed to </p>
+<ul>
+<li>Add the menu section in your html files</li>
+<li>Name the class and id&#39;s correctly</li>
+<li>Add the css rules</li>
+<li>Test to make sure your menu works.</li>
+</ul>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,1095 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      2: Analysis & refactoring class
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Ticket-Machine-Solutions">
+      Ticket-Machine-Solutions
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-classes-objects/book-a/index.html">
+          Classes-objects
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-classes-objects/book-b/index.html">
+          Class-components
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-classes-objects(solns)/book-solutions/index.html">
+          Class-components-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-ticket-machine/book/index.html">
+          Ticket-Machine
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic02-ticket-machine(solns)/book-a/index.html">
+          Ticket-Machine-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-a/index.html">
+          Abstraction-modularization[1]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-b/index.html">
+          Abstraction-modularization[2]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization/book-c/index.html">
+          Abstraction-modularization[3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization(solns)/book-solutions-ab/index.html">
+          Abstraction-modularization-Solutions-[1-2]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-abstraction-modularization(solns)/book-solutions-c/index.html">
+          Abstraction-modularization-Solutions-[3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow/book-a/index.html">
+          Generics-Control-flow
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-generics-control-flow(solns)/book-solutions-a/index.html">
+          Notebook_solutions-[1-3]
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05(assignment-1)/book-a/index.html">
+          Assignment1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-a/index.html">
+          Eclipse
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-b/index.html">
+          CRUD
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-c/index.html">
+          XML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-persistence/book-d/index.html">
+          Exception
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-more-on-collections/book-a/index.html">
+          Primitive-Arrays
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-more-on-collections/book-b/index.html">
+          TechSupport
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-inheritance-polymorphism/book-1/index.html">
+          NetworkSystem
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-inheritance-polymorphism/book-2/index.html">
+          ShopV6.0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-inheritance-polymorphism/book-3/index.html">
+          ShopV7.0
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-abstraction-TDD/book-a/index.html">
+          Lab-Abstraction
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-abstraction-TDD/book-b/index.html">
+          Lab-DVDTesting
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11-interfaces/book/index.html">
+          Lab-10
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Ticket-Machine-Solutions">
+        <h1>Solutions</h1>
+<p>Solutions to the exercise set are provided here.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Exercise 1</h1>
+<ul>
+<li>Write an accessor for the TicketMachine field int total.<ul>
+<li>The signature (including return type) should be int getTotal().</li>
+</ul>
+</li>
+<li>Compile and test the method:<ul>
+<li>Create a TicketMachine object for a 250 cents ticket.</li>
+<li>Insert 1000 cents.</li>
+<li>Use getTotal to verify that the total attribute value is correct.</li>
+<li>Print 2 tickets<ul>
+<li>Verify that the total is correct subsequently.</li>
+</ul>
+</li>
+<li>Print 2 further tickets<ul>
+<li>Check total</li>
+<li>Check balance</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Do you think a mutator for this field (balance) would be inappropriate?</li>
+</ul>
+<h2>Solution</h2>
+<p>Open ticket-master project completed to the end of the lab.</p>
+<ul>
+<li>An archive of the project is available <a href="archives/ticket-machine.zip">here</a>.</li>
+</ul>
+<h2>Accessor</h2>
+<p>Write an accessor for the TicketMachine field int total:</p>
+<ul>
+<li>The signature should be int getTotal().</li>
+</ul>
+<p>Here is the accessor for the field <em>int total</em>:</p>
+<pre><code>    /**
+     * @return total the total amout of money collected by this machine
+     */
+    public int getTotal()
+    {
+        return total;
+    }</code></pre>
+<h2>Compile and test</h2>
+<p>Compile TicketMachine following addition of <em>getTotal</em> accessor.</p>
+<p>Create a TicketMachine object on the object bench, inserting 250 as parameter.</p>
+<ul>
+<li>See Figure 1.</li>
+</ul>
+<p><img src="img/ex0101.png" alt="Figure 1: Instantiating TicketMachine"></p>
+<p>Right click on TicketMachine object and invoke <em>insertMoney</em>, adding 1000 as parameter (Figure 2).</p>
+<p><img src="img/ex0102.png" alt="Figure 2: Insert 1000 as argument in TicketMachine.insertMoney"></p>
+<p>Check the total.</p>
+<p><img src="img/ex0103.png" alt="Figure 3: getTotal"></p>
+<p>The returned value is 0.</p>
+<p>This is correct because <em>total</em> is the total amout of money collected by this machine and at this time no money has been collected. This is somewhat ambiguous. After all we have inserted 1000 cent. However, the variable <em>total</em> is incremented by the amount of each ticket issued. </p>
+<p>Print two tickets and then check the balance. </p>
+<p>We inserted 1000 and have now printed two 250 cent tickets so we would expect the balance to be 500.</p>
+<p>Invoke <em>getBalance</em> on the TicketMachine object. This reveals the balance as 500 which is what we expected. See Figure 4.</p>
+<p><img src="img/ex0104.png" alt="Figure 4: getBalance"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Exercise 2</h1>
+<ul>
+<li>Write a method to allow the price of a ticket to be changed.</li>
+<li>Use the signature <em>public void setPrice(int price)</em></li>
+<li>Use the <em>this</em> keyword within the method.</li>
+<li>Create a TicketMachine object, ticket cost 1000<ul>
+<li>Check the price using <em>getPrice</em> method</li>
+</ul>
+</li>
+<li>Change the ticket price to 2000<ul>
+<li>Check the price has been changed by invoking <em>getPrice</em></li>
+</ul>
+</li>
+</ul>
+<h2>Solution</h2>
+<h2>Mutator (setter) <em>setPrice</em> in which the <em>this</em> keyword is used as required.</h2>
+<p>Here is the mutator <em>setPrice</em>.</p>
+<pre><code>    /**
+     * Sets the value of field price representing the cost of a ticket
+     * @param price the cost of a ticket
+     */
+    public void setPrice(int price)
+    {
+        this.price = price;
+    }</code></pre>
+<p>By using <em>this</em> in the assignment <em>this.price = price</em> we ensure that the contents of the local variable <em>price</em> are assiged to the instance variable <em>price</em>.</p>
+<p>Were we to have written <em>price = price</em> then the contents of the local variable <em>price</em> would simply have been assigned to itself leaving the instance variable unchanged.</p>
+<h2>TicketMachine instantiation and testing</h2>
+<p>Instantiate a TicketMachine object with a parameter of 1000 as required. See Figure 1.</p>
+<p><img src="img/ex0201.png" alt="Figure 1: TicketMachine instantiation, ticket cost 1000"></p>
+<p>Check that the price is 1000 by invoking <em>getPrice</em> on the TicketMachine object.</p>
+<p>Change the ticket price to 2000 by invoking <em>setPrice</em>. See Figure 2.</p>
+<p><img src="img/ex0202.png" alt="Figure 2: Changing ticket price"></p>
+<p>Check the price again and observe it has changed to 2000. See Figure 3.</p>
+<p><img src="img/ex0203.png" alt="Figure 3: Check ticket price"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Exercise 3</h1>
+<ul>
+<li>Write a default constructor for TicketMachine<ul>
+<li>Set the default price at 1000</li>
+</ul>
+</li>
+<li>Create a default TicketMachine object on the object bench<ul>
+<li>Check the price has been correctly set by invoking <em>getPrice</em></li>
+</ul>
+</li>
+</ul>
+<h2>Solution</h2>
+<p>Here is the default constructor:</p>
+<pre><code>    /**
+     * Constructs a new default TicketMachine object
+     */
+    public TicketMachine()
+    {
+        price   = 1000;
+        balance = 0;
+        total   = 0;
+    }</code></pre>
+<p>Since there are no parameters there is no requirement to use the <em>this</em> keyword to identify the instance variables within the constructor body.</p>
+<p>Instantiate TicketMachine using the newly written default constructor. See Figure 1.</p>
+<p><img src="img/ex0301.png" alt="Figure 1: Instantiating default TicketMachine"></p>
+<p>Invoke <em>getPrice</em> on the TicketMachine object.</p>
+<ul>
+<li>Observe it matches the default value assigned in the constructor body, namely 1000.</li>
+<li>See Figure 2.</li>
+</ul>
+<p><img src="img/ex0302.png" alt="Figure 2: Check default TicketMachine object price"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Exercise 4</h1>
+<ul>
+<li>Write a method to simulate removal of all money from the machine.<ul>
+<li>Use a method signature <em>public void empty()</em></li>
+</ul>
+</li>
+<li>Create a default TicketMachine object<ul>
+<li>Check the balance</li>
+<li>Invoke the <em>empty</em> method</li>
+<li>Verify the balance is zero</li>
+</ul>
+</li>
+<li>Create a TicketMachine object using the original constructor, the overloaded constructor, setting the initial price at 500<ul>
+<li>Check the balance</li>
+<li>Insert 1000 into machine</li>
+<li>Check balance again</li>
+<li>Invoke the method <em>empty</em></li>
+<li>Check the balance is zero.</li>
+</ul>
+</li>
+</ul>
+<h2>Solution</h2>
+<h2>Simulate emptying machine</h2>
+<p>Removal of all money from the machine may be similated by setting the balance to zero.</p>
+<p>Here is the method to do this:</p>
+<pre><code>/**
+ * Sets the balance in the TicketMachine object to zero, simulating removal of all money.
+ */
+public void empty()
+{
+    balance = 0;
+}</code></pre>
+<h2>Test using default constructor</h2>
+<p>Instantiate TicketMachine using default constructor.</p>
+<ul>
+<li>Invoke <em>getBalance</em>.</li>
+<li>As expected the balance is zero. See Figure 1.</li>
+</ul>
+<p><img src="img/ex0401.png" alt="Figure 1: Balance default TicketMachine is zero"></p>
+<h2>Test using overloaded constructor</h2>
+<p>Instantiate TicketMachine using overloaded constructor and a ticket price of 500.</p>
+<ul>
+<li>Check balance: it should be zero.</li>
+<li>Insert 1000</li>
+<li>Check balance: it should now be 1000.</li>
+<li>Invoke <em>empty</em> method. See Figure 2.</li>
+<li>Check balance: it should be zero.</li>
+</ul>
+<p><img src="img/ex0402.png" alt="Figure 2: Invoking empty method on TicketMachine"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Exercise 5</h1>
+<ul>
+<li>The skeleton code for the Book class has a series of <em>TO-DO</em> instructions.   </li>
+<li>The object of this exercise is to write a complete Book class by following the <em>TO-DO</em> instructions and test it.</li>
+</ul>
+<pre><code class="lang-java">/**
+ * A class that maintains information on a book.
+ * This might form part of a larger application such
+ * as a library system, for instance.
+ *
+ * @author (TO DO: Insert your name here.)
+ * @version (TO DO: Insert today&#39;s date here.)
+ */
+class Book
+{
+    // The fields
+    private String author;
+    private String title;
+    // TO DO:  Add a field to store the ISBN
+    // TO DO:  Add a field to store the cost of the book
+
+    /**
+     * Set the author and title fields when this object
+     * is constructed.
+     */
+    public Book(String author, String title)
+    {
+        //TO DO: set the author and title fields to the contents of 
+        //       the passed parameters.
+    }
+
+    /**
+     * Set the author, title, ISBN and cost fields when this object
+     * is constructed.
+     */
+    //TO DO: write a second constructor that has four parameters and use
+    //       the data in these parameters to update the instance fields
+    //       Make sure that the cost of the book is greater than zero.
+
+
+    // TO DO: Add a getter method for each instance field (i.e. you 
+    //        will write four methods here.
+
+
+    // TO DO: Add a setter method for each instance field (i.e. you 
+    //        will write four methods here.
+    //        When writing the setter for the cost field, only update the cost fields
+    //        if the value entered is greater than zero.
+
+}</code></pre>
+<h2>Solution - Code</h2>
+<pre><code class="lang-java">/**
+ * A class that maintains information on a book.
+ * This might form part of a larger application such
+ * as a library system, for instance.
+ *
+ * @author (TO DO: Insert your name here.)
+ * @version (TO DO: Insert today&#39;s date here.)
+ */
+class Book
+{
+    // The fields
+    private String author;
+    private String title;
+    // COMPLETE:  Add a field to store the ISBN
+    private String ISBN;
+    // COMPLETE:  Add a field to store the cost of the book
+    private double cost;
+
+    /**
+     * Set the author and title fields when this object
+     * is constructed.
+     */
+    public Book(String author, String title)
+    {
+        //COMPLETE: set the author and title fields to the contents of 
+        //          the passed parameters.
+        this.author = author;
+        this.title = title;
+    }
+
+    /**
+     * Set the author, title, ISBN and cost fields when this object
+     * is constructed.
+     */
+    //COMPELTE: write a second constructor that has four parameters and use
+    //          the data in these parameters to update the instance fields
+    //          Make sure that the cost of the book is greater than zero.
+    public Book(String author, String title, String ISBN, double cost)
+    {
+        this.author = author;
+        this.title = title;
+        this.ISBN = ISBN;
+        if (cost &gt; 0)
+        {
+          this.cost = cost;
+        }
+        else
+        {
+          System.out.println (&quot;Cost must be greater than zero.  You entered: &quot; + cost);
+        }
+    }
+
+
+    // COMPLETE: Add a getter method for each instance field (i.e. you 
+    //           will write four methods here.
+    public String getAuthor()
+    {
+        return author;
+    }
+
+    public String getTitle()
+    {
+        return title;
+    }
+
+    public String getISBN()
+    {
+        return ISBN;
+    }
+
+    public double getCost()
+    {
+        return cost;
+    }
+
+    //  COMPLETE: Add a setter method for each instance field (i.e. you 
+    //            will write four methods here.
+    //            When writing the setter for the cost field, only update the cost fields
+    //            if the value entered is greater than zero.
+    public void setAuthor(String author)
+    {
+        this.author = author;
+    }
+
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+
+    public void setISBN(String ISBN)
+    {
+        this.ISBN = ISBN;
+    }
+
+    public void setCost(double cost)
+    {
+        if (cost &gt; 0)
+        {
+          this.cost = cost;
+        }
+        else
+        {
+          System.out.println (&quot;Cost must be greater than zero.  You entered: &quot; + cost);
+        }        
+    }
+}</code></pre>
+<h2>Solution - Test</h2>
+<ul>
+<li><p>Test both of the constructors by calling each one in turn.  When each object is created, double click on it to display the object state.  Did each value that you passed as an argument get successfully updated in the object state?  If any of the fields did not get updated correctly, return to your code and see if you can spot the problem and fix it.  NOTE: remember to test the check in the <em>cost</em> field...enter a value of 1 (a postitive test - the value should be accepted) and a value of 0 (a negative test - the value should produce a message).</p>
+</li>
+<li><p>Now that you have created objects, you can test your getter and setter methods.  The easiest way to do this is to take each field in turn, call the setter method for it to update the field contents, then check the update worked correctly by calling the getter for the specific field.  If you notice a problem with any field, return to your code and see if you can spot the problem and fix it.  NOTE:  remember to test the if statement for the <em>cost</em> field.</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Exercise 6</h1>
+<p>The object of this exercise is to write a complete <em>USBDrive</em> class based on the following instructions:</p>
+<ul>
+<li>Create a new <em>bluej</em> project called <em>USBDrive</em> in your <em>labs/session02</em> folder. </li>
+<li>In this project, create a new class called <em>USBDrive</em>.</li>
+<li>This class should have four instance fields:<ul>
+<li>make: String      //no validation</li>
+<li>capacity: int     //must be greater than zero</li>
+<li>colour: String    //no validation</li>
+<li>usedSpace: int    //must be set to zero upon object creation</li>
+</ul>
+</li>
+<li>This class should have the following constructors:<ul>
+<li>USBDrive()</li>
+<li>USBDrive(String, int, String)</li>
+</ul>
+</li>
+<li>This class should have the folloiwing methods:<ul>
+<li>getMake()</li>
+<li>getCapacity()</li>
+<li>getColour()</li>
+<li>getUsedSpace()</li>
+<li>setUsedSpace() //must be greater than zero; don&#39;t default a value.</li>
+</ul>
+</li>
+</ul>
+<h2>Solution - Code</h2>
+<pre><code class="lang-java">/**
+ * A class that maintains information on a USBDrive.
+ *
+ * @author (Siobhan Drohan)
+ * @version (24/01/2017)
+ */
+public class USBDrive
+{
+    // The instance fields for a USBDrive object
+    private String make;  
+    private int capacity;   //measured in MB
+    private String colour;
+    private int usedSpace;
+
+    /**
+     * Set the fields to a default value when a USBDrive object
+     * is constructed.
+     */
+    public USBDrive()
+    {
+        this.make = &quot;unknown&quot;;
+        this.capacity = 2000;
+        this.colour = &quot;unknown&quot;;
+        this.usedSpace = 0;
+    }
+
+    /**
+     * Set the make, capacity, colour fields when this object
+     * is constructed.
+     * 
+     * @param make      The make of the USB Drive
+     * @param capacity  The capacity, measured in MB, of the USB Drive
+     * @param colour    The colour of the USB Drive
+     */
+    public USBDrive(String make, int capacity, String colour)
+    {
+        this.make = make;
+        this.colour = colour;
+        this.usedSpace = 0;
+
+        if (capacity &gt; 0)
+        {
+           this.capacity = capacity;
+        }
+        else
+        {
+          System.out.println (&quot;Capacity must be greater than zero.  Defaulting to 2000 MB&quot;);
+          this.capacity = 2000;
+        }
+    }
+
+    /**
+     *  The getter method for the instance field, make.
+     *  
+     *  @return the make of the USBDrive
+     */
+    public String getMake()
+    {
+        return make;
+    }
+
+    /**
+     *  The getter method for the instance field, colour.
+     *  
+     *  @return the colour of the USBDrive
+     */
+    public String getColour()
+    {
+        return colour;
+    }
+
+    /**
+     *  The getter method for the instance field, capacity.
+     *  
+     *  @return the capacity of the USBDrive
+     */
+    public int getCapacity()
+    {
+        return capacity;
+    }
+
+    /**
+     *  The getter method for the instance field, usedSpace.
+     *  
+     *  @return the usedSpace of the USBDrive
+     */
+    public int getUsedSpace()
+    {
+        return usedSpace;
+    }
+
+    /**
+     *  The setter method for the instance field, usedSpace.
+     *  
+     *  @param usedSpace The new value for the usedSpace field of the USBDrive; it must be greater than zero.
+     */
+    public void setUsedSpace(int usedSpace)
+    {
+        if (usedSpace &gt; 0)
+        {
+          this.usedSpace = usedSpace;
+        }
+        else
+        {
+          System.out.println (&quot;Used space must be greater than zero.  You entered: &quot; + usedSpace);
+        }        
+    }
+}</code></pre>
+<h2>Solution - Test</h2>
+<ul>
+<li><p>Test both of the constructors by calling each one in turn.  When each object is created, double click on it to display the object state.  Did each value that you passed as an argument get successfully updated in the object state?  If any of the fields did not get updated correctly, return to your code and see if you can spot the problem and fix it.  NOTE: remember to test the check in the <em>usedSpace</em> field...enter a value of 1 (a postitive test - the value should be accepted) and a value of 0 (a negative test - the value should produce a message).</p>
+</li>
+<li><p>Now that you have created objects, you can test your getter methods for each field...compare the returned value against the value in the object state window (right click and select the <em>inspect</em> field to display this window).</p>
+</li>
+<li><p>Test the setter method for usedSpace.  Remember to test the check in the <em>usedSpace</em> field...enter a value of 1 (a postitive test - the value should be accepted) and a value of 0 (a negative test - the value should produce a message). </p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Exercise 7</h1>
+<p>The object of this exercise is to write a complete <em>Product</em> class based on the following instructions:</p>
+<ul>
+<li>Create a new <em>bluej</em> project called <em>Store</em> in your <em>labs/session02</em> folder. </li>
+<li><p>In this project, create a new class called <em>Product</em>.</p>
+</li>
+<li><p>This class should have four instance fields:</p>
+<ul>
+<li>productName:  String   //no validation</li>
+<li>productCode:  int   //must be between 1000 and 9999 </li>
+<li>unitCost:     double  // must be greater than 0</li>
+<li>inCurrentProductLine:  boolean  //no validation</li>
+</ul>
+</li>
+<li><p>This class should have one constructor taking in values for each of the four instance fields. </p>
+</li>
+<li><p>This class should have accessor and mutator methods for each instance field.</p>
+</li>
+<li><p>Enter Javadoc comments for the class.  Make sure to use @author and @version.</p>
+</li>
+<li><p>Enter Javadoc comments for each method.  Make sure to use @param and @return, where appropriate.</p>
+</li>
+</ul>
+<h2>Solution - Code</h2>
+<pre><code class="lang-java">/**
+ * Represents a Product.  Stores the product name, product code,
+ * unitCost and whether the product is in the current product
+ * line or not.
+ *  
+ * @author Siobhan Drohan
+ * @version 1.0 (25th Jan 2017)
+ */
+public class Product
+{
+    //instance fields
+    private String productName;
+    private int productCode;
+    private double unitCost;
+    private boolean inCurrentProductLine;
+
+    /**
+     * Constructor for objects of class Product
+     * 
+     * @param productName Name of the product
+     * @param productCode Code of the product (between 1000 and 9999)
+     * @param unitCost Unit cost of the product (greater than zero)
+     * @param inCurrentProductLine indicates whether the 
+     *        product is in the current product line or not
+     */
+    public Product(String productName, int productCode, 
+                   double unitCost, boolean inCurrentProductLine)
+    {
+        this.productName = productName;
+
+        if ((productCode &gt;= 1000) &amp;&amp; (productCode &lt;= 9999))
+        {
+            this.productCode = productCode;
+        }
+        else
+        {
+            System.out.println(&quot;Product code is not between 1000 and 9999.&quot;
+                             + &quot;  Setting a default code of 1.&quot;);
+            this.productCode = 1;
+        }
+
+        if (unitCost &gt; 0)
+        {
+            this.unitCost = unitCost;
+        }
+        else
+        {
+            System.out.println(&quot;Unit cost must be greater than zero.&quot;);
+        }
+
+        this.inCurrentProductLine = inCurrentProductLine;
+    }
+
+    //-------
+    //getters
+    //-------
+    /**
+     * Returns the product name for the specified object
+     * 
+     * @return The Product Name 
+     */
+    public String getProductName(){
+        return productName;
+    }
+
+    /**
+     * Returns the unit cost for the specified object
+     * 
+     * @return The Unit Cost 
+     */
+    public double getUnitCost(){
+        return unitCost;
+    }
+
+    /**
+     * Returns the product code for the specified object
+     * 
+     * @return The Product Code 
+     */
+    public int getProductCode() {
+        return productCode;
+    }
+
+    /**
+     * Returns a boolean indicating if the product is in 
+     * the current product line 
+     * 
+     * @return Is the product in the current product line
+     */
+    public boolean isInCurrentProductLine() {
+        return inCurrentProductLine;
+    }
+
+    //-------
+    //setters
+    //-------
+    /**
+     * Updates the Product Code to the value passed as 
+     * a parameter (must be between 1000 and 9999).
+     * 
+     * @param productCode The new Product Code
+     */
+    public void setProductCode(int productCode) {
+        if ((productCode &gt;= 1000) &amp;&amp; (productCode &lt;= 9999))
+        {
+            this.productCode = productCode;
+        }
+        else
+        {
+            System.out.println(&quot;Product code is not between 1000 and 9999.&quot;
+                             + &quot;  You entered: &quot; + productCode);
+        }    }
+
+    /**
+     * Updates the Product Name to the value passed as a parameter 
+     * 
+     * @param productName The new Product Name
+     */
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    /**
+     * Updates the Unit Cost to the value passed as a 
+     * parameter (must be greater than zero).
+     * 
+     * @param unitCost The new unit cost for the product
+     */
+    public void setUnitCost(double unitCost) {
+        if (unitCost &gt; 0)
+        {
+            this.unitCost = unitCost;
+        }
+        else
+        {
+            System.out.println(&quot;Unit cost must be greater than zero.&quot;);
+        }
+    }
+
+    /**
+     * Updates the boolean indicating whether the product 
+     * is in the current product line or not.  
+     * 
+     * @param inCurrentProductLine Indicator that determines if 
+     *        the product is in the current product line or not.
+     */
+    public void setInCurrentProductLine(boolean inCurrentProductLine) {
+        this.inCurrentProductLine = inCurrentProductLine;
+    }
+
+}</code></pre>
+<h2>Solution - Test</h2>
+<ul>
+<li><p>Test your code by creating numerous objects and verifying that the methods behave as expected.  Make sure to <em>boundary</em> test the code that has validations associated with it.</p>
+</li>
+<li><p>View your generated Javadoc...how does it look?  Could you improve it or have you provided sufficient information.</p>
+</li>
+</ul>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        John Fitzgerald (labs), Dr. Siobhan Drohan (lectures).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

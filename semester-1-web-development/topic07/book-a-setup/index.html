@@ -1,0 +1,623 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Starting to Play
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-07a Play Setup">
+      Lab-07a Play Setup
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Lab-1 Editing HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Lab-1 HTML Structure
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-2 CSS Intro
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          Lab-3a Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          Lab-3b Multicolumn
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Lab-4a Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Lab-4b Case Study
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-01-harp/index.html">
+          Lab-5a Harp & Surge
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-02-templates/index.html">
+          Lab-5b Templating
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-03-nav/index.html">
+          Lab-5c Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-6a Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-b/index.html">
+          Lab-6b Semantic UI
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic07/book-a-setup/index.html">
+          Lab-07a Play Setup
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-b-playlist-1/index.html">
+          Lab-07b Playlist 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-a-playlist-2/index.html">
+          Lab-08a Playlist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-b-playlist-3/index.html">
+          Lab-08b Playlist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a-todolist/index.html">
+          Lab-09b Todolist-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-b-playlist-4/index.html">
+          Lab-09a Playlist-4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-sessions/index.html">
+          Lab-10 Todolist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-a-sourcetree/index.html">
+          Lab-11a Sourcdtree
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-b-git/index.html">
+          Lab-11b Todolist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-c/index.html">
+          Lab-12
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-07a Play Setup">
+        <h1>Objectives</h1>
+<p>Review the spacebook-semantic project from an earlier lab. Become familiar with the Command Prompt. Install 2 new programming environments: a Web Framework called Play and an Integrated Development Environment called Eclipse.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Command Prompt</h1>
+<p>Open a command prompt on Windows.</p>
+<p>On Windows 8 and 10, access the desktop from the home screen, and run File Explorer (may be in the toolbar). Then select File-&gt;Open Command Prompt:</p>
+<p><img src="img/01a.png" alt=""></p>
+<h1>Command Line</h1>
+<p>This is an alternative interface to Windows which it is important to become familiar with. In this window you can type what are sometimes called &#39;DOS&#39; commands. These commands let you have a finer level of control of your PC, and are particularly important for programmers to master.</p>
+<p>Here are some simple commands:</p>
+<ul>
+<li>dir<ul>
+<li>list all files in a directory</li>
+</ul>
+</li>
+<li>cd ..<ul>
+<li>change to a parent directory</li>
+</ul>
+</li>
+<li>cd \<directory name><ul>
+<li>change to a specific directory</li>
+</ul>
+</li>
+</ul>
+<p>It is essential that you become adept at these commands, and a few others.</p>
+<p>Bear in mind that these commands always have a &#39;current directory&#39; in mind (a directory is another name for a folder). Try them now and see if you can &#39;navigate&#39; to your web development workspace. For instance, if the folder is located as shown here:</p>
+<p><img src="img/17.png" alt=""></p>
+<p>Then the commands to get there will look like this:</p>
+<p><img src="img/18.png" alt=""></p>
+<p>If your workspace is located on another drive, the enter that drive letter first - say &quot;G:&quot;, press return, and then try the cd and dir commands.</p>
+<p><img src="img/19.png" alt=""></p>
+<p>Note in all of the above that the &#39;prompt&#39; in the command window is always showing the &#39;current&#39; drive/directory.</p>
+<p>Also, if you have a &#39;space&#39; in your directory (a bad idea generally), then you will have to use quotation marks in the commands. Here is an example:</p>
+<p><img src="img/20.png" alt=""></p>
+<p>See in the above transcript that the directory name is &quot;Web Development Workspace&quot; - and it has been enclosed in double quotes.</p>
+<p>In general, however, it is best to adopt the following conventions.</p>
+<ul>
+<li><p>Never use spaces in directory or file names</p>
+</li>
+<li><p>Never use upper case in directory or file names</p>
+</li>
+<li><p>If you wish to use readable multiple words for a directory or file name, separate the words with &#39;-&#39;. e.g.</p>
+<ul>
+<li>web-development</li>
+<li>java-projects</li>
+</ul>
+</li>
+</ul>
+<p>Perhaps you might take this opportunity to adjust your workspace and projects to adopt the above conventions. If you do, then you will find that using DOS commands to navigate your folders will be considerably easier.</p>
+<p>Before going on to the next step, make sure you are comfortable navigating in DOS around the file system, and in particular make sure you can navigate to your web development workspace.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Install Git</h1>
+<p>Install git for your platform:</p>
+<ul>
+<li><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+</ul>
+<p>Accept all the default options if they are presented (usually just for Windows).</p>
+<p>If the installation succeeded, then verify the version. Do this by opening a shell (command prompt on Windows) and enter the following:</p>
+<pre><code>git --version</code></pre>
+<p>The system might respond with something like this:</p>
+<pre><code>git version 2.10.1 (Apple Git-78)</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Install Eclipse</h1>
+<p>To date we have been using Sublime Text as our primary editor. While we can continue to use it, we will supplement our tool set with a professional Java Integrated Development Environment (IDE) called Eclipse:</p>
+<ul>
+<li><a href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a></li>
+</ul>
+<p>Select &#39;Eclipse Neon&#39; - and during the install be sure to select &quot;Eclipse for EE Developers&quot;</p>
+<p><img src="img/01x.png" alt=""></p>
+<p>Make sure you can launch eclipse successfully. When launching, keep an eye on the location of the &#39;workspace&#39;:</p>
+<p><img src="img/03x.png" alt=""></p>
+<p>You can change this to suit your configuration at any time.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Installing and Running Play</h1>
+<h2>Windows</h2>
+<p>Visit the following site:</p>
+<ul>
+<li><a href="http://www.playframework.org">http://www.playframework.org</a></li>
+</ul>
+<p>In particular, vist the download page:</p>
+<ul>
+<li><a href="https://www.playframework.com/download#older-versions">https://www.playframework.com/download#older-versions</a></li>
+</ul>
+<p>On the this page, select and download <code>play-1.4.4.zip</code> (the version number is very important)</p>
+<p>Unzip to somewhere on your PC - a good location might be:</p>
+<pre><code>C:\dev</code></pre>
+<p>Once you have unzipped it, the folder might look like this:</p>
+<p><img src="img/40.png" alt=""></p>
+<p>In the above, the play archive has been downloaded and expanded in <code>c:\dev</code></p>
+<p>See if you can put the folder is on your path. Detailed setup instructions are here for platforms other than Windows:</p>
+<ul>
+<li><a href="http://www.playframework.org/documentation/1.2.7/install">http://www.playframework.org/documentation/1.2.7/install</a></li>
+</ul>
+<p>Here is a shortened guide which may suffice:</p>
+<h2>Mac/linux Users</h2>
+<p>Create or edit a file called .bash_profile in your home directory and set the path to include the extracted archive on the path. It might look like this:</p>
+<pre><code>PATH=$PATH:\
+$HOME/dev/play-1.4.4
+export PATH</code></pre>
+<p>This assumes you extracted the play archive into the dev folder.</p>
+<h2>Windows</h2>
+<p>For Windows machine, you need to do the following:</p>
+<hr>
+<p>Locate the &quot;Computer&quot; icon in explorer</p>
+<p><img src="img/01b.png" alt=""></p>
+<p>Right click on this and select &#39;Properties&#39;:</p>
+<p><img src="img/01c.png" alt=""></p>
+<p>Select &#39;Advanced System Settings&#39;:</p>
+<p><img src="img/01d.png" alt=""></p>
+<p>Select &#39;Environment Variables&#39;:</p>
+<p><img src="img/50.png" alt=""></p>
+<p>Under &quot;System Variables&quot;, locate and select the &#39;Path&#39; entry:</p>
+<p><img src="img/52.png" alt=""></p>
+<p>Append the path in which play is installed. This could be <code>C:\dev\play-1.4.4</code> in the above example.</p>
+<p>NB: DO NOT DELETE ANY OF THE CURRENT VALUES OF THE PATH!</p>
+<p>Press &quot;Ok&quot; all the way back and rerun the command prompt (close the one already open).</p>
+<p>To test, just type &quot;play&quot; from a command prompt you should see something like this:</p>
+<pre><code>~        _            _
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/
+~
+~ play! 1.4.4, http://www.playframework.org
+~
+~ Usage: play cmd [app_path] [--options]
+~
+~ with,  new      Create a new application
+~        run      Run the application in the current shell
+~        help     Show play help</code></pre>
+<p>Or, if you did not manage to get the play folder on the path, then this command here should work (if you used the recommended folder structure)</p>
+<pre><code>C:\dev\play1-1.4.4\play</code></pre>
+<p>However, it is best to ensure that the play command is on the system path.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Create a Play/Eclipse Project</h1>
+<p>Back in the command line, change to a directory where you keep your web development projects and enter:</p>
+<pre><code>play new playdemo</code></pre>
+<p>You should get:</p>
+<pre><code>~        _            _ 
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/   
+~
+~ play! 1.4.4, http://www.playframework.org
+~
+~ The new application will be created in /Users/edeleastar/Dropbox/webdev/2012/dev/projects/spacebook
+~ What is the application name? [spacebook]</code></pre>
+<p>Press return when prompted for the name to accept the default (playdemo)</p>
+<pre><code>~
+~ OK, the application is created.
+~ Start it with : play run playdemo
+~ Have fun!
+~</code></pre>
+<p>In DOS it might look like this:</p>
+<p><img src="img/55.png" alt=""></p>
+<p>Explore the generated folder - called &#39;playdemo&#39;. It should contain six folders</p>
+<ul>
+<li>app</li>
+<li>conf</li>
+<li>lib</li>
+<li>public</li>
+<li>test</li>
+</ul>
+<p>We can import this project into eclipse. First, change into the playdemo folder</p>
+<pre><code>cd playdemo</code></pre>
+<p>Then run this command:</p>
+<pre><code>play eclipsify</code></pre>
+<p>The system will respond with:</p>
+<pre><code>~        _            _ 
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/   
+~
+~ play! 1.4.4, http://www.playframework.org
+~
+~ OK, the application is ready for eclipse
+~ Use File/Import/General/Existing project to import /Users/edeleastar/Dropbox/webdev/2012/dev/projects/spacebook into eclipse
+~
+~ Use eclipsify again when you want to update eclipse configuration files.
+~ However, it&#39;s often better to delete and re-import the project into your workspace since eclipse keeps dirty caches...
+~</code></pre>
+<p>The above sequence might look like this in DOS:</p>
+<p><img src="img/56.png" alt=""></p>
+<p>Now, launch eclipse. In eclipse, select &quot;File-&gt;Open Projects from File System...&quot; and navigate to the folder containing the application just generated.</p>
+<p><img src="img/58.png" alt=""></p>
+<p>Be sure to select the &#39;playdemo&#39; only as shown above (deselect the second one).</p>
+<p>Once imported into eclipse, the project should look like this:</p>
+<p><img src="img/59.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Running a Play Application</h1>
+<p>Back in the shell, from inside the playdemo folder, type the following command:</p>
+<pre><code>play run</code></pre>
+<p>Play will respond with something like this:</p>
+<pre><code>~        _            _ 
+~  _ __ | | __ _ _  _| |
+~ | &#39;_ \| |/ _&#39; | || |_|
+~ |  __/|_|\____|\__ (_)
+~ |_|            |__/   
+~
+~ play! 1.4.4, http://www.playframework.org
+~
+~ Ctrl+C to stop
+~ 
+Listening for transport dt_socket at address: 8000
+16:30:33,586 INFO  ~ Starting /Users/edeleastar/Dropbox/webdev/2012/dev/projects/spacebook
+16:30:34,646 WARN  ~ You&#39;re running Play! in DEV mode
+16:30:34,894 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16:30:58,912 INFO  ~ Application &#39;Spacebook&#39; is now started !</code></pre>
+<p>You may get a dialog from the firewall, asking for permission to run, which you should agree to.</p>
+<p>Now run the browser, and navigate to:</p>
+<ul>
+<li><a href="http://localhost:9000/">http://localhost:9000/</a></li>
+</ul>
+<p>you should see something like this:</p>
+<p><img src="img/46.png" alt=""></p>
+<p>Also notice that a log message will appear in the command window indicating that the app has started:</p>
+<pre><code>16:30:58,912 INFO  ~ Application &#39;playdemo&#39; is now started !</code></pre>
+<p>To stop the application, press &quot;Control+C&quot; in the command prompt.  If you refresh the browser window, then you should now get an error</p>
+<p>Start the app again by typing &#39;play run&#39; as above. Verify that the app has started by browsing/refreshing to:</p>
+<ul>
+<li><a href="http://localhost:9000/">http://localhost:9000/</a></li>
+</ul>
+<p>Try this a few times to get used to starting/stopping the application</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

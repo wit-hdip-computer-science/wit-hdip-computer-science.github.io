@@ -1,0 +1,846 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Model View Controller
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-08a Playlist-2">
+      Lab-08a Playlist-2
+    </a>
+    
+    <a class="item" data-tab="Exercise Solutions">
+      Exercise Solutions
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Lab-1 Editing HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Lab-1 HTML Structure
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-2 CSS Intro
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          Lab-3a Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          Lab-3b Multicolumn
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Lab-4a Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Lab-4b Case Study
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-01-harp/index.html">
+          Lab-5a Harp & Surge
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-02-templates/index.html">
+          Lab-5b Templating
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-03-nav/index.html">
+          Lab-5c Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-6a Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-b/index.html">
+          Lab-6b Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a-setup/index.html">
+          Lab-07a Play Setup
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-b-playlist-1/index.html">
+          Lab-07b Playlist 1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic08/book-a-playlist-2/index.html">
+          Lab-08a Playlist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-b-playlist-3/index.html">
+          Lab-08b Playlist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a-todolist/index.html">
+          Lab-09b Todolist-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-b-playlist-4/index.html">
+          Lab-09a Playlist-4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-sessions/index.html">
+          Lab-10 Todolist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-a-sourcetree/index.html">
+          Lab-11a Sourcdtree
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-b-git/index.html">
+          Lab-11b Todolist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-c/index.html">
+          Lab-12
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-08a Playlist-2">
+        <h1>Objectives</h1>
+<p>Move the playlist model into the database. Prime the database from a YAML file. Modify the Model classes to work with this database. Render the models from the database.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise Solutions">
+        <h1>Exercise Solutions</h1>
+<h2>Exercise 3: Add a new playlist</h2>
+<p>Extend your version of the app to contain a new playlist - make up some songs. Verify that they are rendered as expected.</p>
+<h2>Solution</h2>
+<h2>app/controllers/Dashboard.java</h2>
+<pre><code>    //...
+    Song s7 = new Song (&quot;Opus 34: Six variations on a theme in F major&quot;, &quot;Beethoven&quot;);
+    Song s8 = new Song (&quot;Opus 120: Thirty-three variations on a waltz by Diabelli in C major&quot;, &quot;Beethoven&quot;);
+    Playlist p3 = new Playlist(&quot;Beethoven Variations&quot;);
+    p3.songs.add (s7);
+    p3.songs.add (s8);
+    //...
+    playlists.add(p3);
+    //...</code></pre>
+<h2>Exercise 4: New Fields</h2>
+<p>Extend the playlist to have new entry called <code>duration</code>. Also, extend each song to also have a <code>duration</code> field + a <code>genre</code> field. Change the constructor to initialise these fields.</p>
+<h3>app/models/song.java</h3>
+<pre><code>package models;
+
+public class Song
+{
+  public String title;
+  public String artist;
+  public int duration;
+
+  public Song(String title, String artist, int duration)
+  {
+    this.title = title;
+    this.artist = artist;
+    this.duration = duration;
+  }
+}</code></pre>
+<h3>app/models/playlist.java</h3>
+<pre><code>package models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Playlist
+{
+  public String title;
+  public List&lt;Song&gt; songs = new ArrayList&lt;Song&gt;();
+  public int duration;
+
+  public Playlist(String title, int duration)
+  {
+    this.title = title;
+    this.duration = duration;
+  }
+}</code></pre>
+<p>app/controllers/Dashboard.java</p>
+<pre><code>    Song s1 = new Song(&quot;Piano Sonata No. 3&quot;, &quot;Beethoven&quot;, 5);
+    Song s2 = new Song(&quot;Piano Sonata No. 7&quot;, &quot;Beethoven&quot;, 6);
+    Song s3 = new Song(&quot;Piano Sonata No. 10&quot;, &quot;Beethoven&quot;,8 );
+    Playlist p1 = new Playlist(&quot;Beethoven Sonatas&quot;, 19);
+    p1.songs.add (s1);
+    p1.songs.add (s2);
+    p1.songs.add (s3);
+
+    Song s4 = new Song(&quot;Piano Concerto No. 1&quot;, &quot;Beethoven&quot;, 8);
+    Song s5 = new Song(&quot;Piano Concerto No. 12&quot;, &quot;Beethoven&quot;, 12);
+    Song s6 = new Song(&quot;Piano Concerto No. 23&quot;, &quot;Beethoven&quot;, 23);
+    Playlist p2 = new Playlist(&quot;Beethoven Concertos&quot;, 43);
+    p2.songs.add (s4);
+    p2.songs.add (s5);
+    p2.songs.add (s6);
+
+    Song s7 = new Song (&quot;Opus 34: Six variations on a theme in F major&quot;, &quot;Beethoven&quot;, 12);
+    Song s8 = new Song (&quot;Opus 120: Thirty-three variations on a waltz by Diabelli in C major&quot;, &quot;Beethoven&quot;, 14);
+    Playlist p3 = new Playlist(&quot;Beethoven Variations&quot;, 26);
+    p3.songs.add (s7);
+    p3.songs.add (s8);</code></pre>
+<p>Modify the dashboard view to display these new fields.</p>
+<h2>Exercise 5: Extend Views</h2>
+<h3>app/views/dashboard.html</h3>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Dashboard&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+#{list items:playlists, as:&#39;playlist&#39;}
+  &lt;section class=&quot;ui segment&quot;&gt;
+    &lt;h2 class=&quot;ui header&quot;&gt;
+      ${playlist.title} 
+    &lt;/h2&gt;
+    Total Duration: ${playlist.duration}
+    #{listsongs playlist:playlist/}
+  &lt;/section&gt;
+#{/list}</code></pre>
+<h3>app/views/tags/listsongs.hbs</h3>
+<pre><code>&lt;table class=&quot;ui fixed table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Song&lt;/th&gt;
+      &lt;th&gt;Artist&lt;/th&gt;
+      &lt;th&gt;Duration&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    #{list items:_playlist.songs, as:&#39;song&#39;}
+      &lt;tr&gt;
+        &lt;td&gt;
+          ${song.title}
+        &lt;/td&gt;
+        &lt;td&gt;
+          ${song.artist}
+        &lt;/td&gt;
+        &lt;td&gt;        
+          ${song.duration}
+        &lt;/td&gt;        
+      &lt;/tr&gt;
+    #{/list}
+  &lt;/tbody&gt;
+&lt;/tabl</code></pre>
+<p>Extend the following views:</p>
+<ul>
+<li>Welcome: Extend the welcome view to contain a more detailed outline of the purpose of the application</li>
+<li>About: Extend the about view to provide contact details (may be fictitious) for the author/company that created the app.</li>
+</ul>
+<h2>app/views/about.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;About&#39; /}
+
+#{menu id:&quot;about&quot;/}
+
+&lt;section class=&quot;ui center aligned middle aligned segment&quot;&gt;
+  &lt;p&gt;
+    A Little Playlist Maker - Version 1. Prepared by Playlist Solutions, Playlist Mansions, PlaylistTown.
+  &lt;/p&gt;
+
+&lt;/section&gt;</code></pre>
+<h2>app/views/about.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Start&#39; /}
+
+#{menu id:&quot;start&quot;/}
+
+&lt;section class=&quot;ui center aligned middle aligned segment&quot;&gt;
+  &lt;h1 class=&quot;ui header&quot;&gt;
+    Welcome to Playlist 1
+  &lt;/h1&gt; 
+  &lt;p&gt;
+    A small app to let you compose playlists. This app will allow you to create, manage and share your playlists. Simple enter the playlist details one the dashboard.
+  &lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Yaml</h1>
+<p>Create a new file in the <code>conf</code> folder called <code>data.yml</code>. Here are its contents:</p>
+<h2>conf/data.yml</h2>
+<pre><code>Song(s1):
+  title: Piano Sonata No. 3
+  artist: Beethoven
+  duration: 5
+Song(s2):
+  title: Piano Sonata No. 7
+  artist: Beethoven
+  duration: 6
+Song(s3):
+  title: Piano Sonata No. 10
+  artist: Beethoven
+  duration: 8  
+Song(s4):
+  title: Piano Concerto No. 27
+  artist: Beethoven
+  duration: 8
+Song(s5):
+  title: Piano Concertos No. 17
+  artist: Beethoven
+Song(s6):
+  title: Piano Concerto No. 10
+  artist: Beethoven
+  duration: 12    
+
+Playlist(p1):
+  title: Bethoven Sonatas
+  duration: 19
+  songs:
+  - s1
+  - s2
+  - s3
+
+Playlist(p2):
+  title: Bethoven Concertos
+  duration: 23
+  songs:
+  - s4
+  - s5
+  - s6</code></pre>
+<p>This is a YAML file - a notation for describing configuration data and structure information:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/YAML">https://en.wikipedia.org/wiki/YAML</a></li>
+</ul>
+<p>We will use this to describe initial values for our model objects.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Model</h1>
+<p>Revise the Model classes, by changing the structure of both model classes:</p>
+<h2>app/models/Song.java</h2>
+<pre><code>package models;
+
+import javax.persistence.Entity;
+
+import play.db.jpa.Model;
+
+@Entity
+public class Song extends Model
+{
+  public String title;
+  public String artist;
+  public int duration;
+
+  public Song(String title, String artist, int duration)
+  {
+    this.title = title;
+    this.artist = artist;
+    this.duration = duration;
+  }
+}</code></pre>
+<h2>app/models/Playlist.java</h2>
+<pre><code>package models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+
+import play.db.jpa.Model;
+
+@Entity
+public class Playlist extends Model
+{
+  public String title;
+  @OneToMany(cascade = CascadeType.ALL)
+  public List&lt;Song&gt; songs = new ArrayList&lt;Song&gt;();
+  public int duration;
+
+  public Playlist(String title, int duration)
+  {
+    this.title = title;
+    this.duration = duration;
+  }
+}</code></pre>
+<p>Now modify dashboard.java - removing all of the playlists + songs:</p>
+<h2>app/controllers/Dashboard.java</h2>
+<pre><code>...
+//    Song s1 = new Song(&quot;Piano Sonata No. 3&quot;, &quot;Beethoven&quot;, 5);
+//    Song s2 = new Song(&quot;Piano Sonata No. 7&quot;, &quot;Beethoven&quot;, 6);
+//    Song s3 = new Song(&quot;Piano Sonata No. 10&quot;, &quot;Beethoven&quot;,8 );
+//    Playlist p1 = new Playlist(&quot;Beethoven Sonatas&quot;, 19);
+//    p1.songs.add (s1);
+//    p1.songs.add (s2);
+//    p1.songs.add (s3);
+//    
+//    Song s4 = new Song(&quot;Piano Concerto No. 1&quot;, &quot;Beethoven&quot;, 8);
+//    Song s5 = new Song(&quot;Piano Concerto No. 12&quot;, &quot;Beethoven&quot;, 12);
+//    Song s6 = new Song(&quot;Piano Concerto No. 23&quot;, &quot;Beethoven&quot;, 23);
+//    Playlist p2 = new Playlist(&quot;Beethoven Concertos&quot;, 43);
+//    p2.songs.add (s4);
+//    p2.songs.add (s5);
+//    p2.songs.add (s6);
+//    
+//    Song s7 = new Song (&quot;Opus 34: Six variations on a theme in F major&quot;, &quot;Beethoven&quot;, 12);
+//    Song s8 = new Song (&quot;Opus 120: Thirty-three variations on a waltz by Diabelli in C major&quot;, &quot;Beethoven&quot;, 14);
+//    Playlist p3 = new Playlist(&quot;Beethoven Variations&quot;, 26);
+//    p3.songs.add (s7);
+//    p3.songs.add (s8);
+//    
+//    List&lt;Playlist&gt; playlists = new ArrayList&lt;Playlist&gt;();
+//    playlists.add(p1);
+//    playlists.add(p2);
+//    playlists.add(p3);
+
+    render (&quot;dashboard.html&quot;);
+...</code></pre>
+<p>Make sure the app is running - you may need to restart to make sure...</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Bootstrap</h1>
+<p>Create a new class in the <code>app</code> package:</p>
+<pre><code>import java.util.List;
+
+import play.*;
+import play.jobs.*;
+import play.test.*;
+
+import models.*;
+
+@OnApplicationStart
+public class Bootstrap extends Job 
+{ 
+  public void doJob()
+  {
+    Fixtures.loadModels(&quot;data.yml&quot;);
+  }
+}</code></pre>
+<p>Creating this class will involve the following Eclipse dialog:</p>
+<p><img src="img/01.png" alt=""></p>
+<p>The new class will look like this in the project.</p>
+<p><img src="img/02.png" alt=""></p>
+<p>Restart the project - and visit the Dashboard view. You should see the playlists in data.yml rendered to the view:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>Keep a close eye on the console as you do this - you should see something like this:</p>
+<pre><code>~ Server is up and running
+07:03:04,700 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL for default
+07:03:05,330 INFO  ~ HHH000262: Table not found: Playlist
+07:03:05,332 INFO  ~ HHH000262: Table not found: Playlist_Song
+07:03:05,333 INFO  ~ HHH000262: Table not found: Song
+07:03:05,334 INFO  ~ HHH000262: Table not found: Playlist
+07:03:05,335 INFO  ~ HHH000262: Table not found: Playlist_Song
+07:03:05,336 INFO  ~ HHH000262: Table not found: Song
+07:03:05,338 INFO  ~ HHH000262: Table not found: Playlist
+07:03:05,339 INFO  ~ HHH000262: Table not found: Playlist_Song
+07:03:05,341 INFO  ~ HHH000262: Table not found: Song
+07:03:05,413 INFO  ~ Application &#39;playlist&#39; is now started !
+07:03:06,375 INFO  ~ Rendering Dashboard
+07:03:11,064 INFO  ~ Rendering about
+07:03:12,094 INFO  ~ Rendering Dashboard</code></pre>
+<p>The &#39;Rendering&#39; messages are familiar - but we have a series of new &#39;Table on found&#39; messages. We will will see the significance of these shortly.</p>
+<p>To display the playlist from the database - here is a revised version of the dashboard controller:</p>
+<h2>app/controllers/Dashboard.java</h2>
+<pre><code>package controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Playlist;
+import models.Song;
+import play.Logger;
+import play.mvc.Controller;
+
+public class Dashboard extends Controller
+{
+  public static void index() 
+  {
+    Logger.info(&quot;Rendering Admin&quot;);
+
+    List&lt;Playlist&gt; playlists = Playlist.findAll();
+    render (&quot;dashboard.html&quot;, playlists);
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Database</h1>
+<p>With your application still running - visit the following url:</p>
+<ul>
+<li><a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x68;&#x74;&#x74;&#x70;&#58;&#x2f;&#47;&#x6c;&#111;&#x63;&#x61;&#x6c;&#104;&#111;&#x73;&#116;&#58;&#x39;&#x30;&#48;&#x30;&#47;&#x40;&#x64;&#98;">&#x68;&#x74;&#x74;&#x70;&#58;&#x2f;&#47;&#x6c;&#111;&#x63;&#x61;&#x6c;&#104;&#111;&#x73;&#116;&#58;&#x39;&#x30;&#48;&#x30;&#47;&#x40;&#x64;&#98;</a></li>
+</ul>
+<p>This should display this panel:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>Press <code>Connect</code></p>
+<p><img src="img/05.png" alt=""></p>
+<p>This is a control panel for the database our application is using. This databases is &#39;transient&#39; - only containing values while it is running. When the application is terminated, the database is wiped.</p>
+<p>However, it is a complete Relational Database - comparable to a paired done version of the Oracale database you may be using.</p>
+<p>Select &#39;song&#39; in the panel in the left - and the press the fgreen &#39;play&#39; button:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>This has queried the play table - and displayed the full contents.</p>
+<p>Try inspecting the other tables:</p>
+<p><img src="img/07.png" alt="">
+<img src="img/08.png" alt=""></p>
+<p>Can you make sense of these tables - and relate them to the Java model classes? In particular, can you see the role of the playlist_song table? Inspect the contents closely, paying attention to the IDs.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<h2>Exercise 1: Download and Rename Sample Solution</h2>
+<p>A complete version of the app as it should be at the end of this lab:</p>
+<ul>
+<li><a href="https://github.com/edeleastar/playlist/releases/tag/playlist-2.end">https://github.com/edeleastar/playlist/releases/tag/playlist-2.end</a></li>
+</ul>
+<p>However, if you already have a project called &#39;playlist&#39; in your workspace, then you may not be able to import it into eclipse. So, first rename the project to <code>playlist-2</code> (covered in step 1), and then run this command:</p>
+<pre><code>play eclipsify</code></pre>
+<p>... and then import into eclipse.</p>
+<p>You may skip this step if you are happy with your own solution.</p>
+<h2>Exercise 2: New Playlist</h2>
+<p>Working only in the data.yml, create a new Playlist. If this works correctly, you should see the playlist in the dashboard just by restarting the application.</p>
+<h2>Exercise 3: Admin Panel</h2>
+<p>This is a challenging exercise - but the hints provide most of what you need.</p>
+<p>Problem: We would like an &#39;admin&#39; interface to the application, which displays all the songs in the database - ignoring the playlists they belong to for the moment. The view should also display the IDs of the songs:</p>
+<p><img src="img/09.png" alt=""></p>
+<p>This is a &#39;hidden&#39; view, that does not appear in the menu. It is accessed by browsing directly to:</p>
+<ul>
+<li><a href="http://localhost:9000/admin">http://localhost:9000/admin</a></li>
+</ul>
+<h2>Hints:</h2>
+<p>You will need a new route:</p>
+<pre><code>GET     /admin                                  Admin.index</code></pre>
+<p>... and a matching controller + view:</p>
+<h2>Admin Controller</h2>
+<pre><code>package controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Playlist;
+import models.Song;
+import play.Logger;
+import play.mvc.Controller;
+
+public class Admin extends Controller
+{
+  public static void index() 
+  {
+    Logger.info(&quot;Rendering Admin&quot;);
+
+    // TODO - get list of all songs, and send them to the view
+    render (&quot;admin.html&quot;);
+  }
+}</code></pre>
+<h2>Admin view</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Dashboard&#39; /}
+
+#{menu id:&quot;admin&quot;/}
+
+  &lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    All Known Songs in the Database:
+  &lt;/h2&gt;
+  &lt;table class=&quot;ui fixed table&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;ID &lt;/th&gt;
+        &lt;th&gt;Song&lt;/th&gt;
+        &lt;th&gt;Artist&lt;/th&gt;
+        &lt;th&gt;Duration&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+
+      // TODO Iterate through a list of songs and populate rows in the table.
+
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/section&gt;</code></pre>
+<h2>Even more Hints!</h2>
+<p>How to read all songs form the Songs table:</p>
+<pre><code>    List&lt;Song&gt; songs = Song.findAll();</code></pre>
+<p>How to iterate through a list of songs:</p>
+<pre><code>       ...
+      #{list items:songs, as:&#39;song&#39;}
+         ...
+         ...
+      #{/list}
+       ...</code></pre>
+<p>How to get the songs from the controller to the view:</p>
+<pre><code>...
+  render(&quot;admin.html&quot;, songs);
+...</code></pre>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

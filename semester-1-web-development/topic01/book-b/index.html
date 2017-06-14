@@ -1,0 +1,573 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Introducing HTML
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-1 HTML Structure">
+      Lab-1 HTML Structure
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Lab-1 Editing HTML
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic01/book-b/index.html">
+          Lab-1 HTML Structure
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-2 CSS Intro
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          Lab-3a Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          Lab-3b Multicolumn
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Lab-4a Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Lab-4b Case Study
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-01-harp/index.html">
+          Lab-5a Harp & Surge
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-02-templates/index.html">
+          Lab-5b Templating
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-03-nav/index.html">
+          Lab-5c Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-6a Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-b/index.html">
+          Lab-6b Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a-setup/index.html">
+          Lab-07a Play Setup
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-b-playlist-1/index.html">
+          Lab-07b Playlist 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-a-playlist-2/index.html">
+          Lab-08a Playlist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-b-playlist-3/index.html">
+          Lab-08b Playlist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a-todolist/index.html">
+          Lab-09b Todolist-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-b-playlist-4/index.html">
+          Lab-09a Playlist-4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-sessions/index.html">
+          Lab-10 Todolist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-a-sourcetree/index.html">
+          Lab-11a Sourcdtree
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-b-git/index.html">
+          Lab-11b Todolist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-c/index.html">
+          Lab-12
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-1 HTML Structure">
+        <h1>Objectives</h1>
+<p>The labs are where you will do the real learning in this module. In Lab0-01 you will become familiar with the editor Sublime. We will then use this editor to create a simple multi-page web site containing a small variety of text, images and links. In this lab we will explore some of the basic features of CSS, including colours, font and interesting techniques for setting styles across entire sections of a page.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<h2>Instructions for working in Walton Building PC Labs:</h2>
+<p>If you are working on the workstations in the IT Building, choose Sublime Text 2 from the programs menu.</p>
+<p><img src="./img/00.png" alt=""></p>
+<p>Proceed with the next step of the lab.</p>
+<h2>Instructions for working on your own laptop</h2>
+<p>Download and install Sublime Text 2 from</p>
+<ul>
+<li><a href="http://www.sublimetext.com/">http://www.sublimetext.com/</a></li>
+</ul>
+<p>Select the appropriate download for your laptop (OS, Windows, Linux)</p>
+<p>This site has some useful tutorial videos in how to use Sublime Text 2. You should at least watch the first 2.</p>
+<ul>
+<li>&lt;<a href="http://code.tutsplus.com/courses/perfect-workflow-in-sublime-text-2">http://code.tutsplus.com/courses/perfect-workflow-in-sublime-text-2</a></li>
+</ul>
+<p>We recommend using Chrome as your web browser.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>First Project</h1>
+<p>If you are working on a pc in the IT lab, open your WebDevelopment folder that you created last week (on your G drive or USB drive), inside that folder create another folder called Lab01.</p>
+<p>Open Sublime and choose Open Folder from the File menu. Navigate to the WebDevelopment folder and choose click OK.</p>
+<p>In sublime click on the WebDevelopment folder, you should see the Lab1 folder appear.</p>
+<p><img src="./img/01.png" alt=""></p>
+<p>Chose New File from the File menu, a new blank page should appear in the sublime window. Click Save on the File menu and name the file index.html, save it into the Lab1 folder. You should see the file name appear in the left panel in sublime.</p>
+<p><img src="./img/02.png" alt=""></p>
+<p>Now in File Explorer create another folder in Lab1 that is called images</p>
+<p><img src="./img/03.png" alt=""></p>
+<p>Next you are to save the following images into the images folder:</p>
+<p><img src="./img/ondesoft.jpg" alt=""></p>
+<p><img src="./img/banner.png" alt=""></p>
+<p>Right click on each one and choose Save As. Make sure you save them into the Images folder.</p>
+<p>It is worth making sure your folder structure is the same as this:</p>
+<p><img src="./img/04.png" alt=""></p>
+<p>The WebDevelopment folder will hold a folder for each lab you work on for this module. For today the Lab1 folder will contain at least one .hmtl file as well as an images folder which in turn contains 6 images.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>HTML pages</h1>
+<p>We are going to create a web site that is based on the Google Play site or the Apple app store. It will present mobile apps, music, and movies to the user.</p>
+<p>Choose New File from the File menu, next choose Save from the file menu and name it apps.html
+Do the same for a file named movies.html and one called music.html</p>
+<p>You should now have the following folder and file structure:</p>
+<p><img src="./img/05.png" alt=""></p>
+<p>Next you will write some html code. Copy and paste in the following code:</p>
+<h2>index.html page content</h2>
+<pre><code>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bundle APP Store&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src=&quot;images/banner.png&quot;/&gt;
+    &lt;h1&gt;Welcome to the App Bundle Store&lt;/h1&gt;
+    &lt;p&gt;
+      This store brings you great app bundles week after week. We select the best power 
+      user apps from a broad range of suppliers and combine them into great deals. These are the highest quality apps form the best publishers, at great prices.  
+    &lt;/p&gt;
+    &lt;p&gt;
+      Whether you are interested in gaming or graphics design, software development or media production - we have the bundle for you. Each &lt;a href=&quot;apps.html&quot;&gt;app bundle&lt;/a&gt; is designed to compliment the others, delivering you an exciting take on a scene.  
+    &lt;/p&gt;
+       &lt;h2&gt;Favourites&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Hype by Tumult&lt;/li&gt;
+      &lt;li&gt;Webstorm by Idea&lt;/li&gt;
+      &lt;li&gt;Sublime, by sublimetext.com&lt;/li&gt;
+      &lt;li&gt;Desktop Utility by Sweet Productions&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h2>apps.html page content</h2>
+<pre><code>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bundle APP Store&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src=&quot;images/banner.png&quot;/&gt;&lt;h1&gt;Score&lt;/h1&gt;
+      &lt;h3&gt;Freebie&lt;/h3&gt;
+     &lt;p&gt;
+       Stacksocial just published its so called Free Ondesoft Mac Tool Bundle, which contains 5 apps from Ondesoft. The bundle worth $146 will be probably available only a couple of days so you’d better hurry up to get it.
+     &lt;/p&gt;
+     &lt;p&gt;
+       &lt;img src=&quot;images/ondesoft.jpg&quot; alt=&quot;Black Brain Brew Elixir&quot; /&gt;
+     &lt;/p&gt;
+     &lt;/p&gt;
+     &lt;hr&gt;
+     &lt;h3&gt;Macware Business Bundle&lt;/h3&gt;
+     &lt;p&gt;
+       Here comes the next bundle for march. This time its macware who publish a bundle. The so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of $199.94. So you can save around 84%. There is n...
+     &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Remember to save your files in sublime by clicking File -&gt; Save All</p>
+<p>Test these pages out by opening the index.html in your browser window. Do all of the images display? Does the link to the apps.html page work?</p>
+<p><img src="./img/07.png" alt=""></p>
+<p><img src="./img/08.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>CSS</h1>
+<p>We will now introduce a stylesheet into our project. Stylesheets are usually maintained in separate files with the .css extension. Choose New File from the File menu and name it &#39;style.css&#39;. </p>
+<p>The folder structure now looks like this:</p>
+<p><img src="./img/06.png" alt=""></p>
+<p>We bind this file into the project by &#39;linking&#39; it to our home page. This must be incorporated into the <code>&lt;head</code>&gt; element of each page. Currently index.html head section looks like this:</p>
+<pre><code class="lang-html">  &lt;head&gt;
+    &lt;title&gt;Bundle APP Store&lt;/title&gt;
+  &lt;/head&gt;</code></pre>
+<p>We can extend it with a new element to link to the stylesheet. The head section of the index.html home page should now look like this:</p>
+<pre><code class="lang-html">  &lt;head&gt;
+    &lt;title&gt;Bundle APP Store&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;
+  &lt;/head&gt;</code></pre>
+<p>Save your files and open the index.html page in your browser and keep this window open. There is no visible effect on our page yet until we introduce a rule into the stylesheet. </p>
+<p>Type all of the following into the style.css file (note the American spelling of the word color) :</p>
+<pre><code class="lang-css">h1
+{
+  color: red;
+}</code></pre>
+<p>Save all your files. Refresh the index page in your browser and see the result of writing this one css rule.</p>
+<p><img src="./img/09.png" alt=""></p>
+<p>Experiment with the following rules, introducing them one at a time and one after each other in the file:</p>
+<pre><code class="lang-css">body
+{
+  font-family:sans-serif;
+}</code></pre>
+<p>replace the first one you wrote that changed the h1 colour to red with the following:</p>
+<pre><code class="lang-css">h1, h2
+{
+  color: gray
+}</code></pre>
+<p>Add this as another rule to the file:</p>
+<pre><code class="lang-css">h1
+{
+  border-bottom: 1px solid black;
+}</code></pre>
+<p>Your css file now looks like this:</p>
+<p><img src="./img/10.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<h1>Solution So Far..</h1>
+<p>This is an archive (zip file) of a solution to the lab so far:</p>
+<ul>
+<li><a href="https://github.com/wit-web-dev-2016/app-store/releases/tag/lab.1.end">https://github.com/wit-web-dev-2016/app-store/releases/tag/lab.1.end</a></li>
+</ul>
+<h2>1. Index.html</h2>
+<p>Just to get used to the editor, create a few more new apps in the &#39;apps.html&#39;, perhaps you can locate content from some web source (including images). Try to identify and replicate the way the code is indented in the existing content.</p>
+<h2>2. New pages</h2>
+<p>Incorporate new content into a directions.html page. It can contain any content you think would be useful. Make sure you add the hyperlinks to the home page and to the app page so that you can navigate to them from the index.html page and back to the index.html page. </p>
+<p>We have not covered hyperlinks yet in this lab. Read this documentation here:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a</a></li>
+</ul>
+<p>and see if you can create some links.</p>
+<h2>3. Link the CSS file to all pages</h2>
+<p>Currently you may not have the CSS file &#39;linked&#39; to all pages. i.e. only index.html is styled with the css rules you have defined. See if you can link the other pages now.</p>
+<h2>4. Lists</h2>
+<p>In this lab you used the element <code>&lt;ul</code>&gt;
+Investigate the use of <code>&lt;ol</code>&gt; , find out the differences between these elements here:</p>
+<ul>
+<li><a href="http://www.w3.org/TR/html401/struct/lists.html">http://www.w3.org/TR/html401/struct/lists.html</a></li>
+</ul>
+<h2>5. Images</h2>
+<p>Investigate reducing the size of the images. Try using an image editor to reduce their size to 10% smaller. It is important to have some understanding of using an image editor. The most basic available on all windows pc/laptop&#39;s is Paint which has a resize option on the toolbar.</p>
+<h2>6. Free Code Camp</h2>
+<p>Have a look at this site here:</p>
+<ul>
+<li><a href="http://freecodecamp.com/">http://freecodecamp.com/</a></li>
+</ul>
+<p>This is a self paced instructional web site covering a superset of the technologies we will explore in this course. You will need to sign in to make use of the materials effectively. There are a range of sign in options - we recommend you first create an account here:</p>
+<ul>
+<li><a href="https://github.com/">https://github.com/</a></li>
+</ul>
+<p>and then when you sign up with FreeCodeCamp, you select the &#39;Sign in with Github&#39; option.</p>
+<p>Once you are signed in, there will be an initially overwhelming range of options and features. To get started, restrict your attention to &#39;Map&#39;:</p>
+<ul>
+<li><a href="http://freecodecamp.com/map">http://freecodecamp.com/map</a></li>
+</ul>
+<p>In particular the <code>HTML5 and CSS</code> lessons here:</p>
+<ul>
+<li><a href="http://freecodecamp.com/map#html5-and-css">http://freecodecamp.com/map#html5-and-css</a></li>
+</ul>
+<p>Use any spare time you have at the end of our web development labs to pick your way through these particular lessons.</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

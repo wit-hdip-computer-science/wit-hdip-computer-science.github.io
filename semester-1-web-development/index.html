@@ -1,0 +1,927 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="ui seven wide center aligned column grid">
+    <div class="ui row">
+      <h2> Web Development </h2>
+    </div>
+    <div class="ui row">
+      
+    </div>
+  </div>
+
+  
+    
+<div class="two wide column sitemap">
+  <div class="popup" data-content="To the Portfolio the module is a member of...">
+    <a href="../index.html"> <i class="huge grid layout icon"></i> Workshops </a>
+  </div>
+</div>
+
+  
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic00/index.html">
+        0: Assignments
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic00/talk-assignment-1/c-project-1.pdf">
+          Project 1 Specification</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic00/talk-assignment-2/assignment-2.pdf">
+          Project 2 Specification</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic01/index.html">
+        Introducing HTML
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic01/talk-1/a-introduction.pdf">
+          The Nature of the Web</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/talk-2/b-html-page-structure.pdf">
+          HTML Basics</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/book-a/index.html">
+          Lab-1 Editing HTML</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic01/book-b/index.html">
+          Lab-1 HTML Structure</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic02/index.html">
+        Introducing CSS
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-1/a-html-elements.pdf">
+          HTML Elements</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-2/css-1.pdf">
+          CSS Basics</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-3/css2.pdf">
+          CSS Rules</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/talk-4/css3.pdf">
+          CSS Cascade</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic02/book/index.html">
+          Lab-2 CSS Intro</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic03/index.html">
+         The Box Model
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-1/classes-ids-divs.pdf">
+          Classes, IDs & Divs</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-2/a-box-model-1.pdf">
+          Box Fundamentals</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-3/a-box-model-example.pdf">
+          Box Model Example</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-4/b-multicolumn-layout.pdf">
+          Multicolumn Layout</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/talk-5/c-project-1.pdf">
+          Project 1 Specification</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/book-a/index.html">
+          Lab-3a Layout</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic03/book-b/index.html">
+          Lab-3b Multicolumn</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic04/index.html">
+        Navigation
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-1/d-html_evolution.pdf">
+          The Evolution of the Web</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-2/b-css-navigation.pdf">
+          Navigation</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-3/a-semantic-html.pdf">
+          Semantic HTML</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/talk-4/style-guide.pdf">
+          HTML/CSS Style Guide</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/book-a/index.html">
+          Lab-4a Navigation </a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic04/book-b/index.html">
+          Lab-4b Case Study</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic05/index.html">
+        HTML Templates
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-1-deployment/deployment.pdf">
+          Deployment</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-2-harp-and-surge/harp.pdf">
+          Harp & Surge</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-3-html/case-study.pdf">
+          Case Study</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/talk-4-templates/templates.pdf">
+          Templates</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/book-01-harp/index.html">
+          Lab-5a Harp & Surge</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/book-02-templates/index.html">
+          Lab-5b Templating</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic05/book-03-nav/index.html">
+          Lab-5c Navigation </a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic06/index.html">
+        CSS Frameworks
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-1/lab-review.pdf">
+           Lab Review</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-2/sematic-ui-part-1.pdf">
+          Semantic-UI I</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-3/sematic-ui-part-2.pdf">
+          Semantic-UI II</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-4/sematic-ui-part-3.pdf">
+          Semantic-UI III</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/talk-5/semantic-4.pdf">
+          Semantic Part IV</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/book-a/index.html">
+          Lab-6a Semantic UI</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic06/book-b/index.html">
+          Lab-6b Semantic UI</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic07/index.html">
+        Starting to Play
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-1-introducing-dynamic-web/a-introduction-to-dynamic-web.pdf">
+          Dynamic Web Applications</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-2-starting-to-play/b-starting-to-play.pdf">
+          Starting to Play</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-3-project-structure/web-app-intro.pdf">
+          Web App Introduction</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-4-front-end/front-end.pdf">
+          Front-end</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/talk-5-back-end/back-end.pdf">
+          Back-end</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/book-a-setup/index.html">
+          Lab-07a Play Setup</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic07/book-b-playlist-1/index.html">
+          Lab-07b Playlist 1</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic08/index.html">
+        Model View Controller
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-a-views/views.pdf">
+          Views</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/talk-b-models/models.pdf">
+          Models</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/book-a-playlist-2/index.html">
+          Lab-08a Playlist-2</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic08/book-b-playlist-3/index.html">
+          Lab-08b Playlist-3</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic09/index.html">
+        Forms
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic09/talk-b-todo/forms.pdf">
+          Todo</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09/talk-c-playlist/controllers.pdf">
+          Playlist Features</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09/book-a-todolist/index.html">
+          Lab-09b Todolist-1</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic09/book-b-playlist-4/index.html">
+          Lab-09a Playlist-4</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic10/index.html">
+        7: Sessions
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic10/talk-2-sessions-intro/c-sessions.pdf">
+          Sessions</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10/talk-b-todo-sessions/todo-sessions.pdf">
+          Sessions in Todo</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic10/book-sessions/index.html">
+          Lab-10 Todolist-2</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic11/index.html">
+        Git, Github & Bitbucket
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic11//error: missing pdf">
+          </a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11/book-a-sourcetree/index.html">
+          Lab-11a Sourcdtree</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic11/book-b-git/index.html">
+          Lab-11b Todolist-3</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic12/index.html">
+        Assignment Studio + Deployment
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic12/talk-a-review/review.pdf">
+          Review + Roadmap</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12/talk-b-summer-school/summer-school.pdf">
+          Summer School</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic12/book-c/index.html">
+          Lab-12</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui container">
+      <div class="ui basic segment">
+        <div class="ui centered four doubling stackable cards">
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> 0: Assignments</div>
+  </div>
+    
+    <a href="./topic00/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic00/topic.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Calendar and specifications for the assessments on the course</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Introducing HTML</div>
+  </div>
+    
+    <a href="./topic01/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic01/talk-1/a-introduction.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>We explore the foundations of web and get to grips with the fundamentals of the HTML language. As you will see, its structure and format is relatively straightforward, and you will be able to understand the basics very quickly. We will be focusing on a small number of &#39;tags&#39; to get started, and also on the ways in which different html files can be linked together to form a site.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Introducing CSS</div>
+  </div>
+    
+    <a href="./topic02/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic02/topic.jpeg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>To introduce &#39;style&#39; into a page we need another language - Cascading Style Sheets. This is a different language from HTML and is usually stored in a separate file - the stylesheet.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header">  The Box Model</div>
+  </div>
+    
+    <a href="./topic03/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic03/topic.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>In order to style the same html elements in different ways we need to use classes. This allows us to target specific occurences of an html element for styling purposes. At the heart of the layout engine in web browsers is a concept called the &#39;box model&#39;. This defines a general layout structure for all HTML elements, providing a language for specifying important dimensions and relationships to other elements.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Navigation</div>
+  </div>
+    
+    <a href="./topic04/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic04/topic.jpeg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Central to a well design site is a clear and understandably navigation structure. This must easily allow the user to explore the site, provide sufficient context such that the user knows where they are at any stage, and do this in a visually pleasing and efficient manner.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> HTML Templates</div>
+  </div>
+    
+    <a href="./topic05/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic05/topic.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Review the HTML &amp; CSS constructs covered so far. Introduce html templating using EJS. Refactor a site to use templating techniques.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> CSS Frameworks</div>
+  </div>
+    
+    <a href="./topic06/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic06/topic.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Modern web layouts are not considerably more complex and sophisticated than in the past - particularly as mobile is now considered the &#39;first&#39; destination for any site. To tackle the complex issues CSS Frameworks have arisen as a convenient way to support multiple browsers and different screen sizes &amp; resolutions.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Starting to Play</div>
+  </div>
+    
+    <a href="./topic07/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic07/topic.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>To build a web application we need a web framework. This will define the superstructure of our application and provide essential features to enable us to compose a complicated and efficient web application</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Model View Controller</div>
+  </div>
+    
+    <a href="./topic08/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic08/topic.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Introducing Models, and exploring how the MVC Triad works</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Forms</div>
+  </div>
+    
+    <a href="./topic09/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic09/topic.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Providing input to an application is usually encapsulated in a Form. Review the need for forms and explore hwo they are implemented in Play.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> 7: Sessions</div>
+  </div>
+    
+    <a href="./topic10/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic10/topic.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Review the role of Sessions in web applications. Incorporate the hapi-auth-cookie plugin into HAPI application to manage sessions. Review session strategies, protected and unprotected routes, cookie passwords, timeouts and other configuration options.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Git, Github & Bitbucket</div>
+  </div>
+    
+    <a href="./topic11/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic11/topic.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Learn the basics of git and github repository management.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Assignment Studio + Deployment</div>
+  </div>
+    
+    <a href="./topic12/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic12/talk-a-review/review.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Deploying an app to the cloud + a review of the course to date</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

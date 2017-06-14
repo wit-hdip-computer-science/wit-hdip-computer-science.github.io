@@ -1,0 +1,1140 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       The Box Model
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-3a Layout">
+      Lab-3a Layout
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Lab-1 Editing HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Lab-1 HTML Structure
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-2 CSS Intro
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03/book-a/index.html">
+          Lab-3a Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          Lab-3b Multicolumn
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Lab-4a Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Lab-4b Case Study
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-01-harp/index.html">
+          Lab-5a Harp & Surge
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-02-templates/index.html">
+          Lab-5b Templating
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-03-nav/index.html">
+          Lab-5c Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-6a Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-b/index.html">
+          Lab-6b Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a-setup/index.html">
+          Lab-07a Play Setup
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-b-playlist-1/index.html">
+          Lab-07b Playlist 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-a-playlist-2/index.html">
+          Lab-08a Playlist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-b-playlist-3/index.html">
+          Lab-08b Playlist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a-todolist/index.html">
+          Lab-09b Todolist-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-b-playlist-4/index.html">
+          Lab-09a Playlist-4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-sessions/index.html">
+          Lab-10 Todolist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-a-sourcetree/index.html">
+          Lab-11a Sourcdtree
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-b-git/index.html">
+          Lab-11b Todolist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-c/index.html">
+          Lab-12
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-3a Layout">
+        <h1>CSS Design</h1>
+<p>In this lab we will work towards developing a site with a more ambitious use of CSS. In particular, tbe box model will be used to achieve a more professional user experience.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup</h1>
+<p>This week we wil start a new project, but we will NOT copy over any material from last week - but rather start with a blank slate.</p>
+<p>Open Sublime text editor - and open the <code>directory</code> containing your web development projects (this folder is called <code>web-prj</code> below):</p>
+<p><img src="img/00.png" alt=""></p>
+<p>If you have room, also open the Chrome web browser side by side:</p>
+<p><img src="img/02.png" alt=""></p>
+<p>In the above, we are keeping a tab of the browser open at</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a></li>
+</ul>
+<p>The Mozilla foundation are an excellent source of reference information on all things web - and it is useful to keep the html reference site open to occasionally check that your are using the correct structure for your elements.</p>
+<p>Create a new folder in your project called <code>lab03</code> </p>
+<p><img src="img/03.png" alt=""></p>
+<p>(Right click on <code>web-prj</code> to create the folder)</p>
+<p>Now we can create the project structure:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>That is, we have created these folders inside the project:</p>
+<ul>
+<li>about</li>
+<li>deals</li>
+<li>images</li>
+</ul>
+<p>Here is a blank html file:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Create a file called &#39;index.html&#39; in the following locations:</p>
+<p>lab03
+ - index.html
+ - about/index.html
+ - deals/index.html</p>
+<p>Should see something like this:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>You can see all the files are open in tabs across the top.</p>
+<p>There are alternative colour schemes - for instance &#39;Solarised Light&#39;:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>These are available via the <code>Preferences</code> menu.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Main page</h1>
+<h2>lab03/index.html</h2>
+<p>Open the main index.html page and replace the template contents with the following:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot; /&gt;
+    &lt;title&gt;Bundle App Store&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to the App Bundle Store&lt;/h1&gt;
+    &lt;p&gt;
+      This store brings you great app bundles week after week. We select the best power 
+      user apps from a broad range of suppliers and combine them into great deals. These are 
+      the highest quality apps form the best publishers, at great prices.  
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      Whether you are interested in gaming or graphics design, software development or media 
+      production - we have the bundle for you. Each app bundle is designed to compliment the 
+      others, delivering you an exciting take on a scene.  
+    &lt;/p&gt;
+
+    &lt;p class=&quot;guarantee&quot;&gt;
+        Our guarantee: at the store, we&#39;re committed to providing you, 
+        with an exceptional quality and reliability. Every application is checked in detail
+        for stability, usability and inter-interoperability. If you are unhappy with any 
+        individual app in a bundle we will refund you the full amount for the complete suite, 
+        no questions asked.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      We roll over the bundles on a weekly basis, so be sure to check back regularly for 
+      bundle that suits your tastes. If you dont see application bundles that suit your 
+      interests - please let us know! We are always interested in combining new and 
+      interesting bundles and will strive to figure out your needs and match them to current 
+      or upcoming offerings.
+    &lt;/p&gt;
+
+    &lt;p&gt;
+      Now that you&#39;ve and idea of what we do, why not call into our store? We have create 
+      some  
+      &lt;a href=&quot;about/index.html&quot;
+         title=&quot;Detailed Directions to the Store&quot;&gt;detailed directions&lt;/a&gt;   
+      to get you here in record time. Come and join us anytime.
+    &lt;/p&gt;
+
+    &lt;h2&gt;What&#39;s Apps we Like&lt;/h2&gt;
+
+    &lt;p&gt;
+      We&#39;re frequently asked about the the apps we use most in the store. Here is a list of 
+      our current favorites:
+    &lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Hype by Tumult&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Webstorm by Idea&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Sublime, by sublimetext.com/li&gt;
+      &lt;li&gt;Desktop Utility by Sweet Productions&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;
+      2015, Bundle App Store &lt;br&gt;
+      All trademarks and registered trademarks appearing on this site are 
+      the property of their respective owners.
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>... and open this same file in the browser:</p>
+<p><img src="img/07.png" alt=""></p>
+<p>Check the &#39;Directions&#39; link and make sure it works. Introduce the following content for the file <code>about/index.html</code>:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot; /&gt;
+    &lt;title&gt;Bundle Store Directions&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Directions&lt;/h1&gt;
+    &lt;p&gt;Take the 305 S exit to Webville - go 0.4 mi&lt;/p&gt;
+    &lt;p&gt;Continue on 305 - go 12 mi&lt;/p&gt;
+    &lt;p&gt;Turn right at Structure Ave N - go 0.6 mi&lt;/p&gt;
+    &lt;p&gt;Turn right and head toward Structure Ave N - go 0.0 mi&lt;/p&gt;
+    &lt;p&gt;Turn right at Structure Ave N - go 0.7 mi&lt;/p&gt;
+    &lt;p&gt;Continue on Stucture Ave S - go 0.2 mi&lt;/p&gt;
+    &lt;p&gt;Turn right at SW Presentation Way - go 0.0 mi&lt;/p&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;../index.html&quot;&gt;Back to the Store&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Any change you make in the sublime will only appear in the browser if you:</p>
+<ul>
+<li>save the changes in sublime</li>
+<li>refresh the page in chrome.</li>
+</ul>
+<p>Make sure both pages render in chrome as expected.</p>
+<p>Additionally, chrome has some interesting features to let you explore the page &#39;source&#39;. The simplest one is to just right click anywhere in the browsers and select <code>View Source</code>:</p>
+<p><img src="img/08.png" alt=""></p>
+<p>A more sophisticated option is to use <code>Developer Tools</code>:</p>
+<p><img src="img/09.png" alt=""></p>
+<p>To reproduce the above, first close the <code>source</code> view we just opened above, and proceed to access the tools as shown here:</p>
+<p><img src="img/10.png" alt=""></p>
+<p>Explore the developer tools for a little while - notice how the <code>box model</code> seems to be visible. Then close it, we will return to it later.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Style Sheet</h1>
+<p>Our first step will be to include a style sheet. Create a file called &#39;store.css&#39; and include the following:</p>
+<pre><code>body {
+  font: small/1.6em Verdana, Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+  color: #007e7e;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+h2 {
+  font-size:130%;
+}</code></pre>
+<p>Now edit the main index.html file, and link the stylesheet by inserting this into the <code>&lt;head&gt;</code> element:</p>
+<pre><code>    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;store.css&quot; media=&quot;screen&quot; /&gt;</code></pre>
+<p>Make sure you save everything, and then refresh chrome. It should render a new style - something like this:</p>
+<p><img src="img/11.png" alt=""></p>
+<p>Do you notice that the directions page still seems to use the default fonts? This is because it is not linked to the stylesheet. Incorporate this now by this entry in the <code>&lt;head&gt;</code> element:</p>
+<pre><code>    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;../store.css&quot; media=&quot;screen&quot; /&gt;</code></pre>
+<p>Verify that it now renders as expected:</p>
+<p><img src="img/12.png" alt=""></p>
+<p>Note carefully how the link slightly different to the previous one. Why is that?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Additional Content</h1>
+<p>Here is some additional content for the main index.page:</p>
+<pre><code>    &lt;h2&gt;Weekly Specials&lt;/h2&gt;
+    &lt;hr&gt;
+
+    &lt;h3&gt;Mac Supercharge Bundle&lt;/h3&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;images/paddle.png&quot; alt=&quot;Freebee Bubdle&quot; /&gt;
+      Its been a long time since the last free Mac bundle that big. StackSocial just 
+      published its so called Mac Freebie Bundle 2.0 which contains 10 apps worth 151$.
+      Most of them are  about design and have not been part of bundles before.
+      &lt;img src=&quot;images/star35.gif&quot;&gt;
+    &lt;/p&gt;
+
+    &lt;hr&gt;
+
+    &lt;h3&gt;Freebie&lt;/h3&gt;
+    &lt;p&gt;
+       &lt;img src=&quot;images/freebie.png&quot; alt=&quot;Mac Supercharge Bundle&quot; /&gt;
+       Stacksocial just published its so called Free Ondesoft Mac Tool Bundle, which contains 
+       apps from Ondesoft. The bundle worth $146 will be probably available only a couple of 
+       days so you’d better hurry up to get it.
+       &lt;img src=&quot;images/star45.gif&quot;&gt;
+    &lt;/p&gt;
+    &lt;hr&gt;
+
+    &lt;h3&gt;Macware Business Bundle&lt;/h3&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;images/ondesoft.jpg&quot; alt=&quot;One Soft Bundle&quot; /&gt;
+       Here comes the next bundle for march. This time its macware who publish a bundle. The 
+       so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of 
+       $199.94. So you can save around 84%. There is n...
+      &lt;img src=&quot;images/star40.gif&quot;&gt;
+    &lt;/p&gt;
+    &lt;hr&gt;
+
+    &lt;p&gt;
+       See some other great deals &lt;a href=&quot;deals/index.html&quot; title=&quot;Deals&quot;&gt;here&lt;/a&gt;.
+    &lt;/p&gt;</code></pre>
+<p>Place this content directly into the page, just before the closing <code>&lt;/body&gt;</code> tag. It should look like this:</p>
+<p><img src="img/13.png" alt=""></p>
+<p>Note that the images we have set up don&#39;t seem to work - and are represented in chrome as broken image links.</p>
+<p>We can fix this now. Here is a zipped archive of all the images we will need:</p>
+<ul>
+<li><a href="archives/images.zip">images.zip</a></li>
+</ul>
+<p>Download and expand this file - move/copy all the image files into a new <code>images</code> folder in your project. If all goes well, the a refresh of the browser should bring this:</p>
+<p><img src="img/14.png" alt=""></p>
+<p>Lets now bring in the `deals/index.html&#39; content:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot; /&gt;
+    &lt;title&gt;App Bundle Deals&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;../store.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;More Deals&lt;/h1&gt;
+
+    &lt;h2&gt;Business Bundle&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/business.png&quot; alt=&quot;Business Bundle&quot; /&gt;
+        Here comes the next bundle for march. This time it&#39;s macware who publish a bundle. The so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of $199.94. So you can save around 84%.
+    &lt;/p&gt;
+    &lt;h2&gt;Insanity Deal&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/insanity.jpg&quot; alt=&quot;Insanity Deal&quot; /&gt;
+        With the new $5 Insanity Deals from Bundlehunt you receive every day a highly reduced app for $5 only with savings up to 75%. Not a real bundle but, as there are multiple apps for only $5 each, one new per day, for the days to come.
+    &lt;/p&gt;
+    &lt;h2&gt;Summer Bundle&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/summer.png&quot; alt=&quot;Summer Bundle&quot; /&gt;
+      The new bundle from StackCommerce contains quite a few apps which have never been in bundles before. The so called Summer Mac Essentials Bundle comes with 10 apps for only $19.99. That is 91% off the original price of $234!
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;../index.html&quot;&gt;Back to the Store&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>This should render correctly first time, as we have the images already in place:</p>
+<p><img src="img/15.png" alt=""></p>
+<p>Look carefully at the paths to the images in the html source.</p>
+<p>Make sure you can navigate to all three pages now:</p>
+<ul>
+<li>index.html</li>
+<li>about/index.html</li>
+<li>deals/index.html</li>
+</ul>
+<p>(the link to &#39;deals&#39; is at the very end of the main page)</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Guarantee Paragraph</h1>
+<p>Locate the &#39;guarantee&#39; paragraph in the home page (the third paragraph):</p>
+<pre><code class="lang-html">    &lt;p&gt;
+      Our guarantee: at the store, we&#39;re committed to 
+      providing you, with an exceptional quality and reliability. 
+      Every application is checked in detail for stability, usability 
+      and inter-interoperability. If you are unhappy with any individual app 
+      in a bundle we will refund you the full amount for the complete 
+      suite, no questions asked.
+    &lt;/p&gt;</code></pre>
+<p>(begins around line 19)</p>
+<p>We would like to target this specific paragraph with some custom styles. To this end, we nominate it to a &#39;class&#39; called &#39;guarantee&#39;:</p>
+<pre><code class="lang-html">  &lt;p class=&quot;guarantee&quot;&gt;
+      Our guarantee: at the store, we&#39;re committed to 
+      providing you, with an exceptional quality and reliability. 
+      Every application is checked in detail for stability, usability 
+      and inter-interoperability. If you are unhappy with any individual app 
+      in a bundle we will refund you the full amount for the complete 
+      suite, no questions asked.
+  &lt;/p&gt;</code></pre>
+<p>In our stylesheet, we can devise a rule just for this paragraph:</p>
+<pre><code class="lang-css">.guarantee
+{
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #a7cece;
+}</code></pre>
+<p>Reload and review how the paragraph looks:</p>
+<p><img src="./img/16.png" alt=""></p>
+<p>We can see evidence of our targeted styles.</p>
+<p>We can add a little margin:</p>
+<pre><code class="lang-css">.guarantee
+{
+  /* as before */
+  margin: 30px;
+}</code></pre>
+<p>Note that <code>/* as before */</code> above means leave the existing properties in place and just add the <code>margin</code> to the end of the <code>&#39;guarantee</code> rule.</p>
+<p>Reload the page:</p>
+<p><img src="./img/17.png" alt=""></p>
+<p>Next, the background image. Save this image here to your images folder:</p>
+<p><img src="./img/background.gif" alt=""></p>
+<p>...and we can extend the <code>guaranteee</code> rule with this property here:</p>
+<pre><code class="lang-css">  background-image: url(images/background.gif) ;</code></pre>
+<p>This seems to yield a repeated pattern:</p>
+<p><img src="./img/18.png" alt=""></p>
+<p>Some further refinements to the same rule can put a single image in the top right:</p>
+<pre><code class="lang-css">  background-repeat: no-repeat;
+  background-position: top-left;</code></pre>
+<p>Reloading again:</p>
+<p><img src="./img/19.png" alt=""></p>
+<p>And we can also further refine the padding:</p>
+<pre><code class="lang-css">  padding: 25px;
+  padding-left: 80px;
+  margin-right: 150px;</code></pre>
+<p>Looks like this:</p>
+<p><img src="./img/20.png" alt=""></p>
+<p>Our full rule for guarantee now looks like this:</p>
+<pre><code class="lang-css">.guarantee
+{
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #a7cece;
+
+  margin: 30px;
+  padding: 25px;
+  padding-left: 80px;
+  margin-right: 150px;
+
+  background-image: url(./images/background.gif);
+
+  background-repeat: no-repeat;
+  background-position: top-left;
+}</code></pre>
+<p>Some further adjustments to the text itself:</p>
+<pre><code class="lang-css">  line-height: 1.9em;
+  font-style: italic;
+  font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;
+  color: black;</code></pre>
+<p><img src="./img/21.png" alt=""></p>
+<p>Finally, we might adjust the border pattern:</p>
+<pre><code class="lang-css">  border-color: white;
+  border-width: 1px;
+  border-style: dashed;</code></pre>
+<p>Which turns out as:</p>
+<p><img src="./img/22.png" alt=""></p>
+<p>Regrouping the properties, this is the complete rule:</p>
+<pre><code class="lang-css">.guarantee
+{
+  border-color: white;
+  border-width: 1px;
+  border-style: dashed;
+
+  margin: 30px;
+  padding: 25px;
+  padding-left: 80px;
+  margin-right: 150px;
+
+  background-color: #a7cece;
+  background-image: url(./images/background.gif);
+  background-repeat: no-repeat;
+  background-position: top-left;
+
+  line-height: 1.9em;
+  font-style: italic;
+  font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;
+  color: black;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Folding View in Sublime</h1>
+<p>Your editor may look like this currently:</p>
+<p><img src="img/23.png" alt=""></p>
+<p>Now select the following menu option - <code>Edit-&gt;Code Folding-&gt;Fold All</code>:</p>
+<p><img src="img/24.png" alt=""></p>
+<p>This &#39;folds&#39; the editor, showing you just the highest level elements. </p>
+<p><img src="img/25.png" alt=""></p>
+<p>Using the small arrows in the margin, you should be able to reveal/expand elements at different levels in the document:</p>
+<p><img src="img/26.png" alt=""></p>
+<p>See if you can match approximately the following views:</p>
+<p><img src="img/27.png" alt="">
+<img src="img/28.png" alt=""></p>
+<p>This can be challenging to effect - as the arrow will only appear when you hover in the correct column in the margin:</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Sidebar</h1>
+<p>Open the main index.html and locate the <code>Weekly Specials</code> heading. Place a new <code>&lt;div&gt;</code> element immediately before this element:</p>
+<pre><code>    &lt;div id=&quot;weeklyspecials&quot;&gt;
+    &lt;h2&gt;Weekly Specials&lt;/h2&gt;</code></pre>
+<p>we must now close the <code>&lt;div&gt;</code> a little later in the file, just after this  paragraph: </p>
+<pre><code>    &lt;p&gt;
+      See some other great deals &lt;a href=&quot;deals/index.html&quot; title=&quot;Deals&quot;&gt;here&lt;/a&gt;.
+    &lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+<p>If you &quot;indent&quot; everything inside the <code>&lt;div&gt;</code> - i.e. push all of the enclosed element in by 2 spaces - then the folding editor will allow you to &#39;fold&#39; the entire division:</p>
+<p><img src="img/30.png" alt=""></p>
+<p>I.e. - it is hiding temporarily the enclose elements. This can be difficult to get exactly right - as the folding requires the indentation being precisely correct. Here is the correctly indented section if you are having trouble:</p>
+<pre><code>    &lt;div id=&quot;weeklyspecials&quot;&gt;
+      &lt;h2&gt;Weekly Specials&lt;/h2&gt;
+      &lt;hr&gt;
+
+      &lt;h3&gt;Mac Supercharge Bundle&lt;/h3&gt;
+      &lt;p&gt;
+        &lt;img src=&quot;images/paddle.png&quot; alt=&quot;Freebee Bubdle&quot; /&gt;
+        Its been a long time since the last free Mac bundle that big. StackSocial just 
+        published its so called Mac Freebie Bundle 2.0 which contains 10 apps worth 151$.
+        Most of them are  about design and have not been part of bundles before.
+        &lt;img src=&quot;images/star35.gif&quot;&gt;
+      &lt;/p&gt;
+
+      &lt;hr&gt;
+
+      &lt;h3&gt;Freebie&lt;/h3&gt;
+      &lt;p&gt;
+         &lt;img src=&quot;images/freebie.png&quot; alt=&quot;Mac Supercharge Bundle&quot; /&gt;
+         Stacksocial just published its so called Free Ondesoft Mac Tool Bundle, which contains 
+         apps from Ondesoft. The bundle worth $146 will be probably available only a couple of 
+         days so you’d better hurry up to get it.
+         &lt;img src=&quot;images/star45.gif&quot;&gt;
+      &lt;/p&gt;
+      &lt;hr&gt;
+
+      &lt;h3&gt;Macware Business Bundle&lt;/h3&gt;
+      &lt;p&gt;
+        &lt;img src=&quot;images/ondesoft.jpg&quot; alt=&quot;One Soft Bundle&quot; /&gt;
+         Here comes the next bundle for march. This time its macware who publish a bundle. The 
+         so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of 
+         $199.94. So you can save around 84%. There is n...
+        &lt;img src=&quot;images/star40.gif&quot;&gt;
+      &lt;/p&gt;
+      &lt;hr&gt;
+
+      &lt;p&gt;
+         See some other great deals &lt;a href=&quot;deals/index.html&quot; title=&quot;Deals&quot;&gt;here&lt;/a&gt;.
+      &lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+<p>We can now also enclose th first half of the page in another <code>&lt;div&gt;</code> with the id &quot;maincontent&quot;:</p>
+<pre><code>   &lt;div id=&quot;maincontent&quot;&gt;
+      &lt;h1&gt;Welcome to the App Bundle Store&lt;/h1&gt;
+      &lt;p&gt;
+        This store brings you great app bundles week after week. We select the best power 
+        user apps from a broad range of suppliers and combine them into great deals. These are 
+        the highest quality apps form the best publishers, at great prices.  
+      &lt;/p&gt;
+
+      &lt;p&gt;
+        Whether you are interested in gaming or graphics design, software development or media 
+        production - we have the bundle for you. Each app bundle is designed to compliment the 
+        others, delivering you an exciting take on a scene.  
+      &lt;/p&gt;
+
+      &lt;p class=&quot;guarantee&quot;&gt;
+          Our guarantee: at the store, we&#39;re committed to providing you, 
+          with an exceptional quality and reliability. Every application is checked in detail
+          for stability, usability and inter-interoperability. If you are unhappy with any 
+          individual app in a bundle we will refund you the full amount for the complete suite, 
+          no questions asked.
+      &lt;/p&gt;
+
+      &lt;p&gt;
+        We roll over the bundles on a weekly basis, so be sure to check back regularly for 
+        bundle that suits your tastes. If you dont see application bundles that suit your 
+        interests - please let us know! We are always interested in combining new and 
+        interesting bundles and will strive to figure out your needs and match them to current 
+        or upcoming offerings.
+      &lt;/p&gt;
+
+      &lt;p&gt;
+        Now that you&#39;ve and idea of what we do, why not call into our store? We have create 
+        some  
+        &lt;a href=&quot;about/index.html&quot;
+           title=&quot;Detailed Directions to the Store&quot;&gt;detailed directions&lt;/a&gt;   
+        to get you here in record time. Come and join us anytime.
+      &lt;/p&gt;
+
+      &lt;h2&gt;What&#39;s Apps we Like&lt;/h2&gt;
+
+      &lt;p&gt;
+        We&#39;re frequently asked about the the apps we use most in the store. Here is a list of 
+        our current favorites:
+      &lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Hype by Tumult&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;Webstorm by Idea&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;Sublime, by sublimetext.com/li&gt;
+        &lt;li&gt;Desktop Utility by Sweet Productions&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;
+        2015, Bundle App Store &lt;br&gt;
+        All trademarks and registered trademarks appearing on this site are 
+        the property of their respective owners.
+      &lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+<p>If this goes correctly, we can &#39;fold&#39; sublime to view the entire page structure more easily:</p>
+<p><img src="img/31.png" alt=""></p>
+<p>This allows us to keep an eye on the complete page in a single glance - very useful of the page is long or incorporates a very specific structure you need to manage.</p>
+<p>Here is the complete main index.html page if you are struggling with the indentation:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot; /&gt;
+    &lt;title&gt;Bundle App Store&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;store.css&quot; media=&quot;screen&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;maincontent&quot;&gt;
+      &lt;h1&gt;Welcome to the App Bundle Store&lt;/h1&gt;
+      &lt;p&gt;
+        This store brings you great app bundles week after week. We select the best power 
+        user apps from a broad range of suppliers and combine them into great deals. These are 
+        the highest quality apps form the best publishers, at great prices.  
+      &lt;/p&gt;
+
+      &lt;p&gt;
+        Whether you are interested in gaming or graphics design, software development or media 
+        production - we have the bundle for you. Each app bundle is designed to compliment the 
+        others, delivering you an exciting take on a scene.  
+      &lt;/p&gt;
+
+      &lt;p class=&quot;guarantee&quot;&gt;
+          Our guarantee: at the store, we&#39;re committed to providing you, 
+          with an exceptional quality and reliability. Every application is checked in detail
+          for stability, usability and inter-interoperability. If you are unhappy with any 
+          individual app in a bundle we will refund you the full amount for the complete suite, 
+          no questions asked.
+      &lt;/p&gt;
+
+      &lt;p&gt;
+        We roll over the bundles on a weekly basis, so be sure to check back regularly for 
+        bundle that suits your tastes. If you dont see application bundles that suit your 
+        interests - please let us know! We are always interested in combining new and 
+        interesting bundles and will strive to figure out your needs and match them to current 
+        or upcoming offerings.
+      &lt;/p&gt;
+
+      &lt;p&gt;
+        Now that you&#39;ve and idea of what we do, why not call into our store? We have create 
+        some  
+        &lt;a href=&quot;about/index.html&quot;
+           title=&quot;Detailed Directions to the Store&quot;&gt;detailed directions&lt;/a&gt;   
+        to get you here in record time. Come and join us anytime.
+      &lt;/p&gt;
+
+      &lt;h2&gt;What&#39;s Apps we Like&lt;/h2&gt;
+
+      &lt;p&gt;
+        We&#39;re frequently asked about the the apps we use most in the store. Here is a list of 
+        our current favorites:
+      &lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Hype by Tumult&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;Webstorm by Idea&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;Sublime, by sublimetext.com/li&gt;
+        &lt;li&gt;Desktop Utility by Sweet Productions&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;
+        2015, Bundle App Store &lt;br&gt;
+        All trademarks and registered trademarks appearing on this site are 
+        the property of their respective owners.
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;weeklyspecials&quot;&gt;
+      &lt;h2&gt;Weekly Specials&lt;/h2&gt;
+      &lt;hr&gt;
+
+      &lt;h3&gt;Mac Supercharge Bundle&lt;/h3&gt;
+      &lt;p&gt;
+        &lt;img src=&quot;images/paddle.png&quot; alt=&quot;Freebee Bubdle&quot; /&gt;
+        Its been a long time since the last free Mac bundle that big. StackSocial just 
+        published its so called Mac Freebie Bundle 2.0 which contains 10 apps worth 151$.
+        Most of them are  about design and have not been part of bundles before.
+        &lt;img src=&quot;images/star35.gif&quot;&gt;
+      &lt;/p&gt;
+
+      &lt;hr&gt;
+
+      &lt;h3&gt;Freebie&lt;/h3&gt;
+      &lt;p&gt;
+         &lt;img src=&quot;images/freebie.png&quot; alt=&quot;Mac Supercharge Bundle&quot; /&gt;
+         Stacksocial just published its so called Free Ondesoft Mac Tool Bundle, which contains 
+         apps from Ondesoft. The bundle worth $146 will be probably available only a couple of 
+         days so you’d better hurry up to get it.
+         &lt;img src=&quot;images/star45.gif&quot;&gt;
+      &lt;/p&gt;
+      &lt;hr&gt;
+
+      &lt;h3&gt;Macware Business Bundle&lt;/h3&gt;
+      &lt;p&gt;
+        &lt;img src=&quot;images/ondesoft.jpg&quot; alt=&quot;One Soft Bundle&quot; /&gt;
+         Here comes the next bundle for march. This time its macware who publish a bundle. The 
+         so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of 
+         $199.94. So you can save around 84%. There is n...
+        &lt;img src=&quot;images/star40.gif&quot;&gt;
+      &lt;/p&gt;
+      &lt;hr&gt;
+
+      &lt;p&gt;
+         See some other great deals &lt;a href=&quot;deals/index.html&quot; title=&quot;Deals&quot;&gt;here&lt;/a&gt;.
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Floating Sections</h1>
+<p>The <code>&lt;div&gt;s</code> we have introduced have had no effect on the visual appearance of the main page - it should still look exactly as it did before we incorporated them:</p>
+<p>We can now target this division directly with the following new rules in CSS:</p>
+<pre><code class="lang-css">#weeklyspecials {
+  border-width: thin;
+  border-style: solid;
+  border-color: #007e7e;
+
+  width: 25%;
+  padding: 0px 20px 30px 10px
+  margin-left: 20px;
+
+  text-align: center;
+
+  float:right;
+}
+
+#maincontent {
+  float:left;
+  width:70%;
+}</code></pre>
+<p>Copy/paste this into your css file and refresh the page:</p>
+<p><img src="img/32.png" alt=""></p>
+<p>This is the final version of our store.css:</p>
+<pre><code>body {
+  font: small/1.6em Verdana, Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+  color: #007e7e;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+h2 {
+  font-size:130%;
+}
+
+.guarantee {
+  border-color: white;
+  border-width: 1px;
+  border-style: dashed;
+
+  margin: 30px;
+  padding: 25px;
+  padding-left: 80px;
+  margin-right: 150px;
+
+  background-color: #a7cece;
+  background-image: url(./images/background.gif);
+  background-repeat: no-repeat;
+  background-position: top-left;
+
+  line-height: 1.9em;
+  font-style: italic;
+  font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;
+  color: black;
+}
+
+#weeklyspecials {
+  border-width: thin;
+  border-style: solid;
+  border-color: #007e7e;
+
+  width: 25%;
+  padding: 0px 20px 30px 10px
+  margin-left: 20px;
+
+  text-align: center;
+
+  float:right;
+}
+
+#maincontent {
+  float:left;
+  width:70%;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercise</h1>
+<p>This is the final version of the project:</p>
+<ul>
+<li><a href="archives/lab03.zip">lab03</a></li>
+</ul>
+<h1>Exercise 1:</h1>
+<p>Look again at these CSS rules:</p>
+<pre><code>#weeklyspecials {
+  border-width: thin;
+  border-style: solid;
+  border-color: #007e7e;
+
+  width: 25%;
+  padding: 0px 20px 30px 10px
+  margin-left: 20px;
+
+  text-align: center;
+
+  float:right;
+}
+
+#maincontent {
+  float:left;
+  width:70%;
+}</code></pre>
+<p>Experiment with the various dimensions you can see here. Specifically, the &#39;width&#39; and &#39;padding&#39; dimensions. Remember you have to save the changes and refresh the page to see the effect.</p>
+<h1>Exercise 2:</h1>
+<p>Continue to experiment with the parameters, this time exploring alternatives to the &#39;border-style&#39;, &#39;border-width&#39; and &#39;border-color&#39; properties. See if you can make sense of some of the documentation here:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en/docs/Web/CSS/border">https://developer.mozilla.org/en/docs/Web/CSS/border</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

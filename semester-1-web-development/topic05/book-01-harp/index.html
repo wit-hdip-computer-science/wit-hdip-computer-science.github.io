@@ -1,0 +1,662 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      HTML Templates
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-5a Harp & Surge">
+      Lab-5a Harp & Surge
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Lab-1 Editing HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Lab-1 HTML Structure
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-2 CSS Intro
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          Lab-3a Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          Lab-3b Multicolumn
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Lab-4a Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Lab-4b Case Study
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic05/book-01-harp/index.html">
+          Lab-5a Harp & Surge
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-02-templates/index.html">
+          Lab-5b Templating
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-03-nav/index.html">
+          Lab-5c Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-6a Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-b/index.html">
+          Lab-6b Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a-setup/index.html">
+          Lab-07a Play Setup
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-b-playlist-1/index.html">
+          Lab-07b Playlist 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-a-playlist-2/index.html">
+          Lab-08a Playlist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-b-playlist-3/index.html">
+          Lab-08b Playlist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a-todolist/index.html">
+          Lab-09b Todolist-1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-b-playlist-4/index.html">
+          Lab-09a Playlist-4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-sessions/index.html">
+          Lab-10 Todolist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-a-sourcetree/index.html">
+          Lab-11a Sourcdtree
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-b-git/index.html">
+          Lab-11b Todolist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-c/index.html">
+          Lab-12
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-5a Harp & Surge">
+        <h1>Objectives</h1>
+<p>Install software tools to serve a web site locally and also to deploy the web site to a public web server.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Command Prompt</h1>
+<p>Open a command prompt on Windows. The easiest way to do this is in Windows 7 to type &#39;cmd&#39; in the Search Box on the Windows start menu:</p>
+<p><img src="img/14.png" alt=""></p>
+<p>When you type it, the start menu might change to the following:</p>
+<p><img src="img/15.png" alt=""></p>
+<p>...and if you press return, then the command window itself will appear:</p>
+<p><img src="img/16.png" alt=""></p>
+<p>On Windows 8 and 10, access the desktop from the home screen, and run File Explorer (may be in the toolbar). Then select File-&gt;Open Command Prompt:</p>
+<p><img src="img/01a.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Command Line</h1>
+<p>This is an alternative interface to Windows which it is important to become familiar with. In this window you can type what are sometimes called &#39;DOS&#39; commands. These commands let you have a finer level of control of your PC, and are particularly important for programmers to master.</p>
+<p>Here are some simple commands:</p>
+<ul>
+<li>dir<ul>
+<li>list all files in a directory</li>
+</ul>
+</li>
+<li>cd ..<ul>
+<li>change to a parent directory</li>
+</ul>
+</li>
+<li>cd \<directory name><ul>
+<li>change to a specific directory</li>
+</ul>
+</li>
+</ul>
+<p>It is essential that you become adept at these commands, and a few others.</p>
+<p>Bear in mind that these commands always have a &#39;current directory&#39; in mind (a directory is another name for a folder). Try them now and see if you can &#39;navigate&#39; to your web development workspace. For instance, if the folder is located as shown here:</p>
+<p><img src="img/17.png" alt=""></p>
+<p>Then the commands to get there will look like this:</p>
+<p><img src="img/18.png" alt=""></p>
+<p>If your workspace is located on another drive, the enter that drive letter first - say &quot;G:&quot;, press return, and then try the cd and dir commands.</p>
+<p><img src="img/19.png" alt=""></p>
+<p>Note in all of the above that the &#39;prompt&#39; in the command window is always showing the &#39;current&#39; drive/directory.</p>
+<p>Also, if you have a &#39;space&#39; in your directory (a bad idea generally), then you will have to use quotation marks in the commands. Here is an example:</p>
+<p><img src="img/20.png" alt=""></p>
+<p>See in the above transcript that the directory name is &quot;Web Development Workspace&quot; - and it has been enclosed in double quotes.</p>
+<p>In general, however, it is best to adopt the following conventions.</p>
+<ul>
+<li><p>Never use spaces in directory or file names</p>
+</li>
+<li><p>Never use upper case in directory or file names</p>
+</li>
+<li><p>If you wish to use readable multiple words for a directory or file name, separate the words with &#39;-&#39;. e.g.</p>
+<ul>
+<li>web-development</li>
+<li>java-projects</li>
+</ul>
+</li>
+</ul>
+<p>Perhaps you might take this opportunity to adjust your workspace and projects to adopt the above conventions. If you do, then you will find that using DOS commands to navigate your folders will be considerably easier.</p>
+<p>Before going on to the next step, make sure you are comfortable navigating in DOS around the file system, and in particular make sure you can navigate to your web development workspace.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Installing &amp; Using Harp.js</h1>
+<p>First, install node on your workstation:</p>
+<ul>
+<li><a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+</ul>
+<p>Then install install harp.js</p>
+<ul>
+<li><a href="http://harpjs.com/">http://harpjs.com/</a></li>
+</ul>
+<p>The procedure for both of the above should be relatively straightforward. For windows, the harp install command is:</p>
+<pre><code>npm install -g harp</code></pre>
+<p>On Mac, the command may be:</p>
+<pre><code>sudo npm install -g harp</code></pre>
+<p>Once these tools are installed, then from a shell/Command prompt, you should be able to carry out these commands :</p>
+<pre><code>harp init demo</code></pre>
+<p>This will respond with: </p>
+<pre><code>Downloading boilerplate: https://github.com/harp-boilerplates/default
+Initialized project at /Users/edeleastar/repos/modules/web/bsc-2015/prj/demo</code></pre>
+<p>Then enter:</p>
+<pre><code>cd demo
+harp server</code></pre>
+<p>Which will respond with: </p>
+<pre><code>Harp v0.23.0 – Chloi Inc. 2012–2015
+Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+------------</code></pre>
+<p>Now browse to this url here:</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+<p>and you should see this page:</p>
+<p><img src="img/21.png" alt=""></p>
+<p>To stop &#39;serving&#39; the page, enter Ctrl-C in the command prompt:</p>
+<pre><code>Harp v0.19.0 – Chloi Inc. 2012–2015
+Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+------------
+^C</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Install Surge</h1>
+<p>With node and harp installed - you will need to install:</p>
+<ul>
+<li><a href="https://surge.sh/">https://surge.sh/</a></li>
+</ul>
+<p>The simplest way to do this is to open a terminal and enter:</p>
+<pre><code>sudo npm install surge -g</code></pre>
+<p>On Windows, just:</p>
+<pre><code>npm install surge -g</code></pre>
+<p>If successful, the terminal/command prompt with echo echo something like this:</p>
+<pre><code>/usr/local/bin/surge -&gt; /usr/local/lib/node_modules/surge/lib/cli.js
+/usr/local/lib
+└─┬ surge@0.18.0
+  ├─┬ fstream-ignore@1.0.2
+  │ ├─┬ fstream@1.0.10
+  │ │ ├── graceful-fs@4.1.10
+  │ │ └─┬ rimraf@2.5.4
+  │ │   └─┬ glob@7.1.1
+  │ │     ├── inflight@1.0.6
+  │ │     ├── once@1.4.0
+  │ │     └── path-is-absolute@1.0.1
+  │ └── inherits@2.0.3
+  ├─┬ request@2.40.0
+  │ └─┬ tough-cookie@2.3.2
+  │   └── punycode@1.4.1
+  └─┬ tar.gz@0.1.1
+    └─┬ fstream@0.1.31
+      └─┬ graceful-fs@3.0.11
+        └── natives@1.1.0</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Deploying a Web Site using Surge</h1>
+<p>Create a new project com the command line by entering the following:</p>
+<pre><code>C:&gt; harp init iot-web</code></pre>
+<p>Remember, make sure to keep an eye on which folder this command is executed from. Opening the folder should reveal these files:</p>
+<p><img src="img/22.png" alt=""></p>
+<p>We will use files like these later - but for the moment delete all of these files and replace them with the following file called <code>harp.json</code>:</p>
+<h2>harp.json</h2>
+<pre><code>{
+  &quot;globals&quot;: 
+  {
+
+  }
+}</code></pre>
+<p>If you havent already downloaded it - get the last version of the IoT web site from the last lab:</p>
+<ul>
+<li>Download Archive: <a href="https://github.com/wit-computing/iot-web/releases/tag/V07">https://github.com/wit-computing/iot-web/releases/tag/V07</a></li>
+</ul>
+<p>Unzip the project, and copy the <code>public</code> folder into the iot-web folder you have just created. Your <code>iot-web</code> folder should look like this:</p>
+<p><img src="img/23.png" alt=""></p>
+<p>Now we will <code>serve</code> the web site locally with this command:</p>
+<pre><code>C:&gt; cd iot-web
+C:\iot-web&gt; harp server
+Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server</code></pre>
+<p>Notice that the command is executed form within the <code>iot-web</code> directory.</p>
+<p>Verify that the site is available here:</p>
+<ul>
+<li><a href="http://localhost:9000/">http://localhost:9000/</a></li>
+</ul>
+<p>Terminate the server again with ^C:</p>
+<pre><code>Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+Terminate batch job (Y/N)? y
+^C
+G:\iot-web&gt;</code></pre>
+<p>From still within the <code>iot-folder</code>, enter the following command:</p>
+<pre><code>C:\iot-web&gt; harp compile
+C:\iot-web&gt; surge ./www
+    Welcome to Surge!
+    Please login or create an account by entering your email and password:</code></pre>
+<p>Enter credential to create a new account now - be sure to remember the password. Surge will then deploy the site to a public server:</p>
+<pre><code>  project path: C:\dev\iot-web\
+               size: 34 files, 2.3 MB
+             domain: dull-pet.surge.sh
+             upload: [====================] 100%, eta: 0.0s
+   propagate on CDN: [====================] 100%
+               plan: Free
+              users: youremail@domain.com
+         IP address: 192.241.214.148
+
+    Success! Project is published and running at dull-pet.surge.sh</code></pre>
+<p>The <code>domain</code> can be customised -in the above example &#39;dull-pet&#39; was generated, you can replace this with something more suitable (but unique, so perhaps include your initials, the current date or something that may not be used by someone else).</p>
+<p>Open a browser to inspect the running site. This is now deployed and accessible globally!</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Removing Web Sites from Surge</h1>
+<p>If you have published a number of sites you may want to recall what domains were generated, or perhaps remove some or all of the published pages.</p>
+<p>The various commands are listed here:</p>
+<ul>
+<li><a href="https://surge.sh/help&gt;">https://surge.sh/help&gt;</a></li>
+</ul>
+<p>To list all web sites:</p>
+<pre><code>C:\dev\iot-web&gt;surge list
+              email: youremail@domain.com
+              token: *****************
+
+      iot-1.surge.sh
+      dull-pet.surge.sh
+      highfalutin-exchange.surge.sh
+
+
+C:\dev\iot-web&gt;</code></pre>
+<p>To remove (delete) a site from the server use the <code>teardown</code> command:</p>
+<pre><code>C:\dev\iot-web&gt;surge teardown highfalutin-exchange.surge.sh
+              email: youremail@domain.com
+              token: *****************
+             domain: highfalutin-exchange.surge.sh
+
+    Success - highfalutin-exchange.surge.sh has been removed.
+
+
+C:\dev\iot-web&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>See if you can deploy your assignment 1 project using surge.</p>
+<p>Here are the steps:</p>
+<h1>1</h1>
+<p>Make sure you have the node+harp+surge packages installed on your computer.</p>
+<h1>2</h1>
+<p>Create a new (empty) folder to contain your project. Into this folder place the following file:</p>
+<h2>harp.json</h2>
+<pre><code>{
+  &quot;globals&quot;: 
+  {
+
+  }
+}</code></pre>
+<h1>3</h1>
+<p>Place your entire project into a folder called <code>public</code> inside this project folder (as we did in step 06).</p>
+<h1>4</h1>
+<p>From the command line, enter the command:</p>
+<pre><code>harp server</code></pre>
+<h1>5</h1>
+<p>Verify that your side it available on:</p>
+<pre><code>- &lt;http://localhost:9000/&gt;</code></pre>
+<h1>6</h1>
+<p>Terminate the server with ^C, and then enter:</p>
+<pre><code>surge</code></pre>
+<p>This will deploy the web site:</p>
+<pre><code>  project path: G:\dev\iot-web\
+               size: 34 files, 2.3 MB
+             domain: XXX.surge.sh
+             upload: [====================] 100%, eta: 0.0s
+   propagate on CDN: [====================] 100%
+               plan: Free
+              users: youremail@domain.com
+         IP address: 192.241.214.148
+
+    Success! Project is published and running at XXX.surge.sh</code></pre>
+<h1>7</h1>
+<p>Verify that the site is available on the domain. You will have the opportunity to change the domain <code>XXX</code></p>
+<h1>8</h1>
+<p>Exchange project URLs with your friends!</p>
+<h1>9</h1>
+<p>You may have had relative paths in your html files:</p>
+<pre><code>  &lt;a href=&quot;../stuff/mupage.html&quot;&gt; my stuff &lt;/a&gt;</code></pre>
+<p>or even more confusing:</p>
+<pre><code>  &lt;a href=&quot;../../stuff/mupage.html&quot;&gt; my stuff &lt;/a&gt;</code></pre>
+<p>These type of references can all be replaced with:</p>
+<pre><code>  &lt;a href=&quot;/stuff/mypage.html&quot;&gt; my stuff &lt;/a&gt;</code></pre>
+<pre><code>  &lt;a href=&quot;/stuff/mypage.html&quot;&gt; my stuff &lt;/a&gt;</code></pre>
+<p>Try this now - one link at a time to make sure it works.</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

@@ -1,0 +1,569 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Forms
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-09a Playlist-4">
+      Lab-09a Playlist-4
+    </a>
+    
+    <a class="item" data-tab="Exercise Solutions">
+      Exercise Solutions
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a/index.html">
+          Lab-1 Editing HTML
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01/book-b/index.html">
+          Lab-1 HTML Structure
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02/book/index.html">
+          Lab-2 CSS Intro
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-a/index.html">
+          Lab-3a Layout
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03/book-b/index.html">
+          Lab-3b Multicolumn
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-a/index.html">
+          Lab-4a Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04/book-b/index.html">
+          Lab-4b Case Study
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-01-harp/index.html">
+          Lab-5a Harp & Surge
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-02-templates/index.html">
+          Lab-5b Templating
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05/book-03-nav/index.html">
+          Lab-5c Navigation 
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-a/index.html">
+          Lab-6a Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06/book-b/index.html">
+          Lab-6b Semantic UI
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-a-setup/index.html">
+          Lab-07a Play Setup
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07/book-b-playlist-1/index.html">
+          Lab-07b Playlist 1
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-a-playlist-2/index.html">
+          Lab-08a Playlist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08/book-b-playlist-3/index.html">
+          Lab-08b Playlist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09/book-a-todolist/index.html">
+          Lab-09b Todolist-1
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic09/book-b-playlist-4/index.html">
+          Lab-09a Playlist-4
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10/book-sessions/index.html">
+          Lab-10 Todolist-2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-a-sourcetree/index.html">
+          Lab-11a Sourcdtree
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-b-git/index.html">
+          Lab-11b Todolist-3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-c/index.html">
+          Lab-12
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-09a Playlist-4">
+        <h1>Objectives</h1>
+<p>Introduce forms into a play application to enable the user to create playlists.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercise Solutions">
+        <h1>Exercise Solutions</h1>
+<h2>Exercise 2: UX Enhancements</h2>
+<p>Introduce a &#39;Delete Playlist&#39; button for each playlist, represented by a <code>trash</code> icon. E.g:</p>
+<p><img src="img/06.png" alt=""></p>
+<p>In addition, the <code>view</code> link is replace by a <code>folder open</code> icon.</p>
+<p>Bind the <code>delete playlist</code> button to a new function to be implemented in the Dashboard controller, which should log the id of the playlist to be deleted.</p>
+<h2>Solution</h2>
+<p>First the new user interface:</p>
+<h3>app/views/dashboard.html</h3>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Dashboard&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+#{list items:playlists, as:&#39;playlist&#39;}
+  &lt;section class=&quot;ui segment&quot;&gt;
+    &lt;h2 class=&quot;ui header&quot;&gt;
+      ${playlist.title} 
+    &lt;/h2&gt;
+      &lt;p&gt; Total Duration: ${playlist.duration} &lt;/p&gt;
+      &lt;a href=&quot;/playlists/${playlist.id}&quot; class=&quot;ui icon button&quot;&gt;
+        &lt;i class=&quot;icon folder open&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;/dashboard/deleteplaylist/${playlist.id}&quot; class=&quot;ui icon button&quot;&gt;
+        &lt;i class=&quot;icon trash&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+  &lt;/section&gt;
+#{/list}</code></pre>
+<h2>Exercise 3: Delete Playlist Functionality</h2>
+<p>Now, make the button actually delete the denoted playlist.</p>
+<h2>Solution</h2>
+<h3>conf/routes</h3>
+<pre><code>GET     /dashboard/deleteplaylist/{id}          Dashboard.deletePlaylist</code></pre>
+<h3>app/controllers/Dashboard.java</h3>
+<pre><code>...
+  public static void deletePlaylist (Long id)
+  {
+    Playlist playlist = Playlist.findById(id);
+    Logger.info (&quot;Removing&quot; + playlist.title);
+    playlist.delete();
+    redirect (&quot;/dashboard&quot;);
+  }
+...</code></pre>
+<p>Try this now - and make sure a playlist is being deleted.</p>
+<p>Also - check to see if the songs in the playlist are also deleted?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Add Song Form</h1>
+<p>Introduce a new partial to provide a simple form to add songs to a playlist:</p>
+<h2>app/views/tags/addsong.html</h2>
+<pre><code>&lt;form class=&quot;ui stacked segment form&quot; action=&quot;/playlists/${_playlist.id}/addsong&quot; method=&quot;POST&quot;&gt;
+  &lt;div class=&quot;two fields&quot;&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;Title&lt;/label&gt;
+      &lt;input placeholder=&quot;Title&quot; type=&quot;text&quot; name=&quot;title&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;Artist&lt;/label&gt;
+      &lt;input placeholder=&quot;Artist&quot; type=&quot;text&quot; name=&quot;artist&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;Duration&lt;/label&gt;
+      &lt;input placeholder=&quot;Duration&quot; type=&quot;number&quot; name=&quot;duration&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;ui blue submit button&quot;&gt;Add Song&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<h2>app/views/playlist.html</h2>
+<pre><code>#{extends &#39;main.html&#39; /}
+#{set title:&#39;Playlist&#39; /}
+
+#{menu id:&quot;dashboard&quot;/}
+
+&lt;section class=&quot;ui segment&quot;&gt;
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    ${playlist.title}
+  &lt;/h2&gt;
+  #{listsongs playlist:playlist /}
+  #{addsong playlist:playlist /}
+&lt;/section&gt;</code></pre>
+<p>The playlists should now render like this:</p>
+<p><img src="img/01.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Add Song Route + Action</h1>
+<p>To implement the feature - we need a new route:</p>
+<h2>conf/routes</h2>
+<pre><code>...
+POST    /playlists/{id}/addsong                  PlaylistCtrl.addSong
+...</code></pre>
+<p>Finally, the actual implementation of the add the song:</p>
+<h2>app/controllers/PlaylistCtrl.java</h2>
+<pre><code>...
+  public static void addSong(Long id, String title, String artist, int duration)
+  {
+    Song song = new Song(title, artist, duration);
+    Playlist playlist = Playlist.findById(id);
+    playlist.songs.add(song);
+    playlist.save();
+    redirect (&quot;/playlists/&quot; + id);
+  }
+...</code></pre>
+<p>Restart the app now - and verify that you can add songs. Check in the database to verify that the new songs appear in the table.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Add Playlist Form</h1>
+<p>A new form to support adding new playlists:</p>
+<h2>app/views/tags/addplaylist.html</h2>
+<pre><code>&lt;form class=&quot;ui stacked segment form&quot; action=&quot;/dashboard/addplaylist&quot; method=&quot;POST&quot;&gt;
+  &lt;div class=&quot;field&quot;&gt;
+    &lt;label&gt;Title&lt;/label&gt;
+    &lt;input placeholder=&quot;Title&quot; type=&quot;text&quot; name=&quot;title&quot;&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;ui blue submit button&quot;&gt;Add Playlist&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<p>Include this partial at the end of the dashboard view:</p>
+<h2>app/views/dashboard.html</h2>
+<pre><code>...
+...
+#{addplaylist /}</code></pre>
+<p>The dashboard should look like this now:</p>
+<p><img src="img/02.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Add Playlist Route + Action</h1>
+<p>To implement the feature - we need a new route:</p>
+<h2>conf/routes</h2>
+<pre><code>...
+POST    /dasghboard/addplaylist                 Dashboard.addPlaylist
+...</code></pre>
+<p>Finally, the actual implementation of the add playlist logic:</p>
+<h2>app/controllers/Dashboard.java</h2>
+<pre><code>...
+  public static void addPlaylist (String title)
+  {
+    Playlist playlist = new Playlist (title, 0);
+    Logger.info (&quot;Adding a new playlist called &quot; + title);
+    playlist.save();
+    redirect (&quot;/dashboard&quot;);
+  }
+...</code></pre>
+<p>Restart the app now - and verify that you can add playlists. Check in the database to verify that the new playlists appear in the table. Also add some songs to the playlist.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<h2>Exercise 1 : Download, Rename and Run the Sample Solution</h2>
+<p>Even if you have successfully completed this lab - do not skip this step, as it is important to be able to run the sample solutions occasionally, and also retain them for reference purposes.</p>
+<p>A complete version of the app as it should be at the end of this lab:</p>
+<ul>
+<li><a href="https://github.com/edeleastar/playlist/releases/tag/playlist.4.end">https://github.com/edeleastar/playlist/releases/tag/playlist.4.end</a></li>
+</ul>
+<p>Download and unzip the archive (select the zip version). Once unzipped, rename the folder to <code>playlist-4</code>. Make sure the unzipped and renamed folder looks exactly like this:</p>
+<p><img src="img/03.png" alt=""></p>
+<p>Now we need to rename the project. Open the following file:</p>
+<h2>conf/application.conf</h2>
+<pre><code># This is the main configuration file for the application.
+# ~~
+application.name=playlist
+...</code></pre>
+<p>Change <code>playlist</code> above to <code>playlist-4</code>.</p>
+<p>Next, from a shell inside the project folder run the <code>play eclipsify</code> command:</p>
+<p><img src="img/04.png" alt=""></p>
+<p>In eclipse - select <code>File-&gt;Import</code> ... and then select the following option:</p>
+<p><img src="img/05.png" alt=""></p>
+<p>Select <code>Browse</code> and locate the playlist-4 folder:</p>
+<p><img src="img/07.png" alt=""></p>
+<p>Press <code>Finish</code> - and the project will be imported:</p>
+<p><img src="img/08.png" alt=""></p>
+<p>You should be able to run app in the usual way:</p>
+<p><img src="img/09.png" alt=""></p>
+<p><img src="img/10.png" alt=""></p>
+<h2>Exercise 2: Import the sample solution into IntelliJ Idea</h2>
+<p>The last lab had install instruction for InteliJ Idea. Try to figure out how to import the project into this Idea.</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Eamonn de Leastar.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
