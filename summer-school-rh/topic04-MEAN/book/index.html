@@ -1,0 +1,600 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       MEAN Stack
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab 04">
+      Lab 04
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+      
+
+<a href=https://gitter.im/http://wit-ict-summer-school-2017.github.io/rh-course-web target="_blank">
+  <img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=plastic">
+</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-git/book-b-branching-and-merging/index.html">
+          Lab-01-Branching and Merging
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-agile/book-a/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-docker/book-a/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic04-MEAN/book/index.html">
+          Lab 04
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab 04">
+        <h1>Objectives</h1>
+<p>Introduce the fundamentals of the mean stack</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Create basic Node.js application</h1>
+<h2>Lab Goal:</h2>
+<ul>
+<li>Set up the project base and folder structure.</li>
+<li>Set up a base server which you can run.</li>
+</ul>
+<h2>Project Setup</h2>
+<p>Clone the project repo: <a href="https://github.com/JameelB/node-todo">https://github.com/JameelB/node-todo</a></p>
+<pre><code>git clone https://github.com/JameelB/node-todo</code></pre>
+<p>or</p>
+<pre><code>git clone git@github.com:JameelB/node-todo.git</code></pre>
+<h3>1. Create Folder Structure</h3>
+<p>Create the following folders and files as listed below:</p>
+<pre><code>- public        &lt;!-- Contains all the files for the frontend angular application --&gt;
+  &gt; core.js     &lt;!-- Contains all of the angular code for the app --&gt;
+  &gt; index.html  &lt;!-- Main view --&gt;
+- package.json  &lt;!-- Contains the NPM configuration to install dependencies/modules --&gt;
+- server.js     &lt;!-- Node configuration --&gt;</code></pre>
+<p>This is a simplified file structure for this tutorial. In larger application, this would be broken down
+further to separate duties between client and server. Checkout <a href="http://mean.io/">MEAN.io</a> which is a good boilerplate
+to see best practices and how to separate file structure.</p>
+<p>To see expected results for this step checkout the branch step-01: <code>git checkout step-01</code></p>
+<h3>2. Configure package.json</h3>
+<p>The package.json holds configuration for the app. Node&#39;s package manager (NPM) will use this
+to install any dependencies or modules that are specified here.</p>
+<p>Copy the following below to your package.json:</p>
+<pre><code class="lang-javascript">{
+  &quot;name&quot;         : &quot;node-todo&quot;,
+  &quot;version&quot;      : &quot;0.0.1&quot;,
+  &quot;description&quot;  : &quot;Simple todo application.&quot;,
+  &quot;main&quot;         : &quot;server.js&quot;,
+  &quot;author&quot;       : &quot;ScotchIO&quot;,
+  &quot;dependencies&quot; : {
+    &quot;express&quot;    : &quot;~4.7.2&quot;,
+    &quot;mongoose&quot;   : &quot;~3.6.2&quot;,
+    &quot;morgan&quot;     : &quot;~1.2.2&quot;,
+    &quot;body-parser&quot;: &quot;~1.5.2&quot;,
+    &quot;method-override&quot;: &quot;~2.1.2&quot;
+    }
+}</code></pre>
+<p>Save the file and run <code>npm install</code>. This will install the dependencies specified in your package.json</p>
+<p>To see expected results for this step checkout the branch step-02: <code>git checkout step-02</code></p>
+<h3>3. Node Configuration</h3>
+<p>In the <code>package.json</code> file, it specified that the main file would be <code>server.js</code>. This is the main
+file for our Node app and where we will configure the entire application.</p>
+<p>In this file the following configuration needs to be done:
+- Database connection
+- Mongoose models creation
+- RESTful API routes definition
+- Frontend Angular routes definition
+- Set a port for the app to listen to.</p>
+<pre><code class="lang-javascript">// server.js
+
+    // set up ========================
+    var express  = require(&#39;express&#39;);
+    var app      = express();                        // create our app w/ express
+    var mongoose = require(&#39;mongoose&#39;);              // mongoose for mongodb
+    var morgan = require(&#39;morgan&#39;);                  // log requests to the console (express4)
+    var bodyParser = require(&#39;body-parser&#39;);         // pull information from HTML POST (express4)
+    var methodOverride = require(&#39;method-override&#39;); // simulate DELETE and PUT (express4)
+
+    // configuration =================
+
+    var localDbUrl = &#39;mongodb://localhost/meanstacktutorial&#39;; //set your local database URL
+    mongoose.connect(localDbUrl); //Connects to your local database.
+
+    app.use(express.static(__dirname + &#39;/public&#39;));                 // set the static files location /public/img will be /img for users
+    app.use(morgan(&#39;dev&#39;));                                         // log every request to the console
+    app.use(bodyParser.urlencoded({&#39;extended&#39;:&#39;true&#39;}));            // parse application/x-www-form-urlencoded
+    app.use(bodyParser.json());                                     // parse application/json
+    app.use(bodyParser.json({ type: &#39;application/vnd.api+json&#39; })); // parse application/vnd.api+json as json
+    app.use(methodOverride());
+
+    // listen (start app with node server.js) ======================================
+    app.listen(8080);
+    console.log(&quot;App listening on port 8080&quot;);</code></pre>
+<p>Run <code>npm run start</code> and you should see <code>App listening on port 8080</code> logged out in your terminal.
+If you go to your browser and go to <code>localhost:8080/</code>, it should not give any errors and show an empty page.</p>
+<p>Install nodemon globally by running <code>npm install -g nodemon</code>. Run your application with <code>nodemon server.js</code>.
+By doing this, it will automatically monitor for file changes and restart the server.</p>
+<p>To see expected results for this step checkout the branch step-03: <code>git checkout step-03</code></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h3>Define Model and Routes</h3>
+<h2>Lab Goal:</h2>
+<p>Configure the model and routes for the REST API</p>
+<h3>4. Configure model and routes for the REST API</h3>
+<p>First, we need to define a model for our data that has a text field of type string.
+MongoDB will automatically generate the <code>_id</code> field for each record created.
+Copy this just before the <code>app.listen</code> in your <code>server.js</code></p>
+<pre><code class="lang-javascript">var Todo = mongoose.model(&#39;Todo&#39;, {
+    text : String
+});</code></pre>
+<p>Next, we need to generate our Express routes to handle our API calls. Add this to your <code>server.js</code> file
+just after the model definition above. This will make our application&#39;s API accessible from /api/todos.</p>
+<pre><code class="lang-javascript">app.get(&#39;/api/todos&#39;, function(req, res) {
+
+    // use mongoose to get all todos in the database
+    Todo.find(function(err, todos) {
+
+        // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+        if (err)
+            res.send(err)
+
+        res.json(todos); // return all todos in JSON format
+    });
+});
+
+// create todo and send back all todos after creation
+app.post(&#39;/api/todos&#39;, function(req, res) {
+
+    // create a todo, information comes from AJAX request from Angular
+    Todo.create({
+        text : req.body.text,
+        done : false
+    }, function(err, todo) {
+        if (err)
+            res.send(err);
+
+        // get and return all the todos after you create another
+        Todo.find(function(err, todos) {
+            if (err)
+                res.send(err)
+            res.json(todos);
+        });
+    });
+
+});
+
+// delete a todo
+app.delete(&#39;/api/todos/:todo_id&#39;, function(req, res) {
+    Todo.remove({
+        _id : req.params.todo_id
+    }, function(err, todo) {
+        if (err)
+            res.send(err);
+
+        // get and return all the todos after you create another
+        Todo.find(function(err, todos) {
+            if (err)
+                res.send(err)
+            res.json(todos);
+        });
+    });
+});</code></pre>
+<table>
+<thead>
+<tr>
+<th>HTTP Verb</th>
+<th>URL</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/api/todos</td>
+<td>Get all of the todos</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/api/todos</td>
+<td>Create a single todo</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/api/todos/:todo_id</td>
+<td>Delete a single todo</td>
+</tr>
+</tbody>
+</table>
+<p>To see expected results for this step checkout the branch step-04: <code>git checkout step-04</code></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h3>Configure Frontend</h3>
+<h2>Lab goal:</h2>
+<ul>
+<li>Configure frontend route.</li>
+<li>Create an angular module, controllers and define functions to handle todos.</li>
+<li>Create a view to be used by the app.</li>
+</ul>
+<h3>5. Configure frontend routes and core.js</h3>
+<p>Add the following route to the <code>server.js</code> file just before the <code>app.listen</code> and after the API routes.</p>
+<pre><code class="lang-javascript">   app.get(&#39;*&#39;, function(req, res) {
+       res.sendfile(&#39;./public/index.html&#39;);
+   });</code></pre>
+<p>This will load this view and angular will handle the changes on the frontend.</p>
+<p>Add the following to your <code>public/core.js</code> file
+- Create an angular module.</p>
+<pre><code class="lang-javascript">var toDoApp = angular.module(&#39;todo-app&#39;, []);</code></pre>
+<ul>
+<li>Create a controller and define functions for getting, creating, and deleting todos.</li>
+</ul>
+<pre><code class="lang-javascript">function mainController($scope, $http) {
+    $scope.formData = {};
+
+    // when landing on the page, get all todos and show them
+    $http.get(&#39;/api/todos&#39;)
+        .success(function(data) {
+            $scope.todos = data;
+            console.log(data);
+        })
+        .error(function(data) {
+            console.log(&#39;Error: &#39; + data);
+        });
+
+    // when submitting the add form, send the text to the node API
+    $scope.createTodo = function() {
+        $http.post(&#39;/api/todos&#39;, $scope.formData)
+            .success(function(data) {
+                $scope.formData = {}; // clear the form so our user is ready to enter another
+                $scope.todos = data;
+                console.log(data);
+            })
+            .error(function(data) {
+                console.log(&#39;Error: &#39; + data);
+            });
+    };
+
+    // delete a todo after checking it
+    $scope.deleteTodo = function(id) {
+        $http.delete(&#39;/api/todos/&#39; + id)
+            .success(function(data) {
+                $scope.todos = data;
+                console.log(data);
+            })
+            .error(function(data) {
+                console.log(&#39;Error: &#39; + data);
+            });
+    };
+
+}</code></pre>
+<ul>
+<li>Configure Frontend View to interact with Angular
+This should assign the Angular module and controller, initialize the page that shows all of the todos,
+have a form to create todos and delete todos when they are checked.</li>
+</ul>
+<p>In your <code>public/index.html</code> file, add the following below:</p>
+<pre><code class="lang-html">&lt;!doctype html&gt;
+
+&lt;!-- ASSIGN OUR ANGULAR MODULE --&gt;
+&lt;html ng-app=&quot;scotchTodo&quot;&gt;
+&lt;head&gt;
+    &lt;!-- META --&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;!-- Optimize mobile viewport --&gt;
+
+    &lt;title&gt;Node/Angular Todo App&lt;/title&gt;
+
+    &lt;!-- SCROLLS --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot;&gt;&lt;!-- load bootstrap --&gt;
+    &lt;style&gt;
+        html                    { overflow-y:scroll; }
+        body                    { padding-top:50px; }
+        #todo-list              { margin-bottom:30px; }
+    &lt;/style&gt;
+
+    &lt;!-- SPELLS --&gt;
+    &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;!-- load jquery --&gt;
+    &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js&quot;&gt;&lt;/script&gt;&lt;!-- load angular --&gt;
+    &lt;script src=&quot;core.js&quot;&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;!-- SET THE CONTROLLER AND GET ALL TODOS --&gt;
+&lt;body ng-controller=&quot;mainController&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+
+        &lt;!-- HEADER AND TODO COUNT --&gt;
+        &lt;div class=&quot;jumbotron text-center&quot;&gt;
+            &lt;h1&gt;I&#39;m a Todo-aholic &lt;span class=&quot;label label-info&quot;&gt;{{ todos.length }}&lt;/span&gt;&lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;!-- TODO LIST --&gt;
+        &lt;div id=&quot;todo-list&quot; class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-sm-4 col-sm-offset-4&quot;&gt;
+
+                &lt;!-- LOOP OVER THE TODOS IN $scope.todos --&gt;
+                &lt;div class=&quot;checkbox&quot; ng-repeat=&quot;todo in todos&quot;&gt;
+                    &lt;label&gt;
+                        &lt;input type=&quot;checkbox&quot; ng-click=&quot;deleteTodo(todo._id)&quot;&gt; {{ todo.text }}
+                    &lt;/label&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- FORM TO CREATE TODOS --&gt;
+        &lt;div id=&quot;todo-form&quot; class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-sm-8 col-sm-offset-2 text-center&quot;&gt;
+                &lt;form&gt;
+                    &lt;div class=&quot;form-group&quot;&gt;
+
+                        &lt;!-- BIND THIS VALUE TO formData.text IN ANGULAR --&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control input-lg text-center&quot; placeholder=&quot;I want to buy a puppy that will love me forever&quot; ng-model=&quot;formData.text&quot;&gt;
+                    &lt;/div&gt;
+
+                    &lt;!-- createToDo() WILL CREATE NEW TODOS --&gt;
+                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-lg&quot; ng-click=&quot;createTodo()&quot;&gt;Add&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>To see expected results for this step checkout the branch step-05: <code>git checkout step-05</code></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Lab Exercises</h1>
+<p>A set of exercises on building a simple todo web application using MongoDB, Express, AngularJS and Node.js.</p>
+<p>The web application should allow for CRUDL operations of a dataset in the store.</p>
+<p>Based on tutorial from <a href="https://github.com/scotch-io/node-todo">scotch-io</a> :
+<a href="https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular">https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular</a></p>
+<p>Follow up tutorial: <a href="https://scotch.io/bar-talk/setting-up-a-mean-stack-single-page-application">https://scotch.io/bar-talk/setting-up-a-mean-stack-single-page-application</a></p>
+<p>Working demo on glitch: <a href="https://glitch.com/edit/#!/blossom-blinker">https://glitch.com/edit/#!/blossom-blinker</a></p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Redhat Mobile, Waterford.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

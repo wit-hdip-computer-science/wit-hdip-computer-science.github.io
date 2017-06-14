@@ -1,0 +1,554 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+
+  
+
+
+
+
+
+
+
+  <header class="ui middle aligned center aligned stackable grid segment">
+
+    <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+    <div class="ui seven wide center aligned column grid">
+      <div class="ui row">
+        <h2> Introduction to Glitch </h2>
+      </div>
+      <div class="ui row">
+        
+        
+
+<a href=https://gitter.im/wit-ict-summer-school-2017/glitch target="_blank">
+  <img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=plastic">
+</a>
+
+
+        
+      </div>
+    </div>
+
+    
+
+<div class="two wide column sitemap">
+  <div class="popup" data-content="To the top level Topics for this Module...">
+    <a href="../index.html"> <i class="huge home icon"></i> <br> Module Home </a>
+  </div>
+</div>
+
+
+    
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+    
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="../talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="../labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </header>
+
+
+
+
+
+
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'wit-ict-summer-school-2017/glitch'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+
+
+
+
+
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <div class="header">
+      <a class="item" href="#">
+        Introduction to Glitch
+      </a>
+    </div>
+    <div class="menu">
+      
+      <a class="item" href="talk-a-glitch/glitch.pdf">
+        Introducing Gomix
+      </a>
+      
+      <a class="item" href="talk-b-glitch-tour/glitch-tour.pdf">
+        Glitch Tour
+      </a>
+      
+      <a class="item" href="talk-c-glitch-features/glitch-features.pdf">
+        Glitch Features
+      </a>
+      
+      <a class="item" href="talk-d-js-background/js-background.pdf">
+        JS Introduction
+      </a>
+      
+      <a class="item" href="talk-e-js-varialbes/js-variables.pdf">
+        Variables
+      </a>
+      
+      <a class="item" href="talk-f-js-boolean-logic/js-boolean-logic.pdf">
+        Boolean Logic
+      </a>
+      
+      <a class="item" href="talk-g-js-variables-&-objects/js-variables-&-objects.pdf">
+        Const, Let & Objects
+      </a>
+      
+      <a class="item" href="book-a-glitch-intro/index.html">
+        Lab-1 Gomix Intro
+      </a>
+      
+      <a class="item" href="book-b-js-introduction/index.html">
+        Lab-2 JS Intro
+      </a>
+      
+      <a class="item" href="video-a/index.html">
+        Introduction to Glitch & Javascript
+      </a>
+      
+    </div>
+  </div>
+  <div class="pusher">
+    <div class="ui basic container segment">
+      
+
+
+
+
+<section class="ui attached segment">
+  <div class="ui centered four doubling stackable cards">
+    
+      
+  <div class="ui raised link card">
+    <div class="ui center aligned content">
+      <div class="right floated meta"><i class="huge film icon"></i></div>
+      <div class="header"> Introduction to Glitch & Javascript</div>
+    </div>
+    <div class="ui segment">
+      <div class="ui embed" data-source="youtube" data-id="MQVjkVOOpx0"></div>
+    </div>
+    <div class="center aligned content">
+      <div class="description">
+        <p>An outline of the course. A review of the origins and purpose of Javascript. Introduciton to the Glitch platform.</p>
+
+      </div>
+    </div>
+    <div class="extra content center aligned">
+      <a href="https://youtu.be/MQVjkVOOpx0" target="_blank"> video link</a>
+    </div>
+  </div>
+
+    
+  </div>
+</section>
+
+
+
+      
+
+
+
+
+
+<section class="ui attached segment">
+  <div class="ui centered four doubling stackable cards">
+    
+      
+        
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Introducing Gomix</div>
+  </div>
+    
+    <a href="talk-a-glitch/glitch.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="talk-a-glitch/glitch.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>What is is, what role it plays, why was it built.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+      
+    
+      
+        
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Glitch Tour</div>
+  </div>
+    
+    <a href="talk-b-glitch-tour/glitch-tour.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="talk-b-glitch-tour/glitch-tour.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A look at at the components of a glitch project. Also types of project will we build?</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+      
+    
+      
+        
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Glitch Features</div>
+  </div>
+    
+    <a href="talk-c-glitch-features/glitch-features.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="talk-c-glitch-features/glitch-features.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>The options available in a Glitch project + a an overview of the community projects</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+      
+    
+      
+        
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> JS Introduction</div>
+  </div>
+    
+    <a href="talk-d-js-background/js-background.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="talk-d-js-background/js-background.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Place javascript in its proper context, and explore its relationship to the browser.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+      
+    
+      
+        
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Variables</div>
+  </div>
+    
+    <a href="talk-e-js-varialbes/js-variables.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="talk-e-js-varialbes/js-variables.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Explore the javascript variables, including the basic types, conversion and usage</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+      
+    
+      
+        
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Boolean Logic</div>
+  </div>
+    
+    <a href="talk-f-js-boolean-logic/js-boolean-logic.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="talk-f-js-boolean-logic/js-boolean-logic.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Boolean expressions, operators and selection statements</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+      
+    
+      
+        
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Const, Let & Objects</div>
+  </div>
+    
+    <a href="talk-g-js-variables-&-objects/js-variables-&-objects.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="talk-g-js-variables-&-objects/js-variables-&-objects.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Using const &amp; let. Declaring and using objects.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+      
+    
+  </div>
+</section>
+
+
+
+      
+
+
+
+
+
+<section class="ui attached segment">
+  <div class="ui centered four doubling stackable cards">
+    
+      
+        
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge lab large icon"></i></div>
+    <div class="header"> Lab-1 Gomix Intro</div>
+  </div>
+    
+    <a href="book-a-glitch-intro/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="book-a-glitch-intro/img/main.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Create, modify and view your first Gomix project.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+      
+    
+      
+        
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge lab large icon"></i></div>
+    <div class="header"> Lab-2 JS Intro</div>
+  </div>
+    
+    <a href="book-b-js-introduction/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="book-b-js-introduction/img/main.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Background &amp; Tools, Variables &amp; Boolean Logic</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+      
+    
+  </div>
+</section>
+
+
+
+      
+
+
+
+
+
+      
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

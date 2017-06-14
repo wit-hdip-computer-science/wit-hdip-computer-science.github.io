@@ -1,0 +1,577 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Git Workshop - Part I
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-01-Branching and Merging">
+      Lab-01-Branching and Merging
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <div class="item">
+      
+      
+
+<a href=https://gitter.im/http://wit-ict-summer-school-2017.github.io/rh-course-web target="_blank">
+  <img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=plastic">
+</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="active item" href="../../topic01-git/book-b-branching-and-merging/index.html">
+          Lab-01-Branching and Merging
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-agile/book-a/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-docker/book-a/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-MEAN/book/index.html">
+          Lab 04
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-01-Branching and Merging">
+        <h1>Objectives</h1>
+<p>Explore git branching &amp; merging features</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Branching and merging</h1>
+<p>In this workshop, we&#39;ll cover the following:</p>
+<h2>Branches and branching</h2>
+<ul>
+<li>What are branches, and why would you want to use them?</li>
+<li>How to create, checkout, change, and delete branches</li>
+</ul>
+<h2>Merging</h2>
+<ul>
+<li>What merging means in the context of Git branches</li>
+<li>The most common types of merges in Git<ul>
+<li>Fast-forward merging</li>
+<li>Merge commits (non-fast-forward merging)</li>
+</ul>
+</li>
+</ul>
+<h2>Conflicts (and when to give up)</h2>
+<ul>
+<li>What are conflicts in Git, and how do they happen?</li>
+<li>How to abort the mission if the conflict is too much</li>
+<li>How to resolve conflicts</li>
+<li>How to minimize the chances of hitting a conflict</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Branches and branching</h1>
+<h2>What are branches?</h2>
+<p>Git is a Source Control Management (SCM) tool that helps manage the
+ different states that some source content (often software source
+ code) over time. Each commit is a different state, and we usually
+ visualize these as a graph over time:</p>
+<p><img src="img/branchgraph1.png" alt="It&#39;s a graph over time!"></p>
+<p>In the above image, we can see that:</p>
+<ul>
+<li>newer commits are visualized on top of the older ones</li>
+<li>On the very top (newest) commit, there&#39;s a blue box that says
+&quot;master&quot;.</li>
+<li>We say master is the branch that is currently <em>&quot;checked out&quot;</em>.</li>
+<li><code>master</code> is the default branch that is created when you create or
+clone a repository.</li>
+</ul>
+<p>There are different Git visualization tools available for different
+ computer operating systems. Usually there&#39;s one called <code>gitk</code> that
+ comes installed with Git. Try executing <code>gitk</code> on the command line to
+ see the current branch (or <code>gitk --all</code> to visualize all branches and
+ commits).</p>
+<h2>Create a new local repository</h2>
+<p>For the purposes of this lab, we&#39;re going to create a new local repository:</p>
+<p>Open a shell (a Git Shell on Windows, or a regular Terminal on macOS/Linux), and create a new directory by running:</p>
+<pre><code class="lang-bash">$ mkdir topic05</code></pre>
+<p>Navigate into the <code>topic05</code> directory:</p>
+<pre><code class="lang-bash">$ cd topic05</code></pre>
+<p>Now initialise a Git repository from this empty directory:</p>
+<pre><code class="lang-bash">$ git init
+Initialized empty Git repository in C:/Users/username/topic05/.git/</code></pre>
+<p>Add a <code>README.md</code> file to the repo and commit it:</p>
+<pre><code class="lang-bash">echo &quot;Hello&quot; &gt;&gt; README.md
+git add README.md
+git commit -m &quot;Adding a README&quot;</code></pre>
+<h2>Working with branches</h2>
+<p>Using the Git command line tool, you can get a list of all of your
+ branches:</p>
+<pre><code class="lang-bash">$ git branch
+* master</code></pre>
+<p>You can create a new branch at the same point (commit) as the current
+ branch:</p>
+<pre><code class="lang-bash">$ git branch my-new-branch</code></pre>
+<p>Looking at the list of branches though, we can see that we&#39;re still on
+ the master branch (the asterisk highlights the current branch):</p>
+<pre><code class="lang-bash">$ git branch
+* master
+  my-new-branch</code></pre>
+<p>After creating a branch, we then need to <em>checkout</em> that branch to
+ switch to it:</p>
+<pre><code class="lang-bash">$ git checkout my-new-branch
+Switched to branch &#39;my-new-branch&#39;</code></pre>
+<p>Listing the branches again, we can see that we&#39;re now on the new
+ branch. Some other commands such as <code>git status</code> will give
+ information about the current branch.</p>
+<p>On the new branch, make a new change, and commit it.</p>
+<pre><code class="lang-bash">$ echo &quot;something&quot; &gt;&gt; coolfile.txt
+$ git add coolfile.txt
+$ git commit -m &quot;Add important changes to coolfile.txt&quot;
+[my-new-branch 70be4a5] Add important changes to coolfile.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 coolfile.txt</code></pre>
+<p>In <code>gitk</code> now, we can see that the new branch now represents a
+ different state than the master branch:</p>
+<p><img src="img/gitk1.png" alt="gitk doesn&#39;t like emoji :("></p>
+<p>You can create a branch starting from any place, not just the
+ currently checked-out branch, by specifing that other location to the
+ <code>git branch</code> command that we used earlier. For example, we could
+ create a new branch from master as follows:</p>
+<pre><code class="lang-bash">$ git branch my-other-branch master</code></pre>
+<p>Let&#39;s instead use the following to create and checkout the new branch
+ in one go:</p>
+<pre><code class="lang-bash">$ git checkout -b my-other-branch master
+Switched to a new branch &#39;my-other-branch&#39;</code></pre>
+<p>Again, create a new change on this branch (to a different file this
+ time), and commit it:</p>
+<pre><code class="lang-bash">$ echo &quot;another important change&quot; &gt;&gt; importantfile.txt
+$ git add importantfile.txt
+$ git commit -m &quot;Add cool changes to importantfile.txt&quot;
+[my-other-branch 76cb8d3] Add cool changes to importantfile.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 importantfile.txt</code></pre>
+<p>Visualizing now with <code>gitk --all</code>, we should see our master branch,
+ and the two new branches coming out of it in different directions:</p>
+<p><img src="img/gitk2.png" alt="That&#39;s why they&#39;re called branches!"></p>
+<p>You can delete a branch like this (just an example, no need to run this):</p>
+<pre><code class="lang-bash">$ git branch -d some-other-branch
+error: The branch &#39;some-other-branch&#39; is not fully merged.
+If you are sure you want to delete it, run &#39;git branch -D some-other-branch&#39;.</code></pre>
+<p>Since in this case, there are changes on <code>some-other-branch</code> that don&#39;t
+ exist anywhere else, we got an error message telling us that if we
+ really want to delete it, we need to use <code>-D</code> instead of <code>-d</code>.</p>
+<h2>What are branches <em>really</em> though?</h2>
+<p>A branch is simply a reference to a commit. Remember the first picture
+ in this section? We saw a visualization of a graph of commits, with a
+ blue box containing the name of the branch (master).</p>
+<p>In each repository, there&#39;s a hidden directory named <code>.git</code>, this is
+ the guts of the repository. In there, there is a file at
+ <code>.git/refs/heads/master</code> which contains nothing but the sha1 hash of
+ the commit that the branch is pointing at.</p>
+<h2>What is HEAD?</h2>
+<p><code>HEAD</code> is a special pointer that points to &quot;whatever is currently
+checked out&quot;. If you&#39;re on a particular branch, it will contain a
+reference to that branch:</p>
+<pre><code class="lang-bash">$ cat .git/HEAD
+ref: refs/heads/master</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Merging</h1>
+<h2>What does merging mean?</h2>
+<p>In the last section, we learned about creating new branches. Often
+branches are created temporarily to work on a specific piece of
+work. When that work is ready, then those changes are brought back
+into the original branch again.</p>
+<p>Remember the branches from the last section? Originally there was the
+ master branch, and then we created a branch called <code>my-new-branch</code>,
+ where we made changes. We can now merge those changes back into
+ master branch, and delete the <code>my-new-branch</code> since we won&#39;t need it
+ any longer.</p>
+<p>The simplest form of merging is <em>fast-forward</em> merging. Since branches
+ are just references to commits, and <code>my-new-branch</code> is a direct
+ descendant of the <code>master</code> branch; we can just update the <code>master</code>
+ branch to point to the same commit as <code>my-new-branch</code>.</p>
+<p>This is the default way that Git will merge when the target branch is
+ an ancestor of the source branch. First, <code>checkout</code> the target branch
+ (<code>master</code> in this case), and then use the <code>merge</code> subcommand to bring
+ the changes from the source branch (<code>my-new-branch</code>) into this
+ branch:</p>
+<pre><code class="lang-bash">$ git checkout master
+Switched to branch &#39;master&#39;
+
+$ git merge my-new-branch
+Updating 22ba038..fa8df7e
+Fast-forward
+ coolfile.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 coolfile.txt</code></pre>
+<p>Now we can delete the <code>my-new-branch</code>, since we&#39;ve incorporated all
+ the changes into master:</p>
+<pre><code>$ git branch -d my-new-branch
+Deleted branch my-new-branch (was c1e11ad).</code></pre>
+<h3>Merge commits</h3>
+<p>In some cases, the target branch will not be a direct ancestor of the
+ source branch. Here, the default action is to create a new commit
+ which has two (or more) <em>parent</em> commits and a message.</p>
+<p><img src="img/beforemergecommit1.png" alt="Before creating a merge commit"></p>
+<p>While on the master branch, we can now merge the changes from the
+ other branch as follows:</p>
+<pre><code class="lang-bash">$ git merge my-other-branch
+Merge made by the &#39;recursive&#39; strategy.
+ importantfile.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 importantfile.txt</code></pre>
+<p>The default commit message editor will have appeared here, to give you
+ the opportunity to modify the commit message for the new commit. The
+ default is usually fine.</p>
+<p><img src="img/aftermergecommit1.png" alt="After creating a merge commit"></p>
+<p>Usually a <em>merge commit</em> will not contain any changes to files itself:
+ the changes will be in its ancestors. Sometimes when merging two
+ divergent branches though, there will be conflicting changes on
+ either side of the merge. In this case, there may be changes needed
+ in the merge commit to resolve the conflicts. We&#39;ll talk about
+ conflicts later.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Conflict resolution</h1>
+<h2>What are conflicts, and how do they happen?</h2>
+<p>Conflicts in Git occur when trying to integrate changes from two
+ different states, where different changes are made in one place. The
+ most common case is when performing a <em>merge</em> of one branch into
+ another, where there&#39;s a change to a particular line in a particular
+ file on both sides of the merge.</p>
+<p>Git doesn&#39;t know what to do automatically, so it just stops in the
+ middle of the action, and asks you to intervene.</p>
+<h2>Let&#39;s cause a conflict</h2>
+<p>First, let&#39;s make a new branch and add a file:</p>
+<pre><code class="lang-bash">$ git status # Check that we&#39;ve checked out master
+$ git checkout -b the-left
+Switched to a new branch &#39;the-left&#39;
+
+$ echo &quot;Left is the best&quot; &gt;&gt; importantfile.txt
+
+$ git add importantfile.txt
+$ git commit -m &quot;Left is the best&quot;
+[the-left 511709c] Left is the best
+ 1 file changed, 1 insertion(+)
+ create mode 100644 importantfile.txt</code></pre>
+<p>Next, for the purposes of demonstration, let&#39;s create another branch, 
+called <code>the-right</code>:</p>
+<pre><code class="lang-bash"># Checkout a new branch, `the-right`, from `master`
+git checkout -b the-right master
+Switched to a new branch &#39;the-right&#39;
+
+$ echo &quot;Right is the best&quot; &gt;&gt; importantfile.txt
+$ git add importantfile.txt
+$ git commit -m &quot;Right is the best&quot;
+[the-right 511709c] Right is the best
+ 1 file changed, 1 insertion(+)
+ create mode 100644 importantfile.txt</code></pre>
+<p>We&#39;ve made changes here in the same file, in two separate 
+branches. If we try to integrate these branches with a merge, 
+we&#39;re going to see a conflict. Let&#39;s merge <code>the-left</code> into 
+<code>the-right</code> to see a conflict:</p>
+<pre><code class="lang-bash"># Run `git status` - we should be on the `the-right` branch
+$ git merge the-left 
+Auto-merging importantfile.txt
+CONFLICT (add/add): Merge conflict in importantfile.txt
+Automatic merge failed; fix conflicts and then commit the result.</code></pre>
+<p>We&#39;ve now got a conflict that we need to resolve before we can 
+merge. Check the status of our repo:</p>
+<pre><code class="lang-bash">$ git status
+On branch the-right
+You have unmerged paths.
+  (fix conflicts and run &quot;git commit&quot;)
+  (use &quot;git merge --abort&quot; to abort the merge)
+
+Unmerged paths:
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+
+    both modified:   importantfile.txt
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</code></pre>
+<p>Inspect the <code>diff</code> between these conflicting files:</p>
+<pre><code class="lang-bash">$ git diff</code></pre>
+<pre><code class="lang-diff">diff --cc importantfile.txt
+index 91fe0e5,e188c8f..0000000
+--- a/importantfile.txt
++++ b/importantfile.txt
+@@@ -1,2 -1,2 +1,6 @@@
+  another important change
+++&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+ +Right is the best
+++=======
++ Left is the best
+++&gt;&gt;&gt;&gt;&gt;&gt;&gt; the-left</code></pre>
+<h2>How to resolve conflicts</h2>
+<p>We&#39;ve got a conflict in <code>importantfile.txt</code>. Open this in an 
+editor and let&#39;s walk through how to resolve this conflict.</p>
+<pre><code>another important change
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Right is the best
+=======
+Left is the best
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; the-left</code></pre>
+<p>We want to resolve the conflict so that we end up with an 
+integrated change like the following:</p>
+<pre><code>another important change
+Right and Left are both equally good</code></pre>
+<p>With our conflict manually resolved, we need to <code>git add</code>:</p>
+<pre><code># Stage our change and mark conflict as resolved
+git add importantfile.txt</code></pre>
+<p>Lets check our <code>git status</code> once more:</p>
+<pre><code class="lang-bash">$ git status
+On branch the-right
+All conflicts fixed but you are still merging.
+  (use &quot;git commit&quot; to conclude merge)
+
+Changes to be committed:
+
+    modified:   importantfile.txt</code></pre>
+<p>Finally, commit the integrated change:</p>
+<pre><code class="lang-bash">$ git commit
+# Will prompt for an $EDITOR message
+[the-right d87d6f5] Merge branch &#39;the-left&#39; into the-right</code></pre>
+<h2>Can I just <em>abort</em> and go back to where I was before?</h2>
+<p>Yes, you can - the <code>git status</code> command we ran earlier tells us what 
+to do (<code>git merge --abort</code>)</p>
+<h2>How to minimize the chances of conflicts</h2>
+<p>Try to keep commits small &amp; integrate your changes often.</p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Jason Madigan (jmadigan@redhat.com) & Gerard Ryan (gryan@redhat.com).
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

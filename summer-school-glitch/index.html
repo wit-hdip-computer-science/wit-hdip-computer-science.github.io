@@ -1,0 +1,550 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="ui seven wide center aligned column grid">
+    <div class="ui row">
+      <h2>  Web Application Development Using Glitch </h2>
+    </div>
+    <div class="ui row">
+      
+      
+
+<a href=https://gitter.im/wit-ict-summer-school-2017/glitch target="_blank">
+  <img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=plastic">
+</a>
+
+
+      
+    </div>
+  </div>
+
+  
+    
+<div class="two wide column sitemap">
+  <div class="popup" data-content="To the Portfolio the module is a member of...">
+    <a href="../index.html"> <i class="huge grid layout icon"></i> Workshops </a>
+  </div>
+</div>
+
+  
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+
+
+
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'wit-ict-summer-school-2017/glitch'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+
+
+
+
+
+
+<div class="ui segment pushable">
+  <div class="ui inverted inline vertical sidebar menu">
+    
+    <div class="header">
+      <a class="item" href="topic-01-html&css/index.html">
+        HTML & CSS Revision
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic-01-html&css/topic-01-html-and-templating/index.html">
+          HTML Templates</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-01-html&css/topic-02-css-frameworks/index.html">
+          CSS Frameworks</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic-02-glitch-and-javascript/index.html">
+        Introduction to Glitch
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic-02-glitch-and-javascript/talk-a-glitch/glitch.pdf">
+          Introducing Gomix</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-02-glitch-and-javascript/talk-b-glitch-tour/glitch-tour.pdf">
+          Glitch Tour</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-02-glitch-and-javascript/talk-c-glitch-features/glitch-features.pdf">
+          Glitch Features</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-02-glitch-and-javascript/talk-d-js-background/js-background.pdf">
+          JS Introduction</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-02-glitch-and-javascript/talk-e-js-varialbes/js-variables.pdf">
+          Variables</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-02-glitch-and-javascript/talk-f-js-boolean-logic/js-boolean-logic.pdf">
+          Boolean Logic</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-02-glitch-and-javascript/talk-g-js-variables-&-objects/js-variables-&-objects.pdf">
+          Const, Let & Objects</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-02-glitch-and-javascript/book-a-glitch-intro/index.html">
+          Lab-1 Gomix Intro</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-02-glitch-and-javascript/book-b-js-introduction/index.html">
+          Lab-2 JS Intro</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-02-glitch-and-javascript/video-a/index.html">
+          Introduction to Glitch & Javascript</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic-03-controllers-and-views/index.html">
+        Gomix: Controllers + Views
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic-03-controllers-and-views/talk-1-variables-&-objects-revisited/variables-&-objects-review.pdf">
+          Variables & Objects Review</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-03-controllers-and-views/talk-a-web-app-intro/web-app-intro.pdf">
+          Web App Introduction</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-03-controllers-and-views/talk-b-front-end/front-end.pdf">
+          Front-end</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-03-controllers-and-views/talk-b-modules/modules.pdf">
+          Modules</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-03-controllers-and-views/talk-c-back-end/back-end.pdf">
+          Back-end</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-03-controllers-and-views/book-a-gomix-playlist-1/index.html">
+          Lab-3 Playlist 1</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-03-controllers-and-views/video-a/index.html">
+          Reviewing Javascript Types</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-03-controllers-and-views/video-b/index.html">
+          The Essentials of MVC in Node</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-03-controllers-and-views/github-1-template-1/https://github.com/wit-ict-summer-school-2017/glitch-template-1.git">
+          gitch-template-1</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-03-controllers-and-views/github-2-playlist-1/https://github.com/wit-ict-summer-school-2017/glitch-template-1.git">
+          playlist-1</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic-04-app-templates+views/index.html">
+        Gomix: Templates + Routes
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic-04-app-templates+views/talk-a-templates/templates.pdf">
+          Templates</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-04-app-templates+views/talk-b-templates+json/templates+json.pdf">
+          Json</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-04-app-templates+views/talk-c-dashboard/dashboard.pdf">
+          Dashboard</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-04-app-templates+views/talk-d-playlist/playlist.pdf">
+          Playlist</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-04-app-templates+views/talk-e-mvc/mvc.pdf">
+          MVC</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-04-app-templates+views/book-a-gomix-playlist-2/index.html">
+          Lab-4 Gomix Playlist 2</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-04-app-templates+views/video-a/index.html">
+          Templates & Json in Playlist</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-04-app-templates+views/video-b/index.html">
+          Playlist Route, Model + Controller</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-04-app-templates+views/github-2-playlist-2/https://github.com/wit-ict-summer-school-2017/playlist-2.git">
+          playlist-2</a>
+      </div>
+      
+    </div>
+    
+    <div class="header">
+      <a class="item" href="topic-xx-assignment/index.html">
+        Assignments
+      </a>
+    </div>
+    <div class="menu">
+      
+      <div class="menu">
+        <a class="item" href="topic-xx-assignment/talk-0-gym-v1-spec/assignment-2.pdf">
+          Gym V1 Specification</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-xx-assignment/talk-1-gym-v1-solution/gym-web.pdf">
+          Gym V1 Solution</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-xx-assignment/talk-2-gym-v2-spec/assignment.pdf">
+          Gym V2 Specification</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-xx-assignment/video-c/index.html">
+          Module Assignment</a>
+      </div>
+      
+      <div class="menu">
+        <a class="item" href="topic-xx-assignment/github-play-gym-web/https://github.com/wit-ict-summer-school-2017/play-gym-web">
+          PlayGymWeb</a>
+      </div>
+      
+    </div>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui container">
+      <div class="ui basic segment">
+        <div class="ui centered four doubling stackable cards">
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> HTML & CSS Revision</div>
+  </div>
+    
+    <a href="./topic-01-html&css/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic-01-html&css/topic.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Review of the fundamentals of HTML Templating + the Semantic UI CSS Framework</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Introduction to Glitch</div>
+  </div>
+    
+    <a href="./topic-02-glitch-and-javascript/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic-02-glitch-and-javascript/topic.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>An introduction to the Glitch platform + the very basics of the Javascript Language</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Gomix: Controllers + Views</div>
+  </div>
+    
+    <a href="./topic-03-controllers-and-views/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic-03-controllers-and-views/topic.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Build your first gomix app, a simple static playlist web site.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Gomix: Templates + Routes</div>
+  </div>
+    
+    <a href="./topic-04-app-templates+views/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic-04-app-templates+views/talk-a-templates/templates.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Explore templating in more detail. Enhanced the routing behaviour</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+          
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge sitemap large icon"></i></div>
+    <div class="header"> Assignments</div>
+  </div>
+    
+    <a href="./topic-xx-assignment/index.html">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="./topic-xx-assignment/topic.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Solution to the Play Gym assignment + specification for assignment for this module</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

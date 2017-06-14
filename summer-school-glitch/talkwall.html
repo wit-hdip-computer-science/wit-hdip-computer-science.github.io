@@ -1,0 +1,1040 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="seven wide center aligned column">
+    <h2 class="headder">  Web Application Development Using Glitch</h2>
+    <p> All Slides in the Course </p>
+  </div>
+
+  
+
+<div class="two wide column sitemap">
+  <div class="popup" data-content="To the top level Topics for this Module...">
+    <a href="index.html"> <i class="huge home icon"></i> <br> Module Home </a>
+  </div>
+</div>
+
+
+  
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  
+<div class="ui two wide right aligned column">
+  <div class="ui left aligned middle aligned very basic grid">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large film icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</header>
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic-01-html-and-templating/talk-0-course-structure/summer-school.pdf">
+      Summer School Schedule
+    </a>
+    
+    <a class="item" href="topic-01-html-and-templating/talk-1-deployment/deployment.pdf">
+      Deployment
+    </a>
+    
+    <a class="item" href="topic-01-html-and-templating/talk-2-harp-and-surge/harp.pdf">
+      Harp & Surge
+    </a>
+    
+    <a class="item" href="topic-01-html-and-templating/talk-3-html/case-study.pdf">
+      Case Study
+    </a>
+    
+    <a class="item" href="topic-01-html-and-templating/talk-4-templates/templates.pdf">
+      Templates
+    </a>
+    
+    <a class="item" href="topic-02-css-frameworks/talk-2/sematic-ui-part-1.pdf">
+      Semantic-UI I
+    </a>
+    
+    <a class="item" href="topic-02-css-frameworks/talk-3/sematic-ui-part-2.pdf">
+      Semantic-UI II
+    </a>
+    
+    <a class="item" href="topic-02-css-frameworks/talk-4/sematic-ui-part-3.pdf">
+      Semantic-UI III
+    </a>
+    
+    <a class="item" href="topic-02-css-frameworks/talk-5/semantic-4.pdf">
+      Semantic Part IV
+    </a>
+    
+    <a class="item" href="topic-02-glitch-and-javascript/talk-a-glitch/glitch.pdf">
+      Introducing Gomix
+    </a>
+    
+    <a class="item" href="topic-02-glitch-and-javascript/talk-b-glitch-tour/glitch-tour.pdf">
+      Glitch Tour
+    </a>
+    
+    <a class="item" href="topic-02-glitch-and-javascript/talk-c-glitch-features/glitch-features.pdf">
+      Glitch Features
+    </a>
+    
+    <a class="item" href="topic-02-glitch-and-javascript/talk-d-js-background/js-background.pdf">
+      JS Introduction
+    </a>
+    
+    <a class="item" href="topic-02-glitch-and-javascript/talk-e-js-varialbes/js-variables.pdf">
+      Variables
+    </a>
+    
+    <a class="item" href="topic-02-glitch-and-javascript/talk-f-js-boolean-logic/js-boolean-logic.pdf">
+      Boolean Logic
+    </a>
+    
+    <a class="item" href="topic-02-glitch-and-javascript/talk-g-js-variables-&-objects/js-variables-&-objects.pdf">
+      Const, Let & Objects
+    </a>
+    
+    <a class="item" href="topic-03-controllers-and-views/talk-1-variables-&-objects-revisited/variables-&-objects-review.pdf">
+      Variables & Objects Review
+    </a>
+    
+    <a class="item" href="topic-03-controllers-and-views/talk-a-web-app-intro/web-app-intro.pdf">
+      Web App Introduction
+    </a>
+    
+    <a class="item" href="topic-03-controllers-and-views/talk-b-front-end/front-end.pdf">
+      Front-end
+    </a>
+    
+    <a class="item" href="topic-03-controllers-and-views/talk-b-modules/modules.pdf">
+      Modules
+    </a>
+    
+    <a class="item" href="topic-03-controllers-and-views/talk-c-back-end/back-end.pdf">
+      Back-end
+    </a>
+    
+    <a class="item" href="topic-04-app-templates+views/talk-a-templates/templates.pdf">
+      Templates
+    </a>
+    
+    <a class="item" href="topic-04-app-templates+views/talk-b-templates+json/templates+json.pdf">
+      Json
+    </a>
+    
+    <a class="item" href="topic-04-app-templates+views/talk-c-dashboard/dashboard.pdf">
+      Dashboard
+    </a>
+    
+    <a class="item" href="topic-04-app-templates+views/talk-d-playlist/playlist.pdf">
+      Playlist
+    </a>
+    
+    <a class="item" href="topic-04-app-templates+views/talk-e-mvc/mvc.pdf">
+      MVC
+    </a>
+    
+    <a class="item" href="topic-xx-assignment/talk-0-gym-v1-spec/assignment-2.pdf">
+      Gym V1 Specification
+    </a>
+    
+    <a class="item" href="topic-xx-assignment/talk-1-gym-v1-solution/gym-web.pdf">
+      Gym V1 Solution
+    </a>
+    
+    <a class="item" href="topic-xx-assignment/talk-2-gym-v2-spec/assignment.pdf">
+      Gym V2 Specification
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui container">
+      <div class="ui basic segment">
+        <div class="ui four doubling stackable cards">
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Summer School Schedule</div>
+  </div>
+    
+    <a href="topic-01-html&css/topic-01-html-and-templating/talk-0-course-structure/summer-school.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-01-html&css/topic-01-html-and-templating/talk-0-course-structure/summer-school.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Schedule and structure of the Summer School</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Deployment</div>
+  </div>
+    
+    <a href="topic-01-html&css/topic-01-html-and-templating/talk-1-deployment/deployment.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-01-html&css/topic-01-html-and-templating/talk-1-deployment/deployment.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Deploying a site involves understanding a little more about Clients &amp; Servers, Hosting Providers, Domain Names, Transferring the Sites Files, HTTP and Absolute &amp; Relative Paths</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Harp & Surge</div>
+  </div>
+    
+    <a href="topic-01-html&css/topic-01-html-and-templating/talk-2-harp-and-surge/harp.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-01-html&css/topic-01-html-and-templating/talk-2-harp-and-surge/harp.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Harp.js and Surge.sh are the two services we will use to server the page locally, and also to deploy it to a public web server.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Case Study</div>
+  </div>
+    
+    <a href="topic-01-html&css/topic-01-html-and-templating/talk-3-html/case-study.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-01-html&css/topic-01-html-and-templating/talk-3-html/case-study.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A review of the the evolution of a web site from simple unstyled pages to a reasonable simple but appealing layout.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Templates</div>
+  </div>
+    
+    <a href="topic-01-html&css/topic-01-html-and-templating/talk-4-templates/templates.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-01-html&css/topic-01-html-and-templating/talk-4-templates/templates.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>The EJS template system implements mechanisms for assembling sites from templates - which are called &#39;partials&#39; in EJS. Additionally, there is a complimentary &#39;layout&#39; mechanism for reusing entire page structures.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Semantic-UI I</div>
+  </div>
+    
+    <a href="topic-01-html&css/topic-02-css-frameworks/talk-2/sematic-ui-part-1.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-01-html&css/topic-02-css-frameworks/talk-2/sematic-ui-part-1.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>An overview of the container and segments styles in the framework</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Semantic-UI II</div>
+  </div>
+    
+    <a href="topic-01-html&css/topic-02-css-frameworks/talk-3/sematic-ui-part-2.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-01-html&css/topic-02-css-frameworks/talk-3/sematic-ui-part-2.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>An exploration of the Grid and Image styles.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Semantic-UI III</div>
+  </div>
+    
+    <a href="topic-01-html&css/topic-02-css-frameworks/talk-4/sematic-ui-part-3.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-01-html&css/topic-02-css-frameworks/talk-4/sematic-ui-part-3.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>An exploration of the Tables</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Semantic Part IV</div>
+  </div>
+    
+    <a href="topic-01-html&css/topic-02-css-frameworks/talk-5/semantic-4.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-01-html&css/topic-02-css-frameworks/talk-5/semantic-4.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Our final tour of the Semantic-UI library - with a focus on icons, variations in segments and responsive grids</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Introducing Gomix</div>
+  </div>
+    
+    <a href="topic-02-glitch-and-javascript/talk-a-glitch/glitch.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-02-glitch-and-javascript/talk-a-glitch/glitch.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>What is is, what role it plays, why was it built.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Glitch Tour</div>
+  </div>
+    
+    <a href="topic-02-glitch-and-javascript/talk-b-glitch-tour/glitch-tour.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-02-glitch-and-javascript/talk-b-glitch-tour/glitch-tour.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A look at at the components of a glitch project. Also types of project will we build?</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Glitch Features</div>
+  </div>
+    
+    <a href="topic-02-glitch-and-javascript/talk-c-glitch-features/glitch-features.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-02-glitch-and-javascript/talk-c-glitch-features/glitch-features.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>The options available in a Glitch project + a an overview of the community projects</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> JS Introduction</div>
+  </div>
+    
+    <a href="topic-02-glitch-and-javascript/talk-d-js-background/js-background.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-02-glitch-and-javascript/talk-d-js-background/js-background.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Place javascript in its proper context, and explore its relationship to the browser.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Variables</div>
+  </div>
+    
+    <a href="topic-02-glitch-and-javascript/talk-e-js-varialbes/js-variables.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-02-glitch-and-javascript/talk-e-js-varialbes/js-variables.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Explore the javascript variables, including the basic types, conversion and usage</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Boolean Logic</div>
+  </div>
+    
+    <a href="topic-02-glitch-and-javascript/talk-f-js-boolean-logic/js-boolean-logic.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-02-glitch-and-javascript/talk-f-js-boolean-logic/js-boolean-logic.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Boolean expressions, operators and selection statements</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Const, Let & Objects</div>
+  </div>
+    
+    <a href="topic-02-glitch-and-javascript/talk-g-js-variables-&-objects/js-variables-&-objects.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-02-glitch-and-javascript/talk-g-js-variables-&-objects/js-variables-&-objects.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Using const &amp; let. Declaring and using objects.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Variables & Objects Review</div>
+  </div>
+    
+    <a href="topic-03-controllers-and-views/talk-1-variables-&-objects-revisited/variables-&-objects-review.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-03-controllers-and-views/talk-1-variables-&-objects-revisited/variables-&-objects-review.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A concise tour of the structure of variables &amp; objects in Javascript</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Web App Introduction</div>
+  </div>
+    
+    <a href="topic-03-controllers-and-views/talk-a-web-app-intro/web-app-intro.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-03-controllers-and-views/talk-a-web-app-intro/web-app-intro.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Structure of a web app: Front-end Vs Backend. Routers, Models, Views, Controllers</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Front-end</div>
+  </div>
+    
+    <a href="topic-03-controllers-and-views/talk-b-front-end/front-end.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-03-controllers-and-views/talk-b-front-end/front-end.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Views: Handlebars layouts, partials and templates</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Modules</div>
+  </div>
+    
+    <a href="topic-03-controllers-and-views/talk-b-modules/modules.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-03-controllers-and-views/talk-b-modules/modules.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>The backend will use a modular approach, relying on specific mechanism to import/export shared objects</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Back-end</div>
+  </div>
+    
+    <a href="topic-03-controllers-and-views/talk-c-back-end/back-end.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-03-controllers-and-views/talk-c-back-end/back-end.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Server, routes + controllers</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Templates</div>
+  </div>
+    
+    <a href="topic-04-app-templates+views/talk-a-templates/templates.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-04-app-templates+views/talk-a-templates/templates.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Templates enable dynamic composition of views from layouts, partials and expressions.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Json</div>
+  </div>
+    
+    <a href="topic-04-app-templates+views/talk-b-templates+json/templates+json.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-04-app-templates+views/talk-b-templates+json/templates+json.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>JSON is notatino for representing javascript objects in a simple literal format.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Dashboard</div>
+  </div>
+    
+    <a href="topic-04-app-templates+views/talk-c-dashboard/dashboard.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-04-app-templates+views/talk-c-dashboard/dashboard.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Review thee dashboard controller in detail.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Playlist</div>
+  </div>
+    
+    <a href="topic-04-app-templates+views/talk-d-playlist/playlist.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-04-app-templates+views/talk-d-playlist/playlist.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Revise the Dashboard to render playlist without their contents. Use a new playlist view renders individual playlists</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> MVC</div>
+  </div>
+    
+    <a href="topic-04-app-templates+views/talk-e-mvc/mvc.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-04-app-templates+views/talk-e-mvc/mvc.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Explore the MVC Pattern in action in Playlist 2</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Gym V1 Specification</div>
+  </div>
+    
+    <a href="topic-xx-assignment/talk-0-gym-v1-spec/assignment-2.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-xx-assignment/talk-0-gym-v1-spec/assignment-2.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Version 1 of the Gym application specification</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Gym V1 Solution</div>
+  </div>
+    
+    <a href="topic-xx-assignment/talk-1-gym-v1-solution/gym-web.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-xx-assignment/talk-1-gym-v1-solution/gym-web.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A detailed walkthtough the Gym V1 application solution as implemented in Play/Java</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge object group large icon"></i></div>
+    <div class="header"> Gym V2 Specification</div>
+  </div>
+    
+    <a href="topic-xx-assignment/talk-2-gym-v2-spec/assignment.pdf">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-xx-assignment/talk-2-gym-v2-spec/assignment.png">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Specification of the Assignment for the Summer School module</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

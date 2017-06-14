@@ -1,0 +1,427 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Docker Workshop
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-03">
+      Lab-03
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <div class="item">
+      
+      
+
+<a href=https://gitter.im/http://wit-ict-summer-school-2017.github.io/rh-course-web target="_blank">
+  <img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=plastic">
+</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-git/book-b-branching-and-merging/index.html">
+          Lab-01-Branching and Merging
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-agile/book-a/index.html">
+          Lab-02
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic03-docker/book-a/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-MEAN/book/index.html">
+          Lab 04
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-03">
+        <h1>Objectives</h1>
+<p>Understanding container concepts &amp; how to create a docker image using the docker cli.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Containers Concepts</h1>
+<h2>What are Containers?</h2>
+<p>Containers are self contained, immutable entities that include everything required to run a piece of software via a container runtime. Docker is a container runtime. It can run on different platforms. Containers are instances of a docker image. Docker images can be shared via push and pull commands with the docker cli, similar to git. Images are made up of layers. Each layer builds on the previous layer by modifying the image filesystem or metadata.</p>
+<h2>Self Contained</h2>
+<p>Containers run in isolation from each other, and any other processes running on the OS. This happens at the kernel in Linux by sandboxing processes and controlling their resource allocations via control groups (cgroups).</p>
+<h2>Immutability</h2>
+<p>Containers are immutable. The have a read-only filesystem. If a container is restarted, the filesystem is the same as the very first time it was run. The files in a container are whatever is included in the docker image.</p>
+<h2>Cross Platform</h2>
+<p>The Docker container runtime (also know as the Docker Engine) is available for Linux, macOS &amp; Windows. Linux based containers can be run on any of these platforms. It is possible to run Windows containers on certain versions of Windows.</p>
+<h2>Layered</h2>
+<p>Images are made up of 1 or more layers. Different images can have the same layer in common. For example, an nginx and Apache image could both use <code>centos</code> as the base image. When sharing images, it is only necessary to send the layer differences rather than the full image.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Setting up Docker</h1>
+<ul>
+<li>Install Docker for Mac - <a href="https://docs.docker.com/docker-for-mac/install/">https://docs.docker.com/docker-for-mac/install/</a></li>
+<li>Install Docker for Windows - <a href="https://docs.docker.com/docker-for-windows/install/">https://docs.docker.com/docker-for-windows/install/</a></li>
+<li>Install Docker for Linux (choose distro) - <a href="https://docs.docker.com/engine/installation/">https://docs.docker.com/engine/installation/</a></li>
+</ul>
+<p>To test docker is installed &amp; running ok, run this command:</p>
+<pre><code class="lang-bash">$ docker --version
+Docker version 1.12.6, build ae7d637/1.12.6</code></pre>
+<p>You can list images on you local machine.</p>
+<pre><code class="lang-bash">$ docker images</code></pre>
+<p>To pull an image from Docker Hub, use the <code>docker pull</code> command e.g.</p>
+<pre><code class="lang-bash">$ docker pull golang:1.8.1-onbuild
+Trying to pull repository docker.io/library/golang ... 
+sha256:93fe73ae67ed0f1391b49495bc6a21106617f61f16bbc61a885674d7174d8070: Pulling from docker.io/library/golang
+10a267c67f42: Pull complete 
+fb5937da9414: Pull complete 
+9021b2326a1e: Pull complete 
+96109dbc0c87: Pull complete 
+57d8fbf72ff8: Pull complete 
+38d688423455: Pull complete 
+c9ade847cc74: Pull complete 
+5139017b86e5: Pull complete 
+Digest: sha256:93fe73ae67ed0f1391b49495bc6a21106617f61f16bbc61a885674d7174d8070
+Status: Downloaded newer image for docker.io/golang:1.8.1-onbuild</code></pre>
+<p>You should now see this image in the list if you run <code>docker images</code> again.</p>
+<pre><code class="lang-bash">$ docker images
+REPOSITORY                                                               TAG                                             IMAGE ID            CREATED             SIZE
+docker.io/golang                                                         1.8.1-onbuild                                   3064d3aa065d        3 weeks ago         702.8 MB</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Creating an image &amp; running it</h1>
+<h2>Creating the image</h2>
+<p>A Docker image is essentially a snapshot of a container. When used with the <code>docker run</code> command, they are used to create a running instance of a container.
+To create a Docker image you need a Dockerfile. A Dockerfile is essentially a set of instructions that Docker uses to create the Docker image.
+Example:
+<a href="https://github.com/feedhenry/wit-docker-example">https://github.com/feedhenry/wit-docker-example</a></p>
+<p>To create an image from this example, first clone it.</p>
+<pre><code class="lang-bash">$ git clone https://github.com/feedhenry/wit-docker-example.git</code></pre>
+<p>Then build the image:</p>
+<pre><code class="lang-bash">$ cd wit-docker-example
+$ docker build -t wit/example .
+Sending build context to Docker daemon 56.32 kB
+Step 1 : FROM golang:1.8.1-onbuild
+# Executing 3 build triggers...
+Step 1 : COPY . /go/src/app
+Step 1 : RUN go-wrapper download
+ ---&gt; Running in 3279aec53159
++ exec go get -v -d
+Step 1 : RUN go-wrapper install
+ ---&gt; Running in 7906d9740f3c
++ exec go install -v
+app
+ ---&gt; cdd1ecbfd0cd
+Removing intermediate container 3279aec53159
+Removing intermediate container 7906d9740f3c
+Removing intermediate container 64c608365953
+Successfully built cdd1ecbfd0cd</code></pre>
+<p>The image should now be listed, with the <code>latest</code> tag.</p>
+<pre><code class="lang-bash">$ docker images
+REPOSITORY                                                               TAG                 IMAGE ID            CREATED             SIZE
+wit/example                                                              latest              cdd1ecbfd0cd        34 seconds ago      708.7 MB</code></pre>
+<p>Dockerfile Reference
+<a href="https://docs.docker.com/engine/reference/builder/">https://docs.docker.com/engine/reference/builder/</a></p>
+<h2>Understanding the build process</h2>
+<p>The repository contents:</p>
+<pre><code class="lang-bash">├── Dockerfile
+├── main.go
+└── README.md</code></pre>
+<p>The Dockerfile:</p>
+<pre><code class="lang-Dockerfile">FROM golang:1.8.1-onbuild</code></pre>
+<p>The &#39;parent&#39; Dockerfile with <code>ONBUILD</code> instructions</p>
+<pre><code class="lang-Dockerfile">FROM golang:1.8
+
+RUN mkdir -p /go/src/app
+WORKDIR /go/src/app
+
+# this will ideally be built by the ONBUILD below ;)
+CMD [&quot;go-wrapper&quot;, &quot;run&quot;]
+
+ONBUILD COPY . /go/src/app
+ONBUILD RUN go-wrapper download
+ONBUILD RUN go-wrapper install</code></pre>
+<h2>Running</h2>
+<h3>Running &amp; accessing the container</h3>
+<p>To run the image, use <code>docker run</code>:</p>
+<pre><code class="lang-bash">$ docker run -it --rm --name wit wit/example:latest
++ exec app
+2017/06/06 11:09:02 starting on port 3000</code></pre>
+<p>To call the server that&#39;s running, we need to find the container IP Address.
+You can find this out by running this command in a <strong>new</strong> terminal/console window.</p>
+<pre><code class="lang-bash">$ docker inspect --format=&#39;{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}&#39; wit</code></pre>
+<p>Then curl the <code>/hello</code> endpoint</p>
+<pre><code class="lang-bash">$ curl &lt;ip address&gt;:3000/hello
+hello world</code></pre>
+<p>Try curl localhost to see what the response is:</p>
+<pre><code class="lang-bash">$ curl localhost:3000/hello</code></pre>
+<h3>Accessing the container on localhost</h3>
+<p>To access the server from localhost, you need to expose the port.</p>
+<pre><code class="lang-bash">$ docker run -it --rm --name wit -p 3000:3000 wit/example:latest
++ exec app
+2017/06/06 11:09:54 starting on port 3000</code></pre>
+<p>Now try curling it on localhost again.</p>
+<pre><code class="lang-bash">$ curl localhost:3000/hello
+hello world</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Running containers remotely</h1>
+<h2>Using &#39;docker machine&#39;</h2>
+<p>A &#39;docker machine&#39; is a local or remote instance running docker. More info on setting one up can be found at <a href="https://docs.docker.com/machine/">https://docs.docker.com/machine/</a>.
+Deploying a container to a remote docker-machine can be done using the <code>docker</code> cli. Instead of all commands running against your local machine, they run against the remote machine. Whenever you build an image, it is being built on the remote docker machine. If you pull an image, it gets pulled onto the remote docker machine.</p>
+<h2>Using kubernetes or OpenShift</h2>
+<p>Kubernetes is a system for automating deployment, scaling, and management of containerized applications. It groups containers that make up an application into logical units for easy management and discovery. If you have a kubernetes cluster, you can run docker containers in that cluster via kubernetes templates &amp; the <code>kubectl</code> cli. <a href="https://kubernetes.io/docs/user-guide/kubectl-overview/">https://kubernetes.io/docs/user-guide/kubectl-overview/</a></p>
+<p>If you have an OpenShift cluster (based on kubernetes), you can run docker containers in that cluster via openshift templates &amp; the <code>oc</code> cli. <a href="https://openshift.io/">https://openshift.io/</a></p>
+<p>Kubernetes &amp; OpenShift templates reference the docker image to use when running a container. The image must already be available on the cluster nodes, or be available to pull down. In order to make our image available, we can push it to a public repository on Docker Hub.</p>
+<h3>Pushing an image to a remote repository (optional)</h3>
+<p>You will need a Docker Hub account for this part. First, use <code>docker tag</code> to let docker know what the remote url will be. </p>
+<pre><code class="lang-bash">$ docker tag wit/example:latest &lt;docker hub username&gt;/example:latest
+$ docker push &lt;docker hub username&gt;/example:latest</code></pre>
+<h3>Running the image in an OpenShift cluster (optional)</h3>
+<p>Once pushed, you can reference the image in the remote kubernetes/OpenShift cluster</p>
+<pre><code class="lang-bash">$ oc new-project wit
+$ oc run wit --image=&lt;docker hub username&gt;/example --port=3000 
+deploymentconfig &quot;wit&quot; created</code></pre>
+<p>The pod can be exposed via a <code>service</code> &amp; <code>route</code></p>
+<pre><code class="lang-bash">$ oc expose rc wit-1 --port=3000 --target-port=3000 --name=wit
+$ oc expose service wit --name=wit</code></pre>
+<p>The exposed <code>route</code> can be used to access the running container.</p>
+<pre><code class="lang-bash">$ curl wit-wit.osm4.skunkhenry.com/hello
+$ hello world</code></pre>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        Redhat Mobile, Waterford.
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
