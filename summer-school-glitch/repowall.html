@@ -1,0 +1,327 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+
+
+
+
+
+
+
+
+
+
+<header class="ui middle aligned center aligned stackable grid segment">
+
+  <a class="ui blue left corner label">
+  <div id="showTOC" class="popup" data-content="Reveal TOC">
+    <i id="toc" class="sitemap big  icon"></i>
+  </div>
+</a>
+
+  <div class="ui five wide column">
+    <div class="ui row">
+      <h2>  Web Application Development Using Glitch </h2>
+    </div>
+  </div>
+
+  <div class="ui two wide column">
+    
+
+<div class="two wide column sitemap">
+  <div class="popup" data-content="To the top level Topics for this Module...">
+    <a href="index.html"> <i class="huge home icon"></i> <br> Module Home </a>
+  </div>
+</div>
+
+
+  </div>
+  <div class="ui five wide column">
+    
+<div class="four wide column">
+  <div class="ui center aligned mini message segment">
+    Eamonn de Leastar.
+    <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons License
+    </a>
+  </div>
+</div>
+
+  </div>
+  <div class="four wide column">
+    
+<div class="ui two column grid">
+  <div class="ui eight wide column">
+    <div class="row">
+      <div class="popup" data-content="All Slides in Course">
+        <a href="talkwall.html"> <i class="large object group icon"></i> All Slides </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Labs in Course">
+        <a href="labwall.html"> <i class="large lab icon"></i> All Labs </a>
+      </div>
+    </div>
+  </div>
+  <div class="ui eight wide column">
+    <div class="row">
+      <div class="popup" data-content="All Videos in Course">
+        <a href="videowall.html"> <i class="large film icon"></i> All Videos </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="popup" data-content="All Repos in Course">
+        <a href="repowall.html"> <i class="large git icon"></i> All Repos </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</header>
+
+
+
+
+
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'wit-ict-summer-school-2017/glitch'
+    };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+
+
+
+
+<div class="ui bottom attached segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+    <a class="item" href="topic-03-controllers-and-views/github-1-template-1/https://github.com/wit-ict-summer-school-2017/glitch-template-1.git">
+      gitch-template-1
+    </a>
+    
+    <a class="item" href="topic-03-controllers-and-views/github-2-playlist-1/https://github.com/wit-ict-summer-school-2017/glitch-template-1.git">
+      playlist-1
+    </a>
+    
+    <a class="item" href="topic-04-app-templates+views/github-2-playlist-2/https://github.com/wit-ict-summer-school-2017/playlist-2.git">
+      playlist-2
+    </a>
+    
+    <a class="item" href="topic-xx-assignment/github-play-gym-web/https://github.com/wit-ict-summer-school-2017/play-gym-web">
+      PlayGymWeb
+    </a>
+    
+  </div>
+  <div class="pusher">
+    <div class="ui container">
+      <div class="ui basic segment">
+        <div class="ui centered four doubling stackable cards">
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge git square large icon"></i></div>
+    <div class="header"> gitch-template-1</div>
+  </div>
+    
+    <a href="topic-03-controllers-and-views/github-1-template-1/https://github.com/wit-ict-summer-school-2017/glitch-template-1.git">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-03-controllers-and-views/github-1-template-1/github.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A starter template for glitch. Express + handlebars + simple mvc structure.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge git square large icon"></i></div>
+    <div class="header"> playlist-1</div>
+  </div>
+    
+    <a href="topic-03-controllers-and-views/github-2-playlist-1/https://github.com/wit-ict-summer-school-2017/glitch-template-1.git">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-03-controllers-and-views/github-2-playlist-1/github.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Simple playlist app rendering static play lists.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge git square large icon"></i></div>
+    <div class="header"> playlist-2</div>
+  </div>
+    
+    <a href="topic-04-app-templates+views/github-2-playlist-2/https://github.com/wit-ict-summer-school-2017/playlist-2.git">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-04-app-templates+views/github-2-playlist-2/github.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>Playlist rendered in separate views. Delete song supported. Model loaded from Json store.</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+            
+              
+<div class="ui raised link card">
+  <div class="center aligned content">
+    <div class="right floated meta"><i class="huge git square large icon"></i></div>
+    <div class="header"> PlayGymWeb</div>
+  </div>
+    
+    <a href="topic-xx-assignment/github-play-gym-web/https://github.com/wit-ict-summer-school-2017/play-gym-web">
+      
+      <div class="image">
+        <img class="ui bordered rounded image" src="topic-xx-assignment/github-play-gym-web/github.jpg">
+      </div>
+    </a>
+    <div class="center aligned content">
+      <div class="description">
+        <p>A sample solution to the Gym application in Play</p>
+
+      </div>
+    </div>
+  
+  
+</div>
+
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
