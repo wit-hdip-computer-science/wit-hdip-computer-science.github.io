@@ -99,41 +99,44 @@ figcaption
 
     </div>
 
-    <div class="four wide column">
+    <div class="three wide column">
       
         
-  <div class="ui equal width grid">
+  <div class="ui equal width center aligned grid segment">
     
-  
-    <div class="column">
-      <div class="popup" data-content="All talk's in Course">
-        <a href="talkwall.html"> <i class="large object group icon"></i> </a>
-      </div>
-    </div>
-  
-
+      
+        <div class="column">
+          <div class="popup" data-content="All talk's in Course">
+            <a href="talkwall.html"> <i class="big object group icon"></i> </a>
+            <div class="ui blue mini circular label">
+              29
+            </div>
+          </div>
+        </div>
+      
     
-  
-    <div class="column">
-      <div class="popup" data-content="All lab's in Course">
-        <a href="labwall.html"> <i class="large lab icon"></i> </a>
-      </div>
-    </div>
-  
-
+      
+        <div class="column">
+          <div class="popup" data-content="All lab's in Course">
+            <a href="labwall.html"> <i class="big lab icon"></i> </a>
+            <div class="ui blue mini circular label">
+              9
+            </div>
+          </div>
+        </div>
+      
     
-  
-
+      
     
-  
-
+      
     
-  
-
+      
+    
   </div>
 
       
     </div>
+
 
   </header>
   
@@ -143,122 +146,6 @@ figcaption
 
   <div class="ui bottom attached segment pushable">
     <div class="ui inverted labeled icon left inline vertical sidebar menu">
-      
-        <a class="item" href="topic01/talk-1/database_design.pdf">
-          Database Design
-        </a>
-      
-        <a class="item" href="topic01/talk-2/database_design2.pdf">
-          Database Design
-        </a>
-      
-        <a class="item" href="topic01/talk-3/er_modelling.pdf">
-          ER Modelling
-        </a>
-      
-        <a class="item" href="topic02/talk-1/identify_relationships.pdf">
-          Identify Relationships
-        </a>
-      
-        <a class="item" href="topic02/talk-2/diagram_conventions.pdf">
-          Diagram conventions
-        </a>
-      
-        <a class="item" href="topic02/talk-3/ERDish.pdf">
-          Speaking ERDish
-        </a>
-      
-        <a class="item" href="topic02/talk-4/matrix_diagrams.pdf">
-          Matrix Diagrams
-        </a>
-      
-        <a class="item" href="topic03/talk-1/super_sub.pdf">
-          Super and Subtypes modelled 
-        </a>
-      
-        <a class="item" href="topic03/talk-2/bus_rules.pdf">
-          Modelling Business Rules
-        </a>
-      
-        <a class="item" href="topic03/talk-3/rel_transfer.pdf">
-          Relationship Transferability
-        </a>
-      
-        <a class="item" href="topic03/talk-4/rel-types.pdf">
-          Entity Relationship Types
-        </a>
-      
-        <a class="item" href="topic04/talk-1/many-to-many.pdf">
-          Resolving Many to Many Relationship
-        </a>
-      
-        <a class="item" href="topic04/talk-2/CRUD.pdf">
-          CRUD Analysis
-        </a>
-      
-        <a class="item" href="topic04/talk-3/UIDs.pdf">
-          Unique Identifiers
-        </a>
-      
-        <a class="item" href="topic05/talk-1/1NF.pdf">
-          1NF
-        </a>
-      
-        <a class="item" href="topic05/talk-2/2NF.pdf">
-          2NF
-        </a>
-      
-        <a class="item" href="topic05/talk-3/3NF.pdf">
-          3NF
-        </a>
-      
-        <a class="item" href="topic06/talk-1/Rel_db.pdf">
-          Relational Databases
-        </a>
-      
-        <a class="item" href="topic06/talk-2/basic_mapping.pdf">
-          Basic Mapping
-        </a>
-      
-        <a class="item" href="topic06/talk-3/rel_mapping.pdf">
-          Relationship mapping
-        </a>
-      
-        <a class="item" href="topic06/talk-4/subtype_mapping.pdf">
-          Subtype and supertype mapping
-        </a>
-      
-        <a class="item" href="topic06/talk-5/data_types.pdf">
-          DATA TYPES
-        </a>
-      
-        <a class="item" href="topic07/talk-1/create_table.pdf">
-          CREATE TABLE
-        </a>
-      
-        <a class="item" href="topic07/talk-2/insert_into.pdf">
-          INSERT INTO 
-        </a>
-      
-        <a class="item" href="topic07/talk-3/constraints.pdf">
-          Introduction to Constraints
-        </a>
-      
-        <a class="item" href="topic07/talk-4/key_constraints.pdf">
-          Constraints: FOREIGN KEY, and CHECK constraints
-        </a>
-      
-        <a class="item" href="topic07/talk-5/manage_constraints.pdf">
-          Managing constraints using the ALTER TABLE statement
-        </a>
-      
-        <a class="item" href="topic08/talk-1/select.pdf">
-          SELECT statement
-        </a>
-      
-        <a class="item" href="topic08/talk-2/sorting.pdf">
-          ORDER BY Clause
-        </a>
       
     </div>
     <div class="pusher">
@@ -1147,34 +1034,37 @@ figcaption
 
     </footer>
     <script>
-      $(document).ready(function () {
+      $(document).ready(function() {
   $('img').addClass('ui image');
 
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
     </script>

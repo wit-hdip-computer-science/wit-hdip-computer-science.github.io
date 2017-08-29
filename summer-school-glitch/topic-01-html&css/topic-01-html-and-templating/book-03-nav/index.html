@@ -158,72 +158,6 @@ body
 
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
     
-      
-        <a class="item" href="../../topic-01-html-and-templating/book-00-case-study/index.html">
-          Lab-00a Case Study
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-01-html-and-templating/book-01-harp/index.html">
-          Lab-01b Harp & Surge
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-01-html-and-templating/book-02-templates/index.html">
-          Lab-01c Templating
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-01-html-and-templating/book-03-nav/index.html">
-          Lab-01d Navigation 
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-02-css-frameworks/book-a/index.html">
-          Lab-02a Semantic UI
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-02-css-frameworks/book-b/index.html">
-          Lab-02b Semantic UI
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-02-glitch-and-javascript/book-a-glitch-intro/index.html">
-          Lab-1 Gomix Intro
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-02-glitch-and-javascript/book-b-js-introduction/index.html">
-          Lab-2 JS Intro
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-03-controllers-and-views/book-a-gomix-playlist-1/index.html">
-          Lab-3 Playlist 1
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-04-app-templates+views/book-a-gomix-playlist-2/index.html">
-          Lab-4 Gomix Playlist 2
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic-05-app-models/book-a-gomix-playlist-3/index.html">
-          Lab-5 Gomix Playlist 3
-        </a>
-      
-    
   </div>
   <div class="pusher" tabindex="-1">
     <div class="ui basic segment" id="labchat">
@@ -599,7 +533,7 @@ Press Ctl+C to stop the server
 </div>-->
 
 <script>
-  $(document).on('keydown', function (e) {
+  $(document).on('keydown', function(e) {
   e = e || window.event;
   var nextTab;
   switch (e.which || e.keyCode) {
@@ -627,34 +561,37 @@ Press Ctl+C to stop the server
 
     </footer>
     <script>
-      $(document).ready(function () {
+      $(document).ready(function() {
   $('img').addClass('ui image');
 
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
     </script>

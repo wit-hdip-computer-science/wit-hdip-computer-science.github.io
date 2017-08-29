@@ -99,53 +99,62 @@ figcaption
 
     </div>
 
-    <div class="four wide column">
+    <div class="three wide column">
       
         
-  <div class="ui equal width grid">
+  <div class="ui equal width center aligned grid segment">
     
-  
-    <div class="column">
-      <div class="popup" data-content="All talk's in Course">
-        <a href="talkwall.html"> <i class="large object group icon"></i> </a>
-      </div>
-    </div>
-  
-
+      
+        <div class="column">
+          <div class="popup" data-content="All talk's in Course">
+            <a href="talkwall.html"> <i class="big object group icon"></i> </a>
+            <div class="ui blue mini circular label">
+              34
+            </div>
+          </div>
+        </div>
+      
     
-  
-    <div class="column">
-      <div class="popup" data-content="All lab's in Course">
-        <a href="labwall.html"> <i class="large lab icon"></i> </a>
-      </div>
-    </div>
-  
-
+      
+        <div class="column">
+          <div class="popup" data-content="All lab's in Course">
+            <a href="labwall.html"> <i class="big lab icon"></i> </a>
+            <div class="ui blue mini circular label">
+              11
+            </div>
+          </div>
+        </div>
+      
     
-  
-    <div class="column">
-      <div class="popup" data-content="All video's in Course">
-        <a href="videowall.html"> <i class="large film icon"></i> </a>
-      </div>
-    </div>
-  
-
+      
+        <div class="column">
+          <div class="popup" data-content="All video's in Course">
+            <a href="videowall.html"> <i class="big film icon"></i> </a>
+            <div class="ui blue mini circular label">
+              6
+            </div>
+          </div>
+        </div>
+      
     
-  
-    <div class="column">
-      <div class="popup" data-content="All git's in Course">
-        <a href="repowall.html"> <i class="large git square icon"></i> </a>
-      </div>
-    </div>
-  
-
+      
+        <div class="column">
+          <div class="popup" data-content="All git's in Course">
+            <a href="gitwall.html"> <i class="big git square icon"></i> </a>
+            <div class="ui blue mini circular label">
+              5
+            </div>
+          </div>
+        </div>
+      
     
-  
-
+      
+    
   </div>
 
       
     </div>
+
 
   </header>
   
@@ -235,7 +244,7 @@ figcaption
       </div>
       
       <div class="menu">
-        <a class="item" href="topic-02-glitch-and-javascript/video-a/index.html">
+        <a class="item" href="topic-02-glitch-and-javascript/video-a/MQVjkVOOpx0">
           Introduction to Glitch & Javascript</a>
       </div>
       
@@ -279,12 +288,12 @@ figcaption
       </div>
       
       <div class="menu">
-        <a class="item" href="topic-03-controllers-and-views/video-a/index.html">
+        <a class="item" href="topic-03-controllers-and-views/video-a/dBhq0ijDz4k">
           Reviewing Javascript Types</a>
       </div>
       
       <div class="menu">
-        <a class="item" href="topic-03-controllers-and-views/video-b/index.html">
+        <a class="item" href="topic-03-controllers-and-views/video-b/udLyH6BUUBA">
           The Essentials of MVC in Node</a>
       </div>
       
@@ -338,12 +347,12 @@ figcaption
       </div>
       
       <div class="menu">
-        <a class="item" href="topic-04-app-templates+views/video-a/index.html">
+        <a class="item" href="topic-04-app-templates+views/video-a/t-Jix6x1PGs">
           Templates & Json in Playlist</a>
       </div>
       
       <div class="menu">
-        <a class="item" href="topic-04-app-templates+views/video-b/index.html">
+        <a class="item" href="topic-04-app-templates+views/video-b/5eP66a51Dek">
           Playlist Route, Model + Controller</a>
       </div>
       
@@ -421,7 +430,7 @@ figcaption
       </div>
       
       <div class="menu">
-        <a class="item" href="topic-xx-assignment/video-c/index.html">
+        <a class="item" href="topic-xx-assignment/video-c/LoTBTQpHz1I">
           Module Assignment</a>
       </div>
       
@@ -617,34 +626,37 @@ figcaption
 
     </footer>
     <script>
-      $(document).ready(function () {
+      $(document).ready(function() {
   $('img').addClass('ui image');
 
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
     </script>

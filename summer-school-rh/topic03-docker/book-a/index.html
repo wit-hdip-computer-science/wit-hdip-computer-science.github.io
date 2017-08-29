@@ -150,30 +150,6 @@ body
 
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
     
-      
-        <a class="item" href="../../topic01-git/book-b-branching-and-merging/index.html">
-          Lab-01-Branching and Merging
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic02-agile/book-a/index.html">
-          Lab-02
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic03-docker/book-a/index.html">
-          Lab-03
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic04-MEAN/book/index.html">
-          Lab 04
-        </a>
-      
-    
   </div>
   <div class="pusher" tabindex="-1">
     <div class="ui basic segment" id="labchat">
@@ -356,7 +332,7 @@ $ hello world</code></pre>
 </div>-->
 
 <script>
-  $(document).on('keydown', function (e) {
+  $(document).on('keydown', function(e) {
   e = e || window.event;
   var nextTab;
   switch (e.which || e.keyCode) {
@@ -384,34 +360,37 @@ $ hello world</code></pre>
 
     </footer>
     <script>
-      $(document).ready(function () {
+      $(document).ready(function() {
   $('img').addClass('ui image');
 
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
     </script>

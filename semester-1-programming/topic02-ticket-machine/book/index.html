@@ -166,156 +166,6 @@ body
 
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
     
-      
-        <a class="item" href="../../topic01-classes-objects/book-a/index.html">
-          Classes-objects
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic01-classes-objects/book-b/index.html">
-          Class-components
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic01-classes-objects(solns)/book-solutions/index.html">
-          Class-components-Solutions
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic02-ticket-machine/book/index.html">
-          Ticket-Machine
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic02-ticket-machine(solns)/book-a/index.html">
-          Ticket-Machine-Solutions
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic03-abstraction-modularization/book-a/index.html">
-          Abstraction-modularization[1]
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic03-abstraction-modularization/book-b/index.html">
-          Abstraction-modularization[2]
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic03-abstraction-modularization/book-c/index.html">
-          Abstraction-modularization[3]
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic03-abstraction-modularization(solns)/book-solutions-ab/index.html">
-          Abstraction-modularization-Solutions-[1-2]
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic03-abstraction-modularization(solns)/book-solutions-c/index.html">
-          Abstraction-modularization-Solutions-[3]
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic04-generics-control-flow/book-a/index.html">
-          Generics-Control-flow
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic04-generics-control-flow(solns)/book-solutions-a/index.html">
-          Notebook_solutions-[1-3]
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic05(assignment-1)/book-a/index.html">
-          Assignment1
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic06-persistence/book-a/index.html">
-          Eclipse
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic06-persistence/book-b/index.html">
-          CRUD
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic06-persistence/book-c/index.html">
-          XML
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic06-persistence/book-d/index.html">
-          Exception
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic07-more-on-collections/book-a/index.html">
-          Primitive-Arrays
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic07-more-on-collections/book-b/index.html">
-          TechSupport
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic08-inheritance-polymorphism/book-1/index.html">
-          NetworkSystem
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic08-inheritance-polymorphism/book-2/index.html">
-          ShopV6.0
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic08-inheritance-polymorphism/book-3/index.html">
-          ShopV7.0
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic10-abstraction-TDD/book-a/index.html">
-          Lab-Abstraction
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic10-abstraction-TDD/book-b/index.html">
-          Lab-DVDTesting
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic11-interfaces/book/index.html">
-          Lab-10
-        </a>
-      
-    
   </div>
   <div class="pusher" tabindex="-1">
     <div class="ui basic segment" id="labchat">
@@ -850,7 +700,7 @@ class Book
 </div>-->
 
 <script>
-  $(document).on('keydown', function (e) {
+  $(document).on('keydown', function(e) {
   e = e || window.event;
   var nextTab;
   switch (e.which || e.keyCode) {
@@ -878,34 +728,37 @@ class Book
 
     </footer>
     <script>
-      $(document).ready(function () {
+      $(document).ready(function() {
   $('img').addClass('ui image');
 
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
     </script>
